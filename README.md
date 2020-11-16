@@ -11,5 +11,5 @@ A limpeza dos arquivos objetos e o executável pode ser feita com:
 ## Participantes
 O projeto foi feito em **dupla**. Sendo os participantes:
 
-[Lauro Bezerra de Araújo](https://github.com/brashi)
-[Lucas Moura do Nascimento](https://github.com/lluckymou)
+* [Lauro Bezerra de Araújo](https://github.com/brashi)
+* [Lucas Moura do Nascimento](https://github.com/lluckymou)
