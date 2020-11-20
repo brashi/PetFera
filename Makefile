@@ -20,9 +20,6 @@ $(PROG) : $(OBJS)
 $(BIN)/main.o : $(SRC)/main.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/main.cpp -o $@
 
-
-
-
 #Tarefa para limpeza de arquivos...
 clean:
 	rm -f core $(PROG) $(OBJS)
