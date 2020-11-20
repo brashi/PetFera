@@ -3,7 +3,7 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
+using std::string;
 
 class Pessoa {
     public:

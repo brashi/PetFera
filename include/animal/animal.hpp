@@ -1,9 +1,12 @@
 #pragma once
 
+#include "../funcionarios/tratador.hpp"
+#include "../funcionarios/veterinario.hpp"
+
 #include <string>
 #include <iostream>
 
-using namespace std;
+using std::string;
 
 class Animal {
     public:

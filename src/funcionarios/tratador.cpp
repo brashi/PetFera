@@ -6,3 +6,7 @@ Tratador::Tratador(string nome, string telefone, string email,
                     uniforme(uniforme){}
 
 Tratador::~Tratador(){}
+
+Uniforme Tratador::getUniforme() const {
+    return this->uniforme;
+}

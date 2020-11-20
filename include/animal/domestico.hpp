@@ -5,7 +5,8 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
+using std::string;
+
 class Domestico : public Animal {
     public:
         Domestico();
