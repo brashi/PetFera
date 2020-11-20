@@ -1,5 +1,6 @@
 #pragma once
 
+#include "mamifero.hpp"
 #include "../domestico.hpp"
 
 #include <string>
@@ -7,14 +8,5 @@
 
 using std::string;
 
-class Mamifero : public Domestico {
-    public:
-        Mamifero();
-        Mamifero(bool gestacao);
-        virtual ~Mamifero();
-
-        bool getGestacao() const;
-
-    protected:
-        bool gestacao;
+class MamiferoDomestico : public Mamifero, public Domestico {
 };

@@ -1,13 +1,11 @@
 #pragma once
 
-#include "../exotico.hpp"
-
 #include <string>
 #include <iostream>
 
 using std::string;
 
-class Ave : public Exotico {
+class Ave {
     public:
         Ave();
         Ave(bool voa);

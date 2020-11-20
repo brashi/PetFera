@@ -1,6 +1,6 @@
 #pragma once
 
-#include "reptil.hpp"
+#include "ave.hpp"
 #include "../domestico.hpp"
 
 #include <string>
@@ -8,5 +8,5 @@
 
 using std::string;
 
-class ReptilDomestico : public Reptil, public Domestico {
+class AveExotica : public Ave, public Domestico {
 };

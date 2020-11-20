@@ -1,5 +1,6 @@
 #pragma once
 
+#include "reptil.hpp"
 #include "../nativo.hpp"
 
 #include <string>
@@ -7,20 +8,5 @@
 
 using std::string;
 
-enum Pele {
-    Escama,
-    Placa,
-    Carapaca
-};
-
-class Reptil : public Nativo {
-    public:
-        Reptil();
-        Reptil(Pele pele);
-        virtual ~Reptil();
-
-        Pele getPele() const;
-
-    protected:
-        Pele pele;
+class ReptilNativo : public Reptil, public Nativo {
 };
