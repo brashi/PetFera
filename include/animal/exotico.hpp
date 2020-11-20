@@ -1,0 +1,19 @@
+#pragma once
+
+#include "animal.hpp"
+
+#include <string>
+#include <iostream>
+
+using namespace std;
+class Exotico : public Animal {
+    public:
+        Exotico();
+        Exotico(string local);
+        virtual ~Exotico();
+
+        string getLocal() const;
+
+    protected:
+        string local;
+};

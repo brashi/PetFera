@@ -11,9 +11,9 @@ class Pessoa {
         Pessoa(string nome, string telefone, string email);
         virtual ~Pessoa();
 
-        int getNome()   const;
-        int getTelefone()   const;
-        int getEmail()  const;
+        string getNome() const;
+        string getTelefone() const;
+        string getEmail() const;
 
     protected:
         string nome;
