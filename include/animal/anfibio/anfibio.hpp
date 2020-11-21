@@ -7,7 +7,6 @@ using std::string;
 
 class Anfibio {
     public:
-        Anfibio();
         Anfibio(bool cauda, bool pata);
         virtual ~Anfibio();
 

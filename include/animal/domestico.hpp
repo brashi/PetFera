@@ -9,7 +9,6 @@ using std::string;
 
 class Domestico : public Animal {
     public:
-        Domestico();
         Domestico(bool adestrado);
         virtual ~Domestico();
 

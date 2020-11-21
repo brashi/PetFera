@@ -14,17 +14,17 @@ CXXFLAGS = -O0 -g -Wall -std=c++11
 #ATENÇÃO: Sub-Diretórios (DEVE SER IGUAL EM SRC E INCLUDE);
 DIRS = . funcionarios
 #Busca de arquivos .hpp e .cpp nos sub-diretórios.
-SUBSOURCES = $(foreach dir, $(DIRS), $(addprefix $(SRC)/, $(dir)))
-SUBINCLUDES = $(foreach dir, $(DIRS), $(addprefix $(INC)/, $(dir)))
+SRCpaths = $(foreach dir, $(DIRS), $(addprefix $(SRC)/, $(dir)))
+INCpaths = $(foreach dir, $(DIRS), $(addprefix $(INC)/, $(dir)))
 #subBINS = $(foreach dir, $(DIRS), $(addprefix $(BIN)/, $(dir)))
 
 #Declarando diretórios dos cabeçalhos para cada sub-diretório.
-INCLUDES = $(foreach dir, $(SUBINCLUDES), $(addprefix -I, $(dir)))
+INCLUDES = $(foreach dir, $(SRCpaths), $(addprefix -I, $(dir)))
 
 VPATH = $(SRC/..)
 
 #Busca arquivos ".cpp" em cada diretório dentro de SRC.
-SOURCES = $(foreach dir, $(SUBSOURCES), $(wildcard $(dir)/*.cpp))
+SOURCES = $(foreach dir, $(INCpaths), $(wildcard $(dir)/*.cpp))
 
 #Compilação principal
 all: $(PROG)

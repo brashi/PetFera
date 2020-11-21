@@ -7,7 +7,6 @@ using std::string;
 
 class Pessoa {
     public:
-        Pessoa();
         Pessoa(string nome, string telefone, string email);
         virtual ~Pessoa();
 

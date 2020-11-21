@@ -7,7 +7,6 @@ using std::string;
 
 class Mamifero {
     public:
-        Mamifero();
         Mamifero(bool gestacao);
         virtual ~Mamifero();
 

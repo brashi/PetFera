@@ -1,7 +1,5 @@
 #include "pessoa.hpp"
 
-Pessoa::Pessoa(){}
-
 Pessoa::Pessoa(string nome, string telefone, string email):
                 nome(nome), telefone(telefone),
                 email(email){}
