@@ -19,12 +19,12 @@ INCpaths = $(foreach dir, $(DIRS), $(addprefix $(INC)/, $(dir)))
 #subBINS = $(foreach dir, $(DIRS), $(addprefix $(BIN)/, $(dir)))
 
 #Declarando diretórios dos cabeçalhos para cada sub-diretório.
-INCLUDES = $(foreach dir, $(SRCpaths), $(addprefix -I, $(dir)))
+INCLUDES = $(foreach dir, $(INCpaths), $(addprefix -I, $(dir)))
 
 VPATH = $(SRC/..)
 
 #Busca arquivos ".cpp" em cada diretório dentro de SRC.
-SOURCES = $(foreach dir, $(INCpaths), $(wildcard $(dir)/*.cpp))
+SOURCES = $(foreach dir, $(SRCpaths), $(wildcard $(dir)/*.cpp))
 
 #Compilação principal
 all: $(PROG)
