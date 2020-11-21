@@ -17,3 +17,7 @@ string Pessoa::getTelefone() const {
 string Pessoa::getEmail() const {
     return this->email;
 }
+
+ostream& operator<< (ostream& o, Pessoa& pessoa) {
+    return pessoa.printOutDados(o);
+}

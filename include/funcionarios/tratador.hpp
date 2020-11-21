@@ -2,8 +2,6 @@
 
 #include "pessoa.hpp"
 
-using std::string;
-
 enum Uniforme {
     Verde,
     Azul,
@@ -17,6 +15,8 @@ class Tratador : public Pessoa {
 
         ~Tratador();
         Uniforme getUniforme() const;
+
+        ostream& printOutDados(ostream& o) const;
 
     private:
         Uniforme uniforme;

@@ -12,6 +12,8 @@ class Veterinario : public Pessoa {
         ~Veterinario();
         string getCRMV() const;
 
+        ostream& printOutDados(ostream& o) const;
+
     private:
         string CRMV;
 

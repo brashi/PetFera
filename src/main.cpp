@@ -17,9 +17,9 @@ int main() {
     Exotico *exot = new Exotico("BoB", "Penguin", *vet, *tratador, false, "Antartica");
 
 
-    cout << "Animal: " << exot->getNome() << " Especie: " << exot->getEspecie() << endl;
-    cout << "Vet e tratador: " << exot->getVeterinario().getNome() << " " << exot->getTratador().getNome() << endl;
-
+    //cout << "Animal: " << exot->getNome() << " Especie: " << exot->getEspecie() << endl;
+    cout << *vet;
+    cout << *tratador;
 
     return 0;
 }
