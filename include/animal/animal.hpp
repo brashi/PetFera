@@ -10,7 +10,8 @@ using std::string;
 
 class Animal {
     public:
-        Animal(string nome, string especie, Veterinario veterinario, Tratador tratador, bool perigoso);
+        Animal(string nome, string especie, Veterinario veterinario,
+            Tratador tratador, bool perigoso);
         virtual ~Animal();
 
         string getNome() const;

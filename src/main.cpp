@@ -1,14 +1,24 @@
 #include <iostream>
 #include "pessoa.hpp"
+#include "veterinario.hpp"
+
+#include "exotico.hpp"
+
+using namespace std;
 
 int main() {
 
-    std::cout << "Oi," << std::endl;
-    Pessoa *pepe = new Pessoa("Funcionario De testes", "(84) 9999-6666", "func1@petfera.com.br");
+    cout << "Oi," << endl;
+    Veterinario *vet = new Veterinario("Adelmar Sampaio", "(84) 9892-2224", "sampaio@petfera.com.br",
+                        "1212-44");
+    Tratador *tratador = new Tratador("Rodrigo Aveias", "(84) 9292-4832", "aveias@petfera.com.br",
+                                Verde);
 
-    std::cout << pepe->getNome() << std::endl;
-    std::cout << pepe->getTelefone() << std::endl;
-    std::cout << pepe->getEmail() << std::endl;
+    Exotico *exot = new Exotico("BoB", "Penguin", *vet, *tratador, false, "Antartica");
+
+
+    cout << "Animal: " << exot->getNome() << " Especie: " << exot->getEspecie() << endl;
+    cout << "Vet e tratador: " << exot->getVeterinario().getNome() << " " << exot->getTratador().getNome() << endl;
 
 
     return 0;

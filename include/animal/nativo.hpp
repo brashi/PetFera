@@ -9,7 +9,8 @@ using std::string;
 
 class Nativo : public Animal {
     public:
-        Nativo(string regiao);
+        Nativo(string nome, string especie, Veterinario veterinario,
+                Tratador tratador, bool perigoso, string regiao);
         virtual ~Nativo();
 
         string getRegiao() const;
