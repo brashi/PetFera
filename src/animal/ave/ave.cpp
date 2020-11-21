@@ -1,4 +1,4 @@
-#include "../../../include/animal/ave/ave.hpp"
+#include "ave.hpp"
 
 Ave::Ave(bool voa):
                 voa(voa){}

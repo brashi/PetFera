@@ -8,5 +8,11 @@
 
 using std::string;
 
-class AveExotica : public Ave, public Domestico {
+class AveDomestica : public Ave, public Domestico {
+    public:
+        AveDomestica(string nome, string especie, Veterinario veterinario,
+                Tratador tratador, bool perigoso, bool adestrado, bool voa);
+
+        ~AveDomestica();
+
 };
