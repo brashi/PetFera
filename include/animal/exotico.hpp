@@ -9,6 +9,7 @@ using std::string;
 
 class Exotico : public Animal {
     public:
+        Exotico() {};
         Exotico(string nome, string especie, Veterinario veterinario,
                 Tratador tratador, bool perigoso, string local);
         virtual ~Exotico();

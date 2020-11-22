@@ -28,9 +28,14 @@ int main() {
     cout << *natv << endl;
 
     Domestico testedomestico = *domes;
-    Ave aveve = *domes;
     cout << testedomestico << endl;
-    cout << aveve.getVoa() << endl;
+
+    if( Ave* checar_ave = dynamic_cast< Ave* >(domes)) {
+        cout << "O animal é uma ave!" << endl;
+    }
+    if( Ave* checar_ave = dynamic_cast< Ave* >(natv)) {
+        cout << "O animal é uma ave!" << endl;
+    }
 
     return 0;
 }
