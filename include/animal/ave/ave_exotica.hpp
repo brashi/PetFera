@@ -14,4 +14,6 @@ class AveExotica : public Ave, public Exotico {
                 Tratador tratador, bool perigoso, string local, bool voa);
 
         ~AveExotica();
+
+        ostream& printOutDados(ostream& o) const;
 };

@@ -26,3 +26,7 @@ Tratador Animal::getTratador() const {
 bool Animal::getPerigoso() const {
     return this->perigoso;
 }
+
+ostream& operator<< (ostream& o, Animal& animal) {
+    return animal.printOutDados(o);
+}

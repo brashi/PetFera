@@ -15,4 +15,5 @@ class AveDomestica : public Ave, public Domestico {
 
         ~AveDomestica();
 
+        ostream& printOutDados(ostream& o) const;
 };

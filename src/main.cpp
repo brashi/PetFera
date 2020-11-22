@@ -4,6 +4,8 @@
 
 #include "exotico.hpp"
 #include "ave_exotica.hpp"
+#include "ave_nativa.hpp"
+#include "ave_domestica.hpp"
 
 using namespace std;
 
@@ -16,11 +18,15 @@ int main() {
                                 Vermelho);
 
     AveExotica *exot = new AveExotica("BoB", "Penguin", *vet, *tratador, false, "Antartica", true);
+    AveNativa *natv = new AveNativa("Bica", "Arara Azul", *vet, *tratador, false, "Floresta Amazonica", true);
+    AveDomestica *domes = new AveDomestica("Bina", "Calopsita", *vet, *tratador, false, true, true);
 
-
-    //cout << "Animal: " << exot->getNome() << " Especie: " << exot->getEspecie() << endl;
     cout << *vet;
     cout << *tratador;
+    cout << "Testando sobrecarga para animais... \n" << endl;
+    cout << *exot << endl;
+    cout << *natv << endl;
+    cout << *domes << endl;
 
     return 0;
 }

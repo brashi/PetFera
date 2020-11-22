@@ -14,4 +14,6 @@ class AveNativa : public Ave, public Nativo {
                 Tratador tratador, bool perigoso, string regiao, bool voa);
 
         ~AveNativa();
+
+        ostream& printOutDados(ostream& o) const;
 };

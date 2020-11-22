@@ -6,3 +6,9 @@ AveNativa::AveNativa(string nome, string especie, Veterinario veterinario, Trata
                 Ave(voa){}
 
 AveNativa::~AveNativa(){}
+
+ostream& AveNativa::printOutDados(ostream& o) const {
+    o << "Teste " << "Nativa" << endl;
+
+    return o; 
+}

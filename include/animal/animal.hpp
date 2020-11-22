@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../funcionarios/tratador.hpp"
-#include "../funcionarios/veterinario.hpp"
+#include "tratador.hpp"
+#include "veterinario.hpp"
 
 #include <string>
 #include <iostream>
@@ -20,6 +20,9 @@ class Animal {
         Tratador getTratador() const;
         bool getPerigoso() const;
 
+        virtual ostream& printOutDados(ostream& o) const = 0;
+ 
+        friend ostream& operator<< (ostream& o, Animal& animal);
     protected:
         string nome;
         string especie;
