@@ -6,9 +6,3 @@ MamiferoNativo::MamiferoNativo(string nome, string especie, Veterinario veterina
                 Mamifero(voa){}
 
 MamiferoNativo::~MamiferoNativo(){}
-
-ostream& MamiferoNativo::printOutDados(ostream& o) const {
-    o << "Teste " << "Nativo" << endl;
-
-    return o; 
-}

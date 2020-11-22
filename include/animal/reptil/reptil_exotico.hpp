@@ -14,6 +14,4 @@ class ReptilExotico : public Reptil, public Exotico {
                 Tratador tratador, bool perigoso, string local, Pele pele);
 
         ~ReptilExotico();
-
-        ostream& printOutDados(ostream& o) const;
 };

@@ -14,6 +14,4 @@ class ReptilNativo : public Reptil, public Nativo {
                 Tratador tratador, bool perigoso, string regiao, Pele pele);
 
         ~ReptilNativo();
-
-        ostream& printOutDados(ostream& o) const;
 };

@@ -18,25 +18,25 @@ int main() {
     Tratador *tratador = new Tratador("Rodrigo Aveias", "(84) 9292-4832", "aveias@petfera.com.br",
                                 Vermelho);
 
-    AveExotica *exot = new AveExotica("BoB", "Penguin", *vet, *tratador, false, "Antartica", true);
-    AveNativa *natv = new AveNativa("Bica", "Arara Azul", *vet, *tratador, false, "Floresta Amazonica", true);
+    // AveExotica *exot = new AveExotica("BoB", "Penguin", *vet, *tratador, false, "Antartica", true);
+    // AveNativa *natv = new AveNativa("Bica", "Arara Azul", *vet, *tratador, false, "Floresta Amazonica", true);
     AveDomestica *domes = new AveDomestica("Bina", "Calopsita", *vet, *tratador, false, true, true);
 
     cout << *vet;
     cout << *tratador;
     cout << "Testando sobrecarga para animais... \n" << endl;
-    cout << *exot << endl;
-    cout << *natv << endl;
+    // cout << *exot << endl;
+    // cout << *natv << endl;
 
     Domestico testedomestico = *domes;
     cout << testedomestico << endl;
 
-    if( Ave* checar_ave = dynamic_cast< Ave* >(domes)) {
-        cout << "O animal é uma ave!" << endl;
-    }
-    if( Ave* checar_ave = dynamic_cast< Ave* >(natv)) {
-        cout << "O animal é uma ave!" << endl;
-    }
+    // if( Ave* checar_ave = dynamic_cast< Ave* >(domes)) {
+    //     cout << "O animal é uma ave!" << endl;
+    // }
+    // if( Ave* checar_ave = dynamic_cast< Ave* >(natv)) {
+    //     cout << "O animal é uma ave!" << endl;
+    // }
     
     AnfibioDomestico *novo = new AnfibioDomestico("Pepe", "Sapo", *vet, *tratador, false, true, false, true);
 

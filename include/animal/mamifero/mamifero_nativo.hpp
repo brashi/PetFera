@@ -14,6 +14,4 @@ class MamiferoNativo : public Mamifero, public Nativo {
                 Tratador tratador, bool perigoso, string regiao, bool gestacao);
 
         ~MamiferoNativo();
-
-        ostream& printOutDados(ostream& o) const;
 };

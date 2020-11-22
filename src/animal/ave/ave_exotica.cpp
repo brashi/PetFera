@@ -6,9 +6,3 @@ AveExotica::AveExotica(string nome, string especie, Veterinario veterinario, Tra
                 Ave(voa){}
 
 AveExotica::~AveExotica(){}
-
-ostream& AveExotica::printOutDados(ostream& o) const {
-    o << "Teste " << "Exótica" << endl;
-
-    return o; 
-}

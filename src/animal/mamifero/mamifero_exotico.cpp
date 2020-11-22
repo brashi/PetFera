@@ -6,9 +6,3 @@ MamiferoExotico::MamiferoExotico(string nome, string especie, Veterinario veteri
                 Mamifero(gestacao){}
 
 MamiferoExotico::~MamiferoExotico(){}
-
-ostream& MamiferoExotico::printOutDados(ostream& o) const {
-    o << "Teste " << "Exótico" << endl;
-
-    return o; 
-}

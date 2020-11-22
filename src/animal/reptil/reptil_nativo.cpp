@@ -6,9 +6,3 @@ ReptilNativo::ReptilNativo(string nome, string especie, Veterinario veterinario,
                 Reptil(pele){}
 
 ReptilNativo::~ReptilNativo(){}
-
-ostream& ReptilNativo::printOutDados(ostream& o) const {
-    o << "Teste " << "Nativo" << endl;
-
-    return o; 
-}

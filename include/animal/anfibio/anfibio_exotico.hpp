@@ -14,6 +14,4 @@ class AnfibioExotico : public Anfibio, public Exotico {
                 Tratador tratador, bool perigoso, string local, bool cauda, bool pata);
 
         ~AnfibioExotico();
-
-        ostream& printOutDados(ostream& o) const;
 };

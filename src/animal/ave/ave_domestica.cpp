@@ -6,9 +6,3 @@ AveDomestica::AveDomestica(string nome, string especie, Veterinario veterinario,
                 Ave(voa){}
 
 AveDomestica::~AveDomestica(){}
-
-ostream& AveDomestica::printOutDados(ostream& o) const {
-    o << "Teste " << "Doméstico" << endl;
-
-    return o; 
-}

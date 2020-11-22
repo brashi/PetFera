@@ -14,6 +14,4 @@ class ReptilDomestico : public Reptil, public Domestico {
                 Tratador tratador, bool perigoso, bool adestrado, Pele pele);
 
         ~ReptilDomestico();
-
-        ostream& printOutDados(ostream& o) const;
 };

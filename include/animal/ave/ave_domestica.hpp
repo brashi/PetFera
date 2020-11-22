@@ -15,6 +15,4 @@ class AveDomestica : public Ave, public Domestico {
                 Tratador tratador, bool perigoso, bool adestrado, bool voa);
 
         ~AveDomestica();
-
-        ostream& printOutDados(ostream& o) const;
 };

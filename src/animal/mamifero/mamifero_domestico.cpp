@@ -6,9 +6,3 @@ MamiferoDomestico::MamiferoDomestico(string nome, string especie, Veterinario ve
                 Mamifero(gestacao){}
 
 MamiferoDomestico::~MamiferoDomestico(){}
-
-ostream& MamiferoDomestico::printOutDados(ostream& o) const {
-    o << "Teste " << "Doméstico" << endl;
-
-    return o; 
-}

@@ -14,6 +14,4 @@ class MamiferoDomestico : public Mamifero, public Domestico {
                 Tratador tratador, bool perigoso, bool adestrado, bool gestacao);
 
         ~MamiferoDomestico();
-
-        ostream& printOutDados(ostream& o) const;
 };

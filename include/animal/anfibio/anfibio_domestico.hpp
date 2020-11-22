@@ -14,6 +14,4 @@ class AnfibioDomestico : public Anfibio, public Domestico {
                 Tratador tratador, bool perigoso, bool adestrado, bool cauda, bool pata);
 
         ~AnfibioDomestico();
-
-        ostream& printOutDados(ostream& o) const;
 };

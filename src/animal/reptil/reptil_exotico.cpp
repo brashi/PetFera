@@ -6,9 +6,3 @@ ReptilExotico::ReptilExotico(string nome, string especie, Veterinario veterinari
                 Reptil(pele){}
 
 ReptilExotico::~ReptilExotico(){}
-
-ostream& ReptilExotico::printOutDados(ostream& o) const {
-    o << "Teste " << "Exótico" << endl;
-
-    return o; 
-}

@@ -6,9 +6,3 @@ ReptilDomestico::ReptilDomestico(string nome, string especie, Veterinario veteri
                 Reptil(pele){}
 
 ReptilDomestico::~ReptilDomestico(){}
-
-ostream& ReptilDomestico::printOutDados(ostream& o) const {
-    o << "Teste " << "Doméstico" << endl;
-
-    return o; 
-}

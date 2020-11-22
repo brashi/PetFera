@@ -6,9 +6,3 @@ AnfibioNativo::AnfibioNativo(string nome, string especie, Veterinario veterinari
                 Anfibio(cauda, pata){}
 
 AnfibioNativo::~AnfibioNativo(){}
-
-ostream& AnfibioNativo::printOutDados(ostream& o) const {
-    o << "Teste " << "Nativo" << endl;
-
-    return o; 
-}

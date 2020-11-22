@@ -6,9 +6,3 @@ AnfibioDomestico::AnfibioDomestico(string nome, string especie, Veterinario vete
                 Anfibio(cauda, pata){}
 
 AnfibioDomestico::~AnfibioDomestico(){}
-
-ostream& AnfibioDomestico::printOutDados(ostream& o) const {
-    o << "Teste " << "Doméstico" << endl;
-
-    return o; 
-}

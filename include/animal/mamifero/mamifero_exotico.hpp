@@ -14,6 +14,4 @@ class MamiferoExotico : public Mamifero, public Exotico {
                 Tratador tratador, bool perigoso, string local, bool gestacao);
 
         ~MamiferoExotico();
-
-        ostream& printOutDados(ostream& o) const;
 };
