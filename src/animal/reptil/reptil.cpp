@@ -1,4 +1,4 @@
-#include "../../../include/animal/reptil/reptil.hpp"
+#include "reptil.hpp"
 
 Reptil::Reptil(Pele pele):
                 pele(pele){}

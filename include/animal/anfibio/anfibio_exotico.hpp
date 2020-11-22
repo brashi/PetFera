@@ -8,5 +8,12 @@
 
 using std::string;
 
-class Anfibio : public Anfibio, public Exotico {
+class AnfibioExotico : public Anfibio, public Exotico {
+    public:
+        AnfibioExotico(string nome, string especie, Veterinario veterinario,
+                Tratador tratador, bool perigoso, string local, bool cauda, bool pata);
+
+        ~AnfibioExotico();
+
+        ostream& printOutDados(ostream& o) const;
 };

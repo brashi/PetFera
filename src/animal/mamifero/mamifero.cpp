@@ -1,4 +1,4 @@
-#include "../../../include/animal/mamifero/mamifero.hpp"
+#include "mamifero.hpp"
 
 Mamifero::Mamifero(bool gestacao):
                 gestacao(gestacao){}

@@ -1,4 +1,4 @@
-#include "../../../include/animal/anfibio/anfibio.hpp"
+#include "anfibio.hpp"
 
 Anfibio::Anfibio(bool cauda, bool pata):
                 cauda(cauda), pata(pata){}
