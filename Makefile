@@ -43,11 +43,18 @@ $(PROG): $(SOURCES:.cpp=.o)
 -include $(SOURCES:.cpp=.d)
 
 %.d: %.cpp
+	@echo Preparando arquivo de dependência: $@
 	@$(CXX) $< -MM -MT '$*.o $*.d' -o $*.d $(INCLUDES)
+
+#Tarefa para limpeza de arquivos mantendo as dependências...
+remake:
+	@-rm -f $(PROG)
+	@find . -name "*.o" -type f -delete
+	@echo Limpando Arquivos da compilação...
 
 #Tarefa para limpeza de arquivos...
 clean:
 	@-rm -f *.d $(PROG)
 	@find . -name "*.o" -type f -delete
 	@find . -name "*.d" -type f -delete
-	@echo Limpando Arquivos da compilação...
+	@echo Limpando Arquivos da compilação e dependência...
