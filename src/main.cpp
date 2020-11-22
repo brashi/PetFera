@@ -6,6 +6,7 @@
 #include "ave_exotica.hpp"
 #include "ave_nativa.hpp"
 #include "ave_domestica.hpp"
+#include "anfibio_domestico.hpp"
 
 using namespace std;
 
@@ -36,6 +37,15 @@ int main() {
     if( Ave* checar_ave = dynamic_cast< Ave* >(natv)) {
         cout << "O animal é uma ave!" << endl;
     }
+    
+    AnfibioDomestico *novo = new AnfibioDomestico("Pepe", "Sapo", *vet, *tratador, false, true, false, true);
+
+    if( Ave* checar_ave = dynamic_cast< Ave* >(novo)) {
+        cout << "O animal é uma ave!" << endl;
+    } else {
+        cout << "Não é uma ave" << endl;
+    }
+    
 
     return 0;
 }
