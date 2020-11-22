@@ -28,8 +28,6 @@ int main() {
     // cout << *exot << endl;
     // cout << *natv << endl;
 
-    Domestico testedomestico = *domes;
-    cout << testedomestico << endl;
 
     // if( Ave* checar_ave = dynamic_cast< Ave* >(domes)) {
     //     cout << "O animal é uma ave!" << endl;
@@ -40,11 +38,14 @@ int main() {
     
     AnfibioDomestico *novo = new AnfibioDomestico("Pepe", "Sapo", *vet, *tratador, false, true, false, true);
 
-    if( Ave* checar_ave = dynamic_cast< Ave* >(novo)) {
+    cout << *domes;
+    cout << *novo;
+
+    /*if( Ave* checar_ave = dynamic_cast< Ave* >(novo)) {
         cout << "O animal é uma ave!" << endl;
     } else {
         cout << "Não é uma ave" << endl;
-    }
+    } */
     
 
     return 0;

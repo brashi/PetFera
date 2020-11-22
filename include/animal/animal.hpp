@@ -21,7 +21,7 @@ class Animal {
         Tratador getTratador() const;
         bool getPerigoso() const;
 
-        virtual ostream& printOutDados(ostream& o) const = 0;
+        ostream& printOutDados(ostream& o, Animal* animal) const;
  
         friend ostream& operator<< (ostream& o, Animal& animal);
     protected:

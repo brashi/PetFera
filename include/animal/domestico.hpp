@@ -15,9 +15,6 @@ class Domestico : public Animal {
         virtual ~Domestico();
 
         bool getAdestrado() const;
-
-        ostream& printOutDados(ostream& o) const;
-
     protected:
         bool adestrado;
 };

@@ -10,10 +10,3 @@ Domestico::~Domestico(){}
 bool Domestico::getAdestrado() const {
     return this->adestrado;
 }
-
-ostream& Domestico::printOutDados(ostream& o) const {
-    o << "Teste de animal DOMESTICO de base" << endl;
-    o << this->getNome() << " " << this->getEspecie() << endl;
-
-    return o;
-}
