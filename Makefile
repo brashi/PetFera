@@ -12,7 +12,8 @@ CXX = g++
 CXXFLAGS = -O0 -g -Wall -std=c++11
 
 #ATENÇÃO: Sub-Diretórios (DEVE SER IGUAL EM SRC E INCLUDE);
-DIRS = . funcionarios animal animal/ave
+DIRS = . funcionarios animal animal/ave animal/mamifero animal/reptil animal/anfibio
+
 #Busca de arquivos .hpp e .cpp nos sub-diretórios.
 SRCpaths = $(foreach dir, $(DIRS), $(addprefix $(SRC)/, $(dir)))
 INCpaths = $(foreach dir, $(DIRS), $(addprefix $(INC)/, $(dir)))
