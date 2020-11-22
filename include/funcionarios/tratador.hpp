@@ -10,6 +10,7 @@ enum Uniforme {
 
 class Tratador : public Pessoa {
     public:
+        Tratador() {};
         Tratador(string nome, string telefone, string email,
                 Uniforme uniforme);
 

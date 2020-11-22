@@ -7,6 +7,7 @@ using std::string;
 
 class Ave {
     public:
+        Ave() {};
         Ave(bool voa);
         virtual ~Ave();
 

@@ -4,6 +4,7 @@
 
 class Veterinario : public Pessoa {
     public:
+        Veterinario() {};
         Veterinario(string nome, string telefone, string email,
                 string CRMV);
 

@@ -26,7 +26,11 @@ int main() {
     cout << "Testando sobrecarga para animais... \n" << endl;
     cout << *exot << endl;
     cout << *natv << endl;
-    cout << *domes << endl;
+
+    Domestico testedomestico = *domes;
+    Ave aveve = *domes;
+    cout << testedomestico << endl;
+    cout << aveve.getVoa() << endl;
 
     return 0;
 }
