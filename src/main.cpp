@@ -46,6 +46,13 @@ int main() {
     } else {
         cout << "Não é uma ave" << endl;
     } */
+
+    Tratador *outro = new Tratador("Adelmar Sampaio", "(84) 9892-2224", "sampaio@petfera.com.br",
+                        Verde);
+    if( (*vet) == (*outro) )
+        cout << "sao iguais" << endl;
+    else
+        cout << "nao sao iguais" << endl;
     
 
     return 0;

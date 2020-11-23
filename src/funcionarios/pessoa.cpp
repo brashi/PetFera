@@ -18,6 +18,10 @@ string Pessoa::getEmail() const {
     return this->email;
 }
 
+bool Pessoa::operator==(const Pessoa& outro) const {
+	return ( this->nome == outro.getNome() );
+}
+
 ostream& operator<< (ostream& o, Pessoa& pessoa) {
     return pessoa.printOutDados(o);
 }
