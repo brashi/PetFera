@@ -1,21 +1,38 @@
 #pragma once
 
+#include "animal.hpp"
+#include "veterinario.hpp"
+#include "tratador.hpp"
+
+#include <vector>
 #include <string>
 #include <iostream>
 
+using std::vector;
+
 class Petshop {
     public:
-        void criarVeterinario() const;
-        void criarTratador() const;
-        void criarAnimal() const;
-        void getAnimais() const;
-        void getAnimaisDeVeterinario() const;
-        void getVeterinarios() const;
-        void getTratadores() const;
-        void atualizarVeterinario() const;
-        void atualizarTratador() const;
-        void atualizarAnimal() const;
-        void excluirVeterinario() const;
-        void excluirTratador() const;
-        void excluirAnimal() const;
+        Petshop() {};
+        ~Petshop();
+
+        vector<Animal*> getAnimais() const;
+        vector<Veterinario*> getVeterinarios() const;
+        vector<Tratador*> getTratadores() const;
+
+        bool criarVeterinario();
+        bool criarTratador();
+        bool criarAnimal();
+
+        void atualizarVeterinario();
+        void atualizarTratador();
+        void atualizarAnimal();
+
+        void excluirVeterinario();
+        void excluirTratador();
+        void excluirAnimal();
+    
+    private:
+        vector<Veterinario*> veterinarios;
+        vector<Tratador*> tratador;
+        vector<Animal*> animais;
 };

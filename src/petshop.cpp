@@ -1,57 +1,57 @@
+//Classes associadas
 #include "petshop.hpp"
+#include "animal.hpp"
+#include "tratador.hpp"
+#include "veterinario.hpp"
 
-// definir o que vai ter no petshop
-/* creio que ("void" placeholder, esse comentário é para ser removido para implementação correta):
-    • [void] criarVeterinario
-    • [void] criarTratador
-    • [void] criarAnimal
-    • [void] getAnimais
-    • [void] getAnimaisDeVeterinario
-    • [void] getVeterinarios
-    • [void] getTratadores
-    • [void] atualizarVeterinario (um recadastro de algum veterinário informado)
-    • [void] atualizarTratador (um recadastro de algum tratador informado)
-    • [void] atualizarAnimal (um recadastro de algum animal informado)a
-    • [void] excluirVeterinario
-    • [void] excluirTratador
-    • [void] excluirAnimal
-*/
+#include <iomanip>
+#include <iostream>
 
-void Petshop::criarVeterinario() const {
+Petshop::Petshop() {}
+Petshop::~Petshop() {}
+
+// Criação
+bool Petshop::criarVeterinario() {
+
 }
 
-void Petshop::criarTratador() const {
+bool Petshop::criarTratador() {
+
 }
 
-void Petshop::criarAnimal() const {
+bool Petshop::criarAnimal() {
+
 }
 
-void Petshop::getAnimais() const {
+// Leitura
+vector<Animal*> Petshop::getAnimais() const {
 }
 
-void Petshop::getAnimaisDeVeterinario() const {
+vector<Veterinario*> Petshop::getVeterinarios() const {
 }
 
-void Petshop::getVeterinarios() const {
+vector<Tratador*> Petshop::getTratadores() const {
 }
 
-void Petshop::getTratadores() const {
+// Atualização
+void Petshop::atualizarVeterinario() {
+
 }
 
-void Petshop::atualizarVeterinario() const {
+void Petshop::atualizarTratador() {
+
 }
 
-void Petshop::atualizarTratador() const {
+void Petshop::atualizarAnimal() {
+    
 }
 
-void Petshop::atualizarAnimal() const {
+// Remoção
+void Petshop::excluirVeterinario() {
 }
 
-void Petshop::excluirVeterinario() const {
+void Petshop::excluirTratador() {
 }
 
-void Petshop::excluirTratador() const {
-}
-
-void Petshop::excluirAnimal() const {
+void Petshop::excluirAnimal() {
 }
