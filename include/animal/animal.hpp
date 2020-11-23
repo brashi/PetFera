@@ -21,6 +21,8 @@ class Animal {
         Tratador getTratador() const;
         bool getPerigoso() const;
 
+        string getClassificacao(Animal* animal) const;
+        string getClasse(Animal* animal) const;
         ostream& printOutDados(ostream& o, Animal* animal) const;
  
         friend ostream& operator<< (ostream& o, Animal& animal);
