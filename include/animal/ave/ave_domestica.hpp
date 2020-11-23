@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ave.hpp"
-#include "../domestico.hpp"
+#include "domestico.hpp"
 
 #include <string>
 #include <iostream>

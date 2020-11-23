@@ -1,7 +1,7 @@
 #pragma once
 
 #include "reptil.hpp"
-#include "../exotico.hpp"
+#include "exotico.hpp"
 
 #include <string>
 #include <iostream>

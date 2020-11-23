@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ave.hpp"
-#include "../nativo.hpp"
+#include "nativo.hpp"
 
 #include <string>
 #include <iostream>

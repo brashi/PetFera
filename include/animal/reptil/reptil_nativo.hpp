@@ -1,7 +1,7 @@
 #pragma once
 
 #include "reptil.hpp"
-#include "../nativo.hpp"
+#include "nativo.hpp"
 
 #include <string>
 #include <iostream>

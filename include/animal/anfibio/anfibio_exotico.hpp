@@ -1,7 +1,7 @@
 #pragma once
 
 #include "anfibio.hpp"
-#include "../exotico.hpp"
+#include "exotico.hpp"
 
 #include <string>
 #include <iostream>

@@ -61,5 +61,7 @@ int main() {
         cout << "animais iguais" << endl;
     else
         cout << "Animais diferentes" << endl;
+
+
     return 0;
 }
