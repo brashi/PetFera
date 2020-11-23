@@ -24,6 +24,8 @@ class Animal {
         string getClassificacao(Animal* animal) const;
         string getClasse(Animal* animal) const;
         ostream& printOutDados(ostream& o, Animal* animal) const;
+
+        bool operator==(const Animal& outro) const;
  
         friend ostream& operator<< (ostream& o, Animal& animal);
     protected:

@@ -87,6 +87,10 @@ ostream& Animal::printOutDados(ostream& o, Animal* animal) const {
     return o;
 }
 
+bool Animal::operator==(const Animal& outro) const {
+	return (this->nome == outro.getNome() &&
+            this->especie == outro.getEspecie());
+}
 ostream& operator<< (ostream& o, Animal& animal) {
     return animal.printOutDados(o, &animal);
 }

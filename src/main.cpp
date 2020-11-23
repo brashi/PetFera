@@ -54,6 +54,12 @@ int main() {
     else
         cout << "nao sao iguais" << endl;
     
+    AveDomestica *teste1 = new AveDomestica("Bina", "Calopsita", *vet, *tratador, false, true, true);
+    AnfibioDomestico *teste2 = new AnfibioDomestico("tete", "Calopsita", *vet, *tratador, false, true, true, false);
 
+    if (*teste1 == *teste2)
+        cout << "animais iguais" << endl;
+    else
+        cout << "Animais diferentes" << endl;
     return 0;
 }
