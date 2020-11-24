@@ -48,13 +48,16 @@ bool Petshop::adicionarAnimal(Animal* animalAdd) {
 
 // Criação
 void Petshop::criarVeterinario() {
+    Veterinario *vet = new Veterinario("placeholder", "placeholder", "Placeholder", "placeholder");
+    this->adicionarVeterinario(vet);
 }
 
 void Petshop::criarTratador() {
-
+    Tratador *trt = new Tratador("placeholder", "placeholder", "Placeholder", Azul);
+    this->adicionarTratador(trt);
 }
 
-void Petshop::criarAnimal() {
+void Petshop::criarAnimal() { //FAZER EXCECAO CASO NAO TENHA VET, OU TRATADOR.
     string nome, especie;
     Veterinario vet;
     Tratador trata;
@@ -72,9 +75,21 @@ void Petshop::criarAnimal() {
     cout << "Especie: ";
     cin >> especie;
     
-    //Depois eu listo os veterinarios e escolho...
-    vet = *this->veterinarios[0];
-    trata = *this->tratadores[0];
+    cout << "Digite o número do veterinario responsável: " << endl << endl;
+    this->listarVeterinarios();
+    cout << endl;
+    int num;
+    cin >> num;
+
+    vet = *this->veterinarios[num];
+
+    cout << "Digite o número do tratador responsável: " << endl << endl;
+    this->listarVeterinarios();
+    cout << endl;
+    num;
+    cin >> num;
+
+    trata = *this->tratadores[num];
 
     cout << "É perigoso ? \t S/N : ";
     cin >> opcao;
@@ -145,7 +160,6 @@ void Petshop::criarAnimal() {
     } else {
         cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
     }
-
 }
 
 // Leitura
@@ -168,7 +182,31 @@ void Petshop::atualizarTratador() {
 }
 
 void Petshop::atualizarAnimal() {
-    
+    string nome;
+    string especie;
+
+    cout << "Qual o nome do animal ?" << endl;
+    cin >> nome;
+    cout << "E sua espécie?" << endl;
+    cin >> especie;
+
+    Animal* atualizar = findAnimal(nome, especie);
+    if(atualizar != nullptr) {
+        //SO mudando a especie, por enquanto só testando...
+        cout << "nova especie: ";
+        cin >> especie;
+
+        Animal* novo = new Animal(atualizar->getNome(), especie, atualizar->getVeterinario(),
+                                atualizar->getTratador(), atualizar->getPerigoso());
+        
+        this->excluirAnimal(atualizar);
+        delete atualizar;
+        this->adicionarAnimal(novo);
+
+        cout << "Animal atualizado com sucesso" << endl;
+    } else {
+        cout << "O animal não se apresenta nos registros" << endl;
+    }
 }
 
 // Remoção
@@ -335,7 +373,6 @@ Tratador* Petshop::findTratador(string nome) {
         }
     }
     return nullptr;
-    
 }
 
 Animal* Petshop::findAnimal(string nome, string especie) {
@@ -345,26 +382,69 @@ Animal* Petshop::findAnimal(string nome, string especie) {
         }
     }
     return nullptr;
-    
 }
 
 void Petshop::listarTratadores() {
-    for(auto& trt : this->tratadores)
-        cout << *trt;
+    int index = 0;
+    for(auto& trt : this->tratadores) {
+        cout << index << " - " << *trt;
+        index++;
+    }
 }
 
 void Petshop::listarVeterinarios() {
-    for(auto& vet : this->veterinarios)
-        cout << *vet;
+    int index = 0;
+    for(auto& vet : this->veterinarios) {
+        cout << index << " - " << *vet;
+        index++;
+    }
 }
 
 void Petshop::listarAnimais() {
-    cout << "SO AVES HAHAHA" << endl << endl;
+    cout << "Escolha seu filtro: " << endl << endl;
+    cout << "T - Todos (sem filtro)" << endl;
+    cout << "A - Apenas aves" << endl;
+    cout << "F - Apenas anfibios" << endl;
+    cout << "R - Apenas repteis" << endl;
+    cout << "M - Apenas mamiferos" << endl;
+    char filtro;
+    cin >> filtro;
 
-    for(auto& animal : this->animais) {
-        if( Ave* checar_ave = dynamic_cast< Ave* >(animal))
+    switch(toupper(filtro)) {
+        case 'A' :
+        for(auto& animal : this->animais) {
+            if( Ave* checar_ave = dynamic_cast< Ave* >(animal))
+                cout << *animal;
+        }
+        break;
+
+        case 'F' :
+        for(auto& animal : this->animais) {
+            if( Anfibio* checar_anfibio = dynamic_cast< Anfibio* >(animal))
+                cout << *animal;
+        }
+        break;
+
+        case 'R' :
+        for(auto& animal : this->animais) {
+            if( Reptil* checar_ave = dynamic_cast< Reptil* >(animal))
+                cout << *animal;
+        }
+        break;
+
+        case 'M' :
+        for(auto& animal : this->animais) {
+            if( Mamifero* checar_ave = dynamic_cast< Mamifero* >(animal))
+                cout << *animal;
+        }
+        break;
+
+        case 'T' :
+        for(auto& animal : this->animais) {
             cout << *animal;
+        }
+        break;
     }
 
-    cout << "LISTAGEM COMPLETA !" << endl << endl;
+    cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl << endl;
 }
