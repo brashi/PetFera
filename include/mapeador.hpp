@@ -1,5 +1,7 @@
 #include "animal.hpp"
 
+#include "petshop.hpp"
+
 #include "ave_domestica.hpp"
 #include "ave_nativa.hpp"
 #include "ave_exotica.hpp"
@@ -48,11 +50,11 @@ typedef struct DadosAnimal {
 class MapeadorAnimal {
     public:
         MapeadorAnimal();
-        std::map<string, std::function<Animal* (DadosAnimal dados)>> sMap;
+        std::map<string, std::function<Animal* (DadosAnimal dados)>> aMap;
 };
 
 class MapeadorMenu {
     public:
         MapeadorMenu();
-        std::map<char, std::function<bool()>> escolhas;
+        std::map<char, std::function<bool (Petshop* petshop)>> escolhas;
 };

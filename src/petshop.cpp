@@ -7,7 +7,6 @@
 #include "ave_domestica.hpp"
 #include "ave_nativa.hpp"
 
-
 #include <map>
 #include <functional>
 #include <iomanip>
@@ -101,7 +100,7 @@ void Petshop::criarAnimal() {
 
     //Animal* animalCriado = mapa.sMap["aveD"](dadosNovoAnimal);
 
-    this->animais.push_back(mapa.sMap["aveD"](dadosNovoAnimal));
+    this->animais.push_back(mapa.aMap["aveD"](dadosNovoAnimal));
 }
 
 // Leitura

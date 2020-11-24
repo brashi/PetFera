@@ -1,10 +1,8 @@
-#include <functional>
 #include <iostream> 
 #include <iterator>
-#include <string>
-#include <map>
 
 #include "mapeador.hpp"
+#include "petshop.hpp"
 
 using namespace std;
 using std::cout;
@@ -12,7 +10,20 @@ using std::cin;
 using std::endl;
 
 void imprimirMenu() {
-    cout << "Menu teste!" << endl;
+    cout << "/\u2588\u2588\u2588\u2588\u2588\u2588\u2588  /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588    /\u2588\u2588\u2588\u2588\u2588\u2588 " << endl;
+    cout << "| \u2588\u2588__  \u2588\u2588| \u2588\u2588_____/|__  \u2588\u2588__/| \u2588\u2588_____/| \u2588\u2588_____/| \u2588\u2588__  \u2588\u2588 /\u2588\u2588__  \u2588\u2588" << endl;
+    cout << "| \u2588\u2588  \\ \u2588\u2588| \u2588\u2588         | \u2588\u2588   | \u2588\u2588      | \u2588\u2588      | \u2588\u2588  \\ \u2588\u2588| \u2588\u2588  \\ \u2588\u2588" << endl;
+    cout << "| \u2588\u2588\u2588\u2588\u2588\u2588\u2588/| \u2588\u2588\u2588\u2588\u2588      | \u2588\u2588   | \u2588\u2588\u2588\u2588\u2588   | \u2588\u2588\u2588\u2588\u2588   | \u2588\u2588\u2588\u2588\u2588\u2588\u2588/| \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588" << endl;
+    cout << "| \u2588\u2588____/ | \u2588\u2588__/      | \u2588\u2588   | \u2588\u2588__/   | \u2588\u2588__/   | \u2588\u2588__  \u2588\u2588| \u2588\u2588__  \u2588\u2588" << endl;
+    cout << "| \u2588\u2588      | \u2588\u2588         | \u2588\u2588   | \u2588\u2588      | \u2588\u2588      | \u2588\u2588  \\ \u2588\u2588| \u2588\u2588  | \u2588\u2588" << endl;
+    cout << "| \u2588\u2588      | \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | \u2588\u2588   | \u2588\u2588      | \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| \u2588\u2588  | \u2588\u2588| \u2588\u2588  | \u2588\u2588" << endl;
+    cout << "|__/      |________/   |__/   |__/      |________/|__/  |__/|__/  |__/" << endl;
+    cout << "======================================================================" << endl;
+    cout << "A - Listar animais                                      [ X - Fechar ]" << endl;
+    cout << "B - Adicionar animal" << endl;
+    cout << "C - Atualizar animal" << endl;
+    cout << "D - Remover animal" << endl;
+    cout << "======================================================================" << endl;
 }
 
 void limparTela() {
@@ -31,6 +42,7 @@ void pausar() {
 }
 
 void menu() {
+    Petshop *petshop = new Petshop();
     MapeadorMenu *mapeador = new MapeadorMenu();
     bool executando = true;
     char opcao;
@@ -42,9 +54,20 @@ void menu() {
         cin >> opcao;
         limparTela();
 
-        executando = mapeador->escolhas[toupper(opcao)]();
+        try {
+            executando = mapeador->escolhas[toupper(opcao)](petshop);
+        }
+        catch (const std::bad_function_call&) {
+            cout << "Informe uma opção válida para realizar uma ação" << endl;
+        }
+        catch (...) {
+            cout << "Algo de errado ocorreu, tente novamente" << endl;
+        }
+
         pausar();
     }
+    
+    delete petshop;
 }
 
 int main() {
