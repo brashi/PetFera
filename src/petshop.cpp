@@ -55,14 +55,16 @@ void Petshop::criarTratador() {
 }
 
 void Petshop::criarAnimal() {
-    string nome;
-    string especie;
+    string nome, especie;
     Veterinario vet;
     Tratador trata;
     string regiao, local, gestacao;
     bool cauda, pata, perigo;
     Pele pele;
     char opcao;
+    string classe;
+    string categoria;
+    string animalControle;
 
 
     cout << "Nome do animal: ";
@@ -82,6 +84,44 @@ void Petshop::criarAnimal() {
         perigo = false;
     }
 
+    cout << "O animal pertence a que classe?..." << endl;
+    cout << "A - ave" << endl;
+    cout << "F - anfibio" << endl;
+    cout << "R - reptil" << endl;
+    cout << "M - mamifero" << endl;
+    cin >> opcao;
+
+    switch(toupper(opcao)) {
+        case 'A': classe = "ave";
+        break;
+
+        case 'F': classe = "anf";
+        break;
+
+        case 'R': classe = "rep";
+        break;
+
+        case 'M': classe = "mam";
+        break;
+    }
+
+    cout << "A que categoria o animal pertence?..." << endl;
+    cout << "D - domestico" << endl;
+    cout << "E - exotico" << endl;
+    cout << "N - nativo" << endl;
+    cin >> opcao;
+
+    switch(opcao) {
+        case 'D': categoria = "D";
+        break;
+
+        case 'E' : categoria = "E";
+        break;
+
+        case 'N' : categoria = "N";
+        break;
+    }
+
     DadosAnimal dadosNovoAnimal = (DadosAnimal) {
         .nome = nome,
         .especie = especie,
@@ -98,9 +138,16 @@ void Petshop::criarAnimal() {
         .pele = pele,
     };
 
-    //Animal* animalCriado = mapa.sMap["aveD"](dadosNovoAnimal);
-
+    animalControle = classe + categoria;
+    
     this->animais.push_back(mapa.aMap["aveD"](dadosNovoAnimal));
+    
+    if(this->adicionarAnimal(mapa.aMap[animalControle](dadosNovoAnimal))) {
+        cout << "Animal adicionado ao cadastro." << endl;
+    } else {
+        cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
+    }
+
 }
 
 // Leitura

@@ -11,8 +11,6 @@
 #include <map>
 #include <functional>
 
-#include "ave_domestica.hpp"
-
 using std::vector;
 
 class Petshop {
@@ -55,5 +53,4 @@ class Petshop {
         vector<Animal*> animais;
 
         MapeadorAnimal mapa;
-
 };
