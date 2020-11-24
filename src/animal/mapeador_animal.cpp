@@ -1,5 +1,34 @@
 #include "mapeador_animal.hpp"
 
+
+FiltroAnimal::FiltroAnimal() {
+    filtro['A'] = [](Animal* animal) {
+        Ave* checar = dynamic_cast<Ave*>(animal);
+        return dynamic_cast<Animal*>(checar);
+    };
+
+    filtro['F'] = [](Animal* animal) {
+        Anfibio* checar = dynamic_cast<Anfibio*>(animal);
+        return dynamic_cast<Animal*>(checar);
+    };
+
+    filtro['R'] = [](Animal* animal) {
+        Reptil* checar = dynamic_cast<Reptil*>(animal);
+        return dynamic_cast<Animal*>(checar);
+    };
+
+    filtro['M'] = [](Animal* animal) {
+        Mamifero* checar = dynamic_cast<Mamifero*>(animal);
+        return dynamic_cast<Animal*>(checar);
+    };
+
+    filtro['T'] = [](Animal* animal) {
+        //Mamifero* checar = dynamic_cast<Mamifero*>(animal);
+        return animal;
+    };
+}
+
+
 MapeadorAnimal::MapeadorAnimal() {
     aMap["aveD"] = [](DadosAnimal dados) { 
         return new AveDomestica(dados.nome, dados.especie, dados.veterinario, dados.tratador,

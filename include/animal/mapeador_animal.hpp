@@ -52,3 +52,10 @@ class MapeadorAnimal {
         MapeadorAnimal();
         std::map<string, std::function<Animal* (DadosAnimal dados)>> aMap;
 };
+
+class FiltroAnimal {
+    public:
+        FiltroAnimal();
+        std::map<char, std::function<Animal* (Animal* animal)>> filtro;
+
+};
