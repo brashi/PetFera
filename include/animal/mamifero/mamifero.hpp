@@ -7,11 +7,11 @@ using std::string;
 
 class Mamifero {
     public:
-        Mamifero(bool gestacao);
+        Mamifero(string gestacao);
         virtual ~Mamifero();
 
-        bool getGestacao() const;
+        string getGestacao() const;
 
     protected:
-        bool gestacao;
+        string gestacao;
 };

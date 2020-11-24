@@ -4,6 +4,12 @@
 #include "tratador.hpp"
 #include "veterinario.hpp"
 
+#include "ave_domestica.hpp"
+#include "ave_nativa.hpp"
+
+
+#include <map>
+#include <functional>
 #include <iomanip>
 #include <iostream>
 
@@ -42,15 +48,60 @@ bool Petshop::adicionarAnimal(Animal* animalAdd) {
 }
 
 // Criação
-bool Petshop::criarVeterinario() {
+void Petshop::criarVeterinario() {
 }
 
-bool Petshop::criarTratador() {
+void Petshop::criarTratador() {
 
 }
 
-bool Petshop::criarAnimal() {
+void Petshop::criarAnimal() {
+    string nome;
+    string especie;
+    Veterinario vet;
+    Tratador trata;
+    string regiao, local, gestacao;
+    bool cauda, pata, perigo;
+    Pele pele;
+    char opcao;
 
+
+    cout << "Nome do animal: ";
+    cin >> nome;
+    cout << "Especie: ";
+    cin >> especie;
+    
+    //Depois eu listo os veterinarios e escolho...
+    vet = *this->veterinarios[0];
+    trata = *this->tratadores[0];
+
+    cout << "É perigoso ? \t S/N : ";
+    cin >> opcao;
+    if(opcao == 'S' || opcao == 's') {
+        perigo = true;
+    } else {
+        perigo = false;
+    }
+
+    DadosAnimal dadosNovoAnimal = (DadosAnimal) {
+        .nome = nome,
+        .especie = especie,
+        .veterinario = vet,
+        .tratador = trata,
+        .perigoso = perigo,
+        .regiao = regiao,
+        .local = local,
+        .adestrado = true, //bote valor dps
+        .voa = true,
+        .cauda = cauda,
+        .pata = pata,
+        .gestacao = gestacao,
+        .pele = pele,
+    };
+
+    //Animal* animalCriado = mapa.sMap["aveD"](dadosNovoAnimal);
+
+    this->animais.push_back(mapa.sMap["aveD"](dadosNovoAnimal));
 }
 
 // Leitura
@@ -251,4 +302,15 @@ Animal* Petshop::findAnimal(string nome, string especie) {
     }
     return nullptr;
     
+}
+
+void Petshop::listarAnimais() {
+    cout << "SO AVES HAHAHA" << endl << endl;
+
+    for(auto& animal : this->animais) {
+        if( Ave* checar_ave = dynamic_cast< Ave* >(animal))
+            cout << *animal;
+    }
+
+    cout << "LISTAGEM COMPLETA !" << endl << endl;
 }

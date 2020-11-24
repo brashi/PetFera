@@ -8,6 +8,8 @@
 #include "ave_domestica.hpp"
 #include "anfibio_domestico.hpp"
 
+#include "petshop.hpp"
+
 using namespace std;
 
 int main() {
@@ -63,5 +65,13 @@ int main() {
         cout << "Animais diferentes" << endl;
 
 
+    Petshop* fera = new Petshop;
+
+    fera->adicionarTratador(tratador);
+    fera->adicionarVeterinario(vet);
+    fera->adicionarAnimal(teste1);
+    fera->adicionarAnimal(teste2);
+    fera->criarAnimal();
+    fera->listarAnimais();
     return 0;
 }

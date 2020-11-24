@@ -1,10 +1,10 @@
 #include "mamifero.hpp"
 
-Mamifero::Mamifero(bool gestacao):
+Mamifero::Mamifero(string gestacao):
                 gestacao(gestacao){}
 
 Mamifero::~Mamifero(){}
 
-bool Mamifero::getGestacao() const {
+string Mamifero::getGestacao() const {
     return this->gestacao;
 }

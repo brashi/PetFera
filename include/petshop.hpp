@@ -3,10 +3,15 @@
 #include "animal.hpp"
 #include "veterinario.hpp"
 #include "tratador.hpp"
+#include "dados_animal.hpp"
 
 #include <vector>
 #include <string>
 #include <iostream>
+#include <map>
+#include <functional>
+
+#include "ave_domestica.hpp"
 
 using std::vector;
 
@@ -18,10 +23,11 @@ class Petshop {
         vector<Animal*> getAnimais() const;
         vector<Veterinario*> getVeterinarios() const;
         vector<Tratador*> getTratadores() const;
+        void listarAnimais();
 
-        bool criarVeterinario();
-        bool criarTratador();
-        bool criarAnimal();
+        void criarVeterinario();
+        void criarTratador();
+        void criarAnimal();
 
         bool adicionarVeterinario(Veterinario* vetAdd);
         bool adicionarTratador(Tratador* tratAdd);
@@ -47,4 +53,7 @@ class Petshop {
         vector<Veterinario*> veterinarios;
         vector<Tratador*> tratadores;
         vector<Animal*> animais;
+
+        Mapeador mapa;
+
 };
