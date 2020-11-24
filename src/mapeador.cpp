@@ -1,7 +1,24 @@
-#include "dados_animal.hpp"
+#include "mapeador.hpp"
 
-Mapeador::Mapeador()
-{
+using std::cout;
+using std::cin;
+
+MapeadorMenu::MapeadorMenu() {
+    escolhas['A'] = []() {
+        cout << "TESTE 1" << endl;
+        return true;
+    };
+    escolhas['B'] = []() {
+        cout << "TESTE 2" << endl;
+        return true;
+    };
+    escolhas['X'] = []() {
+        cout << "Saindo do programa..." << endl;
+        return false;
+    };
+}
+
+MapeadorAnimal::MapeadorAnimal() {
     sMap["aveD"] = [](DadosAnimal dados) { 
         return new AveDomestica(dados.nome, dados.especie, dados.veterinario, dados.tratador,
                     dados.perigoso, dados.adestrado, dados.voa); 

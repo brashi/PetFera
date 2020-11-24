@@ -19,9 +19,9 @@
 #include "veterinario.hpp"
 #include "tratador.hpp"
 
+#include <functional>
 #include <string>
 #include <map>
-#include <functional>
 
 typedef struct DadosAnimal {
     //Animal
@@ -45,9 +45,14 @@ typedef struct DadosAnimal {
     
 } DadosAnimal;
 
-class Mapeador {
+class MapeadorAnimal {
     public:
-        Mapeador();
+        MapeadorAnimal();
         std::map<string, std::function<Animal* (DadosAnimal dados)>> sMap;
+};
 
+class MapeadorMenu {
+    public:
+        MapeadorMenu();
+        std::map<char, std::function<bool()>> escolhas;
 };

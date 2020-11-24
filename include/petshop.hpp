@@ -3,7 +3,7 @@
 #include "animal.hpp"
 #include "veterinario.hpp"
 #include "tratador.hpp"
-#include "dados_animal.hpp"
+#include "mapeador.hpp"
 
 #include <vector>
 #include <string>
@@ -54,6 +54,6 @@ class Petshop {
         vector<Tratador*> tratadores;
         vector<Animal*> animais;
 
-        Mapeador mapa;
+        MapeadorAnimal mapa;
 
 };
