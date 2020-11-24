@@ -1,6 +1,6 @@
-#include "animal.hpp"
+#pragma once
 
-#include "petshop.hpp"
+#include "animal.hpp"
 
 #include "ave_domestica.hpp"
 #include "ave_nativa.hpp"
@@ -51,10 +51,4 @@ class MapeadorAnimal {
     public:
         MapeadorAnimal();
         std::map<string, std::function<Animal* (DadosAnimal dados)>> aMap;
-};
-
-class MapeadorMenu {
-    public:
-        MapeadorMenu();
-        std::map<char, std::function<bool (Petshop* petshop)>> escolhas;
 };

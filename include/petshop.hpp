@@ -3,7 +3,7 @@
 #include "animal.hpp"
 #include "veterinario.hpp"
 #include "tratador.hpp"
-#include "mapeador.hpp"
+#include "mapeador_animal.hpp"
 
 #include <vector>
 #include <string>
@@ -21,7 +21,10 @@ class Petshop {
         vector<Animal*> getAnimais() const;
         vector<Veterinario*> getVeterinarios() const;
         vector<Tratador*> getTratadores() const;
+
         void listarAnimais();
+        void listarTratadores();
+        void listarVeterinarios();
 
         void criarVeterinario();
         void criarTratador();

@@ -140,8 +140,6 @@ void Petshop::criarAnimal() {
 
     animalControle = classe + categoria;
     
-    this->animais.push_back(mapa.aMap["aveD"](dadosNovoAnimal));
-    
     if(this->adicionarAnimal(mapa.aMap[animalControle](dadosNovoAnimal))) {
         cout << "Animal adicionado ao cadastro." << endl;
     } else {
@@ -348,6 +346,16 @@ Animal* Petshop::findAnimal(string nome, string especie) {
     }
     return nullptr;
     
+}
+
+void Petshop::listarTratadores() {
+    for(auto& trt : this->tratadores)
+        cout << *trt;
+}
+
+void Petshop::listarVeterinarios() {
+    for(auto& vet : this->veterinarios)
+        cout << *vet;
 }
 
 void Petshop::listarAnimais() {

@@ -1,30 +1,4 @@
-#include "mapeador.hpp"
-
-using std::cout;
-using std::cin;
-
-MapeadorMenu::MapeadorMenu() {
-    escolhas['A'] = [](Petshop* ps) {
-        ps->listarAnimais();
-        return true;
-    };
-    escolhas['B'] = [](Petshop* ps) {
-        ps->criarAnimal();
-        return true;
-    };
-    escolhas['C'] = [](Petshop* ps) {
-        ps->atualizarAnimal();
-        return true;
-    };
-    escolhas['D'] = [](Petshop* ps) {
-        ps->excluirAnimal();
-        return true;
-    };
-    escolhas['X'] = [](Petshop* ps) {
-        cout << "Saindo do programa..." << endl;
-        return false;
-    };
-}
+#include "mapeador_animal.hpp"
 
 MapeadorAnimal::MapeadorAnimal() {
     aMap["aveD"] = [](DadosAnimal dados) { 

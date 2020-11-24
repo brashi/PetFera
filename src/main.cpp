@@ -1,7 +1,7 @@
 #include <iostream> 
 #include <iterator>
 
-#include "mapeador.hpp"
+#include "mapeador_menu.hpp"
 #include "petshop.hpp"
 
 using namespace std;
@@ -19,10 +19,18 @@ void imprimirMenu() {
     cout << "| \u2588\u2588      | \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | \u2588\u2588   | \u2588\u2588      | \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| \u2588\u2588  | \u2588\u2588| \u2588\u2588  | \u2588\u2588" << endl;
     cout << "|__/      |________/   |__/   |__/      |________/|__/  |__/|__/  |__/" << endl;
     cout << "======================================================================" << endl;
-    cout << "A - Listar animais                                      [ X - Fechar ]" << endl;
-    cout << "B - Adicionar animal" << endl;
-    cout << "C - Atualizar animal" << endl;
-    cout << "D - Remover animal" << endl;
+    cout << "    A - Listar animais                                  [ X - Fechar ]" << endl;
+    cout << "    B - Adicionar animal" << endl;
+    cout << "    C - Atualizar animal" << endl;
+    cout << "    D - Remover animal" << endl << endl;
+    cout << "    E - Listar veterinarios" << endl;
+    cout << "    F - Adicionar veterinario" << endl;
+    cout << "    G - Atualizar veterinario" << endl;
+    cout << "    H - Remover veterinario" << endl << endl;
+    cout << "    I - Listar tratadores" << endl;
+    cout << "    J - Adicionar tratador" << endl;
+    cout << "    K - Atualizar tratador" << endl;
+    cout << "    L - Remover tratador" << endl;
     cout << "======================================================================" << endl;
 }
 
@@ -46,7 +54,7 @@ void menu() {
     MapeadorMenu *mapeador = new MapeadorMenu();
     bool executando = true;
     char opcao;
-
+    
     while(executando) {
         limparTela();
         imprimirMenu();
