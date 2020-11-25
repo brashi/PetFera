@@ -2,6 +2,14 @@
 
 #include "pessoa.hpp"
 
+
+/**
+ * @brief Implementação dos veterinarios.
+ * @details A implementação para cadastro e admnistração envolve
+ * veterinarios credenciados e certificados pelo CRMV.
+ * Do mesmo, herdam Pessoa com qual divide atributos básicos comum
+ * a Tratador.
+ */
 class Veterinario : public Pessoa {
     public:
         Veterinario() {};
