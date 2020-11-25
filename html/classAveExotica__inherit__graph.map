@@ -1,0 +1,5 @@
+<map id="AveExotica" name="AveExotica">
+<area shape="rect" id="node2" href="$classAve.html" title="Classificação base para Aves. " alt="" coords="5,615,141,824"/>
+<area shape="rect" id="node3" href="$classExotico.html" title="Umas das definições de categoria para Animal. " alt="" coords="165,615,317,824"/>
+<area shape="rect" id="node4" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="123,5,360,567"/>
+</map>

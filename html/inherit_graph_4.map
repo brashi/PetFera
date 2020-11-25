@@ -1,0 +1,5 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" href="$classPessoa.html" title="Classe base dos funcionarios. " alt="" coords="5,39,107,80"/>
+<area shape="rect" id="node2" href="$classTratador.html" title="Implementação dos tratadores. " alt="" coords="167,5,285,47"/>
+<area shape="rect" id="node3" href="$classVeterinario.html" title="Implementação dos veterinarios. " alt="" coords="155,71,297,112"/>
+</map>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema digital PetFera: Código-Fonte de include/animal/mamifero/mamifero_domestico.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema digital PetFera
+   </div>
+   <div id="projectbrief">Sistemas automatizado de cadastro de administração para os serviços necessários da empresa PetFera</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_026a6e76be8d3097e26c16740716c422.html">animal</a></li><li class="navelem"><a class="el" href="dir_8be241d0fbe14904ae5e7047e4b2e2b5.html">mamifero</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">mamifero_domestico.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;mamifero.hpp&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;domestico.hpp&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::string;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classMamiferoDomestico.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMamiferoDomestico.html">MamiferoDomestico</a> : <span class="keyword">public</span> <a class="code" href="classMamifero.html">Mamifero</a>, <span class="keyword">public</span> <a class="code" href="classDomestico.html">Domestico</a> {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classMamiferoDomestico.html">MamiferoDomestico</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> especie, <a class="code" href="classVeterinario.html">Veterinario</a> veterinario,</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <a class="code" href="classTratador.html">Tratador</a> <a class="code" href="classAnimal.html#a9a864369990c6743895032c6c8f2bdbc">tratador</a>, <span class="keywordtype">bool</span> perigoso, <span class="keywordtype">bool</span> adestrado, <span class="keywordtype">bool</span> gestacao);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        ~<a class="code" href="classMamiferoDomestico.html">MamiferoDomestico</a>();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div><div class="ttc" id="classDomestico_html"><div class="ttname"><a href="classDomestico.html">Domestico</a></div><div class="ttdoc">Umas das definições de categoria para Animal. </div><div class="ttdef"><b>Definition:</b> domestico.hpp:15</div></div>
+<div class="ttc" id="classMamifero_html"><div class="ttname"><a href="classMamifero.html">Mamifero</a></div><div class="ttdoc">Classificação base para Mamiferos. </div><div class="ttdef"><b>Definition:</b> mamifero.hpp:14</div></div>
+<div class="ttc" id="classTratador_html"><div class="ttname"><a href="classTratador.html">Tratador</a></div><div class="ttdoc">Implementação dos tratadores. </div><div class="ttdef"><b>Definition:</b> tratador.hpp:30</div></div>
+<div class="ttc" id="classMamiferoDomestico_html"><div class="ttname"><a href="classMamiferoDomestico.html">MamiferoDomestico</a></div><div class="ttdoc">Implementação de animal com Classe e Categoria. </div><div class="ttdef"><b>Definition:</b> mamifero_domestico.hpp:19</div></div>
+<div class="ttc" id="classVeterinario_html"><div class="ttname"><a href="classVeterinario.html">Veterinario</a></div><div class="ttdoc">Implementação dos veterinarios. </div><div class="ttdef"><b>Definition:</b> veterinario.hpp:13</div></div>
+<div class="ttc" id="classAnimal_html_a9a864369990c6743895032c6c8f2bdbc"><div class="ttname"><a href="classAnimal.html#a9a864369990c6743895032c6c8f2bdbc">Animal::tratador</a></div><div class="ttdeci">Tratador tratador</div><div class="ttdoc">A classe do animal pode indicar a necessidade de um Tratador com Uniforme específico. </div><div class="ttdef"><b>Definition:</b> animal.hpp:69</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

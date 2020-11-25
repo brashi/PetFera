@@ -25,6 +25,10 @@ using std::vector;
  * - Listagem de dados de diversas origens
  * - Interface entre usuario
  * - Guardar as informações de cada classe anterior a esta.
+ * @todo
+ * - Cadastro de Especies
+ * - Lisenças para animais (Silvestre... Nativo)
+ * - Classificações de status de extinção para animais com base na espécie
  */
 class Petshop {
     public:

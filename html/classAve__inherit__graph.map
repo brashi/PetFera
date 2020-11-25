@@ -1,0 +1,5 @@
+<map id="Ave" name="Ave">
+<area shape="rect" id="node2" href="$classAveDomestica.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="5,263,236,443"/>
+<area shape="rect" id="node3" href="$classAveExotica.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="261,277,455,428"/>
+<area shape="rect" id="node4" href="$classAveNativa.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="479,277,666,428"/>
+</map>

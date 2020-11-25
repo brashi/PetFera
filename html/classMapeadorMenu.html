@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema digital PetFera: Referência da Classe MapeadorMenu</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema digital PetFera
+   </div>
+   <div id="projectbrief">Sistemas automatizado de cadastro de administração para os serviços necessários da empresa PetFera</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos Públicos</a> &#124;
+<a href="#pub-attribs">Atributos Públicos</a> &#124;
+<a href="classMapeadorMenu-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe MapeadorMenu</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Classe mapeadora de funções para o menu.  
+ <a href="classMapeadorMenu.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="mapeador__menu_8hpp_source.html">mapeador_menu.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboração para MapeadorMenu:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classMapeadorMenu__coll__graph.svg" width="344" height="360"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos Públicos</h2></td></tr>
+<tr class="memitem:aace8d1ef49f22aa4d24afdc4ada1fd3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapeadorMenu.html#aace8d1ef49f22aa4d24afdc4ada1fd3a">MapeadorMenu</a> ()</td></tr>
+<tr class="memdesc:aace8d1ef49f22aa4d24afdc4ada1fd3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor do mapeador.  <a href="#aace8d1ef49f22aa4d24afdc4ada1fd3a">Mais...</a><br /></td></tr>
+<tr class="separator:aace8d1ef49f22aa4d24afdc4ada1fd3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atributos Públicos</h2></td></tr>
+<tr class="memitem:a819e5f58019ad2d920046cbf721c8ded"><td class="memItemLeft" align="right" valign="top">std::map&lt; char, std::function&lt; bool(<a class="el" href="classPetshop.html">Petshop</a> *petshop)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapeadorMenu.html#a819e5f58019ad2d920046cbf721c8ded">escolhas</a></td></tr>
+<tr class="memdesc:a819e5f58019ad2d920046cbf721c8ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapa usado para retornar funções.  <a href="#a819e5f58019ad2d920046cbf721c8ded">Mais...</a><br /></td></tr>
+<tr class="separator:a819e5f58019ad2d920046cbf721c8ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Classe mapeadora de funções para o menu. </p>
+<p>A classe guarda um tipo map usado para o mapeamento de opções do Menu do programa, sendo usada na função main. A sua conveniencia de juntar diversas opções e chamadas de um tipo <a class="el" href="classPetshop.html" title="Classe de controle. ">Petshop</a> é enorme. Com ela podemos ter várias opções advindas do <a class="el" href="classPetshop.html" title="Classe de controle. ">Petshop</a> sem fazer uma cadeia de condições (com IF ou SWITCH) e podemos também sempre adicionar mais retornos caso necessário. </p>
+</div><h2 class="groupheader">Construtores &amp; Destrutores</h2>
+<a id="aace8d1ef49f22aa4d24afdc4ada1fd3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace8d1ef49f22aa4d24afdc4ada1fd3a">&#9670;&nbsp;</a></span>MapeadorMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MapeadorMenu::MapeadorMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor do mapeador. </p>
+<p>A maior importância da declaração do construtor é definir os parâmetros para seu map, sendo definido em escolhas. Nele são construidos os parâmetros do mapa para cada tipo de retorno diferente, podendo ser qualquer método Public de <a class="el" href="classPetshop.html" title="Classe de controle. ">Petshop</a>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="a819e5f58019ad2d920046cbf721c8ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819e5f58019ad2d920046cbf721c8ded">&#9670;&nbsp;</a></span>escolhas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;char, std::function&lt;bool (<a class="el" href="classPetshop.html">Petshop</a>* petshop)&gt; &gt; MapeadorMenu::escolhas</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mapa usado para retornar funções. </p>
+<p>O tipo std::map pode ser acessado por um tipo char e retornando uma função lambda. Neste caso temos o uso do std::function&lt;&gt;. Que ao receber uma instância de <a class="el" href="classPetshop.html" title="Classe de controle. ">Petshop</a>, pode retornar funções advindas do mesmo, retornando a sua condição de sucesso como bool. O uso deste artíficio é bem conveniente, e pode ser extendido para diversas opções possíveis e qualquer uso disponível em Public da classe <a class="el" href="classPetshop.html" title="Classe de controle. ">Petshop</a>. </p><dl class="section return"><dt>Retorna</dt><dd>Função da classe <a class="el" href="classPetshop.html" title="Classe de controle. ">Petshop</a> desejada. </dd></dl>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte arquivo:<ul>
+<li>include/<a class="el" href="mapeador__menu_8hpp_source.html">mapeador_menu.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
