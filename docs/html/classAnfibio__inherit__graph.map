@@ -1,0 +1,5 @@
+<map id="Anfibio" name="Anfibio">
+<area shape="rect" id="node2" href="$classAnfibioDomestico.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="5,292,271,443"/>
+<area shape="rect" id="node3" href="$classAnfibioExotico.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="295,292,525,443"/>
+<area shape="rect" id="node4" href="$classAnfibioNativo.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="550,292,771,443"/>
+</map>

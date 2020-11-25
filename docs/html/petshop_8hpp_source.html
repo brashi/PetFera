@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema digital PetFera: Código-Fonte de include/petshop.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema digital PetFera
+   </div>
+   <div id="projectbrief">Sistemas automatizado de cadastro de administração para os serviços necessários da empresa PetFera</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">petshop.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;animal.hpp&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;veterinario.hpp&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;tratador.hpp&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;mapeador_animal.hpp&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> std::vector;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classPetshop.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPetshop.html">Petshop</a> {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classPetshop.html#a5dc3e3192c9d541602e216acafecc7ba">Petshop</a>();</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classPetshop.html#a3ec4d2ba5d85e86d63121b4efd199de2">~Petshop</a>();</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        </div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#a29770b7025d7b1f84e2dc946e730463e">listarAnimais</a>();</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        </div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#aae1d8448fa0974450c8dceac2fc5b8f9">listarTratadores</a>();</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        </div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#a22664b727e5d580637146e83a60c29d3">listarVeterinarios</a>();</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#a2482421211b8030a3fb46ae653607bc4">criarVeterinario</a>();</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#a3991d24973de9302686e14ee40b4fdc2">criarTratador</a>();</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#a8caabf7bd1d59db98087d7db8e06db8d">criarAnimal</a>();</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classPetshop.html#aeb4827e72d9c703f7857d6cad20ab54d">adicionarVeterinario</a>(<a class="code" href="classVeterinario.html">Veterinario</a>* vetAdd);</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classPetshop.html#a4a6d70eef348e71c54035dc0a21c5569">adicionarTratador</a>(<a class="code" href="classTratador.html">Tratador</a>* tratAdd);</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classPetshop.html#a631423ce9d40f56416286d9239aa37fd">adicionarAnimal</a>(<a class="code" href="classAnimal.html">Animal</a>* animalAdd);</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#ac1838079ca4949d5f80c4bae103ae44e">atualizarVeterinario</a>();</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#a3bbb013f4aaa0c5ae1d5ec6531166f65">atualizarTratador</a>();</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#ad7821750e5f55fba9dbf1119c92d8316">atualizarAnimal</a>();</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#a4d5c9d254b59d3626a81d25a6ab83383">excluirVeterinario</a>();</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#ac01affc09f3b75e024747a33748cd8b8">excluirTratador</a>();</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPetshop.html#a417aaf81e347090271901332ef4ac8fc">excluirAnimal</a>();</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <a class="code" href="classVeterinario.html">Veterinario</a>* <a class="code" href="classPetshop.html#a4d5c9d254b59d3626a81d25a6ab83383">excluirVeterinario</a>(<a class="code" href="classVeterinario.html">Veterinario</a>* removido);</div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <a class="code" href="classTratador.html">Tratador</a>* <a class="code" href="classPetshop.html#ac01affc09f3b75e024747a33748cd8b8">excluirTratador</a>(<a class="code" href="classTratador.html">Tratador</a>* removido);</div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <a class="code" href="classAnimal.html">Animal</a>* <a class="code" href="classPetshop.html#a417aaf81e347090271901332ef4ac8fc">excluirAnimal</a>(<a class="code" href="classAnimal.html">Animal</a>* removido);</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    </div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <a class="code" href="classVeterinario.html">Veterinario</a>* findVeterinario(<span class="keywordtype">string</span> nome);</div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <a class="code" href="classTratador.html">Tratador</a>* findTratador(<span class="keywordtype">string</span> nome);</div><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <a class="code" href="classAnimal.html">Animal</a>* findAnimal(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> especie);</div><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        vector&lt;Veterinario*&gt; veterinarios;</div><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        vector&lt;Tratador*&gt; tratadores;</div><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        vector&lt;Animal*&gt; animais;</div><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <a class="code" href="classMapeadorAnimal.html">MapeadorAnimal</a> mapa;</div><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;};</div><div class="ttc" id="classPetshop_html_a631423ce9d40f56416286d9239aa37fd"><div class="ttname"><a href="classPetshop.html#a631423ce9d40f56416286d9239aa37fd">Petshop::adicionarAnimal</a></div><div class="ttdeci">bool adicionarAnimal(Animal *animalAdd)</div><div class="ttdoc">Adição interna de Animal no sistema. </div></div>
+<div class="ttc" id="classPetshop_html_a29770b7025d7b1f84e2dc946e730463e"><div class="ttname"><a href="classPetshop.html#a29770b7025d7b1f84e2dc946e730463e">Petshop::listarAnimais</a></div><div class="ttdeci">void listarAnimais()</div><div class="ttdoc">Listagem de Animais no registro. </div></div>
+<div class="ttc" id="classPetshop_html_aeb4827e72d9c703f7857d6cad20ab54d"><div class="ttname"><a href="classPetshop.html#aeb4827e72d9c703f7857d6cad20ab54d">Petshop::adicionarVeterinario</a></div><div class="ttdeci">bool adicionarVeterinario(Veterinario *vetAdd)</div><div class="ttdoc">Adição interna de Veterinario no sistema. </div></div>
+<div class="ttc" id="classPetshop_html_a8caabf7bd1d59db98087d7db8e06db8d"><div class="ttname"><a href="classPetshop.html#a8caabf7bd1d59db98087d7db8e06db8d">Petshop::criarAnimal</a></div><div class="ttdeci">void criarAnimal()</div><div class="ttdoc">Criação do tipo Animal. </div></div>
+<div class="ttc" id="classPetshop_html_a3ec4d2ba5d85e86d63121b4efd199de2"><div class="ttname"><a href="classPetshop.html#a3ec4d2ba5d85e86d63121b4efd199de2">Petshop::~Petshop</a></div><div class="ttdeci">~Petshop()</div><div class="ttdoc">Destrutor padrão. </div></div>
+<div class="ttc" id="classPetshop_html_ac01affc09f3b75e024747a33748cd8b8"><div class="ttname"><a href="classPetshop.html#ac01affc09f3b75e024747a33748cd8b8">Petshop::excluirTratador</a></div><div class="ttdeci">void excluirTratador()</div><div class="ttdoc">Exclusão de cadastro para Tratador. </div></div>
+<div class="ttc" id="classPetshop_html_ac1838079ca4949d5f80c4bae103ae44e"><div class="ttname"><a href="classPetshop.html#ac1838079ca4949d5f80c4bae103ae44e">Petshop::atualizarVeterinario</a></div><div class="ttdeci">void atualizarVeterinario()</div><div class="ttdoc">Atualização de cadastro para Veterinario. </div></div>
+<div class="ttc" id="classPetshop_html_a22664b727e5d580637146e83a60c29d3"><div class="ttname"><a href="classPetshop.html#a22664b727e5d580637146e83a60c29d3">Petshop::listarVeterinarios</a></div><div class="ttdeci">void listarVeterinarios()</div><div class="ttdoc">Listagem dos Veterinarios registrados. </div></div>
+<div class="ttc" id="classTratador_html"><div class="ttname"><a href="classTratador.html">Tratador</a></div><div class="ttdoc">Implementação dos tratadores. </div><div class="ttdef"><b>Definition:</b> tratador.hpp:30</div></div>
+<div class="ttc" id="classPetshop_html_ad7821750e5f55fba9dbf1119c92d8316"><div class="ttname"><a href="classPetshop.html#ad7821750e5f55fba9dbf1119c92d8316">Petshop::atualizarAnimal</a></div><div class="ttdeci">void atualizarAnimal()</div><div class="ttdoc">Atualização de cadastro para Animal. </div></div>
+<div class="ttc" id="classPetshop_html_a417aaf81e347090271901332ef4ac8fc"><div class="ttname"><a href="classPetshop.html#a417aaf81e347090271901332ef4ac8fc">Petshop::excluirAnimal</a></div><div class="ttdeci">void excluirAnimal()</div><div class="ttdoc">Exclusão de cadastro para Animal. </div></div>
+<div class="ttc" id="classMapeadorAnimal_html"><div class="ttname"><a href="classMapeadorAnimal.html">MapeadorAnimal</a></div><div class="ttdoc">Mapeador de animais. </div><div class="ttdef"><b>Definition:</b> mapeador_animal.hpp:71</div></div>
+<div class="ttc" id="classAnimal_html"><div class="ttname"><a href="classAnimal.html">Animal</a></div><div class="ttdoc">Implementação base para o cadastro de animais. </div><div class="ttdef"><b>Definition:</b> animal.hpp:18</div></div>
+<div class="ttc" id="classPetshop_html_a2482421211b8030a3fb46ae653607bc4"><div class="ttname"><a href="classPetshop.html#a2482421211b8030a3fb46ae653607bc4">Petshop::criarVeterinario</a></div><div class="ttdeci">void criarVeterinario()</div><div class="ttdoc">Criação de tipo Veterinario. </div></div>
+<div class="ttc" id="classPetshop_html_a4a6d70eef348e71c54035dc0a21c5569"><div class="ttname"><a href="classPetshop.html#a4a6d70eef348e71c54035dc0a21c5569">Petshop::adicionarTratador</a></div><div class="ttdeci">bool adicionarTratador(Tratador *tratAdd)</div><div class="ttdoc">Adição interna de Tratador no sistema. </div></div>
+<div class="ttc" id="classPetshop_html_a3991d24973de9302686e14ee40b4fdc2"><div class="ttname"><a href="classPetshop.html#a3991d24973de9302686e14ee40b4fdc2">Petshop::criarTratador</a></div><div class="ttdeci">void criarTratador()</div><div class="ttdoc">Criação do tipo Tratador. </div></div>
+<div class="ttc" id="classVeterinario_html"><div class="ttname"><a href="classVeterinario.html">Veterinario</a></div><div class="ttdoc">Implementação dos veterinarios. </div><div class="ttdef"><b>Definition:</b> veterinario.hpp:13</div></div>
+<div class="ttc" id="classPetshop_html_a5dc3e3192c9d541602e216acafecc7ba"><div class="ttname"><a href="classPetshop.html#a5dc3e3192c9d541602e216acafecc7ba">Petshop::Petshop</a></div><div class="ttdeci">Petshop()</div><div class="ttdoc">O construtor deve ser padrão. </div></div>
+<div class="ttc" id="classPetshop_html_a3bbb013f4aaa0c5ae1d5ec6531166f65"><div class="ttname"><a href="classPetshop.html#a3bbb013f4aaa0c5ae1d5ec6531166f65">Petshop::atualizarTratador</a></div><div class="ttdeci">void atualizarTratador()</div><div class="ttdoc">Atualização de cadastro para Tratador. </div></div>
+<div class="ttc" id="classPetshop_html"><div class="ttname"><a href="classPetshop.html">Petshop</a></div><div class="ttdoc">Classe de controle. </div><div class="ttdef"><b>Definition:</b> petshop.hpp:29</div></div>
+<div class="ttc" id="classPetshop_html_aae1d8448fa0974450c8dceac2fc5b8f9"><div class="ttname"><a href="classPetshop.html#aae1d8448fa0974450c8dceac2fc5b8f9">Petshop::listarTratadores</a></div><div class="ttdeci">void listarTratadores()</div><div class="ttdoc">Listagem dos Tratadores registrados. </div></div>
+<div class="ttc" id="classPetshop_html_a4d5c9d254b59d3626a81d25a6ab83383"><div class="ttname"><a href="classPetshop.html#a4d5c9d254b59d3626a81d25a6ab83383">Petshop::excluirVeterinario</a></div><div class="ttdeci">void excluirVeterinario()</div><div class="ttdoc">Exclusão de cadastro para Veterinario. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

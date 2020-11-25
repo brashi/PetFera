@@ -1,0 +1,5 @@
+<map id="Mamifero" name="Mamifero">
+<area shape="rect" id="node2" href="$classMamiferoDomestico.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="5,233,296,384"/>
+<area shape="rect" id="node3" href="$classMamiferoExotico.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="321,233,575,384"/>
+<area shape="rect" id="node4" href="$classMamiferoNativo.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="599,233,846,384"/>
+</map>

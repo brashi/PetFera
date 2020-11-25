@@ -1,0 +1,5 @@
+<map id="AnfibioNativo" name="AnfibioNativo">
+<area shape="rect" id="node2" href="$classAnfibio.html" title="Classificação base para Anfibios. " alt="" coords="5,615,171,853"/>
+<area shape="rect" id="node3" href="$classNativo.html" title="Umas das definições de categoria para Animal. " alt="" coords="195,629,365,839"/>
+<area shape="rect" id="node4" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="161,5,399,567"/>
+</map>

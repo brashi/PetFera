@@ -1,0 +1,5 @@
+<map id="MamiferoExotico" name="MamiferoExotico">
+<area shape="rect" id="node2" href="$classMamifero.html" title="Classificação base para Mamiferos. " alt="" coords="5,629,201,809"/>
+<area shape="rect" id="node3" href="$classExotico.html" title="Umas das definições de categoria para Animal. " alt="" coords="226,615,378,824"/>
+<area shape="rect" id="node4" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="183,5,421,567"/>
+</map>

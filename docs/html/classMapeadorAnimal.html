@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema digital PetFera: Referência da Classe MapeadorAnimal</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema digital PetFera
+   </div>
+   <div id="projectbrief">Sistemas automatizado de cadastro de administração para os serviços necessários da empresa PetFera</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos Públicos</a> &#124;
+<a href="#pub-attribs">Atributos Públicos</a> &#124;
+<a href="classMapeadorAnimal-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe MapeadorAnimal</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Mapeador de animais.  
+ <a href="classMapeadorAnimal.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="mapeador__animal_8hpp_source.html">mapeador_animal.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboração para MapeadorAnimal:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classMapeadorAnimal__coll__graph.svg" width="416" height="360"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos Públicos</h2></td></tr>
+<tr class="memitem:a9f7683be05c7cbb261b060db01eecbbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapeadorAnimal.html#a9f7683be05c7cbb261b060db01eecbbf">MapeadorAnimal</a> ()</td></tr>
+<tr class="memdesc:a9f7683be05c7cbb261b060db01eecbbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor do mapa.  <a href="#a9f7683be05c7cbb261b060db01eecbbf">Mais...</a><br /></td></tr>
+<tr class="separator:a9f7683be05c7cbb261b060db01eecbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atributos Públicos</h2></td></tr>
+<tr class="memitem:a80dbb79128ad67231ccea2fcec6a869a"><td class="memItemLeft" align="right" valign="top">std::map&lt; string, std::function&lt; <a class="el" href="classAnimal.html">Animal</a> *(<a class="el" href="structDadosAnimal.html">DadosAnimal</a> dados)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapeadorAnimal.html#a80dbb79128ad67231ccea2fcec6a869a">aMap</a></td></tr>
+<tr class="memdesc:a80dbb79128ad67231ccea2fcec6a869a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapa de animais.  <a href="#a80dbb79128ad67231ccea2fcec6a869a">Mais...</a><br /></td></tr>
+<tr class="separator:a80dbb79128ad67231ccea2fcec6a869a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Mapeador de animais. </p>
+<p>A classe serve para conter um tipo map capaz de retornar um método de criação de um respectivo animal. A função guarda o mapa que funciona recebendo um parâmetro em string descrevendo qual animal deve ser instânciando. Então, seu retorno é justamente uma referência para o tipo específicado, utilizando funções Lambda e std::function. </p>
+</div><h2 class="groupheader">Construtores &amp; Destrutores</h2>
+<a id="a9f7683be05c7cbb261b060db01eecbbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f7683be05c7cbb261b060db01eecbbf">&#9670;&nbsp;</a></span>MapeadorAnimal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MapeadorAnimal::MapeadorAnimal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor do mapa. </p>
+<p>A sua importância é devido a necessidade de declarar cada caso para o seu mapa. Definindo os parâmetros e suas respostas em base a qual animal deve ser instânciado. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="a80dbb79128ad67231ccea2fcec6a869a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80dbb79128ad67231ccea2fcec6a869a">&#9670;&nbsp;</a></span>aMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;string, std::function&lt;<a class="el" href="classAnimal.html">Animal</a>* (<a class="el" href="structDadosAnimal.html">DadosAnimal</a> dados)&gt; &gt; MapeadorAnimal::aMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mapa de animais. </p>
+<p>Seu funcionamento ocorre pela junção de std::map e funções Lambda, no caso std::function. A sua utilidade em instanciar classes economiza código, evitando repetições do mesmo segmento e possibilitando o instânciamento de tipos derivados de <a class="el" href="classAnimal.html" title="Implementação base para o cadastro de animais. ">Animal</a> com apenas uma opção. Para o seu uso deve informar o tipo específico como string e os dados do animal, utilizando o struct <a class="el" href="structDadosAnimal.html" title="Coringa para tipos de todos os animais. ">DadosAnimal</a>. </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structDadosAnimal.html" title="Coringa para tipos de todos os animais. ">DadosAnimal</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Instancia para a classe desejada. </dd></dl>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte arquivo:<ul>
+<li>include/animal/<a class="el" href="mapeador__animal_8hpp_source.html">mapeador_animal.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
