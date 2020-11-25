@@ -4,7 +4,8 @@ var indexSectionsWithContent =
   1: "adefmnprtv",
   2: "acefglmop~",
   3: "aeft",
-  4: "o"
+  4: "o",
+  5: "l"
 };
 
 var indexSectionNames =
@@ -13,7 +14,8 @@ var indexSectionNames =
   1: "classes",
   2: "functions",
   3: "variables",
-  4: "related"
+  4: "related",
+  5: "pages"
 };
 
 var indexSectionLabels =
@@ -22,6 +24,7 @@ var indexSectionLabels =
   1: "Classes",
   2: "Funções",
   3: "Variáveis",
-  4: "Amigas"
+  4: "Amigas",
+  5: "Páginas"
 };
 

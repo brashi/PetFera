@@ -1,8 +1,0 @@
-<map id="AnfibioNativo" name="AnfibioNativo">
-<area shape="rect" id="node2" href="$classAnfibio.html" title="Classificação base para Anfibios. " alt="" coords="5,1509,171,1719"/>
-<area shape="rect" id="node5" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="228,1041,465,1485"/>
-<area shape="rect" id="node4" href="$classNativo.html" title="Umas das definições de categoria para Animal. " alt="" coords="262,1743,431,1952"/>
-<area shape="rect" id="node6" href="$classTratador.html" title="Implementação dos tratadores. " alt="" coords="553,696,772,935"/>
-<area shape="rect" id="node7" href="$classPessoa.html" title="Classe base dos funcionarios. " alt="" coords="509,263,728,589"/>
-<area shape="rect" id="node10" href="$classVeterinario.html" title="Implementação dos veterinarios. " alt="" coords="311,696,529,935"/>
-</map>

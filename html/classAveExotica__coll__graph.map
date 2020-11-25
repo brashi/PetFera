@@ -1,8 +1,0 @@
-<map id="AveExotica" name="AveExotica">
-<area shape="rect" id="node2" href="$classAve.html" title="Classificação base para Aves. " alt="" coords="5,1480,141,1689"/>
-<area shape="rect" id="node5" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="197,1012,435,1456"/>
-<area shape="rect" id="node4" href="$classExotico.html" title="Umas das definições de categoria para Animal. " alt="" coords="240,1713,392,1923"/>
-<area shape="rect" id="node6" href="$classTratador.html" title="Implementação dos tratadores. " alt="" coords="523,696,741,935"/>
-<area shape="rect" id="node7" href="$classPessoa.html" title="Classe base dos funcionarios. " alt="" coords="479,263,697,589"/>
-<area shape="rect" id="node10" href="$classVeterinario.html" title="Implementação dos veterinarios. " alt="" coords="280,696,499,935"/>
-</map>
