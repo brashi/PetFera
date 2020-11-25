@@ -4,9 +4,6 @@
 #include "tratador.hpp"
 #include "veterinario.hpp"
 
-#include "ave_domestica.hpp"
-#include "ave_nativa.hpp"
-
 #include <map>
 #include <functional>
 #include <iomanip>

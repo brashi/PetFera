@@ -4,3 +4,5 @@
 *.o
 petFera
 Doxyfile
+html/
+latex/
