@@ -1,5 +1,0 @@
-<map id="Animal" name="Animal">
-<area shape="rect" id="node2" href="$classTratador.html" title="Implementação dos tratadores. " alt="" coords="303,696,522,935"/>
-<area shape="rect" id="node3" href="$classPessoa.html" title="Classe base dos funcionarios. " alt="" coords="259,263,478,589"/>
-<area shape="rect" id="node7" href="$classVeterinario.html" title="Implementação dos veterinarios. " alt="" coords="61,696,279,935"/>
-</map>

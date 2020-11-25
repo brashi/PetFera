@@ -1,7 +1,0 @@
-<map id="Exotico" name="Exotico">
-<area shape="rect" id="node3" href="$classAnfibioExotico.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="5,872,236,1023"/>
-<area shape="rect" id="node4" href="$classAveExotica.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="261,872,455,1023"/>
-<area shape="rect" id="node5" href="$classMamiferoExotico.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="480,872,735,1023"/>
-<area shape="rect" id="node6" href="$classReptilExotico.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="759,872,975,1023"/>
-<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="363,5,601,567"/>
-</map>

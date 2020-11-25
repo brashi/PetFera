@@ -1,8 +1,0 @@
-<map id="AnfibioDomestico" name="AnfibioDomestico">
-<area shape="rect" id="node2" href="$classAnfibio.html" title="Classificação base para Anfibios. " alt="" coords="39,1509,205,1719"/>
-<area shape="rect" id="node4" href="$classDomestico.html" title="Umas das definições de categoria para Animal. " alt="" coords="160,1743,367,1952"/>
-<area shape="rect" id="node5" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="378,1041,615,1485"/>
-<area shape="rect" id="node6" href="$classTratador.html" title="Implementação dos tratadores. " alt="" coords="441,696,659,935"/>
-<area shape="rect" id="node7" href="$classPessoa.html" title="Classe base dos funcionarios. " alt="" coords="605,263,823,589"/>
-<area shape="rect" id="node10" href="$classVeterinario.html" title="Implementação dos veterinarios. " alt="" coords="683,696,902,935"/>
-</map>
