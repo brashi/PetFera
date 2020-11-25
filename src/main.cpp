@@ -44,7 +44,7 @@ void limparTela() {
 
 void pausar() {
     string aux;
-    cout << "Aperte enter para continuar..." << endl;
+    cout << "Aperte enter para continuar...";
     cin.ignore();
     getline(cin, aux);
 }
@@ -70,7 +70,6 @@ void menu() {
         }
         catch (std::exception& ex) {
             cout << "Algo de errado ocorreu, tente novamente" << endl;
-            //cout << ex.what() << endl;
         }
 
         pausar();
