@@ -68,8 +68,9 @@ void menu() {
         catch (const std::bad_function_call&) {
             cout << "Informe uma opção válida para realizar uma ação" << endl;
         }
-        catch (...) {
+        catch (std::exception& ex) {
             cout << "Algo de errado ocorreu, tente novamente" << endl;
+            //cout << ex.what() << endl;
         }
 
         pausar();

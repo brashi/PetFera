@@ -42,7 +42,7 @@ typedef struct DadosAnimal {
     bool voa;
     bool cauda;
     bool pata;
-    string gestacao;
+    bool gestacao;
     Pele pele;
     
 } DadosAnimal;

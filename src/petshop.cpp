@@ -61,104 +61,174 @@ void Petshop::criarAnimal() { //FAZER EXCECAO CASO NAO TENHA VET, OU TRATADOR.
     string nome, especie;
     Veterinario vet;
     Tratador trata;
-    string regiao, local, gestacao;
-    bool cauda, pata, perigo;
+    string regiao, local;
+    bool perigo = false, voa = false, cauda = false, pata = false, gestacao = false, adestrado = false;
     Pele pele;
     char opcao;
     string classe;
     string categoria;
-    string animalControle;
-
-
-    cout << "Nome do animal: ";
-    cin >> nome;
-    cout << "Especie: ";
-    cin >> especie;
     
-    cout << "Digite o número do veterinario responsável: " << endl << endl;
-    this->listarVeterinarios();
-    cout << endl;
-    int num;
-    cin >> num;
+    try {
+        cout << "Nome do animal: ";
+        getline(cin, nome);
+        if (nome.size() == 0)
+            throw "Animal sem nome!";
+        
+        cout << "Espécie: ";
+        getline(cin, especie);
+        if (especie.size() == 0)
+            throw "Animal sem espécie!";
+        
+        cout << "Digite o número do veterinario responsável: " << endl << endl;
+        this->listarVeterinarios();
+        cout << endl;
+        int num;
+        cin >> num;
 
-    vet = *this->veterinarios[num];
+        vet = *this->veterinarios[num]; //WIPWIPWIPWIP
 
-    cout << "Digite o número do tratador responsável: " << endl << endl;
-    this->listarVeterinarios();
-    cout << endl;
-    num;
-    cin >> num;
+        cout << "Digite o número do tratador responsável: " << endl << endl;
+        this->listarTratadores();
+        cout << endl;
+        num;
+        cin >> num;
 
-    trata = *this->tratadores[num];
+        trata = *this->tratadores[num]; //WIPWIPWIPWIP
 
-    cout << "É perigoso ? \t S/N : ";
-    cin >> opcao;
-    if(opcao == 'S' || opcao == 's') {
-        perigo = true;
-    } else {
-        perigo = false;
+        cout << "É perigoso ? \t S/N : ";
+        cin >> opcao;
+        if(toupper(opcao) == 'S')
+            perigo = true;
+        else
+            perigo = false;
+
+        cout << "O animal pertence a que classe?..." << endl;
+        cout << "A - ave" << endl;
+        cout << "F - anfíbio" << endl;
+        cout << "R - réptil" << endl;
+        cout << "M - mamífero" << endl;
+        cin >> opcao;
+
+        switch(toupper(opcao)) {
+            case 'A': 
+                classe = "ave";
+                break;
+            case 'F':
+                classe = "anf";
+                break;
+            case 'R':
+                classe = "rep";
+                break;
+            case 'M':
+                classe = "mam";
+                break;
+            default:
+                throw "Animal deve ter uma classe!";
+                break;
+        }
+
+        if(classe == "A") {
+            cout << "Voa? \t S/N : " << endl;
+            cin >> opcao;
+            if(toupper(opcao) == 'S')
+                voa = true;
+            else
+                voa = false;
+        }
+        else if(classe == "F") {
+            cout << "Possui cauda? \t S/N : " << endl;
+            cin >> opcao;
+            if(toupper(opcao) == 'S')
+                cauda = true;
+            else
+                cauda = false;
+
+            cout << "Possui pata? \t S/N : " << endl;
+            cin >> opcao;
+            if(toupper(opcao) == 'S')
+                pata = true;
+            else
+                pata = false;
+        }
+        else if(classe == "R") {
+            cout << "Qual o tipo de pele? " << endl;
+            cout << "C - carapaça" << endl;
+            cout << "E - escama" << endl;
+            cout << "P - placa" << endl;
+            cin >> opcao;
+            if(toupper(opcao) == 'C')
+                pele = Carapaca;
+            if(toupper(opcao) == 'E')
+                pele = Escama;
+            if(toupper(opcao) == 'P')
+                pele = Placa;
+            else
+                throw "Réptil precisa de pele";
+        }
+        else {
+            cout << "Possui gestação? \t S/N : " << endl;
+            cin >> opcao;
+            if(toupper(opcao) == 'S')
+                gestacao = true;
+            else
+                gestacao = false;
+        }
+
+        cout << "A que categoria o animal pertence?..." << endl;
+        cout << "D - doméstico" << endl;
+        cout << "E - exótico" << endl;
+        cout << "N - nativo" << endl;
+        cin >> opcao;
+
+        switch(opcao) {
+            case 'D': 
+                categoria = "D";
+                break;
+            case 'E' : 
+                categoria = "E";
+                break;
+            case 'N' : 
+                categoria = "N";
+                break;
+            default:
+                throw "Animal deve ter uma categoria!";
+                break;
+        }
+
+        if(categoria == "D") {}
+        else if(categoria == "E") {}
+        else {}
+
+        DadosAnimal dadosNovoAnimal = (DadosAnimal) {
+            .nome = nome,
+            .especie = especie,
+            .veterinario = vet,
+            .tratador = trata,
+            .perigoso = perigo,
+            .regiao = regiao,
+            .local = local,
+            .adestrado = adestrado,
+            .voa = voa,
+            .cauda = cauda,
+            .pata = pata,
+            .gestacao = gestacao,
+            .pele = pele,
+        };
+
+        string animalControle = classe + categoria;
+        
+        if(this->adicionarAnimal(mapa.aMap[animalControle](dadosNovoAnimal))) {
+            cout << "Animal adicionado ao cadastro." << endl;
+        } else {
+            cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
+        }
     }
-
-    cout << "O animal pertence a que classe?..." << endl;
-    cout << "A - ave" << endl;
-    cout << "F - anfibio" << endl;
-    cout << "R - reptil" << endl;
-    cout << "M - mamifero" << endl;
-    cin >> opcao;
-
-    switch(toupper(opcao)) {
-        case 'A': classe = "ave";
-        break;
-
-        case 'F': classe = "anf";
-        break;
-
-        case 'R': classe = "rep";
-        break;
-
-        case 'M': classe = "mam";
-        break;
-    }
-
-    cout << "A que categoria o animal pertence?..." << endl;
-    cout << "D - domestico" << endl;
-    cout << "E - exotico" << endl;
-    cout << "N - nativo" << endl;
-    cin >> opcao;
-
-    switch(opcao) {
-        case 'D': categoria = "D";
-        break;
-
-        case 'E' : categoria = "E";
-        break;
-
-        case 'N' : categoria = "N";
-        break;
-    }
-
-    DadosAnimal dadosNovoAnimal = (DadosAnimal) {
-        .nome = nome,
-        .especie = especie,
-        .veterinario = vet,
-        .tratador = trata,
-        .perigoso = perigo,
-        .regiao = regiao,
-        .local = local,
-        .adestrado = true, //bote valor dps
-        .voa = true,
-        .cauda = cauda,
-        .pata = pata,
-        .gestacao = gestacao,
-        .pele = pele,
-    };
-
-    animalControle = classe + categoria;
-    
-    if(this->adicionarAnimal(mapa.aMap[animalControle](dadosNovoAnimal))) {
-        cout << "Animal adicionado ao cadastro." << endl;
-    } else {
-        cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
+    catch (char const* msg) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+        cout << "Erro: " << msg << endl;
+    } 
+    catch(...) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente" << endl;
     }
 }
 
@@ -174,38 +244,283 @@ vector<Tratador*> Petshop::getTratadores() const {
 
 // Atualização
 void Petshop::atualizarVeterinario() {
-
 }
 
 void Petshop::atualizarTratador() {
-
 }
 
 void Petshop::atualizarAnimal() {
-    string nome;
-    string especie;
+    bool perigoso = false, voa = false, cauda = false, pata = false, gestacao = false, adestrado = false;
+    string nome, especie, perigo, veterinario, tratador, categoria, classe, regiao, local;
+    Pele pele = Escama;
+    Veterinario vet;
+    Tratador trt;
 
-    cout << "Qual o nome do animal ?" << endl;
-    cin >> nome;
-    cout << "E sua espécie?" << endl;
-    cin >> especie;
+    try {
+        cout << "Qual o nome do animal ?" << endl;
+        getline(cin, nome);
+        if (nome.size() == 0)
+            throw "Não é possível pesquisar animal sem nome!";
 
-    Animal* atualizar = findAnimal(nome, especie);
-    if(atualizar != nullptr) {
-        //SO mudando a especie, por enquanto só testando...
-        cout << "nova especie: ";
-        cin >> especie;
+        cout << "E sua espécie?" << endl;
+        getline(cin, especie);
+        if (especie.size() == 0)
+            throw "Não é possível pesquisar animal sem espécie!";
 
-        Animal* novo = new Animal(atualizar->getNome(), especie, atualizar->getVeterinario(),
-                                atualizar->getTratador(), atualizar->getPerigoso());
-        
-        this->excluirAnimal(atualizar);
-        delete atualizar;
-        this->adicionarAnimal(novo);
+        Animal* atualizar = findAnimal(nome, especie);
+        if(atualizar != nullptr) {
+            cout << "Alterar nome: (para não alterar mantenha em branco)" << endl;
+            getline(cin, nome);
+            if (nome.size() == 0)
+                nome = atualizar->getNome();
+            
+            cout << "Alterar especie: (para não alterar mantenha em branco)" << endl;
+            getline(cin, especie);
+            if (especie.size() == 0)
+                especie = atualizar->getEspecie();
 
-        cout << "Animal atualizado com sucesso" << endl;
-    } else {
-        cout << "O animal não se apresenta nos registros" << endl;
+            cout << "Alterar periculosidade para S/N: (para não alterar mantenha em branco)" << endl;
+            getline(cin, perigo);
+            if (perigo.size() == 0)
+                perigoso = atualizar->getPerigoso();
+            else if(perigo == "S" || perigo == "s") //toupper não cabe por necessariamente ser string, e não um char
+                perigoso = true;
+            else
+                perigoso = false;
+
+            //Alterar classe
+            cout << "Alterar classe: (para não alterar mantenha em branco)" << endl;
+            cout << "A - ave" << endl;
+            cout << "F - anfíbio" << endl;
+            cout << "R - réptil" << endl;
+            cout << "M - mamífero" << endl;
+            getline(cin, classe);
+            if(classe == "A" || classe == "a") //toupper não cabe por classe necessariamente ser string, e não um char
+                classe = "ave";
+            else if(classe == "F" || classe == "f")
+                classe = "anf";
+            else if(classe == "R" || classe == "r")
+                classe = "rep";
+            else if(classe == "M" || classe == "m")
+                classe = "mam";
+            else {
+                try {
+                    string aux = atualizar->getClasse(atualizar);
+                    if(aux == "Mamífero")
+                        classe = "mam";
+                    else if (aux == "Ave")
+                        classe = "ave";
+                    else if (aux == "Anfíbio")
+                        classe = "anf";
+                    else
+                        classe = "rep";
+                }
+                catch(...) {
+                    throw "Falha ao pegar a Classe, verifique se cadastrou o animal em questão corretamente.";
+                }
+            }
+
+            //Alterar categoria
+            cout << "Alterar categoria: (para não alterar mantenha em branco)" << endl;
+            cout << "D - doméstico" << endl;
+            cout << "E - exótico" << endl;
+            cout << "N - nativo" << endl;
+            getline(cin, categoria);
+
+            if(categoria == "D" || categoria == "d") //validação, toupper não cabe por categoria necessariamente ser string, e não um char
+                categoria = "D";
+            else if (categoria == "E" || categoria == "e")
+                categoria = "E";
+            else if (categoria == "N" || categoria == "n")
+                categoria = "N";
+            else {
+                try {
+                    string aux = atualizar->getClassificacao(atualizar);
+                    if(aux == "Silvestre Nativo")
+                        categoria = "N";
+                    else if (aux == "Silvestre Exótico")
+                        categoria = "E";
+                    else
+                        categoria = "D";
+                }
+                catch(...) {
+                    throw "Falha ao pegar a Classificação, verifique se cadastrou o animal em questão corretamente.";
+                }
+            }
+
+            //Alterar coisas específicas de cada categoria:
+            string verificarCategoria;
+            if(categoria == "D") {
+                Domestico* teste = dynamic_cast< Domestico* >(atualizar);
+                cout << "Alterar status \"adestrado?\" S/N: (para não alterar mantenha em branco)" << endl;
+                getline(cin, verificarCategoria);
+                if (verificarCategoria.size() == 0)
+                    adestrado = teste->getAdestrado();
+                else if(verificarCategoria == "S" || verificarCategoria == "s") //toupper não cabe por necessariamente ser string, e não um char
+                    adestrado = true;
+                else
+                    adestrado = false;
+            } else if(categoria == "E") {
+                Exotico* teste = dynamic_cast< Exotico* >(atualizar);
+                cout << "Alterar habitat local: (para não alterar mantenha em branco)" << endl;
+                getline(cin, verificarCategoria);
+                if (verificarCategoria.size() == 0)
+                    local = teste->getLocal();
+            } else {
+                Nativo* teste = dynamic_cast< Nativo* >(atualizar);
+                cout << "Alterar região na qual habita: (para não alterar mantenha em branco)" << endl;
+                getline(cin, verificarCategoria);
+                if (verificarCategoria.size() == 0)
+                    regiao = teste->getRegiao();
+            }
+
+            string verificarClasse;
+            //Alterar coisas específicas de cada classe:
+            if(classe == "ave") {
+                Ave* teste = dynamic_cast< Ave* >(atualizar);
+                cout << "Alterar status \"voa?\" S/N: (para não alterar mantenha em branco)" << endl;
+                
+                getline(cin, verificarClasse);
+                if (verificarClasse.size() == 0)
+                    voa = teste->getVoa();
+                else if(verificarClasse == "S" || verificarClasse == "s") //toupper não cabe por necessariamente ser string, e não um char
+                    voa = true;
+                else
+                    voa = false;
+
+            } else if(classe == "anf") {
+                Anfibio* teste = dynamic_cast< Anfibio* >(atualizar);
+                cout << "Alterar status \"possui cauda?\" S/N: (para não alterar mantenha em branco)" << endl;
+                getline(cin, verificarClasse);
+                if (verificarClasse.size() == 0)
+                    cauda = teste->getCauda();
+                else if(verificarClasse == "S" || verificarClasse == "s") //toupper não cabe por necessariamente ser string, e não um char
+                    cauda = true;
+                else
+                    cauda = false;
+                
+                verificarClasse = "";
+                cout << "Alterar status \"possui pata?\" S/N: (para não alterar mantenha em branco)" << endl;
+                getline(cin, verificarClasse);
+                if (verificarClasse.size() == 0)
+                    pata = teste->getPata();
+                else if(verificarClasse == "S" || verificarClasse == "s") //toupper não cabe por necessariamente ser string, e não um char
+                    pata = true;
+                else
+                    pata = false;
+
+            } else if(classe == "rep") {
+                Reptil* teste = dynamic_cast< Reptil* >(atualizar);
+                cout << "Alterar status \"pele?\" S/N: (para não alterar mantenha em branco)" << endl;
+                cout << "C - carapaça" << endl;
+                cout << "E - escama" << endl;
+                cout << "P - placa" << endl;
+                getline(cin, verificarClasse);
+                if(verificarClasse == "C" || verificarClasse == "c") //toupper não cabe por necessariamente ser string, e não um char
+                    pele = Carapaca;
+                else if(verificarClasse == "E" || verificarClasse == "e")
+                    pele = Escama;
+                else if(verificarClasse == "P" || verificarClasse == "p")
+                    pele = Placa;
+                else
+                    pele = teste->getPele();
+
+            } else {
+                Mamifero* teste = dynamic_cast< Mamifero* >(atualizar);
+                cout << "Alterar status \"possui gestação?\" S/N: (para não alterar mantenha em branco)" << endl;
+                getline(cin, verificarClasse);
+                if (verificarClasse.size() == 0)
+                    gestacao = teste->getGestacao();
+                else if(verificarClasse == "S" || verificarClasse == "s") //toupper não cabe por necessariamente ser string, e não um char
+                    gestacao = true;
+                else
+                    gestacao = false;
+            }
+
+            //Alterar veterinário ou tratador:
+            cout << "Alterar veterinário: (para não alterar mantenha em branco)" << endl;
+            getline(cin, veterinario);
+            if (veterinario.size() == 0)
+                vet = atualizar->getVeterinario();
+            else
+            {
+                cout << "Digite o número do veterinario responsável: " << endl;
+                this->listarVeterinarios();
+                cout << endl;
+                int num;
+                cin >> num;
+
+                try {
+                    vet = *this->veterinarios[num];
+                }
+                catch(...) {
+                    cout << "Não pudemos trocar o veterinário, cheque se o mesmo existe e tente novamente mais tarde." << endl;
+                    vet = atualizar->getVeterinario();
+                }
+            }
+            
+            cout << "Alterar tratador: (para não alterar mantenha em branco)" << endl;
+            getline(cin, tratador);
+            if (tratador.size() == 0)
+                trt = atualizar->getTratador();
+            else
+            {
+                cout << "Digite o número do tratador responsável: " << endl;
+                this->listarTratadores();
+                cout << endl;
+                int num;
+                cin >> num;
+
+                try {
+                    trt = *this->tratadores[num];
+                    Uniforme un = trt.getUniforme();
+
+                    if(perigoso && un != Vermelho)
+                        throw "Erro de permissão!";
+                    else if((classe == "rep" || classe == "mam") && (un == Verde))
+                        throw "Erro de permissão!";
+                } catch(...) {
+                    cout << "Não pudemos trocar o tratador, cheque se o mesmo existe ou possui a permissão necessária e tente novamente mais tarde." << endl;
+                    trt = atualizar->getTratador();
+                }
+            }
+            
+            this->excluirAnimal(atualizar);
+            delete atualizar;
+
+            DadosAnimal dadosNovoAnimal = (DadosAnimal) {
+                .nome = nome,
+                .especie = especie,
+                .veterinario = vet,
+                .tratador = trt,
+                .perigoso = perigoso,
+                .regiao = regiao,
+                .local = local,
+                .adestrado = adestrado,
+                .voa = voa,
+                .cauda = cauda,
+                .pata = pata,
+                .gestacao = gestacao,
+                .pele = pele,
+            };
+
+            string animalControle = classe + categoria;
+            
+            if(this->adicionarAnimal(mapa.aMap[animalControle](dadosNovoAnimal))) {
+                cout << "Animal atualizado com sucesso" << endl;
+            } else {
+                cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
+            }
+        } else {
+            cout << "O animal não se apresenta nos registros" << endl;
+        }
+    }
+    catch (char const* msg) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+        cout << "Erro: " << msg << endl;
+    } 
+    catch(std::exception& ex) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
     }
 }
 

@@ -11,7 +11,7 @@ using std::string;
 class MamiferoExotico : public Mamifero, public Exotico {
     public:
         MamiferoExotico(string nome, string especie, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string local, string gestacao);
+                Tratador tratador, bool perigoso, string local, bool gestacao);
 
         ~MamiferoExotico();
 };
