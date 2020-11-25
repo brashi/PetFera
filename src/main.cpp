@@ -23,10 +23,10 @@ void imprimirMenu() {
     cout << "    B - Adicionar animal" << endl;
     cout << "    C - Atualizar animal" << endl;
     cout << "    D - Remover animal" << endl << endl;
-    cout << "    E - Listar veterinarios" << endl;
-    cout << "    F - Adicionar veterinario" << endl;
-    cout << "    G - Atualizar veterinario" << endl;
-    cout << "    H - Remover veterinario" << endl << endl;
+    cout << "    E - Listar veterinários" << endl;
+    cout << "    F - Adicionar veterinário" << endl;
+    cout << "    G - Atualizar veterinário" << endl;
+    cout << "    H - Remover veterinário" << endl << endl;
     cout << "    I - Listar tratadores" << endl;
     cout << "    J - Adicionar tratador" << endl;
     cout << "    K - Atualizar tratador" << endl;
