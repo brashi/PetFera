@@ -75,7 +75,8 @@ ostream& Animal::printOutDados(ostream& o, Animal* animal) const {
     int espacamento = 3;
     int tamanhoTruncado = tamanhoColuna - 3 - espacamento;
 
-    o << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getNome().length() > tamanhoTruncado) ? (this->getNome().substr(0, tamanhoTruncado) + "...") : this->getNome())
+    o << right
+    << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getNome().length() > tamanhoTruncado) ? (this->getNome().substr(0, tamanhoTruncado) + "...") : this->getNome())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getEspecie().length() > tamanhoTruncado) ? (this->getEspecie().substr(0, tamanhoTruncado) + "...") : this->getEspecie())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getVeterinario().getNome().length() > tamanhoTruncado) ? (this->getVeterinario().getNome().substr(0, tamanhoTruncado) + "...") : this->getVeterinario().getNome())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getTratador().getNome().length() > tamanhoTruncado) ? (this->getTratador().getNome().substr(0, tamanhoTruncado) + "...") : this->getTratador().getNome())

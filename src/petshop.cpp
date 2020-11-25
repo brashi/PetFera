@@ -12,6 +12,12 @@
 #include <iomanip>
 #include <iostream>
 
+using std::setfill;
+using std::setw;
+using std::fixed;
+using std::setprecision;
+using std::left;
+using std::right;
 using std::cout;
 using std::cin;
 
@@ -48,25 +54,110 @@ bool Petshop::adicionarAnimal(Animal* animalAdd) {
 
 // Criação
 void Petshop::criarVeterinario() {
-    Veterinario *vet = new Veterinario("placeholder", "placeholder", "Placeholder", "placeholder");
-    this->adicionarVeterinario(vet);
+    string nome, telefone, email, CRMV;
+
+    try {
+        cout << "Nome do funcionário: " << endl;
+        cin.ignore();
+        getline(cin, nome);
+        if (nome.size() == 0)
+            throw "Funcionário sem nome!";
+
+        if(this->findVeterinario(nome) != nullptr)
+            throw "Funcionário já existe!";
+
+        cout << endl << "Telefone: " << endl;
+        getline(cin, telefone);
+        if (telefone.size() == 0)
+            throw "Funcionário sem telefone!";
+        cout << endl << "E-mail pessoal: " << endl;
+        getline(cin, email);
+        if (email.size() == 0)
+            throw "Funcionário sem telefone!";
+        cout << endl << "CRMV do veterinário: " << endl;
+        getline(cin, CRMV);
+        if (CRMV.size() == 0)
+            throw "Veterinário precisa de um CRMV!";
+
+        cout << endl;
+        
+        Veterinario *vet = new Veterinario(nome, telefone, email, CRMV);
+
+        if(this->adicionarVeterinario(vet)) {
+            cout << "Veterinário cadastrado com sucesso" << endl;
+        } else {
+            cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
+        }
+        
+    } catch(char const* msg) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+        cout << "Erro: " << msg << endl;
+    } catch(...) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+    }
 }
 
 void Petshop::criarTratador() {
-    Tratador *trt = new Tratador("placeholder", "placeholder", "Placeholder", Azul);
-    this->adicionarTratador(trt);
+    string nome, telefone, email, uniforme;
+    Uniforme un;
+
+    try {
+        cout << "Nome do funcionário: " << endl;
+        cin.ignore();
+        getline(cin, nome);
+        if (nome.size() == 0)
+            throw "Funcionário sem nome!";
+
+        if(this->findTratador(nome) != nullptr)
+            throw "Funcionário já existe!";
+
+        cout << endl << "Telefone: " << endl;
+        getline(cin, telefone);
+        if (telefone.size() == 0)
+            throw "Funcionário sem telefone!";
+        cout << endl << "E-mail pessoal: " << endl;
+        getline(cin, email);
+        if (email.size() == 0)
+            throw "Funcionário sem telefone!";
+        cout << endl << "Nível de segurança:" << endl;
+        cout << "V - Verde" << endl;
+        cout << "A - Azul" << endl;
+        cout << "M - verMelho" << endl;
+        getline(cin, uniforme);
+        if(uniforme == "V" || uniforme == "v") //toupper não cabe por necessariamente ser string, e não um char
+            un = Verde;
+        else if(uniforme == "A" || uniforme == "a")
+            un = Azul;
+        else if(uniforme == "M" || uniforme == "m")
+            un = Vermelho;
+        else
+            throw "Funcionário precisa de um nível de segurança válido.";
+
+        cout << endl;
+
+        Tratador *trt = new Tratador(nome, telefone, email, un);
+
+        if(this->adicionarTratador(trt)) {
+            cout << "Tratador cadastrado com sucesso" << endl;
+        } else {
+            cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
+        }
+
+    } catch(char const* msg) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+        cout << "Erro: " << msg << endl;
+    } catch(...) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+    }
 }
 
-void Petshop::criarAnimal() { //FAZER EXCECAO CASO NAO TENHA VET, OU TRATADOR.
-    string nome, especie;
+void Petshop::criarAnimal() {
+    string nome, especie, regiao, local, classe, categoria;
     Veterinario vet;
     Tratador trata;
-    string regiao, local;
     bool perigo = false, voa = false, cauda = false, pata = false, gestacao = false, adestrado = false;
-    Pele pele;
     char opcao;
-    string classe;
-    string categoria;
+    Pele pele;
     
     try {
         if(this->veterinarios.size() < 1)
@@ -80,13 +171,11 @@ void Petshop::criarAnimal() { //FAZER EXCECAO CASO NAO TENHA VET, OU TRATADOR.
         getline(cin, nome);
         if (nome.size() == 0)
             throw "Animal sem nome!";
-        cout << endl;
-        cout << "Espécie: " << endl;
+        cout << endl << "Espécie: " << endl;
         getline(cin, especie);
         if (especie.size() == 0)
             throw "Animal sem espécie!";
-        cout << endl;
-        cout << "Digite o número do veterinário responsável: " << endl;
+        cout << endl << "Digite o número do veterinário responsável: " << endl;
         this->listarVeterinarios();
         int num;
         cin >> num;
@@ -95,15 +184,13 @@ void Petshop::criarAnimal() { //FAZER EXCECAO CASO NAO TENHA VET, OU TRATADOR.
             vet = *this->veterinarios[num];
         else
             throw "Veterinário não existe!";
-        cout << endl;
-        cout << "É perigoso ? \t S/N : ";
+        cout << endl << "É perigoso ? \t S/N : ";
         cin >> opcao;
         if(toupper(opcao) == 'S')
             perigo = true;
         else
             perigo = false;
-        cout << endl;
-        cout << "O animal pertence a que classe?..." << endl;
+        cout << endl << "O animal pertence a que classe?..." << endl;
         cout << "A - ave" << endl;
         cout << "F - anfíbio" << endl;
         cout << "R - réptil" << endl;
@@ -174,8 +261,7 @@ void Petshop::criarAnimal() { //FAZER EXCECAO CASO NAO TENHA VET, OU TRATADOR.
             else
                 gestacao = false;
         }
-        cout << endl;
-        cout << "A que categoria o animal pertence?..." << endl;
+        cout << endl << "A que categoria o animal pertence?..." << endl;
         cout << "D - doméstico" << endl;
         cout << "E - exótico" << endl;
         cout << "N - nativo" << endl;
@@ -218,8 +304,7 @@ void Petshop::criarAnimal() { //FAZER EXCECAO CASO NAO TENHA VET, OU TRATADOR.
             if (regiao.size() == 0)
                 throw "Animal sem região!";
         }
-        cout << endl;
-        cout << "Digite o número do tratador responsável: " << endl;
+        cout << endl << "Digite o número do tratador responsável: " << endl;
         this->listarTratadores();
         num;
         cin >> num;
@@ -236,6 +321,7 @@ void Petshop::criarAnimal() { //FAZER EXCECAO CASO NAO TENHA VET, OU TRATADOR.
             throw "Tratador não existe!"; 
 
         cout << endl;
+        
         DadosAnimal dadosNovoAnimal = (DadosAnimal) {
             .nome = nome,
             .especie = especie,
@@ -269,21 +355,129 @@ void Petshop::criarAnimal() { //FAZER EXCECAO CASO NAO TENHA VET, OU TRATADOR.
     }
 }
 
-// Leitura
-vector<Animal*> Petshop::getAnimais() const {
-}
-
-vector<Veterinario*> Petshop::getVeterinarios() const {
-}
-
-vector<Tratador*> Petshop::getTratadores() const {
-}
-
 // Atualização
 void Petshop::atualizarVeterinario() {
+    Veterinario* vet;
+    string nomeFind, nome, telefone, email, CRMV;
+
+    try {
+        // Encontrar funcionário
+        cout << "Qual o nome do funcionário a ser alterado?: " << endl;
+        cin.ignore();
+        getline(cin, nome);
+        vet = this->findVeterinario(nome);
+        if (nome.size() == 0 || vet == nullptr)
+            throw "Funcionário não encontrado!";
+
+        cout << "Alterar nome do veterinário: (para não alterar mantenha em branco)" << endl;
+        getline(cin, nome);
+        if (nome.size() == 0)
+            nome = vet->getNome();
+
+        cout << "Alterar telefone do veterinário: (para não alterar mantenha em branco)" << endl;
+        getline(cin, telefone);
+        if (telefone.size() == 0)
+            telefone = vet->getTelefone();
+
+        cout << "Alterar e-mail pessoal do veterinário: (para não alterar mantenha em branco)" << endl;
+        getline(cin, email);
+        if (email.size() == 0)
+            email = vet->getEmail();
+
+        cout << "Alterar CRMV do veterinário: (para não alterar mantenha em branco)" << endl;
+        getline(cin, CRMV);
+        if (CRMV.size() == 0)
+            CRMV = vet->getCRMV();
+
+        this->excluirVeterinario(vet);
+        delete vet;
+
+        if(this->adicionarVeterinario(new Veterinario(nome, telefone, email, CRMV))) {
+            cout << "Veterinário atualizado com sucesso" << endl;
+        } else {
+            cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
+        }
+
+    } catch(char const* msg) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+        cout << "Erro: " << msg << endl;
+    } catch(...) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+    }
 }
 
 void Petshop::atualizarTratador() {
+    string nomeFind, nome, telefone, email, uniforme;
+    Uniforme un;
+    Tratador* trt;
+
+    try {
+        // Encontrar funcionário
+        cout << "Qual o nome do funcionário a ser alterado?: " << endl;
+        cin.ignore();
+        getline(cin, nome);
+        trt = this->findTratador(nome);
+        if (nome.size() == 0 || trt == nullptr)
+            throw "Funcionário não encontrado!";
+
+        cout << "Alterar nome do tratador: (para não alterar mantenha em branco)" << endl;
+        getline(cin, nome);
+        if (nome.size() == 0)
+            nome = trt->getNome();
+
+        cout << "Alterar telefone do tratador: (para não alterar mantenha em branco)" << endl;
+        getline(cin, telefone);
+        if (telefone.size() == 0)
+            telefone = trt->getTelefone();
+
+        cout << "Alterar e-mail pessoal do tratador: (para não alterar mantenha em branco)" << endl;
+        getline(cin, email);
+        if (email.size() == 0)
+            email = trt->getEmail();
+
+        cout << "Alterar nível de segurança: (para não alterar mantenha em branco)" << endl;
+        cout << "V - Verde" << endl;
+        cout << "A - Azul" << endl;
+        cout << "M - verMelho" << endl;
+        getline(cin, uniforme);
+        bool alterou = true;
+        if(uniforme == "V" || uniforme == "v") //toupper não cabe por necessariamente ser string, e não um char
+            un = Verde;
+        else if(uniforme == "A" || uniforme == "a")
+            un = Azul;
+        else if(uniforme == "M" || uniforme == "m")
+            un = Vermelho;
+        else
+            trt->getUniforme();
+        
+        // Checa se o novo uniforme do tratador não entra em conflito com algum animal
+        if(un != trt->getUniforme()) {
+            for(auto& animal : this->animais) {
+                if(animal->getTratador() == *trt) {
+                    string classe = animal->getClasse(animal);
+                    if(animal->getPerigoso() && un != Vermelho)
+                        throw "O tratador possui animais que requerem segurança maior que a informada. Remova os animais de sua cautela e tente novamente.";
+                    else if((classe == "Réptil" || classe == "Mamífero") && (un == Verde))
+                        throw "O tratador possui animais que requerem segurança maior que a informada. Remova os animais de sua cautela e tente novamente.";
+                }
+            }
+        }
+
+        this->excluirTratador(trt);
+        delete trt;
+
+        if(this->adicionarTratador(new Tratador(nome, telefone, email, un))) {
+            cout << "Tratador atualizado com sucesso" << endl;
+        } else {
+            cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
+        }
+
+    } catch(char const* msg) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+        cout << "Erro: " << msg << endl;
+    } catch(...) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+    }
 }
 
 void Petshop::atualizarAnimal() {
@@ -568,9 +762,9 @@ void Petshop::atualizarAnimal() {
 void Petshop::excluirVeterinario() {
     string nome;
     cout << "Nome do Vet.: ";
-    cin >> nome;
+    getline(cin, nome);
 
-    char opcao;
+    string opcao;
     Veterinario* vet = this->findVeterinario(nome);
     if(vet != nullptr) {
         cout << "Registro encontrado !" << endl;
@@ -579,7 +773,7 @@ void Petshop::excluirVeterinario() {
         cout << endl << "\t Aperte \"S\" caso queira prosseguir ";
         cin >> opcao;
 
-        if(opcao == 'S' || opcao == 's') {
+        if(opcao == "S" || opcao == "s") {
             if(this->excluirVeterinario(vet)) {
                 cout << "Sucesso, registro removido." << endl;
             } else {
@@ -591,8 +785,6 @@ void Petshop::excluirVeterinario() {
             cout << "Operação cancelada !!" << endl;
             cout << "Voltando ao menu..." << endl;
         }
-        
-        
     } else {
         cout << "Entrada não encontrada nos registros." << endl;
     }
@@ -601,9 +793,9 @@ void Petshop::excluirVeterinario() {
 void Petshop::excluirTratador() {
     string nome;
     cout << "Nome do Tratador: ";
-    cin >> nome;
+    getline(cin, nome);
 
-    char opcao;
+    string opcao;
     Tratador* tratador = this->findTratador(nome);
     if(tratador != nullptr) {
         cout << "Registro encontrado !" << endl;
@@ -612,7 +804,7 @@ void Petshop::excluirTratador() {
         cout << endl << "\t Aperte \"S\" caso queira prosseguir ";
         cin >> opcao;
 
-        if(opcao == 'S' || opcao == 's') {
+        if(opcao == "S" || opcao == "s") {
             if(this->excluirTratador(tratador)) {
                 cout << "Sucesso, registro removido." << endl;
             } else {
@@ -634,11 +826,11 @@ void Petshop::excluirTratador() {
 void Petshop::excluirAnimal() {
     string nome, especie;
     cout << "Nome do animal: ";
-    cin >> nome;
+    getline(cin, nome);
     cout << "Especie do animal: ";
-    cin >> especie;
+    getline(cin, especie);
 
-    char opcao;
+    string opcao;
     Animal* animal = this->findAnimal(nome, especie);
     if(animal != nullptr) {
         cout << "Registro encontrado !" << endl;
@@ -647,7 +839,7 @@ void Petshop::excluirAnimal() {
         cout << endl << "\t Aperte \"S\" caso queira prosseguir ";
         cin >> opcao;
 
-        if(opcao == 'S' || opcao == 's') {
+        if(opcao == "S" || opcao == "s") {
             if(this->excluirAnimal(animal)) {
                 cout << "Sucesso, registro removido." << endl;
             } else {
@@ -711,6 +903,7 @@ Animal* Petshop::excluirAnimal(Animal* removido) {
     return nullptr;
 }
 
+// Métodos para "encontrar"
 Veterinario* Petshop::findVeterinario(string nome) {
     for(auto& vet : this->veterinarios) {
         if(vet->getNome() == nome) {
@@ -718,7 +911,6 @@ Veterinario* Petshop::findVeterinario(string nome) {
         }
     }
     return nullptr;
-
 }
 
 Tratador* Petshop::findTratador(string nome) {
@@ -739,88 +931,149 @@ Animal* Petshop::findAnimal(string nome, string especie) {
     return nullptr;
 }
 
+// Listar
 void Petshop::listarTratadores() {
-    int index = 0;
-    
-    for(auto& trt : this->tratadores) {
-        cout << index << " - " << *trt;
-        index++;
+    if(this->tratadores.size() == 0) {
+        cout << "Não há tratadores registrados" << endl;
+    } else {
+        int index = 0;
+        cout << endl << "-=-=-=-=-=-=-= Tratadores =-=-=-=-=-=-=" << endl;
+        cout << right << setfill(' ') << setw(6) << "ID"
+        << setfill(' ') << setw(23) << "Nome"
+        << setfill(' ') << setw(23) << "E-mail"
+        << setfill(' ') << setw(23) << "Telefone"
+        << setfill(' ') << setw(23) << "N. segurança"
+        << endl;
+        for(auto& trt : this->tratadores) {
+            cout << right << setfill(' ') << setw(6) << index << *trt;
+            index++;
+        }
+        cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl;
     }
 }
 
 void Petshop::listarVeterinarios() {
-    int index = 0;
-
-    for(auto& vet : this->veterinarios) {
-        cout << index << " - " << *vet;
-        index++;
+    if(this->veterinarios.size() == 0) {
+        cout << "Não há veterinários registrados" << endl;
+    } else {
+        int index = 0;
+        cout << endl << "-=-=-=-=-=-=- Veterinários -=-=-=-=-=-=" << endl;
+        cout << right << setfill(' ') << setw(6) << "ID"
+        << setfill(' ') << setw(23) << "Nome"
+        << setfill(' ') << setw(23) << "E-mail"
+        << setfill(' ') << setw(23) << "Telefone"
+        << setfill(' ') << setw(23) << "CRMV"
+        << endl;
+        for(auto& vet : this->veterinarios) {
+            cout << right << setfill(' ') << setw(6) << index << *vet;
+            index++;
+        }
+        cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl;
     }
 }
 
 void Petshop::listarAnimais() {
-    cout << "Escolha seu filtro: " << endl << endl;
-    cout << "T - Todos (sem filtro)" << endl;
-    cout << "A - Apenas aves" << endl;
-    cout << "F - Apenas anfibios" << endl;
-    cout << "R - Apenas repteis" << endl;
-    cout << "M - Apenas mamiferos" << endl;
-    char filtro;
-    cin >> filtro;
+    Veterinario vet;
+    Tratador trt;
 
-    switch(toupper(filtro)) {
-        case 'A' :
+    try {
+        if(this->animais.size() == 0)
+            throw "Não há animais para visualizar no sistema!";
+
+        cout << "Escolha seu filtro: " << endl << endl;
+        cout << "Enter - Todos (sem filtro)" << endl;
+        cout << "A - Apenas aves" << endl;
+        cout << "F - Apenas anfíbios" << endl;
+        cout << "R - Apenas répteis" << endl;
+        cout << "M - Apenas mamíferos" << endl;
+        cout << "D - Apenas animais domésticos" << endl;
+        cout << "E - Apenas silvestres exóticos" << endl;
+        cout << "N - Apenas silvestres nativos" << endl;
+        cout << "T - Filtrar por tratador" << endl;
+        cout << "V - Filtrar por veterinário" << endl;
+    
+        string filtro;
+        cin.ignore();
+        getline(cin, filtro);
+
+        if(filtro == "T" || filtro == "t") {
+            if(this->tratadores.size() == 0)
+                throw "Não há tratadores no sistema!";
+
+            cout << "Digite o número do tratador responsável: " << endl;
+            this->listarTratadores();
+            int num;
+            cin >> num;
+            
+            if(num >= 0 && num < this->tratadores.size())
+                trt = *this->tratadores[num];
+            else
+                throw "Tratador não existe!";
+        } else if(filtro == "V" || filtro == "v") {
+            if(this->veterinarios.size() == 0)
+                throw "Não há veterinários no sistema!";
+
+            cout << "Digite o número do veterinário responsável: " << endl;
+            this->listarVeterinarios();
+            int num;
+            cin >> num;
+            
+            if(num >= 0 && num < this->veterinarios.size())
+                vet = *this->veterinarios[num];
+            else
+                throw "Veterinário não existe!";
+        }
+
+        // Imprime cabeçalho:
+        cout << endl << "=-=-=-=-=- Lista de animais -=-=-=-=-=-" << endl;
+
+        cout << right
+        << setfill(' ') << setw(19) << "Nome"
+        << setfill(' ') << setw(19) << "Espécie"
+        << setfill(' ') << setw(19) << "Veterinário"
+        << setfill(' ') << setw(19) << "Tratador"
+        << setfill(' ') << setw(19) << "Perigoso"
+        << setfill(' ') << setw(19) << "Classificação"
+        << setfill(' ') << setw(19) << "Classe"
+        << endl;
+
         for(auto& animal : this->animais) {
-            if( Ave* checar_ave = dynamic_cast< Ave* >(animal))
+            if(filtro == "a" || filtro == "A") {
+                if( Ave* checar_ave = dynamic_cast< Ave* >(animal))
+                    cout << *animal;
+            } else if(filtro == "f" || filtro == "F") {
+                if( Anfibio* checar_anfibio = dynamic_cast< Anfibio* >(animal))
+                    cout << *animal;
+            } else if(filtro == "r" || filtro == "R") {
+                if( Reptil* checar_ave = dynamic_cast< Reptil* >(animal))
+                    cout << *animal;
+            } else if(filtro == "m" || filtro == "M") {
+                if( Mamifero* checar_ave = dynamic_cast< Mamifero* >(animal))
+                    cout << *animal;
+            } else if(filtro == "d" || filtro == "D") {
+                if( Domestico* checar_domestico = dynamic_cast< Domestico* >(animal))
+                    cout << *animal;
+            } else if(filtro == "e" || filtro == "E") {
+                if( Exotico* checar_exotico = dynamic_cast< Exotico* >(animal))
+                    cout << *animal;
+            } else if(filtro == "n" || filtro == "N") {
+                if( Nativo* checar_nativo = dynamic_cast< Nativo* >(animal))
+                    cout << *animal;
+            } else if(filtro == "T" || filtro == "t") {
+                if(animal->getTratador() == trt)
+                    cout << *animal;
+            } else if(filtro == "V" || filtro == "v") {
+                if(animal->getVeterinario() == vet)
+                    cout << *animal;
+            } else
                 cout << *animal;
         }
-        break;
+        cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl << endl;
 
-        case 'F' :
-        for(auto& animal : this->animais) {
-            if( Anfibio* checar_anfibio = dynamic_cast< Anfibio* >(animal))
-                cout << *animal;
-        }
-        break;
-
-        case 'R' :
-        for(auto& animal : this->animais) {
-            if( Reptil* checar_ave = dynamic_cast< Reptil* >(animal))
-                cout << *animal;
-        }
-        break;
-
-        case 'M' :
-        for(auto& animal : this->animais) {
-            if( Mamifero* checar_ave = dynamic_cast< Mamifero* >(animal))
-                cout << *animal;
-        }
-        break;
-
-        case 'T' :
-        for(auto& animal : this->animais) {
-            cout << *animal;
-        }
-        break;
+    } catch(char const* msg) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+        cout << "Erro: " << msg << endl;
+    } catch(...) {
+        cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
     }
-
-    cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl << endl;
 }
-
-// void Petshop::listarAnimais() {
-//     cout << "Escolha seu filtro: " << endl << endl;
-//     cout << "T - Todos (sem filtro)" << endl;
-//     cout << "A - Apenas aves" << endl;
-//     cout << "F - Apenas anfibios" << endl;
-//     cout << "R - Apenas repteis" << endl;
-//     cout << "M - Apenas mamiferos" << endl;
-//     char filtro;
-//     cin >> filtro;
-
-//     for(auto& animal : this->animais) {
-//         if(Animal* ver = fifi.filtro[filtro](animal)) {
-//             cout << *animal;
-//         }
-//     }
-
-//     cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl << endl;
-// }

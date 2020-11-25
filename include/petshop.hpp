@@ -17,11 +17,7 @@ class Petshop {
     public:
         Petshop();
         ~Petshop();
-
-        vector<Animal*> getAnimais() const;
-        vector<Veterinario*> getVeterinarios() const;
-        vector<Tratador*> getTratadores() const;
-
+        
         void listarAnimais();
         void listarTratadores();
         void listarVeterinarios();
