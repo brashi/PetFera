@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tratador',['tratador',['../classAnimal.html#a9a864369990c6743895032c6c8f2bdbc',1,'Animal']]]
+  ['filtro',['filtro',['../classFiltroAnimal.html#a41691dd3fe4c7904e795edfccf7669b9',1,'FiltroAnimal']]]
 ];

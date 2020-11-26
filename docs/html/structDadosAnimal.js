@@ -1,9 +1,11 @@
 var structDadosAnimal =
 [
     [ "adestrado", "structDadosAnimal.html#a7e96478616a42a0d5738057066b3b38b", null ],
+    [ "ameacadoPor", "structDadosAnimal.html#ae137f8275dc43f9753364095aae6f757", null ],
     [ "cauda", "structDadosAnimal.html#a1bc2b435b8b81d215c9e2650ac5ae52b", null ],
     [ "especie", "structDadosAnimal.html#a5c1e3003399b3ced9020d04d947ad079", null ],
     [ "gestacao", "structDadosAnimal.html#acb06a588857b5d1b0e08f7971d32c3fa", null ],
+    [ "licenca", "structDadosAnimal.html#a09a540568a8c1409eff6d7e733b668e3", null ],
     [ "local", "structDadosAnimal.html#a720aa1908cce8658c175e2915ae9fc3c", null ],
     [ "nome", "structDadosAnimal.html#a10b7dddd7f7f6fe6cb21c8fcd7eee774", null ],
     [ "pata", "structDadosAnimal.html#ae0da195e5e3577e25befd63a43671348", null ],

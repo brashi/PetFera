@@ -1,6 +1,22 @@
 var searchData=
 [
-  ['listaranimais',['listarAnimais',['../classPetshop.html#a29770b7025d7b1f84e2dc946e730463e',1,'Petshop']]],
-  ['listartratadores',['listarTratadores',['../classPetshop.html#aae1d8448fa0974450c8dceac2fc5b8f9',1,'Petshop']]],
-  ['listarveterinarios',['listarVeterinarios',['../classPetshop.html#a22664b727e5d580637146e83a60c29d3',1,'Petshop']]]
+  ['getadestrado',['getAdestrado',['../classDomestico.html#a1be64ba6c161c35484a6484e709cbbc1',1,'Domestico']]],
+  ['getameacadopor',['getAmeacadoPor',['../classAnimal.html#a9acdc604d45a1e32e414bd8ffc0d220a',1,'Animal']]],
+  ['getcauda',['getCauda',['../classAnfibio.html#aafdb18890be1713a49631fee8449b3dc',1,'Anfibio']]],
+  ['getclasse',['getClasse',['../classAnimal.html#aeb955ca9957614f871efaf2156da8baf',1,'Animal']]],
+  ['getclassificacao',['getClassificacao',['../classAnimal.html#afe5c96ce74fc4bd291b45092bebaf360',1,'Animal']]],
+  ['getcrmv',['getCRMV',['../classVeterinario.html#a8ac8fd3dbec97feac3a870aa916d61ea',1,'Veterinario']]],
+  ['getemail',['getEmail',['../classPessoa.html#a0fe937f9358dd92f73441c3288e46500',1,'Pessoa']]],
+  ['getespecie',['getEspecie',['../classAnimal.html#ae44b21c31ddc536df13bb7989daf5913',1,'Animal']]],
+  ['getlicenca',['getLicenca',['../classNativo.html#af8b543c14031088110e972b13afe85a5',1,'Nativo']]],
+  ['getlocal',['getLocal',['../classExotico.html#a5434a3369721b03f129adbe23709f571',1,'Exotico']]],
+  ['getnome',['getNome',['../classAnimal.html#a16dab693b54ccdb94ead24d703f6d5a6',1,'Animal::getNome()'],['../classPessoa.html#a8d551db3b19e1f07022adb3793cb8ed7',1,'Pessoa::getNome()']]],
+  ['getpata',['getPata',['../classAnfibio.html#abeb145d22dbe98d78934ad9ef0e45873',1,'Anfibio']]],
+  ['getperigoso',['getPerigoso',['../classAnimal.html#aea331441b92c0c724088fa0bc384db8d',1,'Animal']]],
+  ['getregiao',['getRegiao',['../classNativo.html#a7f3fa1f37f3b9f7ea61d8377d7992dc6',1,'Nativo']]],
+  ['gettelefone',['getTelefone',['../classPessoa.html#afcc25e8f6dc6d9b0ce5862df3cfbb66f',1,'Pessoa']]],
+  ['gettratador',['getTratador',['../classAnimal.html#a836f9e953b1f801af5f0cc326cf09dae',1,'Animal']]],
+  ['getuniforme',['getUniforme',['../classTratador.html#a9950c0442f4dc3858605426f1589cac4',1,'Tratador']]],
+  ['getveterinario',['getVeterinario',['../classAnimal.html#a5aba52156e564a35ab05a20d1cab3d8d',1,'Animal']]],
+  ['getvoa',['getVoa',['../classAve.html#abe245db949779b3a0ae976aa5fe66169',1,'Ave']]]
 ];

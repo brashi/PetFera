@@ -1,6 +1,6 @@
 <map id="Nativo" name="Nativo">
-<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="335,1012,572,1456"/>
-<area shape="rect" id="node3" href="$classTratador.html" title="Implementação dos tratadores. " alt="" coords="361,696,580,935"/>
-<area shape="rect" id="node4" href="$classPessoa.html" title="Classe base dos funcionarios. " alt="" coords="221,263,440,589"/>
-<area shape="rect" id="node8" href="$classVeterinario.html" title="Implementação dos veterinarios. " alt="" coords="119,696,337,935"/>
+<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="338,1041,585,1515"/>
+<area shape="rect" id="node3" href="$classTratador.html" title="Implementação dos tratadores. " alt="" coords="369,725,588,964"/>
+<area shape="rect" id="node4" href="$classPessoa.html" title="Classe base dos funcionarios. " alt="" coords="225,263,444,589"/>
+<area shape="rect" id="node8" href="$classVeterinario.html" title="Implementação dos veterinarios. " alt="" coords="127,725,345,964"/>
 </map>

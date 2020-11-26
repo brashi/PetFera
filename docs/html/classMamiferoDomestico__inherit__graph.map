@@ -1,5 +1,5 @@
 <map id="MamiferoDomestico" name="MamiferoDomestico">
-<area shape="rect" id="node2" href="$classMamifero.html" title="Classificação base para Mamiferos. " alt="" coords="5,629,201,809"/>
-<area shape="rect" id="node3" href="$classDomestico.html" title="Umas das definições de categoria para Animal. " alt="" coords="225,615,432,824"/>
-<area shape="rect" id="node4" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="210,5,447,567"/>
+<area shape="rect" id="node2" href="$classMamifero.html" title="Classificação base para Mamiferos. " alt="" coords="5,688,201,868"/>
+<area shape="rect" id="node3" href="$classDomestico.html" title="Umas das definições de categoria para Animal. " alt="" coords="225,673,432,883"/>
+<area shape="rect" id="node4" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="205,5,452,625"/>
 </map>

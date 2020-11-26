@@ -1,5 +1,5 @@
 <map id="AveNativa" name="AveNativa">
-<area shape="rect" id="node2" href="$classAve.html" title="Classificação base para Aves. " alt="" coords="5,615,141,824"/>
-<area shape="rect" id="node3" href="$classNativo.html" title="Umas das definições de categoria para Animal. " alt="" coords="166,615,335,824"/>
-<area shape="rect" id="node4" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="132,5,369,567"/>
+<area shape="rect" id="node2" href="$classAve.html" title="Classificação base para Aves. " alt="" coords="5,703,141,912"/>
+<area shape="rect" id="node3" href="$classNativo.html" title="Umas das definições de categoria para Animal. " alt="" coords="166,673,343,941"/>
+<area shape="rect" id="node4" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="131,5,378,625"/>
 </map>
