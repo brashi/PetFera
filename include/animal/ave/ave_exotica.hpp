@@ -18,6 +18,13 @@ using std::string;
  */
 class AveExotica : public Ave, public Exotico {
     public:
+        /**
+         * @brief Construtor de AveExotica
+         * @details é totalmente baseado em suas
+         * heranças Ave e Exotico.
+         * @param Ave()
+         * @param Exotico()
+         */
         AveExotica(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, string local, bool voa);
 

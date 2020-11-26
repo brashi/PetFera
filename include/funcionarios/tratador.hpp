@@ -30,15 +30,35 @@ enum Uniforme {
 class Tratador : public Pessoa {
     public:
         Tratador() {};
+        /**
+         * @brief Construtor de Tratador
+         * @details Herda o mesmo construtor em Pessoa,
+         * com a adição de seus atributos própios.
+         * @param Pessoa() igual construtor de Pessoa
+         * @param Uniforme do funcionario, tipo Enum
+         */
         Tratador(string nome, string telefone, string email,
                 Uniforme uniforme);
 
         ~Tratador();
+
+        /**
+         * @brief getter de Enum
+         * @return tipo Enum explicitando
+         * o uniforme do tratador em questão.
+         */
         Uniforme getUniforme() const;
 
+        /**
+         * @brief Implementação da stream de dados.
+         * @details Retorna um stream de saida std::cout
+         * com as informações da instância específica,
+         * feito para a classe Tratador.
+         */
         ostream& printOutDados(ostream& o) const;
 
     private:
+        /** @brief Uniforme do funcionário, definindo seu nível de segurança. */
         Uniforme uniforme;
 
 };

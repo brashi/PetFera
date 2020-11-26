@@ -16,11 +16,41 @@ using std::endl;
 class Pessoa {
     public:
         Pessoa() {};
+        /**
+         * @brief Construtor base para pessoas.
+         * @details A base para os funcionários é
+         * declarada por aqui, embora não seja instanciada,
+         * a classe Pessoa tem sua utilidade em dar base
+         * aos que herdam.
+         * @param nome do funcionaro
+         * @param telefone para contato
+         * @param email como string
+         */
         Pessoa(string nome, string telefone, string email);
+        /**
+         * @brief Destrutor virtual
+         * @details deve ser virtual para
+         * servir de ponte para a criação
+         * de classes herdeiras.
+         */
         virtual ~Pessoa();
 
+        /** 
+         * @brief getter de string
+         * @return nome como string
+         */
         string getNome() const;
+        
+        /** 
+         * @brief getter de string
+         * @return telefone como string
+         */
         string getTelefone() const;
+
+        /** 
+         * @brief getter de string
+         * @return Email como string
+         */
         string getEmail() const;
 
         /** 
@@ -46,7 +76,10 @@ class Pessoa {
         friend ostream& operator<< (ostream& o, Pessoa& pessoa);
 
     protected:
+        /** @brief Nome do funcionaro */
         string nome;
+        /** @brief Telefone para contato */
         string telefone;
+        /** @brief Email em forma de string */
         string email;
 };

@@ -19,6 +19,14 @@ using std::string;
  */
 class AnfibioNativo : public Anfibio, public Nativo {
     public:
+        /** 
+         * @brief construtor herdado
+         * @details sua implementação
+         * é parte da herança entre Anfibio
+         * e Nativo.
+         * @param Nativo()
+         * @param Anfibio()
+         */
         AnfibioNativo(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, string regiao, string licenca, bool cauda, bool pata);
 

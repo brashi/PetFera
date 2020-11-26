@@ -19,6 +19,14 @@ using std::string;
  */
 class AnfibioExotico : public Anfibio, public Exotico {
     public:
+        /** 
+         * @brief construtor herdado
+         * @details sua implementação
+         * é parte da herança entre Anfibio
+         * e Exotico.
+         * @param Exotico()
+         * @param Anfibio()
+         */
         AnfibioExotico(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, string local, bool cauda, bool pata);
 

@@ -17,11 +17,31 @@ using std::string;
 class Ave {
     public:
         Ave() {};
+        /** 
+         * @brief construtor de Ave
+         * @details Serve para dar padrão
+         * às classes de animais derivadas
+         * dela.
+         * @param voa tipo bool
+         */
         Ave(bool voa);
+
+        /**
+         * @brief destrutor de Ave
+         * @details Usa tipo virtual para
+         * haver polimorfismo entre
+         * suas classes herdeiras.
+         */
         virtual ~Ave();
 
+        /**
+         * @brief getter de bool
+         * @return bool determinando
+         * se o animal voa ou não.
+         */
         bool getVoa() const;
 
     protected:
+        /** @brief valor bool que determina se o animal voa */
         bool voa;
 };

@@ -18,18 +18,84 @@ using std::string;
 class Animal {
     public:
         Animal() {};
+        /**
+         * @brief Construtor da classe base Animal
+         * @details O construtor faz a base para a criação
+         * de dados presentes em qualquer animal. Serve como
+         * base para os construtores de suas herdeiras.
+         * @param nome como string
+         * @param especie como string
+         * @param ameaça como string, se esta ameaçado por extinção
+         * @param Veterinario como tipo Veterinario
+         * @param Tratador como tipo Tratador
+         * @param perigoso como bool
+         */
         Animal(string nome, string especie, string ameacadoPor, Veterinario veterinario,
             Tratador tratador, bool perigoso);
+        /** 
+         * @brief destrutor padrão para base
+         * @details deve ser virtual por questões
+         * de polimorfismo entre as classes herdeiras.
+         */
         virtual ~Animal();
 
+        /** 
+         * @brief getter de string
+         * @return nome do Animal como
+         * uma string
+         */
         string getNome() const;
+        /**
+         * @brief getter de string
+         * @return especie do Animal
+         * como uma string
+         */
         string getEspecie() const;
+        /**
+         * @brief getter de string
+         * @return a situação de preservação
+         * do Animal. Declarando se o mesmo
+         * se encontra ameaçado por algum
+         * fator especifico dado por uma string.
+         */
         string getAmeacadoPor() const;
+        /**
+         * @brief getter de tipo Veterinario
+         * @return Veterinario responsável
+         * pelo animal em questão.
+         */
         Veterinario getVeterinario() const;
+        /**
+         * @brief getter de tipo Tratador
+         * @return Tratador responsável
+         * pelo animal em questão.
+         */
         Tratador getTratador() const;
+        /**
+         * @brief getter de bool
+         * @return bool de verdadeiro
+         * ou falso se o animal apresenta
+         * algum perigo ao manejo.
+         */
         bool getPerigoso() const;
 
+        /**
+         * @details getter de string
+         * @details com base em casts para
+         * o uma classe especifica. Define
+         * uma string com a categoria do animal.
+         * @param Animal em questão.
+         * @return String com a categoria do animal.
+         */
         string getClassificacao(Animal* animal) const;
+        /**
+         * @details getter de string
+         * @details com base em casts para
+         * o uma classe especifica. Define
+         * uma string com a classificação do animal.
+         * @param Animal em questão.
+         * @return String com a classificação do animal.
+         */
         string getClasse(Animal* animal) const;
 
         /**
@@ -63,11 +129,16 @@ class Animal {
          */
         friend ostream& operator<< (ostream& o, Animal& animal);
     protected:
+        /** String declarando o nome do Animal */
         string nome;
+        /** String declarando sua espécie */
         string especie;
+        /** @brief Declara se o animal é ameaçado por alguma causa. Possui valor "nada" caso contrário */
         string ameacadoPor;
+        /** @brief O Veterinario responsável pelo animal em questão */
         Veterinario veterinario;
         /** @brief A classe do animal pode indicar a necessidade de um Tratador com Uniforme específico */
         Tratador tratador;
+        /** @brief Declara se o animal apresenta perigo ao manejo */
         bool perigoso;
 };

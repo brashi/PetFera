@@ -19,6 +19,13 @@ using std::string;
 class AveDomestica : public Ave, public Domestico {
     public:
         AveDomestica() {};
+        /**
+         * @brief Construtor de AveDomestica
+         * @details é totalmente baseado em suas
+         * heranças Ave e Domestico.
+         * @param Ave()
+         * @param Domestico()
+         */
         AveDomestica(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, bool adestrado, bool voa);
 

@@ -327,13 +327,45 @@ class Petshop {
         Animal* excluirAnimal(Animal* removido);
     
     private:
+        /**
+         * @brief Uso interno
+         * @details Acha e retorna a referência
+         * para o tipo Veterinario com o mesmo
+         * nome que o informado.
+         * @param nome como string
+         * @return Referência a instância, retorna
+         * nullptr caso não exista.
+         */
         Veterinario* findVeterinario(string nome);
+        /**
+         * @brief Uso interno
+         * @details Acha e retorna a referência
+         * para o tipo Tratador com o mesmo
+         * nome que o informado.
+         * @param nome como string
+         * @return Referência a instância, retorna
+         * nullptr caso não exista.
+         */
         Tratador* findTratador(string nome);
+        /**
+         * @brief Uso interno
+         * @details Acha e retorna a referência
+         * para o tipo Animal com o mesmo
+         * nome que o informado.
+         * @param nome como string
+         * @param especie como string
+         * @return Referência a instância, retorna
+         * nullptr caso não exista.
+         */
         Animal* findAnimal(string nome, string especie);
 
+        /** @brief vetor guardando as instâncias de Veterinario do sistema. */
         vector<Veterinario*> veterinarios;
+        /** @brief vetor guardando as instâncias de Tratador do sistema. */
         vector<Tratador*> tratadores;
+        /** @brief vetor guardando as instâncias de Animal do sistema. */
         vector<Animal*> animais;
 
+        /** @brief Mapeador de animais, veja MapeadorAnimal */
         MapeadorAnimal mapa;
 };

@@ -16,8 +16,24 @@ using std::string;
 class Nativo : public Animal {
     public:
         Nativo() {};
+        /**
+         * @brief Construtor para o tipo Nativo
+         * @details Usando o construtor de sua classe
+         * base Animal. Também faz a base para os
+         * que o herdam, definindo os atributos própios
+         * da classe.
+         * @param Animal() construtor base
+         * @param regiao string determinando a que região o animal pertence
+         * @param licenca declarando a licença do animal (numero)
+         */
         Nativo(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, string regiao, string licenca);
+        /**
+         * @brief Destrutor virtual
+         * @details O destrutor deve ser virtual
+         * pois terá herdeiros, sendo necessário
+         * a definição do metodo
+         */
         virtual ~Nativo();
 
         /**
@@ -31,6 +47,8 @@ class Nativo : public Animal {
         string getLicenca() const;
 
     protected:
+        /** @brief região brasileira de origem do animal */
         string regiao;
+        /** @brief Numero de licensa do IBAMA para transporte */
         string licenca;
 };
