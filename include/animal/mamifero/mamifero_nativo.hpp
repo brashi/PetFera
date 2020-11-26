@@ -18,8 +18,8 @@ using std::string;
  */
 class MamiferoNativo : public Mamifero, public Nativo {
     public:
-        MamiferoNativo(string nome, string especie, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string regiao, bool gestacao);
+        MamiferoNativo(string nome, string especie, string ameacadoPor, Veterinario veterinario,
+                Tratador tratador, bool perigoso, string regiao, string licenca, bool gestacao);
 
         ~MamiferoNativo();
 };

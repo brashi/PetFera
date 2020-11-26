@@ -19,7 +19,7 @@ using std::string;
 class AveDomestica : public Ave, public Domestico {
     public:
         AveDomestica() {};
-        AveDomestica(string nome, string especie, Veterinario veterinario,
+        AveDomestica(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, bool adestrado, bool voa);
 
         ~AveDomestica();

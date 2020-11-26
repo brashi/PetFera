@@ -15,7 +15,7 @@ using std::string;
 class Domestico : public Animal {
     public:
         Domestico() {};
-        Domestico(string nome, string especie, Veterinario veterinario,
+        Domestico(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, bool adestrado);
         virtual ~Domestico();
 

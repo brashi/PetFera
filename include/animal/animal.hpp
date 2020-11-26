@@ -18,12 +18,13 @@ using std::string;
 class Animal {
     public:
         Animal() {};
-        Animal(string nome, string especie, Veterinario veterinario,
+        Animal(string nome, string especie, string ameacadoPor, Veterinario veterinario,
             Tratador tratador, bool perigoso);
         virtual ~Animal();
 
         string getNome() const;
         string getEspecie() const;
+        string getAmeacadoPor() const;
         Veterinario getVeterinario() const;
         Tratador getTratador() const;
         bool getPerigoso() const;
@@ -64,6 +65,7 @@ class Animal {
     protected:
         string nome;
         string especie;
+        string ameacadoPor;
         Veterinario veterinario;
         /** @brief A classe do animal pode indicar a necessidade de um Tratador com Uniforme específico */
         Tratador tratador;

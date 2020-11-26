@@ -1,8 +1,8 @@
 #include "domestico.hpp"
 
-Domestico::Domestico(string nome, string especie, Veterinario veterinario, Tratador tratador,
+Domestico::Domestico(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador,
                 bool perigoso, bool adestrado):
-                Animal(nome, especie, veterinario, tratador, perigoso),
+                Animal(nome, especie, ameacadoPor, veterinario, tratador, perigoso),
                 adestrado(adestrado){}
 
 Domestico::~Domestico(){}
