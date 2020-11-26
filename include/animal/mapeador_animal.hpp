@@ -38,6 +38,7 @@ typedef struct DadosAnimal {
     //Animal
     string nome;
     string especie;
+    string ameacadoPor;
     Veterinario veterinario;
     Tratador tratador;
     bool perigoso;
@@ -45,6 +46,7 @@ typedef struct DadosAnimal {
     //Categoria
     string regiao;
     string local;
+    string licenca;
     bool adestrado;
 
     //Classe

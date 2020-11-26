@@ -19,8 +19,8 @@ using std::string;
  */
 class AnfibioNativo : public Anfibio, public Nativo {
     public:
-        AnfibioNativo(string nome, string especie, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string regiao, bool cauda, bool pata);
+        AnfibioNativo(string nome, string especie, string ameacadoPor, Veterinario veterinario,
+                Tratador tratador, bool perigoso, string regiao, string licenca, bool cauda, bool pata);
 
         ~AnfibioNativo();
 };

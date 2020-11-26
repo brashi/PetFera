@@ -19,7 +19,7 @@ using std::string;
  */
 class AnfibioExotico : public Anfibio, public Exotico {
     public:
-        AnfibioExotico(string nome, string especie, Veterinario veterinario,
+        AnfibioExotico(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, string local, bool cauda, bool pata);
 
         ~AnfibioExotico();

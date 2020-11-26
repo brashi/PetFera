@@ -21,9 +21,9 @@ using std::right;
 using std::cout;
 using std::endl;
 
-Animal::Animal(string nome, string especie, Veterinario veterinario, Tratador tratador,
+Animal::Animal(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador,
                 bool perigoso):
-                nome(nome), especie(especie), veterinario(veterinario), tratador(tratador),
+                nome(nome), especie(especie), ameacadoPor(ameacadoPor), veterinario(veterinario), tratador(tratador),
                 perigoso(perigoso){}
 
 Animal::~Animal(){}
@@ -34,6 +34,10 @@ string Animal::getNome() const {
 
 string Animal::getEspecie() const {
     return this->especie;
+}
+
+string Animal::getAmeacadoPor() const {
+    return this->ameacadoPor;
 }
 
 Veterinario Animal::getVeterinario() const {
@@ -71,19 +75,19 @@ string Animal::getClasse(Animal* animal) const {
 }
 
 ostream& Animal::printOutDados(ostream& o, Animal* animal) const {
-    int tamanhoColuna = 16;
+    int tamanhoColuna = 20;
     int espacamento = 3;
     int tamanhoTruncado = tamanhoColuna - 3 - espacamento;
 
-    o << right
-    << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getNome().length() > tamanhoTruncado) ? (this->getNome().substr(0, tamanhoTruncado) + "...") : this->getNome())
+    o  << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getNome().length() > tamanhoTruncado) ? (this->getNome().substr(0, tamanhoTruncado) + "...") : this->getNome())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getEspecie().length() > tamanhoTruncado) ? (this->getEspecie().substr(0, tamanhoTruncado) + "...") : this->getEspecie())
-    << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getVeterinario().getNome().length() > tamanhoTruncado) ? (this->getVeterinario().getNome().substr(0, tamanhoTruncado) + "...") : this->getVeterinario().getNome())
-    << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getTratador().getNome().length() > tamanhoTruncado) ? (this->getTratador().getNome().substr(0, tamanhoTruncado) + "...") : this->getTratador().getNome())
+    << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getAmeacadoPor().length() > tamanhoTruncado) ? (this->getAmeacadoPor().substr(0, tamanhoTruncado) + "...") : this->getAmeacadoPor())
+    // << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getVeterinario().getNome().length() > tamanhoTruncado) ? (this->getVeterinario().getNome().substr(0, tamanhoTruncado) + "...") : this->getVeterinario().getNome())
+    // << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getTratador().getNome().length() > tamanhoTruncado) ? (this->getTratador().getNome().substr(0, tamanhoTruncado) + "...") : this->getTratador().getNome())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << (this->getPerigoso()? "Sim" : "Não")
     << setfill(' ') << setw(tamanhoColuna + espacamento) << this->getClassificacao(animal)
     << setfill(' ') << setw(tamanhoColuna + espacamento) << this->getClasse(animal)
-    << endl;
+    << right << endl;
 
     return o;
 }

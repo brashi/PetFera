@@ -1,8 +1,8 @@
 #include "mamifero_domestico.hpp"
 
-MamiferoDomestico::MamiferoDomestico(string nome, string especie, Veterinario veterinario, Tratador tratador,
+MamiferoDomestico::MamiferoDomestico(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador,
                 bool perigoso, bool adestrado, bool gestacao):
-                Domestico(nome, especie, veterinario, tratador, perigoso, adestrado),
+                Domestico(nome, especie, ameacadoPor, veterinario, tratador, perigoso, adestrado),
                 Mamifero(gestacao){}
 
 MamiferoDomestico::~MamiferoDomestico(){}

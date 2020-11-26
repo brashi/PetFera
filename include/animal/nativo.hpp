@@ -16,8 +16,8 @@ using std::string;
 class Nativo : public Animal {
     public:
         Nativo() {};
-        Nativo(string nome, string especie, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string regiao);
+        Nativo(string nome, string especie, string ameacadoPor, Veterinario veterinario,
+                Tratador tratador, bool perigoso, string regiao, string licenca);
         virtual ~Nativo();
 
         /**
@@ -25,6 +25,12 @@ class Nativo : public Animal {
          */
         string getRegiao() const;
 
+        /**
+         * @brief Um Nativo tem uma licença de transporte gerada pelo IBAMA.
+         */
+        string getLicenca() const;
+
     protected:
         string regiao;
+        string licenca;
 };
