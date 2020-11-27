@@ -29,37 +29,75 @@ string Animal::getNome() const {
     return this->nome;
 }
 
-void Animal::setNome() {}
+string Animal::setNome() {
+    string s;
+    cout << endl << "Nome: " << endl;
+    getline(cin, s);
+
+    if(s.size() == 0)
+        return {};
+    else
+        nome = s;
+    
+    return s;
+}
 
 string Animal::getEspecie() const {
     return this->especie;
 }
 
-void Animal::setEspecie() {}
+string Animal::setEspecie() {
+    string s;
+    cout << endl << "Espécie: " << endl;
+    getline(cin, s);
+    
+    if(s.size() == 0)
+        return {};
+    else
+        especie = s;
+    
+    return s;
+}
 
 string Animal::getAmeacadoPor() const {
     return this->ameacadoPor;
 }
 
-void Animal::setAmeacadoPor() {}
+string Animal::setAmeacadoPor() {
+    string s;
+    cout << endl << "Animal ameaçado de extinção por?: " << endl;
+    getline(cin, s);
+    
+    if(s.size() == 0)
+        return {};
+    else
+        ameacadoPor = s;
+    
+    return s;
+}
+
+// Sobrecarga para opcionalidade do campo
+void Animal::setAmeacadoPor(string s) {
+    ameacadoPor = s;
+}
 
 Veterinario Animal::getVeterinario() const {
     return this->veterinario;
 }
 
-void Animal::setVeterinario() {}
+Veterinario* Animal::setVeterinario() {}
 
 Tratador Animal::getTratador() const {
     return this->tratador;
 }
 
-void Animal::setTratador() {}
+Tratador* Animal::setTratador() {}
 
 bool Animal::getPerigoso() const {
     return this->perigoso;
 }
 
-void Animal::setPerigoso() {}
+int Animal::setPerigoso() {}
 
 string Animal::getClassificacao(Animal* animal) const {
     if(Exotico* teste = dynamic_cast< Exotico* >(animal)) {

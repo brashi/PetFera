@@ -18,6 +18,7 @@ using std::string;
  */
 class Anfibio : public Animal {
     public:
+        Anfibio() {};
         /** 
          * @brief construtor de Anfibio
          * provendo os atributos
@@ -39,12 +40,15 @@ class Anfibio : public Animal {
          */
         bool getCauda() const;
 
+        int setCauda();
+
         /**
          * @brief getter de bool
          * @return bool pata da instância.
          */
         bool getPata() const;
 
+        int setPata();
     protected:
         /** @brief determina se o anfibio tem ou não cauda */
         bool cauda;

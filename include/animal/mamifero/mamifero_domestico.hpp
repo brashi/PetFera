@@ -18,6 +18,8 @@ using std::string;
  */
 class MamiferoDomestico : public Mamifero, public Domestico {
     public:
+        MamiferoDomestico() {};
+
         MamiferoDomestico(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, bool adestrado, bool gestacao);
 

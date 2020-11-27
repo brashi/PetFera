@@ -24,13 +24,15 @@ enum Pele {
  */
 class Reptil : public Animal {
     public:
-        Reptil();
+        Reptil() {};
+
         Reptil(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, Pele pele);
         virtual ~Reptil();
 
         Pele getPele() const;
 
+        int setPele();
     protected:
         Pele pele;
 };

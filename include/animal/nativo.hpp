@@ -38,10 +38,14 @@ class Nativo {
          */
         string getRegiao() const;
 
+        string setRegiao();
+        
         /**
          * @brief Um Nativo tem uma licença de transporte gerada pelo IBAMA.
          */
         string getLicenca() const;
+
+        string setLicenca();
 
     protected:
         /** @brief região brasileira de origem do animal */

@@ -8,3 +8,5 @@ Exotico::~Exotico(){}
 string Exotico::getLocal() const {
     return this->local;
 }
+
+string Exotico::setLocal() {}

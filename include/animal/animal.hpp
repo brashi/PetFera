@@ -79,12 +79,20 @@ class Animal {
          */
         bool getPerigoso() const;
 
-        void setNome();
-        void setEspecie();
-        void setAmeacadoPor();
-        void setVeterinario();
-        void setTratador();
-        void setPerigoso();
+        string setNome();
+
+        string setEspecie();
+
+        // Sobrecarga para opcionalidade do campo
+        string setAmeacadoPor();
+
+        void setAmeacadoPor(string s);
+
+        Veterinario* setVeterinario();
+
+        Tratador* setTratador();
+
+        int setPerigoso();
 
         /**
          * @details getter de string
@@ -106,6 +114,7 @@ class Animal {
         string getClasse(Animal* animal) const;
 
         string setClassificacao();
+        
         string setClasse();
 
         /**

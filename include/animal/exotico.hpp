@@ -37,7 +37,8 @@ class Exotico {
          * @brief Um Exotico ter uma string de sua origem.
          */
         string getLocal() const;
-
+        
+        string setLocal();
     protected:
         /** @brief String declarando o local de origem do animal */
         string local;

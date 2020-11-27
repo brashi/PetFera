@@ -10,3 +10,5 @@ Mamifero::~Mamifero(){}
 bool Mamifero::getGestacao() const {
     return this->gestacao;
 }
+
+int Mamifero::setGestacao() {}

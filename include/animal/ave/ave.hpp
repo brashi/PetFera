@@ -44,6 +44,7 @@ class Ave : public Animal {
          */
         bool getVoa() const;
 
+        int setVoa();
     protected:
         /** @brief valor bool que determina se o animal voa */
         bool voa;

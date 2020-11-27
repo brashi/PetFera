@@ -11,6 +11,10 @@ bool Anfibio::getCauda() const {
     return this->cauda;
 }
 
+int Anfibio::setCauda() {}
+
 bool Anfibio::getPata() const {
     return this->pata;
 }
+
+int Anfibio::setPata() {}

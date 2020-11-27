@@ -18,6 +18,7 @@ using std::string;
  */
 class AveExotica : public Ave, public Exotico {
     public:
+        AveExotica() {};
         /**
          * @brief Construtor de AveExotica
          * @details é totalmente baseado em suas

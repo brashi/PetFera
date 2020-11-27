@@ -19,6 +19,7 @@ using std::string;
  */
 class AveNativa : public Ave, public Nativo {
     public:
+        AveNativa() {};
         /**
          * @brief Construtor de AveNativa
          * @details é totalmente baseado em suas

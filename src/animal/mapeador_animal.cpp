@@ -29,53 +29,53 @@
 
 MapeadorAnimal::MapeadorAnimal() {
     aMap["aveD"] = []() { 
-        return new AveDomestica({}, {}, {}, {}, {}, false, false, false); 
-        };
+        return new AveDomestica(); 
+    };
 
     aMap["aveN"] = []() { 
-        return new AveNativa({}, {}, {}, {}, {}, false, {}, {}, false); 
-        };
+        return new AveNativa(); 
+    };
 
     aMap["aveE"] = []() { 
-        return new AveExotica({}, {}, {}, {}, {}, false, {}, false); 
-        };
+        return new AveExotica(); 
+    };
 
 
     aMap["anfD"] = []() { 
-        return new AnfibioDomestico({}, {}, {}, {}, {}, false, false, false, false); 
-        };
+        return new AnfibioDomestico(); 
+    };
 
     aMap["anfN"] = []() { 
-        return new AnfibioNativo({}, {}, {}, {}, {}, false, {}, {}, false, false); 
-        };
+        return new AnfibioNativo(); 
+    };
 
     aMap["anfE"] = []() { 
-        return new AnfibioExotico({}, {}, {}, {}, {}, false, {}, false, false); 
-        };
+        return new AnfibioExotico(); 
+    };
 
     
     aMap["repD"] = []() { 
-        return new ReptilDomestico({}, {}, {}, {}, {}, false, false, {}); 
-        };
+        return new ReptilDomestico(); 
+    };
 
     aMap["repN"] = []() { 
-        return new ReptilNativo({}, {}, {}, {}, {}, false, {}, {}, {}); 
-        };
+        return new ReptilNativo(); 
+    };
 
     aMap["repE"] = []() { 
-        return new ReptilExotico({}, {}, {}, {}, {}, false, {}, {}); 
-        };
+        return new ReptilExotico(); 
+    };
 
 
     aMap["mamD"] = []() { 
-        return new MamiferoDomestico({}, {}, {}, {}, {}, false, false, false); 
-        };
+        return new MamiferoDomestico(); 
+    };
 
     aMap["mamN"] = []() { 
-        return new MamiferoNativo({}, {}, {}, {}, {}, false, {}, {}, false); 
-        };
+        return new MamiferoNativo(); 
+    };
 
     aMap["mamE"] = []() { 
-        return new MamiferoExotico({}, {}, {}, {}, {}, false, {}, false); 
-        };
+        return new MamiferoExotico(); 
+    };
 }

@@ -18,6 +18,7 @@ using std::string;
  */
 class AnfibioDomestico : public Anfibio, public Domestico {
     public:
+        AnfibioDomestico() {};
         /** 
          * @brief construtor herdado
          * @details sua implementação

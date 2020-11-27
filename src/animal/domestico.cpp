@@ -8,3 +8,5 @@ Domestico::~Domestico(){}
 bool Domestico::getAdestrado() const {
     return this->adestrado;
 }
+
+int Domestico::setAdestrado() {}

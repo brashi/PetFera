@@ -10,3 +10,5 @@ Reptil::~Reptil(){}
 Pele Reptil::getPele() const {
     return this->pele;
 }
+
+int Reptil::setPele() {}

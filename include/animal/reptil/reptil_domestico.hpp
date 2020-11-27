@@ -18,6 +18,8 @@ using std::string;
  */
 class ReptilDomestico : public Reptil, public Domestico {
     public:
+        ReptilDomestico() {};
+
         ReptilDomestico(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, bool adestrado, Pele pele);
 

@@ -9,6 +9,10 @@ string Nativo::getLicenca() const {
     return this->licenca;
 }
 
+string Nativo::setLicenca() {}
+
 string Nativo::getRegiao() const {
     return this->regiao;
 }
+
+string Nativo::setRegiao() {}

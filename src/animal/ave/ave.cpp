@@ -10,3 +10,5 @@ Ave::~Ave(){}
 bool Ave::getVoa() const {
     return this->voa;
 }
+
+int Ave::setVoa() {}
