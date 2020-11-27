@@ -79,6 +79,13 @@ class Animal {
          */
         bool getPerigoso() const;
 
+        void setNome();
+        void setEspecie();
+        void setAmeacadoPor();
+        void setVeterinario();
+        void setTratador();
+        void setPerigoso();
+
         /**
          * @details getter de string
          * @details com base em casts para
@@ -97,6 +104,9 @@ class Animal {
          * @return String com a classificação do animal.
          */
         string getClasse(Animal* animal) const;
+
+        string setClassificacao();
+        string setClasse();
 
         /**
          * @brief Função para impressão de dados via sobrecarga.

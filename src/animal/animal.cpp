@@ -14,12 +14,9 @@
 
 using std::setfill;
 using std::setw;
-using std::fixed;
-using std::setprecision;
-using std::left;
 using std::right;
 using std::cout;
-using std::endl;
+using std::cin;
 
 Animal::Animal(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador,
                 bool perigoso):
@@ -32,25 +29,37 @@ string Animal::getNome() const {
     return this->nome;
 }
 
+void Animal::setNome() {}
+
 string Animal::getEspecie() const {
     return this->especie;
 }
+
+void Animal::setEspecie() {}
 
 string Animal::getAmeacadoPor() const {
     return this->ameacadoPor;
 }
 
+void Animal::setAmeacadoPor() {}
+
 Veterinario Animal::getVeterinario() const {
     return this->veterinario;
 }
+
+void Animal::setVeterinario() {}
 
 Tratador Animal::getTratador() const {
     return this->tratador;
 }
 
+void Animal::setTratador() {}
+
 bool Animal::getPerigoso() const {
     return this->perigoso;
 }
+
+void Animal::setPerigoso() {}
 
 string Animal::getClassificacao(Animal* animal) const {
     if(Exotico* teste = dynamic_cast< Exotico* >(animal)) {
@@ -60,6 +69,32 @@ string Animal::getClassificacao(Animal* animal) const {
     } else {
         return "Doméstico";
     }
+}
+
+string Animal::setClassificacao() {
+    string s;
+    cout << endl << "A que categoria o animal pertence?..." << endl;
+    cout <<         "D - doméstico" << endl;
+    cout <<         "E - exótico"   << endl;
+    cout <<         "N - nativo"    << endl;
+    getline(cin, s);
+
+    if(s.size() == 0)
+        return {};
+    else
+        switch(toupper(s[0])) {
+            case 'D':
+                return "D";
+                break;
+            case 'E':
+                return "E";
+                break;
+            case 'N':
+                return "N";
+                break;
+        }
+
+    return {}; // Não retornou nada (falhou), retorne vazio
 }
 
 string Animal::getClasse(Animal* animal) const {
@@ -72,6 +107,36 @@ string Animal::getClasse(Animal* animal) const {
     } else {
         return "Mamífero";
     }
+}
+
+string Animal::setClasse() {
+    string s;
+    cout << endl << "O animal pertence a que classe?..." << endl;
+    cout <<         "A - ave"       << endl;
+    cout <<         "F - anfíbio"   << endl;
+    cout <<         "R - réptil"    << endl;
+    cout <<         "M - mamífero"  << endl;
+    getline(cin, s);
+
+    if(s.size() == 0)
+        return {};
+    else
+        switch(toupper(s[0])) {
+            case 'A':
+                return "ave";
+                break;
+            case 'F':
+                return "anf";
+                break;
+            case 'R':
+                return "rep";
+                break;
+            case 'M':
+                return "mam";
+                break;
+        }
+
+    return {}; // Não retornou nada (falhou), retorne vazio
 }
 
 ostream& Animal::printOutDados(ostream& o, Animal* animal) const {

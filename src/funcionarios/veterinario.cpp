@@ -5,12 +5,8 @@
 
 using std::setfill;
 using std::setw;
-using std::fixed;
-using std::setprecision;
-using std::left;
 using std::right;
 using std::cout;
-using std::endl;
 
 Veterinario::Veterinario(string nome, string telefone, string email,
                     string CRMV):

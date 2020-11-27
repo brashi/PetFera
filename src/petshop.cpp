@@ -11,9 +11,6 @@
 
 using std::setfill;
 using std::setw;
-using std::fixed;
-using std::setprecision;
-using std::left;
 using std::right;
 using std::cout;
 using std::cin;
@@ -133,12 +130,7 @@ void Petshop::criarTratador() {
 }
 
 void Petshop::criarAnimal() {
-    string nome, especie, regiao, local, classe, categoria, ameacadoPor, licenca;
-    Veterinario vet;
-    Tratador trata;
-    bool perigo = false, voa = false, cauda = false, pata = false, gestacao = false, adestrado = false;
-    char opcao;
-    Pele pele;
+    Animal* animal;
 
     if(this->veterinarios.size() < 1)
         throw "Não há veterinários no sistema!"; 
@@ -146,10 +138,22 @@ void Petshop::criarAnimal() {
     if(this->tratadores.size() < 1)
         throw "Não há tratadores no sistema!"; 
 
+    string classe = animal->setClasse();
+    if(classe.empty())
+        throw "Animal deve ter uma classe!";
+
+    string categoria = animal->setClassificacao();
+    if(categoria.empty())
+        throw "Animal deve ter uma categoria!";
+
+    animal = mapa.aMap[classe + categoria]();
+
+    //=================================
+
+    //mapa.aMap[animalControle](dadosNovoAnimal))
+
     cout << "Nome do animal: " << endl;
-    cin.ignore();
-    getline(cin, nome);
-    if (nome.size() == 0)
+
         throw "Animal sem nome!";
     cout << endl << "Espécie: " << endl;
     getline(cin, especie);
@@ -174,11 +178,7 @@ void Petshop::criarAnimal() {
         perigo = true;
     else
         perigo = false;
-    cout << endl << "O animal pertence a que classe?..." << endl;
-    cout << "A - ave" << endl;
-    cout << "F - anfíbio" << endl;
-    cout << "R - réptil" << endl;
-    cout << "M - mamífero" << endl;
+    
     cin >> opcao;
 
     switch(toupper(opcao)) {
@@ -195,7 +195,7 @@ void Petshop::criarAnimal() {
             classe = "mam";
             break;
         default:
-            throw "Animal deve ter uma classe!";
+            
             break;
     }
     cout << endl;
@@ -329,7 +329,7 @@ void Petshop::criarAnimal() {
         .pele = pele,
     };
 
-    string animalControle = classe + categoria;
+    
     
     if(this->adicionarAnimal(mapa.aMap[animalControle](dadosNovoAnimal))) {
         cout << "Animal adicionado ao cadastro." << endl;

@@ -1,95 +1,81 @@
 #include "mapeador_animal.hpp"
 
+// FiltroAnimal::FiltroAnimal() {
+//     filtro['A'] = [](Animal* animal) {
+//         Ave* checar = dynamic_cast<Ave*>(animal);
+//         return dynamic_cast<Animal*>(checar);
+//     };
 
-FiltroAnimal::FiltroAnimal() {
-    filtro['A'] = [](Animal* animal) {
-        Ave* checar = dynamic_cast<Ave*>(animal);
-        return dynamic_cast<Animal*>(checar);
-    };
+//     filtro['F'] = [](Animal* animal) {
+//         Anfibio* checar = dynamic_cast<Anfibio*>(animal);
+//         return dynamic_cast<Animal*>(checar);
+//     };
 
-    filtro['F'] = [](Animal* animal) {
-        Anfibio* checar = dynamic_cast<Anfibio*>(animal);
-        return dynamic_cast<Animal*>(checar);
-    };
+//     filtro['R'] = [](Animal* animal) {
+//         Reptil* checar = dynamic_cast<Reptil*>(animal);
+//         return dynamic_cast<Animal*>(checar);
+//     };
 
-    filtro['R'] = [](Animal* animal) {
-        Reptil* checar = dynamic_cast<Reptil*>(animal);
-        return dynamic_cast<Animal*>(checar);
-    };
+//     filtro['M'] = [](Animal* animal) {
+//         Mamifero* checar = dynamic_cast<Mamifero*>(animal);
+//         return dynamic_cast<Animal*>(checar);
+//     };
 
-    filtro['M'] = [](Animal* animal) {
-        Mamifero* checar = dynamic_cast<Mamifero*>(animal);
-        return dynamic_cast<Animal*>(checar);
-    };
-
-    filtro['T'] = [](Animal* animal) {
-        //Mamifero* checar = dynamic_cast<Mamifero*>(animal);
-        return animal;
-    };
-}
-
+//     filtro['T'] = [](Animal* animal) {
+//         //Mamifero* checar = dynamic_cast<Mamifero*>(animal);
+//         return animal;
+//     };
+// }
 
 MapeadorAnimal::MapeadorAnimal() {
-    aMap["aveD"] = [](DadosAnimal dados) { 
-        return new AveDomestica(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.adestrado, dados.voa); 
+    aMap["aveD"] = []() { 
+        return new AveDomestica({}, {}, {}, {}, {}, false, false, false); 
         };
 
-    aMap["aveN"] = [](DadosAnimal dados) { 
-        return new AveNativa(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.regiao, dados.licenca, dados.voa); 
+    aMap["aveN"] = []() { 
+        return new AveNativa({}, {}, {}, {}, {}, false, {}, {}, false); 
         };
 
-    aMap["aveE"] = [](DadosAnimal dados) { 
-        return new AveExotica(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.local, dados.voa); 
+    aMap["aveE"] = []() { 
+        return new AveExotica({}, {}, {}, {}, {}, false, {}, false); 
         };
 
 
-    aMap["anfD"] = [](DadosAnimal dados) { 
-        return new AnfibioDomestico(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.adestrado, dados.cauda, dados.pata); 
+    aMap["anfD"] = []() { 
+        return new AnfibioDomestico({}, {}, {}, {}, {}, false, false, false, false); 
         };
 
-    aMap["anfN"] = [](DadosAnimal dados) { 
-        return new AnfibioNativo(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.regiao, dados.licenca, dados.cauda, dados.pata); 
+    aMap["anfN"] = []() { 
+        return new AnfibioNativo({}, {}, {}, {}, {}, false, {}, {}, false, false); 
         };
 
-    aMap["anfE"] = [](DadosAnimal dados) { 
-        return new AnfibioExotico(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.local, dados.cauda, dados.pata); 
+    aMap["anfE"] = []() { 
+        return new AnfibioExotico({}, {}, {}, {}, {}, false, {}, false, false); 
         };
 
     
-    aMap["repD"] = [](DadosAnimal dados) { 
-        return new ReptilDomestico(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.adestrado, dados.pele); 
+    aMap["repD"] = []() { 
+        return new ReptilDomestico({}, {}, {}, {}, {}, false, false, {}); 
         };
 
-    aMap["repN"] = [](DadosAnimal dados) { 
-        return new ReptilNativo(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.regiao, dados.licenca, dados.pele); 
+    aMap["repN"] = []() { 
+        return new ReptilNativo({}, {}, {}, {}, {}, false, {}, {}, {}); 
         };
 
-    aMap["repE"] = [](DadosAnimal dados) { 
-        return new ReptilExotico(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.local, dados.pele); 
+    aMap["repE"] = []() { 
+        return new ReptilExotico({}, {}, {}, {}, {}, false, {}, {}); 
         };
 
 
-    aMap["mamD"] = [](DadosAnimal dados) { 
-        return new MamiferoDomestico(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.adestrado, dados.gestacao); 
+    aMap["mamD"] = []() { 
+        return new MamiferoDomestico({}, {}, {}, {}, {}, false, false, false); 
         };
 
-    aMap["mamN"] = [](DadosAnimal dados) { 
-        return new MamiferoNativo(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.regiao, dados.licenca, dados.gestacao); 
+    aMap["mamN"] = []() { 
+        return new MamiferoNativo({}, {}, {}, {}, {}, false, {}, {}, false); 
         };
 
-    aMap["mamE"] = [](DadosAnimal dados) { 
-        return new MamiferoExotico(dados.nome, dados.especie, dados.ameacadoPor, dados.veterinario, dados.tratador,
-                    dados.perigoso, dados.local, dados.gestacao); 
+    aMap["mamE"] = []() { 
+        return new MamiferoExotico({}, {}, {}, {}, {}, false, {}, false); 
         };
 }

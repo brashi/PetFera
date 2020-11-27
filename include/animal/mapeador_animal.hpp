@@ -26,39 +26,6 @@
 #include <map>
 
 /**
- * @brief Coringa para tipos de todos os animais.
- * @details O struct provê uma maneira comoda de
- * fornecer todos os atributos de animais possíveis.
- * Sendo necessário conter as informações presentes
- * em qualquer classe derivada de Animal já criada
- * para o sistema. É usada na maior parte para
- * criação de novos animais.
- */
-typedef struct DadosAnimal {
-    //Animal
-    string nome;
-    string especie;
-    string ameacadoPor;
-    Veterinario veterinario;
-    Tratador tratador;
-    bool perigoso;
-
-    //Categoria
-    string regiao;
-    string local;
-    string licenca;
-    bool adestrado;
-
-    //Classe
-    bool voa;
-    bool cauda;
-    bool pata;
-    bool gestacao;
-    Pele pele;
-    
-} DadosAnimal;
-
-/**
  * @brief Mapeador de animais.
  * @details A classe serve para
  * conter um tipo map capaz de retornar
@@ -93,7 +60,7 @@ class MapeadorAnimal {
          * @param DadosAnimal
          * @return Instancia para a classe desejada.
          */
-        std::map<string, std::function<Animal* (DadosAnimal dados)>> aMap;
+        std::map<string, std::function<Animal* ()>> aMap;
 };
 
 
