@@ -1,6 +1,8 @@
 #include "ave.hpp"
 
-Ave::Ave(bool voa):
+Ave::Ave(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador, bool perigoso,
+                bool voa):
+                Animal(nome, especie, ameacadoPor, veterinario, tratador, perigoso),
                 voa(voa){}
 
 Ave::~Ave(){}

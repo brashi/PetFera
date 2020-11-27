@@ -1,2 +1,4 @@
 <map id="MapeadorMenu" name="MapeadorMenu">
+<area shape="rect" id="node1" title="Classe mapeadora de funções para o menu." alt="" coords="73,233,351,355"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,419,156"/>
 </map>

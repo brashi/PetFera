@@ -1001,8 +1001,6 @@ void Petshop::listarAnimais() {
     cout << setfill(' ') << setw(23) << "Nome"
     << setfill(' ') << setw(23) << "Espécie"
     << setfill(' ') << setw(23) << "Ameaçado por:"
-    // << setfill(' ') << setw(23) << "Veterinário"
-    // << setfill(' ') << setw(23) << "Tratador"
     << setfill(' ') << setw(23) << "Perigoso"
     << setfill(' ') << setw(23) << "Classificação"
     << setfill(' ') << setw(23) << "Classe"

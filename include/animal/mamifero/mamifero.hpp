@@ -1,5 +1,8 @@
 #pragma once
 
+#include "animal.hpp"
+
+#include <string>
 #include <iostream>
 
 /**
@@ -11,9 +14,10 @@
  * - Nativo
  * - Exotico
  */
-class Mamifero {
+class Mamifero : public Animal {
     public:
-        Mamifero(bool gestacao);
+        Mamifero(string nome, string especie, string ameacadoPor, Veterinario veterinario,
+                Tratador tratador, bool perigoso, bool gestacao);
         virtual ~Mamifero();
 
         bool getGestacao() const;

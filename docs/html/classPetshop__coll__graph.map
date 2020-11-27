@@ -1,3 +1,8 @@
 <map id="Petshop" name="Petshop">
-<area shape="rect" id="node5" href="$classMapeadorAnimal.html" title="Mapeador de animais. " alt="" coords="797,233,1041,355"/>
+<area shape="rect" id="node1" title="Classe de controle." alt="" coords="461,432,798,935"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,233,301,355"/>
+<area shape="rect" id="node3" title=" " alt="" coords="326,233,605,355"/>
+<area shape="rect" id="node4" title=" " alt="" coords="629,233,960,355"/>
+<area shape="rect" id="node5" href="$classMapeadorAnimal.html" title="Mapeador de animais." alt="" coords="985,233,1279,355"/>
+<area shape="rect" id="node6" title=" " alt="" coords="883,5,1381,156"/>
 </map>

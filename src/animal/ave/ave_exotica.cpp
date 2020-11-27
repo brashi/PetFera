@@ -2,7 +2,7 @@
 
 AveExotica::AveExotica(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador,
                 bool perigoso, string local, bool voa):
-                Exotico(nome, especie, ameacadoPor, veterinario, tratador, perigoso, local),
-                Ave(voa){}
+                Ave(nome, especie, ameacadoPor, veterinario, tratador, perigoso, voa),
+                Exotico(local){}
 
 AveExotica::~AveExotica(){}

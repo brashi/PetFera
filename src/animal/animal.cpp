@@ -82,8 +82,6 @@ ostream& Animal::printOutDados(ostream& o, Animal* animal) const {
     o  << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getNome().length() > tamanhoTruncado) ? (this->getNome().substr(0, tamanhoTruncado) + "...") : this->getNome())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getEspecie().length() > tamanhoTruncado) ? (this->getEspecie().substr(0, tamanhoTruncado) + "...") : this->getEspecie())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getAmeacadoPor().length() > tamanhoTruncado) ? (this->getAmeacadoPor().substr(0, tamanhoTruncado) + "...") : this->getAmeacadoPor())
-    // << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getVeterinario().getNome().length() > tamanhoTruncado) ? (this->getVeterinario().getNome().substr(0, tamanhoTruncado) + "...") : this->getVeterinario().getNome())
-    // << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getTratador().getNome().length() > tamanhoTruncado) ? (this->getTratador().getNome().substr(0, tamanhoTruncado) + "...") : this->getTratador().getNome())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << (this->getPerigoso()? "Sim" : "Não")
     << setfill(' ') << setw(tamanhoColuna + espacamento) << this->getClassificacao(animal)
     << setfill(' ') << setw(tamanhoColuna + espacamento) << this->getClasse(animal)

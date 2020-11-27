@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Sistema digital PetFera: Código-Fonte de include/funcionarios/tratador.hpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -13,9 +13,6 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -38,18 +35,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.8.13 -->
+<!-- Gerado por Doxygen 1.8.17 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
   $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -63,7 +63,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('tratador_8hpp_source.html','');});
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('tratador_8hpp_source.html',''); initResizable(); });
+/* @license-end */
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -85,23 +87,49 @@ $(document).ready(function(){initNavTree('tratador_8hpp_source.html','');});
 <div class="title">tratador.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;pessoa.hpp&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">enum</span> Uniforme {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Verde,</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Azul,</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Vermelho</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classTratador.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTratador.html">Tratador</a> : <span class="keyword">public</span> <a class="code" href="classPessoa.html">Pessoa</a> {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classTratador.html">Tratador</a>() {};</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classTratador.html">Tratador</a>(<span class="keywordtype">string</span> <a class="code" href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">nome</a>, <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">telefone</a>, <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">email</a>,</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                Uniforme <a class="code" href="classTratador.html#a978d8cd91b975a119353d98ce4b9fdcc">uniforme</a>);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        ~<a class="code" href="classTratador.html">Tratador</a>();</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        Uniforme <a class="code" href="classTratador.html#a9950c0442f4dc3858605426f1589cac4">getUniforme</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        ostream&amp; <a class="code" href="classTratador.html#a076ff1d8f755fb1c2a8ab65943d1729e">printOutDados</a>(ostream&amp; o) <span class="keyword">const</span>;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classTratador.html#a978d8cd91b975a119353d98ce4b9fdcc">   62</a></span>&#160;        Uniforme <a class="code" href="classTratador.html#a978d8cd91b975a119353d98ce4b9fdcc">uniforme</a>;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div><div class="ttc" id="classTratador_html_a978d8cd91b975a119353d98ce4b9fdcc"><div class="ttname"><a href="classTratador.html#a978d8cd91b975a119353d98ce4b9fdcc">Tratador::uniforme</a></div><div class="ttdeci">Uniforme uniforme</div><div class="ttdoc">Uniforme do funcionário, definindo seu nível de segurança. </div><div class="ttdef"><b>Definition:</b> tratador.hpp:62</div></div>
-<div class="ttc" id="classTratador_html_a9950c0442f4dc3858605426f1589cac4"><div class="ttname"><a href="classTratador.html#a9950c0442f4dc3858605426f1589cac4">Tratador::getUniforme</a></div><div class="ttdeci">Uniforme getUniforme() const</div><div class="ttdoc">getter de Enum </div></div>
-<div class="ttc" id="classTratador_html_a076ff1d8f755fb1c2a8ab65943d1729e"><div class="ttname"><a href="classTratador.html#a076ff1d8f755fb1c2a8ab65943d1729e">Tratador::printOutDados</a></div><div class="ttdeci">ostream &amp; printOutDados(ostream &amp;o) const</div><div class="ttdoc">Implementação da stream de dados. </div></div>
-<div class="ttc" id="classPessoa_html"><div class="ttname"><a href="classPessoa.html">Pessoa</a></div><div class="ttdoc">Classe base dos funcionarios. </div><div class="ttdef"><b>Definition:</b> pessoa.hpp:16</div></div>
-<div class="ttc" id="classTratador_html"><div class="ttname"><a href="classTratador.html">Tratador</a></div><div class="ttdoc">Implementação dos tratadores. </div><div class="ttdef"><b>Definition:</b> tratador.hpp:30</div></div>
-<div class="ttc" id="classPessoa_html_ad4e88b8f3499405a7a03df648857c338"><div class="ttname"><a href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">Pessoa::nome</a></div><div class="ttdeci">string nome</div><div class="ttdoc">Nome do funcionaro. </div><div class="ttdef"><b>Definition:</b> pessoa.hpp:80</div></div>
-<div class="ttc" id="classPessoa_html_adff808bdaf530f44b337705ef7a5b2f5"><div class="ttname"><a href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">Pessoa::email</a></div><div class="ttdeci">string email</div><div class="ttdoc">Email em forma de string. </div><div class="ttdef"><b>Definition:</b> pessoa.hpp:84</div></div>
-<div class="ttc" id="classPessoa_html_a9bf168eeb62bd37b8815d8ab920ceed5"><div class="ttname"><a href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">Pessoa::telefone</a></div><div class="ttdeci">string telefone</div><div class="ttdoc">Telefone para contato. </div><div class="ttdef"><b>Definition:</b> pessoa.hpp:82</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;pessoa.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">enum</span> Uniforme {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Verde,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Azul,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Vermelho</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classTratador.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTratador.html">Tratador</a> : <span class="keyword">public</span> <a class="code" href="classPessoa.html">Pessoa</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classTratador.html">Tratador</a>() {};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classTratador.html">Tratador</a>(<span class="keywordtype">string</span> <a class="code" href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">nome</a>, <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">telefone</a>, <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">email</a>,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                Uniforme <a class="code" href="classTratador.html#a978d8cd91b975a119353d98ce4b9fdcc">uniforme</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        ~<a class="code" href="classTratador.html">Tratador</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        Uniforme <a class="code" href="classTratador.html#a9950c0442f4dc3858605426f1589cac4">getUniforme</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        ostream&amp; <a class="code" href="classTratador.html#a076ff1d8f755fb1c2a8ab65943d1729e">printOutDados</a>(ostream&amp; o) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classTratador.html#a978d8cd91b975a119353d98ce4b9fdcc">   62</a></span>&#160;        Uniforme <a class="code" href="classTratador.html#a978d8cd91b975a119353d98ce4b9fdcc">uniforme</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassPessoa_html_a9bf168eeb62bd37b8815d8ab920ceed5"><div class="ttname"><a href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">Pessoa::telefone</a></div><div class="ttdeci">string telefone</div><div class="ttdoc">Telefone para contato.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:82</div></div>
+<div class="ttc" id="aclassPessoa_html"><div class="ttname"><a href="classPessoa.html">Pessoa</a></div><div class="ttdoc">Classe base dos funcionarios.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:16</div></div>
+<div class="ttc" id="aclassTratador_html_a076ff1d8f755fb1c2a8ab65943d1729e"><div class="ttname"><a href="classTratador.html#a076ff1d8f755fb1c2a8ab65943d1729e">Tratador::printOutDados</a></div><div class="ttdeci">ostream &amp; printOutDados(ostream &amp;o) const</div><div class="ttdoc">Implementação da stream de dados.</div></div>
+<div class="ttc" id="aclassPessoa_html_ad4e88b8f3499405a7a03df648857c338"><div class="ttname"><a href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">Pessoa::nome</a></div><div class="ttdeci">string nome</div><div class="ttdoc">Nome do funcionaro.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:80</div></div>
+<div class="ttc" id="aclassPessoa_html_adff808bdaf530f44b337705ef7a5b2f5"><div class="ttname"><a href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">Pessoa::email</a></div><div class="ttdeci">string email</div><div class="ttdoc">Email em forma de string.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:84</div></div>
+<div class="ttc" id="aclassTratador_html_a978d8cd91b975a119353d98ce4b9fdcc"><div class="ttname"><a href="classTratador.html#a978d8cd91b975a119353d98ce4b9fdcc">Tratador::uniforme</a></div><div class="ttdeci">Uniforme uniforme</div><div class="ttdoc">Uniforme do funcionário, definindo seu nível de segurança.</div><div class="ttdef"><b>Definition:</b> tratador.hpp:62</div></div>
+<div class="ttc" id="aclassTratador_html_a9950c0442f4dc3858605426f1589cac4"><div class="ttname"><a href="classTratador.html#a9950c0442f4dc3858605426f1589cac4">Tratador::getUniforme</a></div><div class="ttdeci">Uniforme getUniforme() const</div><div class="ttdoc">getter de Enum</div></div>
+<div class="ttc" id="aclassTratador_html"><div class="ttname"><a href="classTratador.html">Tratador</a></div><div class="ttdoc">Implementação dos tratadores.</div><div class="ttdef"><b>Definition:</b> tratador.hpp:30</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_53f86f703112b57bbb381585844c3ca1.html">funcionarios</a></li><li class="navelem"><b>tratador.hpp</b></li>
     <li class="footer">Gerado por
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

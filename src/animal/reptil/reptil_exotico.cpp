@@ -2,7 +2,7 @@
 
 ReptilExotico::ReptilExotico(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador,
                 bool perigoso, string local, Pele pele):
-                Exotico(nome, especie, ameacadoPor, veterinario, tratador, perigoso, local),
-                Reptil(pele){}
+                Reptil(nome, especie, ameacadoPor, veterinario, tratador, perigoso, pele),
+                Exotico(local){}
 
 ReptilExotico::~ReptilExotico(){}

@@ -1,6 +1,8 @@
 #include "anfibio.hpp"
 
-Anfibio::Anfibio(bool cauda, bool pata):
+Anfibio::Anfibio(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador, bool perigoso,
+                bool cauda, bool pata):
+                Animal(nome, especie, ameacadoPor, veterinario, tratador, perigoso),
                 cauda(cauda), pata(pata){}
 
 Anfibio::~Anfibio(){}

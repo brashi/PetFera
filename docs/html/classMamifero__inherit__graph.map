@@ -1,5 +1,7 @@
 <map id="Mamifero" name="Mamifero">
-<area shape="rect" id="node2" href="$classMamiferoDomestico.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="5,233,296,384"/>
-<area shape="rect" id="node3" href="$classMamiferoExotico.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="321,233,575,384"/>
-<area shape="rect" id="node4" href="$classMamiferoNativo.html" title="Implementação de animal com Classe e Categoria. " alt="" coords="599,233,846,384"/>
+<area shape="rect" id="node1" title="Classificação base para Mamiferos." alt="" coords="425,673,664,853"/>
+<area shape="rect" id="node3" href="$classMamiferoDomestico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="5,901,364,1052"/>
+<area shape="rect" id="node4" href="$classMamiferoExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="388,901,701,1052"/>
+<area shape="rect" id="node5" href="$classMamiferoNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="725,901,1028,1052"/>
+<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="396,5,693,625"/>
 </map>

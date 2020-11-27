@@ -1,5 +1,7 @@
 #pragma once
 
+#include "animal.hpp"
+
 #include <string>
 #include <iostream>
 
@@ -20,10 +22,11 @@ enum Pele {
  * - Nativo
  * - Exotico
  */
-class Reptil {
+class Reptil : public Animal {
     public:
         Reptil();
-        Reptil(Pele pele);
+        Reptil(string nome, string especie, string ameacadoPor, Veterinario veterinario,
+                Tratador tratador, bool perigoso, Pele pele);
         virtual ~Reptil();
 
         Pele getPele() const;

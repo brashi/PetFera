@@ -1,6 +1,4 @@
 <map id="Domestico" name="Domestico">
-<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais. " alt="" coords="441,1041,688,1515"/>
-<area shape="rect" id="node3" href="$classTratador.html" title="Implementação dos tratadores. " alt="" coords="309,725,527,964"/>
-<area shape="rect" id="node4" href="$classPessoa.html" title="Classe base dos funcionarios. " alt="" coords="141,263,359,589"/>
-<area shape="rect" id="node8" href="$classVeterinario.html" title="Implementação dos veterinarios. " alt="" coords="66,725,285,964"/>
+<area shape="rect" id="node1" title="Umas das definições de categoria para Animal." alt="" coords="5,204,256,413"/>
+<area shape="rect" id="node2" title=" " alt="" coords="91,5,170,127"/>
 </map>

@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Sistema digital PetFera: Código-Fonte de include/animal/reptil/reptil_nativo.hpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -13,9 +13,6 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -38,18 +35,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.8.13 -->
+<!-- Gerado por Doxygen 1.8.17 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
   $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -63,7 +63,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('reptil__nativo_8hpp_source.html','');});
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('reptil__nativo_8hpp_source.html',''); initResizable(); });
+/* @license-end */
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -85,28 +87,45 @@ $(document).ready(function(){initNavTree('reptil__nativo_8hpp_source.html','');}
 <div class="title">reptil_nativo.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;reptil.hpp&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;nativo.hpp&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::string;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classReptilNativo.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classReptilNativo.html">ReptilNativo</a> : <span class="keyword">public</span> <a class="code" href="classReptil.html">Reptil</a>, <span class="keyword">public</span> <a class="code" href="classNativo.html">Nativo</a> {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classReptilNativo.html">ReptilNativo</a>(<span class="keywordtype">string</span> <a class="code" href="classAnimal.html#a54f3f22208c7342039266c8c87de99e7">nome</a>, <span class="keywordtype">string</span> <a class="code" href="classAnimal.html#a6d08af00ece2985d73126798973f84a8">especie</a>, <span class="keywordtype">string</span> <a class="code" href="classAnimal.html#a680705af8ef098dc922b2a7c97dc7ed5">ameacadoPor</a>, <a class="code" href="classVeterinario.html">Veterinario</a> <a class="code" href="classAnimal.html#a3618cd50da896cee0b62eec659d2c2bb">veterinario</a>,</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <a class="code" href="classTratador.html">Tratador</a> <a class="code" href="classAnimal.html#a9a864369990c6743895032c6c8f2bdbc">tratador</a>, <span class="keywordtype">bool</span> <a class="code" href="classAnimal.html#ad2d8f253344b43d2e36ae71b4becc5b4">perigoso</a>, <span class="keywordtype">string</span> <a class="code" href="classNativo.html#a68335741469f703f0ea612ed0e79ce78">regiao</a>, <span class="keywordtype">string</span> <a class="code" href="classNativo.html#a0cb2da79afd69fa0e821c274be488eae">licenca</a>, Pele pele);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        ~<a class="code" href="classReptilNativo.html">ReptilNativo</a>();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div><div class="ttc" id="classNativo_html_a0cb2da79afd69fa0e821c274be488eae"><div class="ttname"><a href="classNativo.html#a0cb2da79afd69fa0e821c274be488eae">Nativo::licenca</a></div><div class="ttdeci">string licenca</div><div class="ttdoc">Numero de licensa do IBAMA para transporte. </div><div class="ttdef"><b>Definition:</b> nativo.hpp:53</div></div>
-<div class="ttc" id="classReptil_html"><div class="ttname"><a href="classReptil.html">Reptil</a></div><div class="ttdoc">Classificação base para Repteis. </div><div class="ttdef"><b>Definition:</b> reptil.hpp:23</div></div>
-<div class="ttc" id="classNativo_html"><div class="ttname"><a href="classNativo.html">Nativo</a></div><div class="ttdoc">Umas das definições de categoria para Animal. </div><div class="ttdef"><b>Definition:</b> nativo.hpp:16</div></div>
-<div class="ttc" id="classAnimal_html_ad2d8f253344b43d2e36ae71b4becc5b4"><div class="ttname"><a href="classAnimal.html#ad2d8f253344b43d2e36ae71b4becc5b4">Animal::perigoso</a></div><div class="ttdeci">bool perigoso</div><div class="ttdoc">Declara se o animal apresenta perigo ao manejo. </div><div class="ttdef"><b>Definition:</b> animal.hpp:143</div></div>
-<div class="ttc" id="classTratador_html"><div class="ttname"><a href="classTratador.html">Tratador</a></div><div class="ttdoc">Implementação dos tratadores. </div><div class="ttdef"><b>Definition:</b> tratador.hpp:30</div></div>
-<div class="ttc" id="classReptilNativo_html"><div class="ttname"><a href="classReptilNativo.html">ReptilNativo</a></div><div class="ttdoc">Implementação de animal com Classe e Categoria. </div><div class="ttdef"><b>Definition:</b> reptil_nativo.hpp:19</div></div>
-<div class="ttc" id="classNativo_html_a68335741469f703f0ea612ed0e79ce78"><div class="ttname"><a href="classNativo.html#a68335741469f703f0ea612ed0e79ce78">Nativo::regiao</a></div><div class="ttdeci">string regiao</div><div class="ttdoc">região brasileira de origem do animal </div><div class="ttdef"><b>Definition:</b> nativo.hpp:51</div></div>
-<div class="ttc" id="classAnimal_html_a54f3f22208c7342039266c8c87de99e7"><div class="ttname"><a href="classAnimal.html#a54f3f22208c7342039266c8c87de99e7">Animal::nome</a></div><div class="ttdeci">string nome</div><div class="ttdef"><b>Definition:</b> animal.hpp:133</div></div>
-<div class="ttc" id="classVeterinario_html"><div class="ttname"><a href="classVeterinario.html">Veterinario</a></div><div class="ttdoc">Implementação dos veterinarios. </div><div class="ttdef"><b>Definition:</b> veterinario.hpp:13</div></div>
-<div class="ttc" id="classAnimal_html_a9a864369990c6743895032c6c8f2bdbc"><div class="ttname"><a href="classAnimal.html#a9a864369990c6743895032c6c8f2bdbc">Animal::tratador</a></div><div class="ttdeci">Tratador tratador</div><div class="ttdoc">A classe do animal pode indicar a necessidade de um Tratador com Uniforme específico. </div><div class="ttdef"><b>Definition:</b> animal.hpp:141</div></div>
-<div class="ttc" id="classAnimal_html_a680705af8ef098dc922b2a7c97dc7ed5"><div class="ttname"><a href="classAnimal.html#a680705af8ef098dc922b2a7c97dc7ed5">Animal::ameacadoPor</a></div><div class="ttdeci">string ameacadoPor</div><div class="ttdoc">Declara se o animal é ameaçado por alguma causa. Possui valor &quot;nada&quot; caso contrário. </div><div class="ttdef"><b>Definition:</b> animal.hpp:137</div></div>
-<div class="ttc" id="classAnimal_html_a3618cd50da896cee0b62eec659d2c2bb"><div class="ttname"><a href="classAnimal.html#a3618cd50da896cee0b62eec659d2c2bb">Animal::veterinario</a></div><div class="ttdeci">Veterinario veterinario</div><div class="ttdoc">O Veterinario responsável pelo animal em questão. </div><div class="ttdef"><b>Definition:</b> animal.hpp:139</div></div>
-<div class="ttc" id="classAnimal_html_a6d08af00ece2985d73126798973f84a8"><div class="ttname"><a href="classAnimal.html#a6d08af00ece2985d73126798973f84a8">Animal::especie</a></div><div class="ttdeci">string especie</div><div class="ttdef"><b>Definition:</b> animal.hpp:135</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;reptil.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;nativo.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classReptilNativo.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classReptilNativo.html">ReptilNativo</a> : <span class="keyword">public</span> <a class="code" href="classReptil.html">Reptil</a>, <span class="keyword">public</span> <a class="code" href="classNativo.html">Nativo</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classReptilNativo.html">ReptilNativo</a>(<span class="keywordtype">string</span> <a class="code" href="classAnimal.html#a54f3f22208c7342039266c8c87de99e7">nome</a>, <span class="keywordtype">string</span> <a class="code" href="classAnimal.html#a6d08af00ece2985d73126798973f84a8">especie</a>, <span class="keywordtype">string</span> <a class="code" href="classAnimal.html#a680705af8ef098dc922b2a7c97dc7ed5">ameacadoPor</a>, <a class="code" href="classVeterinario.html">Veterinario</a> <a class="code" href="classAnimal.html#a3618cd50da896cee0b62eec659d2c2bb">veterinario</a>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <a class="code" href="classTratador.html">Tratador</a> <a class="code" href="classAnimal.html#a9a864369990c6743895032c6c8f2bdbc">tratador</a>, <span class="keywordtype">bool</span> <a class="code" href="classAnimal.html#ad2d8f253344b43d2e36ae71b4becc5b4">perigoso</a>, <span class="keywordtype">string</span> <a class="code" href="classNativo.html#a68335741469f703f0ea612ed0e79ce78">regiao</a>, <span class="keywordtype">string</span> <a class="code" href="classNativo.html#a0cb2da79afd69fa0e821c274be488eae">licenca</a>, Pele pele);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        ~<a class="code" href="classReptilNativo.html">ReptilNativo</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassAnimal_html_ad2d8f253344b43d2e36ae71b4becc5b4"><div class="ttname"><a href="classAnimal.html#ad2d8f253344b43d2e36ae71b4becc5b4">Animal::perigoso</a></div><div class="ttdeci">bool perigoso</div><div class="ttdoc">Declara se o animal apresenta perigo ao manejo.</div><div class="ttdef"><b>Definition:</b> animal.hpp:143</div></div>
+<div class="ttc" id="aclassVeterinario_html"><div class="ttname"><a href="classVeterinario.html">Veterinario</a></div><div class="ttdoc">Implementação dos veterinarios.</div><div class="ttdef"><b>Definition:</b> veterinario.hpp:13</div></div>
+<div class="ttc" id="aclassNativo_html"><div class="ttname"><a href="classNativo.html">Nativo</a></div><div class="ttdoc">Umas das definições de categoria para Animal.</div><div class="ttdef"><b>Definition:</b> nativo.hpp:14</div></div>
+<div class="ttc" id="aclassAnimal_html_a54f3f22208c7342039266c8c87de99e7"><div class="ttname"><a href="classAnimal.html#a54f3f22208c7342039266c8c87de99e7">Animal::nome</a></div><div class="ttdeci">string nome</div><div class="ttdef"><b>Definition:</b> animal.hpp:133</div></div>
+<div class="ttc" id="aclassAnimal_html_a9a864369990c6743895032c6c8f2bdbc"><div class="ttname"><a href="classAnimal.html#a9a864369990c6743895032c6c8f2bdbc">Animal::tratador</a></div><div class="ttdeci">Tratador tratador</div><div class="ttdoc">A classe do animal pode indicar a necessidade de um Tratador com Uniforme específico.</div><div class="ttdef"><b>Definition:</b> animal.hpp:141</div></div>
+<div class="ttc" id="aclassReptilNativo_html"><div class="ttname"><a href="classReptilNativo.html">ReptilNativo</a></div><div class="ttdoc">Implementação de animal com Classe e Categoria.</div><div class="ttdef"><b>Definition:</b> reptil_nativo.hpp:19</div></div>
+<div class="ttc" id="aclassReptil_html"><div class="ttname"><a href="classReptil.html">Reptil</a></div><div class="ttdoc">Classificação base para Repteis.</div><div class="ttdef"><b>Definition:</b> reptil.hpp:25</div></div>
+<div class="ttc" id="aclassAnimal_html_a6d08af00ece2985d73126798973f84a8"><div class="ttname"><a href="classAnimal.html#a6d08af00ece2985d73126798973f84a8">Animal::especie</a></div><div class="ttdeci">string especie</div><div class="ttdef"><b>Definition:</b> animal.hpp:135</div></div>
+<div class="ttc" id="aclassAnimal_html_a3618cd50da896cee0b62eec659d2c2bb"><div class="ttname"><a href="classAnimal.html#a3618cd50da896cee0b62eec659d2c2bb">Animal::veterinario</a></div><div class="ttdeci">Veterinario veterinario</div><div class="ttdoc">O Veterinario responsável pelo animal em questão.</div><div class="ttdef"><b>Definition:</b> animal.hpp:139</div></div>
+<div class="ttc" id="aclassNativo_html_a0cb2da79afd69fa0e821c274be488eae"><div class="ttname"><a href="classNativo.html#a0cb2da79afd69fa0e821c274be488eae">Nativo::licenca</a></div><div class="ttdeci">string licenca</div><div class="ttdoc">Numero de licensa do IBAMA para transporte.</div><div class="ttdef"><b>Definition:</b> nativo.hpp:50</div></div>
+<div class="ttc" id="aclassNativo_html_a68335741469f703f0ea612ed0e79ce78"><div class="ttname"><a href="classNativo.html#a68335741469f703f0ea612ed0e79ce78">Nativo::regiao</a></div><div class="ttdeci">string regiao</div><div class="ttdoc">região brasileira de origem do animal</div><div class="ttdef"><b>Definition:</b> nativo.hpp:48</div></div>
+<div class="ttc" id="aclassAnimal_html_a680705af8ef098dc922b2a7c97dc7ed5"><div class="ttname"><a href="classAnimal.html#a680705af8ef098dc922b2a7c97dc7ed5">Animal::ameacadoPor</a></div><div class="ttdeci">string ameacadoPor</div><div class="ttdoc">Declara se o animal é ameaçado por alguma causa. Possui valor &quot;nada&quot; caso contrário.</div><div class="ttdef"><b>Definition:</b> animal.hpp:137</div></div>
+<div class="ttc" id="aclassTratador_html"><div class="ttname"><a href="classTratador.html">Tratador</a></div><div class="ttdoc">Implementação dos tratadores.</div><div class="ttdef"><b>Definition:</b> tratador.hpp:30</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_026a6e76be8d3097e26c16740716c422.html">animal</a></li><li class="navelem"><a class="el" href="dir_db79a2b629534bdac21b3a6b5f8326f6.html">reptil</a></li><li class="navelem"><b>reptil_nativo.hpp</b></li>
     <li class="footer">Gerado por
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "animal.hpp"
+
 #include <string>
 #include <iostream>
 
@@ -14,7 +16,7 @@ using std::string;
  * - Nativo
  * - Exotico
  */
-class Ave {
+class Ave : public Animal {
     public:
         Ave() {};
         /** 
@@ -24,7 +26,8 @@ class Ave {
          * dela.
          * @param voa tipo bool
          */
-        Ave(bool voa);
+        Ave(string nome, string especie, string ameacadoPor, Veterinario veterinario,
+            Tratador tratador, bool perigoso, bool voa);
 
         /**
          * @brief destrutor de Ave

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "animal.hpp"
+
 #include <string>
 #include <iostream>
 
@@ -14,14 +16,15 @@ using std::string;
  * - Nativo
  * - Exotico
  */
-class Anfibio {
+class Anfibio : public Animal {
     public:
         /** 
          * @brief construtor de Anfibio
          * provendo os atributos
          * do tipo do Animal
          */
-        Anfibio(bool cauda, bool pata);
+        Anfibio(string nome, string especie, string ameacadoPor, Veterinario veterinario,
+                Tratador tratador, bool perigoso, bool cauda, bool pata);
         /**
          * @brief Destrutor virtual
          * @details Determinado virtual devido

@@ -1,6 +1,8 @@
 #include "reptil.hpp"
 
-Reptil::Reptil(Pele pele):
+Reptil::Reptil(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador, bool perigoso,
+                Pele pele):
+                Animal(nome, especie, ameacadoPor, veterinario, tratador, perigoso),
                 pele(pele){}
 
 Reptil::~Reptil(){}

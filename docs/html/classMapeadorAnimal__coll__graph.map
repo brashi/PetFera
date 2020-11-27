@@ -1,2 +1,4 @@
 <map id="MapeadorAnimal" name="MapeadorAnimal">
+<area shape="rect" id="node1" title="Mapeador de animais." alt="" coords="107,233,402,355"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,504,156"/>
 </map>

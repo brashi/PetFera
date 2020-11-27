@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Sistema digital PetFera: Código-Fonte de include/funcionarios/veterinario.hpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -13,9 +13,6 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -38,18 +35,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.8.13 -->
+<!-- Gerado por Doxygen 1.8.17 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Busca');
   $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -63,7 +63,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('veterinario_8hpp_source.html','');});
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('veterinario_8hpp_source.html',''); initResizable(); });
+/* @license-end */
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -85,23 +87,44 @@ $(document).ready(function(){initNavTree('veterinario_8hpp_source.html','');});
 <div class="title">veterinario.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;pessoa.hpp&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classVeterinario.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVeterinario.html">Veterinario</a> : <span class="keyword">public</span> <a class="code" href="classPessoa.html">Pessoa</a> {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classVeterinario.html">Veterinario</a>() {};</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classVeterinario.html">Veterinario</a>(<span class="keywordtype">string</span> <a class="code" href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">nome</a>, <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">telefone</a>, <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">email</a>,</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordtype">string</span> <a class="code" href="classVeterinario.html#a4de1009a66b65ac70bdfbb746bbba367">CRMV</a>);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        ~<a class="code" href="classVeterinario.html">Veterinario</a>();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classVeterinario.html#a8ac8fd3dbec97feac3a870aa916d61ea">getCRMV</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        ostream&amp; <a class="code" href="classVeterinario.html#a5407766614c4dba3b76f9f0c7dfe7b4e">printOutDados</a>(ostream&amp; o) <span class="keyword">const</span>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classVeterinario.html#a4de1009a66b65ac70bdfbb746bbba367">   46</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classVeterinario.html#a4de1009a66b65ac70bdfbb746bbba367">CRMV</a>;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div><div class="ttc" id="classVeterinario_html_a4de1009a66b65ac70bdfbb746bbba367"><div class="ttname"><a href="classVeterinario.html#a4de1009a66b65ac70bdfbb746bbba367">Veterinario::CRMV</a></div><div class="ttdeci">string CRMV</div><div class="ttdoc">Número de cadastro no orgão conforme a legislação. </div><div class="ttdef"><b>Definition:</b> veterinario.hpp:46</div></div>
-<div class="ttc" id="classPessoa_html"><div class="ttname"><a href="classPessoa.html">Pessoa</a></div><div class="ttdoc">Classe base dos funcionarios. </div><div class="ttdef"><b>Definition:</b> pessoa.hpp:16</div></div>
-<div class="ttc" id="classVeterinario_html_a5407766614c4dba3b76f9f0c7dfe7b4e"><div class="ttname"><a href="classVeterinario.html#a5407766614c4dba3b76f9f0c7dfe7b4e">Veterinario::printOutDados</a></div><div class="ttdeci">ostream &amp; printOutDados(ostream &amp;o) const</div><div class="ttdoc">Implementação da stream de dados. </div></div>
-<div class="ttc" id="classPessoa_html_ad4e88b8f3499405a7a03df648857c338"><div class="ttname"><a href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">Pessoa::nome</a></div><div class="ttdeci">string nome</div><div class="ttdoc">Nome do funcionaro. </div><div class="ttdef"><b>Definition:</b> pessoa.hpp:80</div></div>
-<div class="ttc" id="classPessoa_html_adff808bdaf530f44b337705ef7a5b2f5"><div class="ttname"><a href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">Pessoa::email</a></div><div class="ttdeci">string email</div><div class="ttdoc">Email em forma de string. </div><div class="ttdef"><b>Definition:</b> pessoa.hpp:84</div></div>
-<div class="ttc" id="classVeterinario_html"><div class="ttname"><a href="classVeterinario.html">Veterinario</a></div><div class="ttdoc">Implementação dos veterinarios. </div><div class="ttdef"><b>Definition:</b> veterinario.hpp:13</div></div>
-<div class="ttc" id="classVeterinario_html_a8ac8fd3dbec97feac3a870aa916d61ea"><div class="ttname"><a href="classVeterinario.html#a8ac8fd3dbec97feac3a870aa916d61ea">Veterinario::getCRMV</a></div><div class="ttdeci">string getCRMV() const</div><div class="ttdoc">getter de string </div></div>
-<div class="ttc" id="classPessoa_html_a9bf168eeb62bd37b8815d8ab920ceed5"><div class="ttname"><a href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">Pessoa::telefone</a></div><div class="ttdeci">string telefone</div><div class="ttdoc">Telefone para contato. </div><div class="ttdef"><b>Definition:</b> pessoa.hpp:82</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;pessoa.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classVeterinario.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVeterinario.html">Veterinario</a> : <span class="keyword">public</span> <a class="code" href="classPessoa.html">Pessoa</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classVeterinario.html">Veterinario</a>() {};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classVeterinario.html">Veterinario</a>(<span class="keywordtype">string</span> <a class="code" href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">nome</a>, <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">telefone</a>, <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">email</a>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordtype">string</span> <a class="code" href="classVeterinario.html#a4de1009a66b65ac70bdfbb746bbba367">CRMV</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        ~<a class="code" href="classVeterinario.html">Veterinario</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classVeterinario.html#a8ac8fd3dbec97feac3a870aa916d61ea">getCRMV</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        ostream&amp; <a class="code" href="classVeterinario.html#a5407766614c4dba3b76f9f0c7dfe7b4e">printOutDados</a>(ostream&amp; o) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classVeterinario.html#a4de1009a66b65ac70bdfbb746bbba367">   46</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classVeterinario.html#a4de1009a66b65ac70bdfbb746bbba367">CRMV</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassVeterinario_html"><div class="ttname"><a href="classVeterinario.html">Veterinario</a></div><div class="ttdoc">Implementação dos veterinarios.</div><div class="ttdef"><b>Definition:</b> veterinario.hpp:13</div></div>
+<div class="ttc" id="aclassPessoa_html_a9bf168eeb62bd37b8815d8ab920ceed5"><div class="ttname"><a href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">Pessoa::telefone</a></div><div class="ttdeci">string telefone</div><div class="ttdoc">Telefone para contato.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:82</div></div>
+<div class="ttc" id="aclassVeterinario_html_a4de1009a66b65ac70bdfbb746bbba367"><div class="ttname"><a href="classVeterinario.html#a4de1009a66b65ac70bdfbb746bbba367">Veterinario::CRMV</a></div><div class="ttdeci">string CRMV</div><div class="ttdoc">Número de cadastro no orgão conforme a legislação.</div><div class="ttdef"><b>Definition:</b> veterinario.hpp:46</div></div>
+<div class="ttc" id="aclassPessoa_html"><div class="ttname"><a href="classPessoa.html">Pessoa</a></div><div class="ttdoc">Classe base dos funcionarios.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:16</div></div>
+<div class="ttc" id="aclassPessoa_html_ad4e88b8f3499405a7a03df648857c338"><div class="ttname"><a href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">Pessoa::nome</a></div><div class="ttdeci">string nome</div><div class="ttdoc">Nome do funcionaro.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:80</div></div>
+<div class="ttc" id="aclassPessoa_html_adff808bdaf530f44b337705ef7a5b2f5"><div class="ttname"><a href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">Pessoa::email</a></div><div class="ttdeci">string email</div><div class="ttdoc">Email em forma de string.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:84</div></div>
+<div class="ttc" id="aclassVeterinario_html_a5407766614c4dba3b76f9f0c7dfe7b4e"><div class="ttname"><a href="classVeterinario.html#a5407766614c4dba3b76f9f0c7dfe7b4e">Veterinario::printOutDados</a></div><div class="ttdeci">ostream &amp; printOutDados(ostream &amp;o) const</div><div class="ttdoc">Implementação da stream de dados.</div></div>
+<div class="ttc" id="aclassVeterinario_html_a8ac8fd3dbec97feac3a870aa916d61ea"><div class="ttname"><a href="classVeterinario.html#a8ac8fd3dbec97feac3a870aa916d61ea">Veterinario::getCRMV</a></div><div class="ttdeci">string getCRMV() const</div><div class="ttdoc">getter de string</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_53f86f703112b57bbb381585844c3ca1.html">funcionarios</a></li><li class="navelem"><b>veterinario.hpp</b></li>
     <li class="footer">Gerado por
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

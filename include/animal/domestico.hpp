@@ -1,7 +1,5 @@
 #pragma once
 
-#include "animal.hpp"
-
 #include <string>
 #include <iostream>
 
@@ -12,7 +10,7 @@ using std::string;
  * entre a classificação do animal e as características de um animal da
  * mesma categoria.
  */
-class Domestico : public Animal {
+class Domestico {
     public:
         Domestico() {};
         /**
@@ -23,8 +21,7 @@ class Domestico : public Animal {
          * @param Animal() construtor de Animal
          * @param adestrado tipo bool
          */
-        Domestico(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, bool adestrado);
+        Domestico(bool adestrado);
 
         /**
          * @brief Destrutor virtual

@@ -1,3 +1,6 @@
 <map id="Tratador" name="Tratador">
-<area shape="rect" id="node2" href="$classPessoa.html" title="Classe base dos funcionarios. " alt="" coords="5,263,224,589"/>
+<area shape="rect" id="node1" title="Implementação dos tratadores." alt="" coords="120,667,387,905"/>
+<area shape="rect" id="node2" href="$classPessoa.html" title="Classe base dos funcionarios." alt="" coords="5,263,272,589"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,5,188,127"/>
+<area shape="rect" id="node4" title=" " alt="" coords="297,365,439,487"/>
 </map>

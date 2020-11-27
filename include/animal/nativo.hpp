@@ -1,7 +1,5 @@
 #pragma once
 
-#include "animal.hpp"
-
 #include <string>
 #include <iostream>
 
@@ -13,7 +11,7 @@ using std::string;
  * entre a classificação do animal e as características de um animal da
  * mesma categoria.
  */
-class Nativo : public Animal {
+class Nativo {
     public:
         Nativo() {};
         /**
@@ -26,8 +24,7 @@ class Nativo : public Animal {
          * @param regiao string determinando a que região o animal pertence
          * @param licenca declarando a licença do animal (numero)
          */
-        Nativo(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string regiao, string licenca);
+        Nativo(string regiao, string licenca);
         /**
          * @brief Destrutor virtual
          * @details O destrutor deve ser virtual

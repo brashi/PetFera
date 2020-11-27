@@ -2,7 +2,7 @@
 
 AnfibioExotico::AnfibioExotico(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador,
                 bool perigoso, string local, bool cauda, bool pata):
-                Exotico(nome, especie, ameacadoPor, veterinario, tratador, perigoso, local),
-                Anfibio(cauda, pata){}
+                Anfibio(nome, especie, ameacadoPor, veterinario, tratador, perigoso, cauda, pata),
+                Exotico(local){}
 
 AnfibioExotico::~AnfibioExotico(){}
