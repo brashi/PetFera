@@ -12,6 +12,7 @@
 using std::setfill;
 using std::setw;
 using std::right;
+using std::stoi;
 using std::cout;
 using std::cin;
 
@@ -130,6 +131,9 @@ void Petshop::criarTratador() {
 }
 
 void Petshop::criarAnimal() {
+    string nome, especie, pessoa;
+    int idPessoa;
+
     Animal* animal;
 
     if(this->veterinarios.size() < 1)
@@ -148,110 +152,112 @@ void Petshop::criarAnimal() {
 
     animal = mapa.aMap[classe + categoria]();
 
-    string nome = animal->setNome();
-    if(nome.empty())
+    if(animal->setNome())
+        nome = animal->getNome();
+    else
         throw "Animal deve ter um nome válido!";
-    
-    string especie = animal->setEspecie();
-    if(especie.empty())
+
+
+    if(animal->setEspecie())
+        especie = animal->getNome();
+    else
         throw "Animal deve ter uma espécie válida!";
-    else if(findAnimal(nome, especie) != nullptr)
+    
+    if(findAnimal(nome, especie) != nullptr)
         throw "Animal já existe!";
 
-    string ameacado = animal->setAmeacadoPor();
-    if(ameacado.empty()) {
-        cout << "Animal então não está ameaçado de extinção!" << endl;
+    if(!animal->setAmeacadoPor()) {
+        cout << "Animal não está ameaçado de extinção!" << endl;
         animal->setAmeacadoPor("Nada");
     }
 
-    // Arrumar essa parte
+    // Adiciona veterinário ao animal
     this->listarVeterinarios();
-    if(num >= 0 && num < this->veterinarios.size())
-        vet = *this->veterinarios[num];
+    cout << endl << "Digite o número do veterinário responsável: " << endl;
+    getline(cin, pessoa);
+    idPessoa = stoi(pessoa);
+
+    // Pela lista de vet. ser em petshop o tratamento se dá aqui, não no setter
+    if(idPessoa >= 0 && idPessoa < this->veterinarios.size())
+        animal->setVeterinario(this->veterinarios[idPessoa]);
     else
         throw "Veterinário não existe!";
-    Veterinario* vet = animal->setVeterinario();
-    if(vet == nullptr)
-        throw "Veterinário não encontrado!";
 
-    int perigoso = animal->setPerigoso();
-    if(perigoso == -1)
+    if(!animal->setPerigoso())
         throw "Animal não pode ficar sem a informação de seu perigo!";
 
-    if(classe == "ave") {
-        // Ave
+    if(classe == "ave") { // Ave
         Ave* classe = dynamic_cast< Ave* >(animal);
 
-        int voa = classe->setVoa();
-        if(voa == -1)
+        if(!classe->setVoa())
             throw "Informe se a ave voa!";
 
-    } else if(classe == "mam") {
-        // Mamífero
+    } else if(classe == "mam") { // Mamífero
         Mamifero* classe = dynamic_cast< Mamifero* >(animal);
 
-        int gestacao = classe->setGestacao();
-        if(gestacao == -1)
+        if(!classe->setGestacao())
             throw "Informe se o mamífero possui gestação!";
 
-    } else if(classe == "rep") {
-        // Réptil
+    } else if(classe == "rep") { // Réptil
         Reptil* classe = dynamic_cast< Reptil* >(animal);
 
-        int pele = classe->setPele();
-        if(pele == -1)
+        if(!classe->setPele())
             throw "Informe se o réptil possui pele!";
 
-    } else {
-        // Anfíbio
+    } else if(classe == "anf") { // Anfíbio
         Anfibio* classe = dynamic_cast< Anfibio* >(animal);
 
-        int cauda = classe->setCauda();
-        if(cauda == -1)
+        if(classe->setCauda())
             throw "Informe se o anfíbio possui cauda!";
 
-        int pata = classe->setPata();
-        if(pata == -1)
+        if(classe->setPata())
             throw "Informe se o anfíbio possui pata!";
+            
+    } else
+        throw "Algo de errado aconteceu na criação de animal, verifique se a classe informada condiz com o que foi pedido pela aplicação.";
 
-    }
+    // Adiciona tratador ao animal
+    this->listarTratadores();
+    cout << endl << "Digite o número do tratador responsável: " << endl;
+    getline(cin, pessoa);
+    idPessoa = stoi(pessoa);
 
-    Tratador* trt = animal->setTratador();
-    if(trt == nullptr)
-        throw "Tratador não encontrado!";
+    // Pela lista de trt. ser em petshop o tratador se dá aqui, não no setter
+    if(idPessoa >= 0 && idPessoa < this->tratadores.size())
+        animal->setTratador(this->tratadores[idPessoa]);
+    else
+        throw "Tratador não existe!";
 
     // Tratamento de permissão
-    Uniforme un = trt->getUniforme();
-    if((perigoso == 1) && un != Vermelho)
+    Uniforme un = animal->getTratador().getUniforme();
+    if(animal->getPerigoso() && un != Vermelho)
         throw "Erro de permissão! O tratador necessita de ao menos um nível de segurança Vermelho.";
     else if((classe == "rep" || classe == "mam") && (un == Verde))
         throw "Erro de permissão! O tratador necessita de ao menos um nível de segurança Azul.";
 
-    if(categoria == "D") {
+    if(categoria == "D") { // Animal Doméstico
         Domestico* categoria = dynamic_cast< Domestico* >(animal);
 
-        int adestrado = categoria->setAdestrado();
-        if(adestrado == -1)
+        if(!categoria->setAdestrado())
             throw "Informe um valor válido de adestramento!";
 
-    } else if(categoria == "N") {
+    } else if(categoria == "N") { // Silvestre Nativo
         Nativo* categoria = dynamic_cast< Nativo* >(animal);
 
-        string licenca = categoria->setLicenca();
-        if(licenca.empty())
+        if(!categoria->setLicenca())
             throw "Informe um valor válido para a licença!";
 
-        string regiao = categoria->setRegiao();
-        if(regiao.empty())
+        if(!categoria->setRegiao())
             throw "Informe uma região válida!";
 
-    } else {
+    } else if(categoria == "E") { // Silvestre Exótico
         Exotico* categoria = dynamic_cast< Exotico* >(animal);
 
-        string local = categoria->setLocal();
-        if(local.empty())
+        if(!categoria->setLocal())
             throw "Informe um habitat válido!";
-    }
+
+    } else
+        throw "Algo de errado aconteceu na criação de animal, verifique se a categoria informada condiz com o que foi pedido pela aplicação.";
 
     if(this->adicionarAnimal(animal))
         cout << "Animal adicionado ao cadastro." << endl;
@@ -259,170 +265,6 @@ void Petshop::criarAnimal() {
         cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
 
     //delete animal; Checar por possível memory leak aqui ~ Lucas
-
-    // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-    cout << endl << "Espécie: " << endl;
-    getline(cin, especie);
-    if (especie.size() == 0)
-        throw "Animal sem espécie!";
-    cout << endl << "Animal ameaçado de extinção por: (mantenha em branco para \"nada\")" << endl;
-    getline(cin, ameacadoPor);
-    if (ameacadoPor.size() == 0)
-        ameacadoPor = "Nada";
-    
-    cout << endl << "Digite o número do veterinário responsável: " << endl;
-    int num;
-    cin >> num;
-    
-    if(num >= 0 && num < this->veterinarios.size())
-        vet = *this->veterinarios[num];
-    else
-        throw "Veterinário não existe!";
-    cout << endl << "É perigoso ? \t S/N : ";
-    cin >> opcao;
-    if(toupper(opcao) == 'S')
-        perigo = true;
-    else
-        perigo = false;
-    
-    cin >> opcao;
-
-    switch(toupper(opcao)) {
-        case 'A': 
-            classe = "ave";
-            break;
-        case 'F':
-            classe = "anf";
-            break;
-        case 'R':
-            classe = "rep";
-            break;
-        case 'M':
-            classe = "mam";
-            break;
-        default:
-            
-            break;
-    }
-    cout << endl;
-    if(classe == "ave") {
-        cout << "Voa? \t S/N : " << endl;
-        cin >> opcao;
-        if(toupper(opcao) == 'S')
-            voa = true;
-        else
-            voa = false;
-    }
-    else if(classe == "anf") {
-        cout << "Possui cauda? \t S/N : " << endl;
-        cin >> opcao;
-        if(toupper(opcao) == 'S')
-            cauda = true;
-        else
-            cauda = false;
-
-        cout << "Possui pata? \t S/N : " << endl;
-        cin >> opcao;
-        if(toupper(opcao) == 'S')
-            pata = true;
-        else
-            pata = false;
-    }
-    else if(classe == "rep") {
-        cout << "Qual o tipo de pele? " << endl;
-        cout << "C - carapaça" << endl;
-        cout << "E - escama" << endl;
-        cout << "P - placa" << endl;
-        cin >> opcao;
-        if(toupper(opcao) == 'C')
-            pele = Carapaca;
-        else if(toupper(opcao) == 'E')
-            pele = Escama;
-        else if(toupper(opcao) == 'P')
-            pele = Placa;
-        else
-            throw "Réptil precisa de pele";
-    }
-    else {
-        cout << "Possui gestação? \t S/N : " << endl;
-        cin >> opcao;
-        if(toupper(opcao) == 'S')
-            gestacao = true;
-        else
-            gestacao = false;
-    }
-    cout << endl << "A que categoria o animal pertence?..." << endl;
-    cout << "D - doméstico" << endl;
-    cout << "E - exótico" << endl;
-    cout << "N - nativo" << endl;
-    cin >> opcao;
-
-    switch(toupper(opcao)) {
-        case 'D': 
-            categoria = "D";
-            break;
-        case 'E' : 
-            categoria = "E";
-            break;
-        case 'N' : 
-            categoria = "N";
-            break;
-        default:
-            throw "Animal deve ter uma categoria!";
-            break;
-    }
-    cout << endl;
-    if(categoria == "D") {
-        cout << "É adestrado? \t S/N : " << endl;
-        cin >> opcao;
-        if(toupper(opcao) == 'S')
-            adestrado = true;
-        else
-            adestrado = false;
-    }
-    else if(categoria == "E") {
-        cout << "Habitat local: " << endl;
-        cin.ignore();
-        getline(cin, local);
-        if (local.size() == 0)
-            throw "Animal sem habitat!";
-    }
-    else {
-        cout << "Região do animal: " << endl;
-        cin.ignore();
-        getline(cin, regiao);
-        if (regiao.size() == 0)
-            throw "Animal sem região!";
-
-        cout << endl << "Licença de transporte do IBAMA:" << endl;
-        getline(cin, licenca);
-        if (licenca.size() == 0)
-            throw "Não é possível cadastrar animal silvestre nativo sem cadastro no IBAMA!";
-    }
-    this->listarTratadores();
-    cout << endl << "Digite o número do tratador responsável: " << endl;
-    num;
-    cin >> num;
-
-    if(num >= 0 && num < this->tratadores.size()) {
-        trata = *this->tratadores[num];
-        Uniforme un = trata.getUniforme();
-
-        if(perigo && un != Vermelho)
-            throw "Erro de permissão! O tratador necessita de ao menos um nível de segurança Vermelho.";
-        else if((classe == "rep" || classe == "mam") && (un == Verde))
-            throw "Erro de permissão! O tratador necessita de ao menos um nível de segurança Azul.";
-    } else
-        throw "Tratador não existe!"; 
-
-    cout << endl;
-    
-    if(this->adicionarAnimal(mapa.aMap[animalControle](dadosNovoAnimal))) {
-        cout << "Animal adicionado ao cadastro." << endl;
-    } else {
-        cout << "Houve um erro na operação" << endl << "Cancelando..." << endl;
-    }
 }
 
 // Atualização

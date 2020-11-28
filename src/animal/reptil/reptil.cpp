@@ -1,5 +1,8 @@
 #include "reptil.hpp"
 
+using std::cout;
+using std::cin;
+
 Reptil::Reptil(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador, bool perigoso,
                 Pele pele):
                 Animal(nome, especie, ameacadoPor, veterinario, tratador, perigoso),
@@ -11,4 +14,28 @@ Pele Reptil::getPele() const {
     return this->pele;
 }
 
-int Reptil::setPele() {}
+bool Reptil::setPele() {
+    string s;
+    cout << endl << "Qual o tipo de pele do réptil? (S/N): " << endl;
+    cout << "C - carapaça" << endl;
+    cout << "E - escama" << endl;
+    cout << "P - placa" << endl;
+    getline(cin, s);
+
+    switch(toupper(s[0])) {
+        case 'S':
+            pele = Carapaca;
+            break;
+        case 'N':
+            pele = Escama;
+            break;
+        case 'P':
+            pele = Placa;
+            break;
+        default:
+            return false;
+            break;
+    }
+
+    return true;
+}

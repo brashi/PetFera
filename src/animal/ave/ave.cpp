@@ -1,5 +1,8 @@
 #include "ave.hpp"
 
+using std::cout;
+using std::cin;
+
 Ave::Ave(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador, bool perigoso,
                 bool voa):
                 Animal(nome, especie, ameacadoPor, veterinario, tratador, perigoso),
@@ -11,4 +14,17 @@ bool Ave::getVoa() const {
     return this->voa;
 }
 
-int Ave::setVoa() {}
+bool Ave::setVoa() {
+    string s;
+    cout << endl << "Ave voa? (S/N): " << endl;
+    getline(cin, s);
+
+    if(toupper(s[0]) == 'S')
+        voa = true;
+    else if(toupper(s[0]) == 'N')
+        voa = false;
+    else
+        return false;
+
+    return true;
+}

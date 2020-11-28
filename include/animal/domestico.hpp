@@ -37,7 +37,7 @@ class Domestico {
          */
         bool getAdestrado() const;
         
-        int setAdestrado();
+        bool setAdestrado();
     protected:
         /** @brief Bool determinando se o animal é adestrado ou não */
         bool adestrado;

@@ -48,7 +48,7 @@ class Anfibio : public Animal {
          */
         bool getPata() const;
 
-        int setPata();
+        bool setPata();
     protected:
         /** @brief determina se o anfibio tem ou não cauda */
         bool cauda;

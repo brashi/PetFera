@@ -1,5 +1,8 @@
 #include "mamifero.hpp"
 
+using std::cout;
+using std::cin;
+
 Mamifero::Mamifero(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador, bool perigoso,
                 bool gestacao):
                 Animal(nome, especie, ameacadoPor, veterinario, tratador, perigoso),
@@ -11,4 +14,17 @@ bool Mamifero::getGestacao() const {
     return this->gestacao;
 }
 
-int Mamifero::setGestacao() {}
+bool Mamifero::setGestacao() {
+    string s;
+    cout << endl << "Mamífero possui gestação? (S/N): " << endl;
+    getline(cin, s);
+
+    if(toupper(s[0]) == 'S')
+        gestacao = true;
+    else if(toupper(s[0]) == 'N')
+        gestacao = false;
+    else
+        return false;
+
+    return true;
+}

@@ -11,10 +11,12 @@
 
 #include <iomanip>
 #include <iostream>
+#include <vector>
 
 using std::setfill;
 using std::setw;
 using std::right;
+using std::vector;
 using std::cout;
 using std::cin;
 
@@ -29,51 +31,51 @@ string Animal::getNome() const {
     return this->nome;
 }
 
-string Animal::setNome() {
+bool Animal::setNome() {
     string s;
     cout << endl << "Nome: " << endl;
     getline(cin, s);
 
     if(s.size() == 0)
-        return {};
+        return false;
     else
         nome = s;
     
-    return s;
+    return true;
 }
 
 string Animal::getEspecie() const {
     return this->especie;
 }
 
-string Animal::setEspecie() {
+bool Animal::setEspecie() {
     string s;
     cout << endl << "Espécie: " << endl;
     getline(cin, s);
     
     if(s.size() == 0)
-        return {};
+        return false;
     else
         especie = s;
     
-    return s;
+    return true;
 }
 
 string Animal::getAmeacadoPor() const {
     return this->ameacadoPor;
 }
 
-string Animal::setAmeacadoPor() {
+bool Animal::setAmeacadoPor() {
     string s;
     cout << endl << "Animal ameaçado de extinção por?: " << endl;
     getline(cin, s);
     
     if(s.size() == 0)
-        return {};
+        return false;
     else
         ameacadoPor = s;
     
-    return s;
+    return true;
 }
 
 // Sobrecarga para opcionalidade do campo
@@ -85,19 +87,36 @@ Veterinario Animal::getVeterinario() const {
     return this->veterinario;
 }
 
-Veterinario* Animal::setVeterinario() {}
+void Animal::setVeterinario(Veterinario* vet) {
+    veterinario = *vet;
+}
 
 Tratador Animal::getTratador() const {
     return this->tratador;
 }
 
-Tratador* Animal::setTratador() {}
+void Animal::setTratador(Tratador* trt) {
+    tratador = *trt;
+}
 
 bool Animal::getPerigoso() const {
     return this->perigoso;
 }
 
-int Animal::setPerigoso() {}
+bool Animal::setPerigoso() {
+    string s;
+    cout << endl << "É perigoso? (S/N): ";
+    getline(cin, s);
+    
+    if(toupper(s[0]) == 'S')
+        perigoso = true;
+    else if(toupper(s[0]) == 'N')
+        perigoso = false;
+    else
+        return false;
+
+    return true;
+}
 
 string Animal::getClassificacao(Animal* animal) const {
     if(Exotico* teste = dynamic_cast< Exotico* >(animal)) {
@@ -133,6 +152,7 @@ string Animal::setClassificacao() {
         }
 
     return {}; // Não retornou nada (falhou), retorne vazio
+    // {} é mais rápido que "", já que não chama o construtor de std::string
 }
 
 string Animal::getClasse(Animal* animal) const {
@@ -175,6 +195,7 @@ string Animal::setClasse() {
         }
 
     return {}; // Não retornou nada (falhou), retorne vazio
+    // {} é mais rápido que "", já que não chama o construtor de std::string
 }
 
 ostream& Animal::printOutDados(ostream& o, Animal* animal) const {

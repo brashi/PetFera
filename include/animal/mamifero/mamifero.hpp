@@ -24,7 +24,7 @@ class Mamifero : public Animal {
 
         bool getGestacao() const;
 
-        int setGestacao();
+        bool setGestacao();
     protected:
         bool gestacao;
 };

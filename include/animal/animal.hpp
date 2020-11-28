@@ -3,11 +3,12 @@
 #include "tratador.hpp"
 #include "veterinario.hpp"
 
-#include <string>
 #include <iostream>
+#include <vector>
+#include <string>
 
 using std::string;
-
+using std::vector;
 
 /**
  * @brief Implementação base para o cadastro de animais.
@@ -79,20 +80,22 @@ class Animal {
          */
         bool getPerigoso() const;
 
-        string setNome();
+        //Setters
+        
+        bool setNome();
 
-        string setEspecie();
+        bool setEspecie();
+
+        bool setAmeacadoPor();
+
+        bool setPerigoso();
 
         // Sobrecarga para opcionalidade do campo
-        string setAmeacadoPor();
-
         void setAmeacadoPor(string s);
 
-        Veterinario* setVeterinario();
+        void setVeterinario(Veterinario* veterinario);
 
-        Tratador* setTratador();
-
-        int setPerigoso();
+        void setTratador(Tratador* tratador);
 
         /**
          * @details getter de string

@@ -32,7 +32,7 @@ class Reptil : public Animal {
 
         Pele getPele() const;
 
-        int setPele();
+        bool setPele();
     protected:
         Pele pele;
 };

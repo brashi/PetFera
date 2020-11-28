@@ -1,5 +1,8 @@
 #include "anfibio.hpp"
 
+using std::cout;
+using std::cin;
+
 Anfibio::Anfibio(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador, bool perigoso,
                 bool cauda, bool pata):
                 Animal(nome, especie, ameacadoPor, veterinario, tratador, perigoso),
@@ -11,10 +14,36 @@ bool Anfibio::getCauda() const {
     return this->cauda;
 }
 
-int Anfibio::setCauda() {}
+int Anfibio::setCauda() {
+    string s;
+    cout << endl << "Anfíbio possui cauda? (S/N): " << endl;
+    getline(cin, s);
+
+    if(toupper(s[0]) == 'S')
+        cauda = true;
+    else if(toupper(s[0]) == 'N')
+        cauda = false;
+    else
+        return false;
+
+    return true;
+}
 
 bool Anfibio::getPata() const {
     return this->pata;
 }
 
-int Anfibio::setPata() {}
+bool Anfibio::setPata() {
+    string s;
+    cout << endl << "Anfíbio possui pata? (S/N): " << endl;
+    getline(cin, s);
+
+    if(toupper(s[0]) == 'S')
+        pata = true;
+    else if(toupper(s[0]) == 'N')
+        pata = false;
+    else
+        return false;
+
+    return true;
+}
