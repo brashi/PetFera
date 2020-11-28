@@ -4,6 +4,7 @@
 
 #include <functional>
 #include <string>
+#include <memory>
 #include <map>
 
 /**
@@ -41,5 +42,5 @@ class MapeadorMenu {
          * em Public da classe Petshop.
          * @return Função da classe Petshop desejada.
          */ 
-        std::map<char, std::function<bool (Petshop* petshop)>> escolhas;
+        std::map<char, std::function<bool (std::shared_ptr<Petshop> petshop)>> escolhas;
 };

@@ -1,5 +1,6 @@
 #include <iostream> 
 #include <iterator>
+#include <memory>
 
 #include "mapeador_menu.hpp"
 #include "petshop.hpp"
@@ -47,8 +48,8 @@ void pausar() {
 }
 
 void menu() {
-    Petshop *petshop = new Petshop();
-    MapeadorMenu *mapeador = new MapeadorMenu();
+    std::shared_ptr<Petshop> petshop = std::make_shared<Petshop>();
+    std::unique_ptr<MapeadorMenu> mapeador = std::make_unique<MapeadorMenu>();
     bool executando = true;
     string opcao;
     
@@ -74,7 +75,7 @@ void menu() {
         pausar();
     }
     
-    delete petshop;
+    //delete petshop;
 }
 
 int main() {

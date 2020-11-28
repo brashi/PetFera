@@ -8,7 +8,7 @@ INC = ./include
 # Definições gerais: Nome do Executável Main e Flags do compilador.
 PROG = petFera	# Nome do executável gerado.
 CXX = g++
-CXXFLAGS = -O0 -g -Wall -std=c++11
+CXXFLAGS = -O0 -g -Wall -std=c++14
 
 # ATENÇÃO: Sub-Diretórios (DEVE SER IGUAL EM SRC E INCLUDE);
 DIRS = . funcionarios animal animal/ave animal/mamifero animal/reptil animal/anfibio
