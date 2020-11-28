@@ -98,9 +98,9 @@ class Animal {
 
         bool setPerigoso();
 
-        void setVeterinario(Veterinario* veterinario);
+        void setVeterinario(Veterinario veterinario);
 
-        void setTratador(Tratador* tratador);
+        void setTratador(Tratador tratador);
 
         /**
          * @details getter de string

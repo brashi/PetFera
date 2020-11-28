@@ -20,11 +20,15 @@ bool Ave::setVoa() {
     getline(cin, s);
 
     if(toupper(s[0]) == 'S')
-        voa = true;
+        this->voa = true;
     else if(toupper(s[0]) == 'N')
-        voa = false;
+        this->voa = false;
     else
         return false;
 
     return true;
+}
+
+void Ave::setVoa(bool b) {
+    this->voa = b;
 }

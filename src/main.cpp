@@ -78,7 +78,6 @@ void menu() {
 }
 
 int main() {
-    cin.ignore();
     menu();
     return 0;
 }

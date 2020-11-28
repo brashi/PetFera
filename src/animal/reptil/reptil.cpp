@@ -24,13 +24,13 @@ bool Reptil::setPele() {
 
     switch(toupper(s[0])) {
         case 'S':
-            pele = Carapaca;
+            this->pele = Carapaca;
             break;
         case 'N':
-            pele = Escama;
+            this->pele = Escama;
             break;
         case 'P':
-            pele = Placa;
+            this->pele = Placa;
             break;
         default:
             return false;
@@ -38,4 +38,8 @@ bool Reptil::setPele() {
     }
 
     return true;
+}
+
+void Reptil::setPele(Pele p) {
+    this->pele = p;
 }

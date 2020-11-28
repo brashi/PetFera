@@ -13,6 +13,10 @@ string Nativo::getLicenca() const {
     return this->licenca;
 }
 
+void Nativo::setLicenca(string s) {
+    this->licenca = s;
+}
+
 bool Nativo::setLicenca() {
     string s;
     cout << endl << "Licença de transporte IBAMA: " << endl;
@@ -21,13 +25,17 @@ bool Nativo::setLicenca() {
     if(s.size() == 0)
         return false;
     else
-        licenca = s;
+        this->licenca = s;
     
     return true;
 }
 
 string Nativo::getRegiao() const {
     return this->regiao;
+}
+
+void Nativo::setRegiao(string s) {
+    this->regiao = s;
 }
 
 bool Nativo::setRegiao() {
@@ -38,7 +46,7 @@ bool Nativo::setRegiao() {
     if(s.size() == 0)
         return false;
     else
-        regiao = s;
+        this->regiao = s;
     
     return true;
 }

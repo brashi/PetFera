@@ -104,28 +104,40 @@ $(document).ready(function(){initNavTree('pessoa_8hpp_source.html',''); initResi
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#a8d551db3b19e1f07022adb3793cb8ed7">getNome</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#afcc25e8f6dc6d9b0ce5862df3cfbb66f">getTelefone</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#a0fe937f9358dd92f73441c3288e46500">getEmail</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">bool</span> setNome();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> setNome(<span class="keywordtype">string</span> s);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#afcc25e8f6dc6d9b0ce5862df3cfbb66f">getTelefone</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">bool</span> setTelefone();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">virtual</span> ostream&amp; <a class="code" href="classPessoa.html#a39406e1f3d5ceaf4db47fc7dae7b3ac0">printOutDados</a>(ostream&amp; o) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classPessoa.html#a3a1cab899b8b33a9d88aeeb369d377dd">operator==</a>(<span class="keyword">const</span> <a class="code" href="classPessoa.html">Pessoa</a>&amp; outro) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">friend</span> ostream&amp; <a class="code" href="classPessoa.html#adb1c6a714ec60655e618798db9429f1c">operator&lt;&lt; </a>(ostream&amp; o, <a class="code" href="classPessoa.html">Pessoa</a>&amp; pessoa);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">   80</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">nome</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">   82</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">telefone</a>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">   84</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">email</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> setTelefone(<span class="keywordtype">string</span> s);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#a0fe937f9358dd92f73441c3288e46500">getEmail</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">bool</span> setEmail();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">void</span> setEmail(<span class="keywordtype">string</span> s);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">virtual</span> ostream&amp; <a class="code" href="classPessoa.html#a39406e1f3d5ceaf4db47fc7dae7b3ac0">printOutDados</a>(ostream&amp; o) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classPessoa.html#a3a1cab899b8b33a9d88aeeb369d377dd">operator==</a>(<span class="keyword">const</span> <a class="code" href="classPessoa.html">Pessoa</a>&amp; outro) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">friend</span> ostream&amp; <a class="code" href="classPessoa.html#adb1c6a714ec60655e618798db9429f1c">operator&lt;&lt; </a>(ostream&amp; o, <a class="code" href="classPessoa.html">Pessoa</a>&amp; pessoa);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">   92</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">nome</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">   94</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">telefone</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">   96</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">email</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassPessoa_html_a9bf168eeb62bd37b8815d8ab920ceed5"><div class="ttname"><a href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">Pessoa::telefone</a></div><div class="ttdeci">string telefone</div><div class="ttdoc">Telefone para contato.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:82</div></div>
+<div class="ttc" id="aclassPessoa_html_a9bf168eeb62bd37b8815d8ab920ceed5"><div class="ttname"><a href="classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5">Pessoa::telefone</a></div><div class="ttdeci">string telefone</div><div class="ttdoc">Telefone para contato.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:94</div></div>
 <div class="ttc" id="aclassPessoa_html"><div class="ttname"><a href="classPessoa.html">Pessoa</a></div><div class="ttdoc">Classe base dos funcionarios.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:16</div></div>
 <div class="ttc" id="aclassPessoa_html_a0fe937f9358dd92f73441c3288e46500"><div class="ttname"><a href="classPessoa.html#a0fe937f9358dd92f73441c3288e46500">Pessoa::getEmail</a></div><div class="ttdeci">string getEmail() const</div><div class="ttdoc">getter de string</div></div>
-<div class="ttc" id="aclassPessoa_html_ad4e88b8f3499405a7a03df648857c338"><div class="ttname"><a href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">Pessoa::nome</a></div><div class="ttdeci">string nome</div><div class="ttdoc">Nome do funcionaro.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:80</div></div>
-<div class="ttc" id="aclassPessoa_html_adff808bdaf530f44b337705ef7a5b2f5"><div class="ttname"><a href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">Pessoa::email</a></div><div class="ttdeci">string email</div><div class="ttdoc">Email em forma de string.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:84</div></div>
+<div class="ttc" id="aclassPessoa_html_ad4e88b8f3499405a7a03df648857c338"><div class="ttname"><a href="classPessoa.html#ad4e88b8f3499405a7a03df648857c338">Pessoa::nome</a></div><div class="ttdeci">string nome</div><div class="ttdoc">Nome do funcionaro.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:92</div></div>
+<div class="ttc" id="aclassPessoa_html_adff808bdaf530f44b337705ef7a5b2f5"><div class="ttname"><a href="classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5">Pessoa::email</a></div><div class="ttdeci">string email</div><div class="ttdoc">Email em forma de string.</div><div class="ttdef"><b>Definition:</b> pessoa.hpp:96</div></div>
 <div class="ttc" id="aclassPessoa_html_a8d551db3b19e1f07022adb3793cb8ed7"><div class="ttname"><a href="classPessoa.html#a8d551db3b19e1f07022adb3793cb8ed7">Pessoa::getNome</a></div><div class="ttdeci">string getNome() const</div><div class="ttdoc">getter de string</div></div>
 <div class="ttc" id="aclassPessoa_html_afcc25e8f6dc6d9b0ce5862df3cfbb66f"><div class="ttname"><a href="classPessoa.html#afcc25e8f6dc6d9b0ce5862df3cfbb66f">Pessoa::getTelefone</a></div><div class="ttdeci">string getTelefone() const</div><div class="ttdoc">getter de string</div></div>
 <div class="ttc" id="aclassPessoa_html_adb1c6a714ec60655e618798db9429f1c"><div class="ttname"><a href="classPessoa.html#adb1c6a714ec60655e618798db9429f1c">Pessoa::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;o, Pessoa &amp;pessoa)</div><div class="ttdoc">Sobrecarga do operador de extração.</div></div>

@@ -1,7 +1,7 @@
 <map id="Nativo" name="Nativo">
-<area shape="rect" id="node1" title="Umas das definições de categoria para Animal." alt="" coords="450,5,666,273"/>
-<area shape="rect" id="node2" href="$classAnfibioNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="5,321,276,472"/>
-<area shape="rect" id="node3" href="$classAveNativa.html" title="Implementação de animal com Classe e Categoria." alt="" coords="300,321,528,472"/>
-<area shape="rect" id="node4" href="$classMamiferoNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="552,321,855,472"/>
-<area shape="rect" id="node5" href="$classReptilNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="879,321,1133,472"/>
+<area shape="rect" id="node1" title="Umas das definições de categoria para Animal." alt="" coords="450,5,666,391"/>
+<area shape="rect" id="node2" href="$classAnfibioNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="5,439,276,619"/>
+<area shape="rect" id="node3" href="$classAveNativa.html" title="Implementação de animal com Classe e Categoria." alt="" coords="300,439,528,619"/>
+<area shape="rect" id="node4" href="$classMamiferoNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="552,439,855,619"/>
+<area shape="rect" id="node5" href="$classReptilNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="879,439,1133,619"/>
 </map>

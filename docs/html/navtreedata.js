@@ -43,7 +43,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"anfibio_8hpp_source.html"
+"anfibio_8hpp_source.html",
+"mapeador__animal_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'clique para desativar a sincronização do painel';

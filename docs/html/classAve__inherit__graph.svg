@@ -59,15 +59,17 @@ var sectionId = 'dynsection-0';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="Classificação base para Aves.">
-<polygon fill="#bfbfbf" stroke="black" points="259.5,-171.5 259.5,-327.5 381.5,-327.5 381.5,-171.5 259.5,-171.5"/>
-<text text-anchor="middle" x="320.5" y="-307.5" font-family="Helvetica,sans-Serif" font-size="20.00">Ave</text>
-<polyline fill="none" stroke="black" points="259.5,-297.5 381.5,-297.5 "/>
-<text text-anchor="start" x="267.5" y="-277.5" font-family="Helvetica,sans-Serif" font-size="20.00"># voa</text>
-<polyline fill="none" stroke="black" points="259.5,-267.5 381.5,-267.5 "/>
-<text text-anchor="start" x="267.5" y="-247.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ Ave()</text>
-<text text-anchor="start" x="267.5" y="-225.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ Ave()</text>
-<text text-anchor="start" x="267.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ ~Ave()</text>
-<text text-anchor="start" x="267.5" y="-181.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ getVoa()</text>
+<polygon fill="#bfbfbf" stroke="black" points="259.5,-171.5 259.5,-371.5 381.5,-371.5 381.5,-171.5 259.5,-171.5"/>
+<text text-anchor="middle" x="320.5" y="-351.5" font-family="Helvetica,sans-Serif" font-size="20.00">Ave</text>
+<polyline fill="none" stroke="black" points="259.5,-341.5 381.5,-341.5 "/>
+<text text-anchor="start" x="267.5" y="-321.5" font-family="Helvetica,sans-Serif" font-size="20.00"># voa</text>
+<polyline fill="none" stroke="black" points="259.5,-311.5 381.5,-311.5 "/>
+<text text-anchor="start" x="267.5" y="-291.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ Ave()</text>
+<text text-anchor="start" x="267.5" y="-269.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ Ave()</text>
+<text text-anchor="start" x="267.5" y="-247.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ ~Ave()</text>
+<text text-anchor="start" x="267.5" y="-225.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ getVoa()</text>
+<text text-anchor="start" x="267.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ setVoa()</text>
+<text text-anchor="start" x="267.5" y="-181.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ setVoa()</text>
 </a>
 </g>
 </g>
@@ -89,54 +91,56 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M251.76,-190.68C230.56,-172.85 207.05,-153.07 185.23,-134.72"/>
-<polygon fill="none" stroke="midnightblue" points="249.56,-193.4 259.46,-197.16 254.06,-188.04 249.56,-193.4"/>
+<path fill="none" stroke="midnightblue" d="M252.09,-205.93C228.01,-183.19 200.91,-157.61 176.68,-134.74"/>
+<polygon fill="none" stroke="midnightblue" points="249.79,-208.57 259.46,-212.89 254.59,-203.48 249.79,-208.57"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
 <g id="a_node4"><a xlink:href="classAveExotica.html" target="_top" xlink:title="Implementação de animal com Classe e Categoria.">
-<polygon fill="white" stroke="black" points="231,-11.5 231,-123.5 410,-123.5 410,-11.5 231,-11.5"/>
-<text text-anchor="middle" x="320.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="20.00">AveExotica</text>
-<polyline fill="none" stroke="black" points="231,-93.5 410,-93.5 "/>
-<text text-anchor="middle" x="320.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="20.00"> </text>
-<polyline fill="none" stroke="black" points="231,-63.5 410,-63.5 "/>
-<text text-anchor="start" x="239" y="-43.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ AveExotica()</text>
-<text text-anchor="start" x="239" y="-21.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ ~AveExotica()</text>
+<polygon fill="white" stroke="black" points="231,-0.5 231,-134.5 410,-134.5 410,-0.5 231,-0.5"/>
+<text text-anchor="middle" x="320.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="20.00">AveExotica</text>
+<polyline fill="none" stroke="black" points="231,-104.5 410,-104.5 "/>
+<text text-anchor="middle" x="320.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="20.00"> </text>
+<polyline fill="none" stroke="black" points="231,-74.5 410,-74.5 "/>
+<text text-anchor="start" x="239" y="-54.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ AveExotica()</text>
+<text text-anchor="start" x="239" y="-32.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ AveExotica()</text>
+<text text-anchor="start" x="239" y="-10.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ ~AveExotica()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M320.5,-161.18C320.5,-148.42 320.5,-135.59 320.5,-123.71"/>
-<polygon fill="none" stroke="midnightblue" points="317,-161.38 320.5,-171.38 324,-161.38 317,-161.38"/>
+<path fill="none" stroke="midnightblue" d="M320.5,-161.05C320.5,-152.02 320.5,-143.07 320.5,-134.51"/>
+<polygon fill="none" stroke="midnightblue" points="317,-161.28 320.5,-171.28 324,-161.28 317,-161.28"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:href="classAveNativa.html" target="_top" xlink:title="Implementação de animal com Classe e Categoria.">
-<polygon fill="white" stroke="black" points="428,-11.5 428,-123.5 599,-123.5 599,-11.5 428,-11.5"/>
-<text text-anchor="middle" x="513.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="20.00">AveNativa</text>
-<polyline fill="none" stroke="black" points="428,-93.5 599,-93.5 "/>
-<text text-anchor="middle" x="513.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="20.00"> </text>
-<polyline fill="none" stroke="black" points="428,-63.5 599,-63.5 "/>
-<text text-anchor="start" x="436" y="-43.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ AveNativa()</text>
-<text text-anchor="start" x="436" y="-21.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ ~AveNativa()</text>
+<polygon fill="white" stroke="black" points="428,-0.5 428,-134.5 599,-134.5 599,-0.5 428,-0.5"/>
+<text text-anchor="middle" x="513.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="20.00">AveNativa</text>
+<polyline fill="none" stroke="black" points="428,-104.5 599,-104.5 "/>
+<text text-anchor="middle" x="513.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="20.00"> </text>
+<polyline fill="none" stroke="black" points="428,-74.5 599,-74.5 "/>
+<text text-anchor="start" x="436" y="-54.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ AveNativa()</text>
+<text text-anchor="start" x="436" y="-32.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ AveNativa()</text>
+<text text-anchor="start" x="436" y="-10.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ ~AveNativa()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M389.04,-184.58C410.42,-164.64 433.81,-142.82 454.48,-123.55"/>
-<polygon fill="none" stroke="midnightblue" points="386.49,-182.17 381.57,-191.55 391.27,-187.29 386.49,-182.17"/>
+<path fill="none" stroke="midnightblue" d="M388.57,-199.25C408.61,-178.28 430.44,-155.43 450.17,-134.78"/>
+<polygon fill="none" stroke="midnightblue" points="385.94,-196.94 381.57,-206.59 391.01,-201.77 385.94,-196.94"/>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="classAnimal.html" target="_top" xlink:title="Implementação base para o cadastro de animais.">
-<polygon fill="white" stroke="black" points="209,-364.5 209,-828.5 432,-828.5 432,-364.5 209,-364.5"/>
+<polygon fill="white" stroke="black" points="209,-408.5 209,-828.5 432,-828.5 432,-408.5 209,-408.5"/>
 <text text-anchor="middle" x="320.5" y="-808.5" font-family="Helvetica,sans-Serif" font-size="20.00">Animal</text>
 <polyline fill="none" stroke="black" points="209,-798.5 432,-798.5 "/>
 <text text-anchor="start" x="217" y="-778.5" font-family="Helvetica,sans-Serif" font-size="20.00"># nome</text>
@@ -155,18 +159,16 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="217" y="-506.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ getVeterinario()</text>
 <text text-anchor="start" x="217" y="-484.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ getTratador()</text>
 <text text-anchor="start" x="217" y="-462.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ getPerigoso()</text>
-<text text-anchor="start" x="217" y="-440.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ getClassificacao()</text>
-<text text-anchor="start" x="217" y="-418.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ getClasse()</text>
-<text text-anchor="start" x="217" y="-396.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ printOutDados()</text>
-<text text-anchor="start" x="217" y="-374.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ operator==()</text>
+<text text-anchor="start" x="217" y="-440.5" font-family="Helvetica,sans-Serif" font-size="20.00">+ setNome()</text>
+<text text-anchor="start" x="217" y="-418.5" font-family="Helvetica,sans-Serif" font-size="20.00">e 15 mais...</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node2&#45;&gt;Node1</title>
-<path fill="none" stroke="midnightblue" d="M320.5,-354.26C320.5,-345.01 320.5,-336.07 320.5,-327.58"/>
-<polygon fill="none" stroke="midnightblue" points="317,-354.42 320.5,-364.42 324,-354.42 317,-354.42"/>
+<path fill="none" stroke="midnightblue" d="M320.5,-398.09C320.5,-389.07 320.5,-380.23 320.5,-371.68"/>
+<polygon fill="none" stroke="midnightblue" points="317,-398.36 320.5,-408.36 324,-398.36 317,-398.36"/>
 </g>
 </g>
 </svg>

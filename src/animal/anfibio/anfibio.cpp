@@ -20,13 +20,17 @@ bool Anfibio::setCauda() {
     getline(cin, s);
 
     if(toupper(s[0]) == 'S')
-        cauda = true;
+        this->cauda = true;
     else if(toupper(s[0]) == 'N')
-        cauda = false;
+        this->cauda = false;
     else
         return false;
 
     return true;
+}
+
+void Anfibio::setCauda(bool b) {
+    this->cauda = b;
 }
 
 bool Anfibio::getPata() const {
@@ -39,11 +43,15 @@ bool Anfibio::setPata() {
     getline(cin, s);
 
     if(toupper(s[0]) == 'S')
-        pata = true;
+        this->pata = true;
     else if(toupper(s[0]) == 'N')
-        pata = false;
+        this->pata = false;
     else
         return false;
 
     return true;
+}
+
+void Anfibio::setPata(bool b) {
+    this->pata = b;
 }

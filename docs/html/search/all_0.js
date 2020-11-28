@@ -4,7 +4,7 @@ var searchData=
   ['adicionaranimal_1',['adicionarAnimal',['../classPetshop.html#a631423ce9d40f56416286d9239aa37fd',1,'Petshop']]],
   ['adicionartratador_2',['adicionarTratador',['../classPetshop.html#a4a6d70eef348e71c54035dc0a21c5569',1,'Petshop']]],
   ['adicionarveterinario_3',['adicionarVeterinario',['../classPetshop.html#aeb4827e72d9c703f7857d6cad20ab54d',1,'Petshop']]],
-  ['amap_4',['aMap',['../classMapeadorAnimal.html#a80dbb79128ad67231ccea2fcec6a869a',1,'MapeadorAnimal']]],
+  ['amap_4',['aMap',['../classMapeadorAnimal.html#a00e483d9c9b774834b3c00ed86272014',1,'MapeadorAnimal']]],
   ['ameacadopor_5',['ameacadoPor',['../classAnimal.html#a680705af8ef098dc922b2a7c97dc7ed5',1,'Animal']]],
   ['anfibio_6',['Anfibio',['../classAnfibio.html',1,'Anfibio'],['../classAnfibio.html#a88146957022fd7d8eaccee3832c65845',1,'Anfibio::Anfibio()']]],
   ['anfibiodomestico_7',['AnfibioDomestico',['../classAnfibioDomestico.html',1,'AnfibioDomestico'],['../classAnfibioDomestico.html#adabb525e758d4c7c1931c43fb88b0cfe',1,'AnfibioDomestico::AnfibioDomestico()']]],

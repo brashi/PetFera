@@ -31,6 +31,10 @@ string Animal::getNome() const {
     return this->nome;
 }
 
+void Animal::setNome(string s) {
+    this->nome = s;
+}
+
 bool Animal::setNome() {
     string s;
     cout << endl << "Nome: " << endl;
@@ -39,7 +43,7 @@ bool Animal::setNome() {
     if(s.size() == 0)
         return false;
     else
-        nome = s;
+        this->nome = s;
     
     return true;
 }
@@ -56,9 +60,13 @@ bool Animal::setEspecie() {
     if(s.size() == 0)
         return false;
     else
-        especie = s;
+        this->especie = s;
     
     return true;
+}
+
+void Animal::setEspecie(string s) {
+    this->especie = s;
 }
 
 string Animal::getAmeacadoPor() const {
@@ -73,30 +81,29 @@ bool Animal::setAmeacadoPor() {
     if(s.size() == 0)
         return false;
     else
-        ameacadoPor = s;
+        this->ameacadoPor = s;
     
     return true;
 }
 
-// Sobrecarga para opcionalidade do campo
 void Animal::setAmeacadoPor(string s) {
-    ameacadoPor = s;
+    this->ameacadoPor = s;
 }
 
 Veterinario Animal::getVeterinario() const {
     return this->veterinario;
 }
 
-void Animal::setVeterinario(Veterinario* vet) {
-    veterinario = *vet;
+void Animal::setVeterinario(Veterinario vet) {
+    this->veterinario = vet;
 }
 
 Tratador Animal::getTratador() const {
     return this->tratador;
 }
 
-void Animal::setTratador(Tratador* trt) {
-    tratador = *trt;
+void Animal::setTratador(Tratador trt) {
+    this->tratador = trt;
 }
 
 bool Animal::getPerigoso() const {
@@ -109,13 +116,17 @@ bool Animal::setPerigoso() {
     getline(cin, s);
     
     if(toupper(s[0]) == 'S')
-        perigoso = true;
+        this->perigoso = true;
     else if(toupper(s[0]) == 'N')
-        perigoso = false;
+        this->perigoso = false;
     else
         return false;
 
     return true;
+}
+
+void Animal::setPerigoso(bool b) {
+    this->perigoso = b;
 }
 
 string Animal::getClassificacao(Animal* animal) const {

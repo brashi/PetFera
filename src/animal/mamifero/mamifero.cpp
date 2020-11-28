@@ -20,11 +20,15 @@ bool Mamifero::setGestacao() {
     getline(cin, s);
 
     if(toupper(s[0]) == 'S')
-        gestacao = true;
+        this->gestacao = true;
     else if(toupper(s[0]) == 'N')
-        gestacao = false;
+        this->gestacao = false;
     else
         return false;
 
     return true;
+}
+
+void Mamifero::setGestacao(bool b) {
+    this->gestacao = b;
 }

@@ -22,7 +22,6 @@ var hierarchy =
         [ "ReptilNativo", "classReptilNativo.html", null ]
       ] ]
     ] ],
-    [ "DadosAnimal", "structDadosAnimal.html", null ],
     [ "Domestico", "classDomestico.html", [
       [ "AnfibioDomestico", "classAnfibioDomestico.html", null ],
       [ "AveDomestica", "classAveDomestica.html", null ],

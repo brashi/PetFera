@@ -5,5 +5,7 @@ var classTratador =
     [ "~Tratador", "classTratador.html#a8750ed6960e786da5d6f87e05b491093", null ],
     [ "getUniforme", "classTratador.html#a9950c0442f4dc3858605426f1589cac4", null ],
     [ "printOutDados", "classTratador.html#a076ff1d8f755fb1c2a8ab65943d1729e", null ],
+    [ "setUniforme", "classTratador.html#a89a49d25a2f50146b346ecc555576f32", null ],
+    [ "setUniforme", "classTratador.html#a9916e9be9118f1a4a77fc4936781f06a", null ],
     [ "uniforme", "classTratador.html#a978d8cd91b975a119353d98ce4b9fdcc", null ]
 ];

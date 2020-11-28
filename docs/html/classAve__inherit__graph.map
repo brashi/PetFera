@@ -1,7 +1,7 @@
 <map id="Ave" name="Ave">
-<area shape="rect" id="node1" title="Classificação base para Aves." alt="" coords="351,673,514,883"/>
+<area shape="rect" id="node1" title="Classificação base para Aves." alt="" coords="351,615,514,883"/>
 <area shape="rect" id="node3" href="$classAveDomestica.html" title="Implementação de animal com Classe e Categoria." alt="" coords="5,931,289,1111"/>
-<area shape="rect" id="node4" href="$classAveExotica.html" title="Implementação de animal com Classe e Categoria." alt="" coords="313,945,552,1096"/>
-<area shape="rect" id="node5" href="$classAveNativa.html" title="Implementação de animal com Classe e Categoria." alt="" coords="576,945,804,1096"/>
-<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="284,5,581,625"/>
+<area shape="rect" id="node4" href="$classAveExotica.html" title="Implementação de animal com Classe e Categoria." alt="" coords="313,931,552,1111"/>
+<area shape="rect" id="node5" href="$classAveNativa.html" title="Implementação de animal com Classe e Categoria." alt="" coords="576,931,804,1111"/>
+<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="284,5,581,567"/>
 </map>

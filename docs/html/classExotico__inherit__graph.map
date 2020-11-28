@@ -1,7 +1,7 @@
 <map id="Exotico" name="Exotico">
-<area shape="rect" id="node1" title="Umas das definições de categoria para Animal." alt="" coords="486,5,677,215"/>
-<area shape="rect" id="node2" href="$classAnfibioExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="5,263,288,413"/>
-<area shape="rect" id="node3" href="$classAveExotica.html" title="Implementação de animal com Classe e Categoria." alt="" coords="313,263,551,413"/>
-<area shape="rect" id="node4" href="$classMamiferoExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="575,263,889,413"/>
-<area shape="rect" id="node5" href="$classReptilExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="913,263,1177,413"/>
+<area shape="rect" id="node1" title="Umas das definições de categoria para Animal." alt="" coords="486,5,677,273"/>
+<area shape="rect" id="node2" href="$classAnfibioExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="5,321,288,501"/>
+<area shape="rect" id="node3" href="$classAveExotica.html" title="Implementação de animal com Classe e Categoria." alt="" coords="313,321,551,501"/>
+<area shape="rect" id="node4" href="$classMamiferoExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="575,321,889,501"/>
+<area shape="rect" id="node5" href="$classReptilExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="913,321,1177,501"/>
 </map>

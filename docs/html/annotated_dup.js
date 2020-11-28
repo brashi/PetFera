@@ -9,7 +9,6 @@ var annotated_dup =
     [ "AveDomestica", "classAveDomestica.html", "classAveDomestica" ],
     [ "AveExotica", "classAveExotica.html", "classAveExotica" ],
     [ "AveNativa", "classAveNativa.html", "classAveNativa" ],
-    [ "DadosAnimal", "structDadosAnimal.html", "structDadosAnimal" ],
     [ "Domestico", "classDomestico.html", "classDomestico" ],
     [ "Exotico", "classExotico.html", "classExotico" ],
     [ "FiltroAnimal", "classFiltroAnimal.html", "classFiltroAnimal" ],

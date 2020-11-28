@@ -7,6 +7,7 @@ using std::setfill;
 using std::setw;
 using std::right;
 using std::cout;
+using std::cin;
 
 Tratador::Tratador(string nome, string telefone, string email,
                     Uniforme uniforme):
@@ -17,6 +18,36 @@ Tratador::~Tratador(){}
 
 Uniforme Tratador::getUniforme() const {
     return this->uniforme;
+}
+
+bool Tratador::setUniforme() {
+    string s;
+    cout << endl << "Nível de segurança do tratador: " << endl;
+    cout << "V - verde" << endl;
+    cout << "A - azul" << endl;
+    cout << "M - vermelho" << endl;
+    getline(cin, s);
+
+    switch(toupper(s[0])) {
+        case 'V':
+            this->uniforme = Verde;
+            break;
+        case 'A':
+            this->uniforme = Azul;
+            break;
+        case 'M':
+            this->uniforme = Vermelho;
+            break;
+        default:
+            return false;
+            break;
+    }
+
+    return true;
+}
+
+void Tratador::setUniforme(Uniforme u) {
+    this->uniforme = u;
 }
 
 ostream& Tratador::printOutDados(ostream& o) const {

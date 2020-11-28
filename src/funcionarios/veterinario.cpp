@@ -7,6 +7,7 @@ using std::setfill;
 using std::setw;
 using std::right;
 using std::cout;
+using std::cin;
 
 Veterinario::Veterinario(string nome, string telefone, string email,
                     string CRMV):
@@ -17,6 +18,23 @@ Veterinario::~Veterinario(){}
 
 string Veterinario::getCRMV() const {
     return this->CRMV;
+}
+
+bool Veterinario::setCRMV() {
+    string s;
+    cout << endl << "CRMV: " << endl;
+    getline(cin, s);
+
+    if(s.size() == 0)
+        return false;
+    else
+        this->CRMV = s;
+    
+    return true;
+}
+
+void Veterinario::setCRMV(string s) {
+    this->CRMV = s;
 }
 
 ostream& Veterinario::printOutDados(ostream& o) const {

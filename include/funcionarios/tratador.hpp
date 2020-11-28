@@ -49,6 +49,10 @@ class Tratador : public Pessoa {
          */
         Uniforme getUniforme() const;
 
+        bool setUniforme();
+
+        void setUniforme(Uniforme u);
+
         /**
          * @brief Implementação da stream de dados.
          * @details Retorna um stream de saida std::cout

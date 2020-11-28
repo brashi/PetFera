@@ -1,6 +1,6 @@
 <map id="MamiferoNativo" name="MamiferoNativo">
-<area shape="rect" id="node1" title="Implementação de animal com Classe e Categoria." alt="" coords="128,989,431,1140"/>
-<area shape="rect" id="node2" href="$classMamifero.html" title="Classificação base para Mamiferos." alt="" coords="35,717,273,897"/>
-<area shape="rect" id="node3" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="5,5,303,625"/>
-<area shape="rect" id="node4" href="$classNativo.html" title="Umas das definições de categoria para Animal." alt="" coords="298,673,514,941"/>
+<area shape="rect" id="node1" title="Implementação de animal com Classe e Categoria." alt="" coords="128,1048,431,1228"/>
+<area shape="rect" id="node2" href="$classMamifero.html" title="Classificação base para Mamiferos." alt="" coords="35,673,273,941"/>
+<area shape="rect" id="node3" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="5,5,303,567"/>
+<area shape="rect" id="node4" href="$classNativo.html" title="Umas das definições de categoria para Animal." alt="" coords="298,615,514,1000"/>
 </map>

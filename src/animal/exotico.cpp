@@ -21,7 +21,11 @@ bool Exotico::setLocal() {
     if(s.size() == 0)
         return false;
     else
-        local = s;
+        this->local = s;
     
     return true;
+}
+
+void Exotico::setLocal(string s) {
+    this->local = s;
 }

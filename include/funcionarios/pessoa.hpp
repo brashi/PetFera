@@ -41,17 +41,29 @@ class Pessoa {
          */
         string getNome() const;
         
+        bool setNome();
+
+        void setNome(string s);
+
         /** 
          * @brief getter de string
          * @return telefone como string
          */
         string getTelefone() const;
 
+        bool setTelefone();
+
+        void setTelefone(string s);
+
         /** 
          * @brief getter de string
          * @return Email como string
          */
         string getEmail() const;
+
+        bool setEmail();
+
+        void setEmail(string s);
 
         /** 
          * @brief Método virtual para passagem ao Cout, implementado nos herdeiros.

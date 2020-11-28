@@ -19,11 +19,15 @@ bool Domestico::setAdestrado() {
     getline(cin, s);
 
     if(toupper(s[0]) == 'S')
-        adestrado = true;
+        this->adestrado = true;
     else if(toupper(s[0]) == 'N')
-        adestrado = false;
+        this->adestrado = false;
     else
         return false;
 
     return true;
+}
+
+void Domestico::setAdestrado(bool b) {
+    this->adestrado = b;
 }

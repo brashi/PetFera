@@ -33,6 +33,10 @@ class Veterinario : public Pessoa {
          */
         string getCRMV() const;
 
+        bool setCRMV();
+
+        void setCRMV(string s);
+
         /**
          * @brief Implementação da stream de dados.
          * @details Retorna um stream de saida std::cout
