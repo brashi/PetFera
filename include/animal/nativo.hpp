@@ -38,12 +38,16 @@ class Nativo {
          */
         string getRegiao() const;
 
+        void setRegiao(string s);
+
         bool setRegiao();
         
         /**
          * @brief Um Nativo tem uma licença de transporte gerada pelo IBAMA.
          */
         string getLicenca() const;
+
+        void setLicenca(string s);
 
         bool setLicenca();
 

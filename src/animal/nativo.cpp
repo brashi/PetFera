@@ -1,5 +1,6 @@
 #include "nativo.hpp"
 
+using std::endl;
 using std::cout;
 using std::cin;
 
@@ -12,7 +13,7 @@ string Nativo::getLicenca() const {
     return this->licenca;
 }
 
-string Nativo::setLicenca() {
+bool Nativo::setLicenca() {
     string s;
     cout << endl << "Licença de transporte IBAMA: " << endl;
     getline(cin, s);

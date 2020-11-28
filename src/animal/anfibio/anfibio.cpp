@@ -14,7 +14,7 @@ bool Anfibio::getCauda() const {
     return this->cauda;
 }
 
-int Anfibio::setCauda() {
+bool Anfibio::setCauda() {
     string s;
     cout << endl << "Anfíbio possui cauda? (S/N): " << endl;
     getline(cin, s);

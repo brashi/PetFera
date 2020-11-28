@@ -82,16 +82,21 @@ class Animal {
 
         //Setters
         
+        void setNome(string s);
+
         bool setNome();
+
+        void setEspecie(string s);
 
         bool setEspecie();
 
+        void setAmeacadoPor(string s);
+
         bool setAmeacadoPor();
 
-        bool setPerigoso();
+        void setPerigoso(bool b);
 
-        // Sobrecarga para opcionalidade do campo
-        void setAmeacadoPor(string s);
+        bool setPerigoso();
 
         void setVeterinario(Veterinario* veterinario);
 

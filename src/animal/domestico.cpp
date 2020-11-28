@@ -1,5 +1,6 @@
 #include "domestico.hpp"
 
+using std::endl;
 using std::cout;
 using std::cin;
 

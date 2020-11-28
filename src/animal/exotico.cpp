@@ -1,5 +1,6 @@
 #include "exotico.hpp"
 
+using std::endl;
 using std::cout;
 using std::cin;
 

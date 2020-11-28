@@ -38,6 +38,8 @@ class Exotico {
          */
         string getLocal() const;
         
+        void setLocal(string s);
+
         bool setLocal();
     protected:
         /** @brief String declarando o local de origem do animal */

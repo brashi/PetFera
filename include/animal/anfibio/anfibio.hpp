@@ -40,13 +40,17 @@ class Anfibio : public Animal {
          */
         bool getCauda() const;
 
-        int setCauda();
+        void setCauda(bool b);
+
+        bool setCauda();
 
         /**
          * @brief getter de bool
          * @return bool pata da instância.
          */
         bool getPata() const;
+
+        void setPata(bool b);
 
         bool setPata();
     protected:
