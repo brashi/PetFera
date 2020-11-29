@@ -6,12 +6,20 @@
 #include "mapeador_animal.hpp"
 
 #include <vector>
+#include <memory>
 #include <string>
 #include <iostream>
 #include <map>
 #include <functional>
 
 using std::vector;
+using std::dynamic_pointer_cast;
+
+using std::unique_ptr;
+using std::make_unique;
+
+using std::shared_ptr;
+using std::make_shared;
 
 /**
  * @brief Classe de controle
@@ -160,7 +168,7 @@ class Petshop {
          * localizado no Vetor de cadastro de Veterinario na
          * classe Petshop.
          */
-        bool adicionarVeterinario(Veterinario* vetAdd);
+        bool adicionarVeterinario(shared_ptr<Veterinario> vetAdd);
 
         /**
          * @brief Adição interna de Tratador no sistema.
@@ -171,7 +179,7 @@ class Petshop {
          * localizado no Vetor de cadastro de Tratador na
          * classe Petshop.
          */
-        bool adicionarTratador(Tratador* tratAdd);
+        bool adicionarTratador(shared_ptr<Tratador> tratAdd);
 
         /**
          * @brief Adição interna de Animal no sistema.
@@ -182,7 +190,7 @@ class Petshop {
          * localizado no Vetor de cadastro de Animal na
          * classe Petshop.
          */
-        bool adicionarAnimal(Animal* animalAdd);
+        bool adicionarAnimal(shared_ptr<Animal> animalAdd);
 
 
         /**
@@ -286,7 +294,7 @@ class Petshop {
          * void, que implementa a interface chamada de
          * excluirVeterinario().
          */
-        Veterinario* excluirVeterinario(Veterinario* removido);
+        shared_ptr<Veterinario> excluirVeterinario(shared_ptr<Veterinario> removido);
 
         /**
          * @brief Remoção interna de Tratador
@@ -305,7 +313,7 @@ class Petshop {
          * void, que implementa a interface chamada de
          * excluirTratador().
          */
-        Tratador* excluirTratador(Tratador* removido);
+        shared_ptr<Tratador> excluirTratador(shared_ptr<Tratador> removido);
 
         /**
          * @brief Remoção interna de Animal
@@ -324,7 +332,7 @@ class Petshop {
          * void, que implementa a interface chamada de
          * excluirAnimal().
          */
-        Animal* excluirAnimal(Animal* removido);
+        shared_ptr<Animal> excluirAnimal(shared_ptr<Animal> removido);
     
     private:
         /**
@@ -336,7 +344,7 @@ class Petshop {
          * @return Referência a instância, retorna
          * nullptr caso não exista.
          */
-        Veterinario* findVeterinario(string nome);
+        shared_ptr<Veterinario> findVeterinario(string nome);
         /**
          * @brief Uso interno
          * @details Acha e retorna a referência
@@ -346,7 +354,7 @@ class Petshop {
          * @return Referência a instância, retorna
          * nullptr caso não exista.
          */
-        Tratador* findTratador(string nome);
+        shared_ptr<Tratador> findTratador(string nome);
         /**
          * @brief Uso interno
          * @details Acha e retorna a referência
@@ -357,14 +365,14 @@ class Petshop {
          * @return Referência a instância, retorna
          * nullptr caso não exista.
          */
-        Animal* findAnimal(string nome, string especie);
+        shared_ptr<Animal> findAnimal(string nome, string especie);
 
         /** @brief vetor guardando as instâncias de Veterinario do sistema. */
-        vector<Veterinario*> veterinarios;
+        vector< shared_ptr<Veterinario> > veterinarios;
         /** @brief vetor guardando as instâncias de Tratador do sistema. */
-        vector<Tratador*> tratadores;
+        vector< shared_ptr<Tratador> > tratadores;
         /** @brief vetor guardando as instâncias de Animal do sistema. */
-        vector<Animal*> animais;
+        vector< shared_ptr<Animal> > animais;
 
         /** @brief Mapeador de animais, veja MapeadorAnimal */
         MapeadorAnimal mapa;

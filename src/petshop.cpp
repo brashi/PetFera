@@ -18,31 +18,19 @@ using std::cin;
 
 Petshop::Petshop() {}
 
-Petshop::~Petshop() {
-    for(auto& vet : this->veterinarios) {
-        delete vet;
-    }
+Petshop::~Petshop() {}
 
-    for(auto& tratador : this->tratadores) {
-        delete tratador;
-    }
-
-    for(auto& animal : this->animais) {
-        delete animal;
-    }
-}
-
-bool Petshop::adicionarVeterinario(Veterinario* vetAdd) {
+bool Petshop::adicionarVeterinario(shared_ptr<Veterinario> vetAdd) {
     this->veterinarios.push_back(vetAdd);
     return true;
 }
 
-bool Petshop::adicionarTratador(Tratador* tratAdd) {
+bool Petshop::adicionarTratador(shared_ptr<Tratador> tratAdd) {
     this->tratadores.push_back(tratAdd);
     return true;
 }
 
-bool Petshop::adicionarAnimal(Animal* animalAdd) {
+bool Petshop::adicionarAnimal(shared_ptr<Animal> animalAdd) {
     this->animais.push_back(animalAdd);
     return true;
 }
@@ -50,7 +38,7 @@ bool Petshop::adicionarAnimal(Animal* animalAdd) {
 // Criação
 void Petshop::criarVeterinario() {
     string nome;
-    Veterinario* veterinario = new Veterinario();
+    shared_ptr<Veterinario> veterinario = make_shared<Veterinario>();
 
     if(veterinario->setNome())
         nome = veterinario->getNome();
@@ -77,7 +65,7 @@ void Petshop::criarVeterinario() {
 
 void Petshop::criarTratador() {
     string nome;
-    Tratador* tratador = new Tratador();
+    shared_ptr<Tratador> tratador = make_shared<Tratador>();
 
     if(tratador->setNome())
         nome = tratador->getNome();
@@ -105,8 +93,7 @@ void Petshop::criarTratador() {
 void Petshop::criarAnimal() {
     string nome, especie, pessoa;
     int idPessoa;
-
-    Animal* animal;
+    shared_ptr<Animal> animal;
 
     if(this->veterinarios.size() < 1)
         throw "Não há veterinários no sistema!"; 
@@ -158,30 +145,30 @@ void Petshop::criarAnimal() {
         throw "Animal não pode ficar sem a informação de seu perigo!";
 
     if(classe == "ave") { // Ave
-        Ave* classe = dynamic_cast< Ave* >(animal);
+        shared_ptr<Ave> classe = dynamic_pointer_cast< Ave >(animal);
 
         if(!classe->setVoa())
             throw "Informe se a ave voa!";
 
     } else if(classe == "mam") { // Mamífero
-        Mamifero* classe = dynamic_cast< Mamifero* >(animal);
+        shared_ptr<Mamifero> classe = dynamic_pointer_cast< Mamifero >(animal);
 
         if(!classe->setGestacao())
             throw "Informe se o mamífero possui gestação!";
 
     } else if(classe == "rep") { // Réptil
-        Reptil* classe = dynamic_cast< Reptil* >(animal);
+        shared_ptr<Reptil> classe = dynamic_pointer_cast< Reptil >(animal);
 
         if(!classe->setPele())
             throw "Informe se o réptil possui pele!";
 
     } else if(classe == "anf") { // Anfíbio
-        Anfibio* classe = dynamic_cast< Anfibio* >(animal);
+        shared_ptr<Anfibio> classe = dynamic_pointer_cast< Anfibio >(animal);
 
-        if(classe->setCauda())
+        if(!classe->setCauda())
             throw "Informe se o anfíbio possui cauda!";
 
-        if(classe->setPata())
+        if(!classe->setPata())
             throw "Informe se o anfíbio possui pata!";
 
     } else
@@ -207,13 +194,13 @@ void Petshop::criarAnimal() {
         throw "Erro de permissão! O tratador necessita de ao menos um nível de segurança Azul.";
 
     if(categoria == "D") { // Animal Doméstico
-        Domestico* categoria = dynamic_cast< Domestico* >(animal);
+        shared_ptr<Domestico> categoria = dynamic_pointer_cast< Domestico >(animal);
 
         if(!categoria->setAdestrado())
             throw "Informe um valor válido de adestramento!";
 
     } else if(categoria == "N") { // Silvestre Nativo
-        Nativo* categoria = dynamic_cast< Nativo* >(animal);
+        shared_ptr<Nativo> categoria = dynamic_pointer_cast< Nativo >(animal);
 
         if(!categoria->setLicenca())
             throw "Informe um valor válido para a licença!";
@@ -222,7 +209,7 @@ void Petshop::criarAnimal() {
             throw "Informe uma região válida!";
 
     } else if(categoria == "E") { // Silvestre Exótico
-        Exotico* categoria = dynamic_cast< Exotico* >(animal);
+        shared_ptr<Exotico> categoria = dynamic_pointer_cast< Exotico >(animal);
 
         if(!categoria->setLocal())
             throw "Informe um habitat válido!";
@@ -248,7 +235,7 @@ void Petshop::atualizarVeterinario() {
     if (nome.size() == 0)
         throw "Não é possível pesquisar um veterinário sem nome!";
 
-    Veterinario* veterinario = findVeterinario(nome);
+    shared_ptr<Veterinario> veterinario = findVeterinario(nome);
 
     if(veterinario == nullptr)
         throw "Veterinário não encontrado! Verifique os dados e tente novamente";
@@ -279,7 +266,7 @@ void Petshop::atualizarTratador() {
     if (nome.size() == 0)
         throw "Não é possível pesquisar um tratador sem nome!";
 
-    Tratador* tratador = findTratador(nome);
+    shared_ptr<Tratador> tratador = findTratador(nome);
 
     if(tratador == nullptr)
         throw "Tratador não encontrado! Verifique os dados e tente novamente";
@@ -317,7 +304,7 @@ void Petshop::atualizarAnimal() {
     if (especie.size() == 0)
         throw "Não é possível pesquisar animal sem espécie!";
 
-    Animal* animal = findAnimal(nome, especie);
+    shared_ptr<Animal> animal = findAnimal(nome, especie);
 
     if(animal == nullptr)
         throw "Animal não encontrado! Verifique os dados e tente novamente";
@@ -339,7 +326,7 @@ void Petshop::atualizarAnimal() {
         categoria = animal->getClassificacao(animal);
 
     // Animal que será atualizado *de facto*
-    Animal* atualizar;
+    shared_ptr<Animal> atualizar;
 
     if(trocarHerancas)
         atualizar = mapa.aMap[classe + categoria]();
@@ -381,28 +368,28 @@ void Petshop::atualizarAnimal() {
 
     // Classe
     if(classe == "ave" || classe == "Ave") { // Ave
-        Ave* classe = dynamic_cast< Ave* >(atualizar);
+        shared_ptr<Ave> classe = dynamic_pointer_cast< Ave >(atualizar);
 
         cout << endl << updateText;
         if(!classe->setVoa() && trocarHerancas)
             throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
 
     } else if(classe == "mam" || classe == "Mamífero") { // Mamífero
-        Mamifero* classe = dynamic_cast< Mamifero* >(atualizar);
+        shared_ptr<Mamifero> classe = dynamic_pointer_cast< Mamifero >(atualizar);
     
         cout << endl << updateText;
         if(!classe->setGestacao() && trocarHerancas)
             throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
 
     } else if(classe == "rep" || classe == "Réptil") { // Réptil
-        Reptil* classe = dynamic_cast< Reptil* >(atualizar);
+        shared_ptr<Reptil> classe = dynamic_pointer_cast< Reptil >(atualizar);
 
         cout << endl << updateText;
         if(!classe->setPele() && trocarHerancas)
             throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
 
     } else if(classe == "anf" || classe == "Anfíbio") { // Anfíbio
-        Anfibio* classe = dynamic_cast< Anfibio* >(atualizar);
+        shared_ptr<Anfibio> classe = dynamic_pointer_cast< Anfibio >(atualizar);
 
         cout << endl << updateText;
         if(!classe->setCauda() && trocarHerancas)
@@ -432,7 +419,7 @@ void Petshop::atualizarAnimal() {
 
     // Classificação
     if(categoria == "N" || categoria == "Silvestre Nativo") { // Silvestre Nativo
-        Nativo* categoria = dynamic_cast< Nativo* >(atualizar);
+        shared_ptr<Nativo> categoria = dynamic_pointer_cast< Nativo >(atualizar);
 
         cout << endl << updateText;
         if(!categoria->setLicenca() && trocarHerancas)
@@ -443,14 +430,14 @@ void Petshop::atualizarAnimal() {
             throw "Para troca de categorias é necessário informar tal informação. Operação cancelada";
 
     } else if(categoria == "E" || categoria == "Silvestre Exótico") { // Silvestre Exótico
-        Exotico* categoria = dynamic_cast< Exotico* >(atualizar);
+        shared_ptr<Exotico> categoria = dynamic_pointer_cast< Exotico >(atualizar);
     
         cout << endl << updateText;
         if(!categoria->setLocal() && trocarHerancas)
             throw "Para troca de categorias é necessário informar tal informação. Operação cancelada";
 
     } else if(categoria == "D" || categoria == "Doméstico") { // Doméstico
-        Domestico* categoria = dynamic_cast< Domestico* >(atualizar);
+        shared_ptr<Domestico> categoria = dynamic_pointer_cast< Domestico >(atualizar);
 
         cout << endl << updateText;
         if(!categoria->setAdestrado() && trocarHerancas)
@@ -468,7 +455,7 @@ void Petshop::atualizarAnimal() {
 
     if(trocarHerancas) {
         this->excluirAnimal(animal);
-        delete animal;
+        //delete animal;
 
         if(this->adicionarAnimal(atualizar))
             cout << "Animal atualizado com sucesso" << endl;
@@ -487,7 +474,7 @@ void Petshop::excluirVeterinario() {
     if (s.size() == 0)
         throw "Não é possível pesquisar um veterinário sem nome!";
 
-    Veterinario* veterinario = findVeterinario(s);
+    shared_ptr<Veterinario> veterinario = findVeterinario(s);
 
     if(veterinario == nullptr)
         throw "Veterinário não encontrado! Verifique os dados e tente novamente";
@@ -515,7 +502,7 @@ void Petshop::excluirTratador() {
     if (s.size() == 0)
         throw "Não é possível pesquisar um tratador sem nome!";
 
-    Tratador* tratador = findTratador(s);
+    shared_ptr<Tratador> tratador = findTratador(s);
 
     if(tratador == nullptr)
         throw "Tratador não encontrado! Verifique os dados e tente novamente";
@@ -547,7 +534,7 @@ void Petshop::excluirAnimal() {
     if (especie.size() == 0)
         throw "Não é possível pesquisar um animal sem espécie!";
 
-    Animal* animal = findAnimal(nome, especie);
+    shared_ptr<Animal> animal = findAnimal(nome, especie);
 
     if(animal == nullptr)
         throw "Animal não encontrado! Verifique os dados e tente novamente";
@@ -566,12 +553,12 @@ void Petshop::excluirAnimal() {
         cout << "Operação cancelada" << endl;
 }
 
-Veterinario* Petshop::excluirVeterinario(Veterinario* removido) {
+shared_ptr<Veterinario> Petshop::excluirVeterinario(shared_ptr<Veterinario> removido) {
     int index = 0;
 
     for(auto& vet : this->veterinarios) {
         if(*vet == *removido) {
-            Veterinario* ptr_removido = vet;
+            shared_ptr<Veterinario> ptr_removido = vet;
             this->veterinarios.erase(this->veterinarios.begin() + index);
             return ptr_removido;
         }
@@ -581,12 +568,12 @@ Veterinario* Petshop::excluirVeterinario(Veterinario* removido) {
     return nullptr;
 }
 
-Tratador* Petshop::excluirTratador(Tratador* removido) {
+shared_ptr<Tratador> Petshop::excluirTratador(shared_ptr<Tratador> removido) {
     int index = 0;
 
     for(auto& tratador : this->tratadores) {
         if(*tratador == *removido) {
-            Tratador* ptr_removido = tratador;
+            shared_ptr<Tratador> ptr_removido = tratador;
             this->tratadores.erase(this->tratadores.begin() + index);
             return ptr_removido;
         }
@@ -596,12 +583,12 @@ Tratador* Petshop::excluirTratador(Tratador* removido) {
     return nullptr;
 }
 
-Animal* Petshop::excluirAnimal(Animal* removido) {
+shared_ptr<Animal> Petshop::excluirAnimal(shared_ptr<Animal> removido) {
     int index = 0;
 
     for(auto& animal : this->animais) {
         if(*animal == *removido) {
-            Animal* ptr_removido = animal;
+            shared_ptr<Animal> ptr_removido = animal;
             this->animais.erase(this->animais.begin() + index);
             return ptr_removido;
         }
@@ -612,7 +599,7 @@ Animal* Petshop::excluirAnimal(Animal* removido) {
 }
 
 // Métodos para "encontrar"
-Veterinario* Petshop::findVeterinario(string nome) {
+shared_ptr<Veterinario> Petshop::findVeterinario(string nome) {
     for(auto& vet : this->veterinarios) {
         if(vet->getNome() == nome) {
             return vet;
@@ -621,7 +608,7 @@ Veterinario* Petshop::findVeterinario(string nome) {
     return nullptr;
 }
 
-Tratador* Petshop::findTratador(string nome) {
+shared_ptr<Tratador> Petshop::findTratador(string nome) {
     for(auto& trata : this->tratadores) {
         if(trata->getNome() == nome) {
             return trata;
@@ -630,7 +617,7 @@ Tratador* Petshop::findTratador(string nome) {
     return nullptr;
 }
 
-Animal* Petshop::findAnimal(string nome, string especie) {
+shared_ptr<Animal> Petshop::findAnimal(string nome, string especie) {
     for(auto& animal : this->animais) {
         if(animal->getNome() == nome && animal->getEspecie() == especie) {
             return animal;
@@ -742,34 +729,34 @@ void Petshop::listarAnimais() {
 
     for(auto& animal : this->animais) {
         if(filtro == "a" || filtro == "A") {
-            if( Ave* checar_ave = dynamic_cast< Ave* >(animal))
-                cout << *animal;
+            if( shared_ptr<Ave> checar_ave = dynamic_pointer_cast< Ave >(animal))
+                cout << animal;
         } else if(filtro == "f" || filtro == "F") {
-            if( Anfibio* checar_anfibio = dynamic_cast< Anfibio* >(animal))
-                cout << *animal;
+            if( shared_ptr<Anfibio> checar_ave = dynamic_pointer_cast< Anfibio >(animal))
+                cout << animal;
         } else if(filtro == "r" || filtro == "R") {
-            if( Reptil* checar_ave = dynamic_cast< Reptil* >(animal))
-                cout << *animal;
+            if( shared_ptr<Reptil> checar_ave = dynamic_pointer_cast< Reptil >(animal))
+                cout << animal;
         } else if(filtro == "m" || filtro == "M") {
-            if( Mamifero* checar_ave = dynamic_cast< Mamifero* >(animal))
-                cout << *animal;
+            if( shared_ptr<Mamifero> checar_ave = dynamic_pointer_cast< Mamifero >(animal))
+                cout << animal;
         } else if(filtro == "d" || filtro == "D") {
-            if( Domestico* checar_domestico = dynamic_cast< Domestico* >(animal))
-                cout << *animal;
+            if( shared_ptr<Domestico> checar_domestico = dynamic_pointer_cast< Domestico >(animal))
+                cout << animal;
         } else if(filtro == "e" || filtro == "E") {
-            if( Exotico* checar_exotico = dynamic_cast< Exotico* >(animal))
-                cout << *animal;
+            if( shared_ptr<Exotico> checar_exotico = dynamic_pointer_cast< Exotico >(animal))
+                cout << animal;
         } else if(filtro == "n" || filtro == "N") {
-            if( Nativo* checar_nativo = dynamic_cast< Nativo* >(animal))
-                cout << *animal;
+            if( shared_ptr<Nativo> checar_nativo = dynamic_pointer_cast< Nativo >(animal))
+                cout << animal;
         } else if(filtro == "T" || filtro == "t") {
             if(animal->getTratador() == trt)
-                cout << *animal;
+                cout << animal;
         } else if(filtro == "V" || filtro == "v") {
             if(animal->getVeterinario() == vet)
-                cout << *animal;
+                cout << animal;
         } else
-            cout << *animal;
+            cout << animal;
     }
     cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl << endl;
 }

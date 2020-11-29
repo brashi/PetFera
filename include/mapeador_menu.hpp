@@ -7,6 +7,8 @@
 #include <memory>
 #include <map>
 
+using std::shared_ptr;
+using std::make_shared;
 /**
  * @brief Classe mapeadora de funções para o menu.
  * @details A classe guarda um tipo map usado para
@@ -42,5 +44,5 @@ class MapeadorMenu {
          * em Public da classe Petshop.
          * @return Função da classe Petshop desejada.
          */ 
-        std::map<char, std::function<bool (std::shared_ptr<Petshop> petshop)>> escolhas;
+        std::map<char, std::function<bool (shared_ptr<Petshop> petshop)>> escolhas;
 };

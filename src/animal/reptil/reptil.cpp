@@ -23,10 +23,10 @@ bool Reptil::setPele() {
     getline(cin, s);
 
     switch(toupper(s[0])) {
-        case 'S':
+        case 'C':
             this->pele = Carapaca;
             break;
-        case 'N':
+        case 'E':
             this->pele = Escama;
             break;
         case 'P':

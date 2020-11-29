@@ -129,10 +129,10 @@ void Animal::setPerigoso(bool b) {
     this->perigoso = b;
 }
 
-string Animal::getClassificacao(Animal* animal) const {
-    if(Exotico* teste = dynamic_cast< Exotico* >(animal)) {
+string Animal::getClassificacao(shared_ptr<Animal> animal) const {
+    if(shared_ptr<Exotico> teste = dynamic_pointer_cast< Exotico >(animal)) {
         return "Silvestre Exótico";
-    } if(Nativo* teste = dynamic_cast< Nativo* >(animal)) {
+    } if(shared_ptr<Nativo> teste = dynamic_pointer_cast< Nativo >(animal)) {
         return "Silvestre Nativo";
     } else {
         return "Doméstico";
@@ -166,12 +166,12 @@ string Animal::setClassificacao() {
     // {} é mais rápido que "", já que não chama o construtor de std::string
 }
 
-string Animal::getClasse(Animal* animal) const {
-    if(Ave* teste = dynamic_cast< Ave* >(animal)) {
+string Animal::getClasse(shared_ptr<Animal> animal) const {
+    if(shared_ptr<Ave> teste = dynamic_pointer_cast< Ave >(animal)) {
         return "Ave";
-    } if(Anfibio* teste = dynamic_cast< Anfibio* >(animal)) {
+    } if(shared_ptr<Anfibio> teste = dynamic_pointer_cast< Anfibio >(animal)) {
         return "Anfíbio";
-    } if(Reptil* teste = dynamic_cast< Reptil* >(animal)) {
+    } if(shared_ptr<Reptil> teste = dynamic_pointer_cast< Reptil >(animal)) {
         return "Réptil";
     } else {
         return "Mamífero";
@@ -209,7 +209,7 @@ string Animal::setClasse() {
     // {} é mais rápido que "", já que não chama o construtor de std::string
 }
 
-ostream& Animal::printOutDados(ostream& o, Animal* animal) const {
+ostream& Animal::printOutDados(ostream& o, shared_ptr<Animal> animal) const {
     int tamanhoColuna = 20;
     int espacamento = 3;
     int tamanhoTruncado = tamanhoColuna - 3 - espacamento;
@@ -229,6 +229,6 @@ bool Animal::operator==(const Animal& outro) const {
 	return (this->nome == outro.getNome() &&
             this->especie == outro.getEspecie());
 }
-ostream& operator<< (ostream& o, Animal& animal) {
-    return animal.printOutDados(o, &animal);
+ostream& operator<< (ostream& o, shared_ptr<Animal> animal) {
+    return animal->printOutDados(o, animal);
 }

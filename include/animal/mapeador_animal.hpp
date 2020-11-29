@@ -23,7 +23,11 @@
 
 #include <functional>
 #include <string>
+#include <memory>
 #include <map>
+
+using std::shared_ptr;
+using std::make_shared;
 
 /**
  * @brief Mapeador de animais.
@@ -60,7 +64,7 @@ class MapeadorAnimal {
          * @param DadosAnimal
          * @return Instancia para a classe desejada.
          */
-        std::map<string, std::function<Animal* ()>> aMap;
+        std::map<string, std::function<shared_ptr<Animal> ()>> aMap;
 };
 
 

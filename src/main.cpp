@@ -8,6 +8,11 @@
 using std::cout;
 using std::cin;
 
+using std::shared_ptr;
+using std::make_shared;
+using std::unique_ptr;
+using std::make_unique;
+
 void imprimirMenu() {
     cout << "/\u2588\u2588\u2588\u2588\u2588\u2588\u2588  /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588    /\u2588\u2588\u2588\u2588\u2588\u2588 " << endl;
     cout << "| \u2588\u2588__  \u2588\u2588| \u2588\u2588_____/|__  \u2588\u2588__/| \u2588\u2588_____/| \u2588\u2588_____/| \u2588\u2588__  \u2588\u2588 /\u2588\u2588__  \u2588\u2588" << endl;
@@ -48,8 +53,8 @@ void pausar() {
 }
 
 void menu() {
-    std::shared_ptr<Petshop> petshop = std::make_shared<Petshop>();
-    std::unique_ptr<MapeadorMenu> mapeador = std::make_unique<MapeadorMenu>();
+    shared_ptr<Petshop> petshop = make_shared<Petshop>();
+    unique_ptr<MapeadorMenu> mapeador = make_unique<MapeadorMenu>();
     bool executando = true;
     string opcao;
     
@@ -75,7 +80,6 @@ void menu() {
         pausar();
     }
     
-    //delete petshop;
 }
 
 int main() {

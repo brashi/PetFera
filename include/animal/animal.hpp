@@ -6,9 +6,15 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <memory>
 
 using std::string;
 using std::vector;
+using std::dynamic_pointer_cast;
+
+
+using std::shared_ptr;
+using std::make_shared;
 
 /**
  * @brief Implementação base para o cadastro de animais.
@@ -110,7 +116,7 @@ class Animal {
          * @param Animal em questão.
          * @return String com a categoria do animal.
          */
-        string getClassificacao(Animal* animal) const;
+        string getClassificacao(shared_ptr<Animal> animal) const;
         /**
          * @details getter de string
          * @details com base em casts para
@@ -119,7 +125,7 @@ class Animal {
          * @param Animal em questão.
          * @return String com a classificação do animal.
          */
-        string getClasse(Animal* animal) const;
+        string getClasse(shared_ptr<Animal> animal) const;
 
         string setClassificacao();
         
@@ -135,7 +141,7 @@ class Animal {
          * @return Stream de saída com os dados do animal. Sendo eles os atributos definidos
          * em Animal e a Classe e Categoria do animal.
          */
-        ostream& printOutDados(ostream& o, Animal* animal) const;
+        ostream& printOutDados(ostream& o, shared_ptr<Animal> animal) const;
 
         /**
          * @brief Sobrecarga do operador de igualdade para animais.
@@ -154,7 +160,7 @@ class Animal {
          * @return Stream de saída padrão com os resultados da função
          * printOutDados().
          */
-        friend ostream& operator<< (ostream& o, Animal& animal);
+        friend ostream& operator<< (ostream& o, shared_ptr<Animal> animal);
     protected:
         /** String declarando o nome do Animal */
         string nome;

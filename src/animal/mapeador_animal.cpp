@@ -29,53 +29,53 @@
 
 MapeadorAnimal::MapeadorAnimal() {
     aMap["aveD"] = []() { 
-        return new AveDomestica(); 
+        return make_shared<AveDomestica>(); 
     };
 
     aMap["aveN"] = []() { 
-        return new AveNativa(); 
+        return make_shared<AveNativa>(); 
     };
 
     aMap["aveE"] = []() { 
-        return new AveExotica(); 
+        return make_shared<AveExotica>(); 
     };
 
 
     aMap["anfD"] = []() { 
-        return new AnfibioDomestico(); 
+        return make_shared<AnfibioDomestico>(); 
     };
 
     aMap["anfN"] = []() { 
-        return new AnfibioNativo(); 
+        return make_shared<AnfibioNativo>(); 
     };
 
     aMap["anfE"] = []() { 
-        return new AnfibioExotico(); 
+        return make_shared<AnfibioExotico>(); 
     };
 
     
     aMap["repD"] = []() { 
-        return new ReptilDomestico(); 
+        return make_shared<ReptilDomestico>(); 
     };
 
     aMap["repN"] = []() { 
-        return new ReptilNativo(); 
+        return make_shared<ReptilNativo>(); 
     };
 
     aMap["repE"] = []() { 
-        return new ReptilExotico(); 
+        return make_shared<ReptilExotico>(); 
     };
 
 
     aMap["mamD"] = []() { 
-        return new MamiferoDomestico(); 
+        return make_shared<MamiferoDomestico>(); 
     };
 
     aMap["mamN"] = []() { 
-        return new MamiferoNativo(); 
+        return make_shared<MamiferoNativo>(); 
     };
 
     aMap["mamE"] = []() { 
-        return new MamiferoExotico(); 
+        return make_shared<MamiferoExotico>(); 
     };
 }
