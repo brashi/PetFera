@@ -76,6 +76,14 @@ bool Pessoa::operator==(const Pessoa& outro) const {
 	return ( this->nome == outro.getNome() );
 }
 
+bool Pessoa::operator==(const shared_ptr<Pessoa> outro) const {
+	return ( this->nome == outro->getNome() );
+}
+
 ostream& operator<< (ostream& o, Pessoa& pessoa) {
     return pessoa.printOutDados(o);
+}
+
+ostream& operator<< (ostream& o, shared_ptr<Pessoa> pessoa) {
+    return pessoa->printOutDados(o);
 }

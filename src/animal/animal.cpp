@@ -212,11 +212,11 @@ string Animal::setClasse() {
 ostream& Animal::printOutDados(ostream& o, shared_ptr<Animal> animal) const {
     int tamanhoColuna = 20;
     int espacamento = 3;
-    int tamanhoTruncado = tamanhoColuna - 3 - espacamento;
+    long unsigned int tamanhoTruncado = tamanhoColuna - 3 - espacamento;
 
     o  << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getNome().length() > tamanhoTruncado) ? (this->getNome().substr(0, tamanhoTruncado) + "...") : this->getNome())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getEspecie().length() > tamanhoTruncado) ? (this->getEspecie().substr(0, tamanhoTruncado) + "...") : this->getEspecie())
-    << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getAmeacadoPor().length() > tamanhoTruncado) ? (this->getAmeacadoPor().substr(0, tamanhoTruncado) + "...") : this->getAmeacadoPor())
+    //<< setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getAmeacadoPor().length() > tamanhoTruncado) ? (this->getAmeacadoPor().substr(0, tamanhoTruncado) + "...") : this->getAmeacadoPor())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << (this->getPerigoso()? "Sim" : "Não")
     << setfill(' ') << setw(tamanhoColuna + espacamento) << this->getClassificacao(animal)
     << setfill(' ') << setw(tamanhoColuna + espacamento) << this->getClasse(animal)
@@ -225,9 +225,9 @@ ostream& Animal::printOutDados(ostream& o, shared_ptr<Animal> animal) const {
     return o;
 }
 
-bool Animal::operator==(const Animal& outro) const {
-	return (this->nome == outro.getNome() &&
-            this->especie == outro.getEspecie());
+bool Animal::operator==(const shared_ptr<Animal> outro) const {
+	return (this->nome == outro->getNome() &&
+            this->especie == outro->getEspecie());
 }
 ostream& operator<< (ostream& o, shared_ptr<Animal> animal) {
     return animal->printOutDados(o, animal);

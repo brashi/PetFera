@@ -92,7 +92,7 @@ void Petshop::criarTratador() {
 
 void Petshop::criarAnimal() {
     string nome, especie, pessoa;
-    int idPessoa;
+    long unsigned int idPessoa;
     shared_ptr<Animal> animal;
 
     if(this->veterinarios.size() < 1)
@@ -289,7 +289,7 @@ void Petshop::atualizarTratador() {
 void Petshop::atualizarAnimal() {
     string nome, especie, pessoa;
     bool trocarHerancas = false;
-    int idPessoa;
+    long unsigned int idPessoa;
 
     // Configuração do texto acima dos campos de alteração
     string updateText = "Alterar: (para não alterar mantenha em branco)";
@@ -557,7 +557,7 @@ shared_ptr<Veterinario> Petshop::excluirVeterinario(shared_ptr<Veterinario> remo
     int index = 0;
 
     for(auto& vet : this->veterinarios) {
-        if(*vet == *removido) {
+        if(vet == removido) {
             shared_ptr<Veterinario> ptr_removido = vet;
             this->veterinarios.erase(this->veterinarios.begin() + index);
             return ptr_removido;
@@ -572,7 +572,7 @@ shared_ptr<Tratador> Petshop::excluirTratador(shared_ptr<Tratador> removido) {
     int index = 0;
 
     for(auto& tratador : this->tratadores) {
-        if(*tratador == *removido) {
+        if(tratador == removido) {
             shared_ptr<Tratador> ptr_removido = tratador;
             this->tratadores.erase(this->tratadores.begin() + index);
             return ptr_removido;
@@ -587,7 +587,7 @@ shared_ptr<Animal> Petshop::excluirAnimal(shared_ptr<Animal> removido) {
     int index = 0;
 
     for(auto& animal : this->animais) {
-        if(*animal == *removido) {
+        if(animal == removido) {
             shared_ptr<Animal> ptr_removido = animal;
             this->animais.erase(this->animais.begin() + index);
             return ptr_removido;
@@ -688,7 +688,7 @@ void Petshop::listarAnimais() {
 
     string filtro, idPessoa;
     getline(cin, filtro);
-    int num;
+    long unsigned int num;
 
     if(filtro == "T" || filtro == "t") {
         if(this->tratadores.size() == 0)
@@ -721,7 +721,7 @@ void Petshop::listarAnimais() {
 
     cout << setfill(' ') << setw(23) << "Nome"
     << setfill(' ') << setw(23) << "Espécie"
-    << setfill(' ') << setw(23) << "Ameaçado por:"
+    //<< setfill(' ') << setw(23) << "Ameaçado por:"
     << setfill(' ') << setw(23) << "Perigoso"
     << setfill(' ') << setw(23) << "Classificação"
     << setfill(' ') << setw(23) << "Classe"

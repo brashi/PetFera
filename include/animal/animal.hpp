@@ -150,7 +150,7 @@ class Animal {
          * @param Animal Dado pela sobrecarga do operador.
          * @return Bool confirmando (ou não) a igualdade.
          */
-        bool operator==(const Animal& outro) const;
+        bool operator==(const shared_ptr<Animal> outro) const;
 
         /**
          * @brief Sobrecarga do operador de extração.

@@ -4,6 +4,7 @@
 
 #include "mapeador_menu.hpp"
 #include "petshop.hpp"
+#include "testes.hpp"
 
 using std::cout;
 using std::cin;
@@ -12,6 +13,14 @@ using std::shared_ptr;
 using std::make_shared;
 using std::unique_ptr;
 using std::make_unique;
+
+#ifdef DEBUG
+#define Debug(x) acionarTestes(x)
+#define Aviso(x) std::cout << x
+#else
+#define Debug(x)
+#define Aviso(x)
+#endif
 
 void imprimirMenu() {
     cout << "/\u2588\u2588\u2588\u2588\u2588\u2588\u2588  /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 /\u2588\u2588\u2588\u2588\u2588\u2588\u2588    /\u2588\u2588\u2588\u2588\u2588\u2588 " << endl;
@@ -36,6 +45,7 @@ void imprimirMenu() {
     cout << "    K - Atualizar tratador" << endl;
     cout << "    L - Remover tratador" << endl;
     cout << "======================================================================" << endl;
+    Aviso(endl << "Modo DEBUG está ativo" << endl;);
 }
 
 void limparTela() {
@@ -58,6 +68,7 @@ void menu() {
     bool executando = true;
     string opcao;
     
+    Debug(petshop);
     while(executando) {
         limparTela();
         imprimirMenu();

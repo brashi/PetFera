@@ -2,10 +2,13 @@
 
 #include <string>
 #include <iostream>
+#include <memory>
 
 using std::string;
 using std::ostream;
 using std::endl;
+
+using std::shared_ptr;
 
 /** 
  * @brief Classe base dos funcionarios
@@ -78,7 +81,7 @@ class Pessoa {
          * @return Bool definindo a igualdade.
          */
         bool operator==(const Pessoa& outro) const;
-
+        bool operator==(const shared_ptr<Pessoa> outro) const;
         /**
          * @brief Sobrecarga do operador de extração.
          * @param cout dado pela operação.
@@ -86,6 +89,7 @@ class Pessoa {
          * @return cout usado na impressão em stream.
          */
         friend ostream& operator<< (ostream& o, Pessoa& pessoa);
+        friend ostream& operator<< (ostream& o, shared_ptr<Pessoa> pessoa);
 
     protected:
         /** @brief Nome do funcionaro */
