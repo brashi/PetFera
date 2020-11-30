@@ -41,10 +41,10 @@ $ sudo apt-get install make
 # Ou (ubuntu apenas):
 $ sudo apt-get install build-essential
 
-# Clone do projeto
+# Clone do projeto (URL do repositório)
 $ git clone https://github.com/brashi/PetFera.git
 
-# Dentro da pasta do projeto, execute um make para realizar a compilação do projeto
+# Dentro da pasta do projeto, execute um make para realizar a compilação do mesmo
 $ make
 
 # Agora execute o programa normalmente
@@ -66,7 +66,7 @@ O projeto foi feito em **dupla**. Sendo os participantes:
 
 ## Ferramentas
 As ferramentas utilizadas foram:
-* `c++11` linguagem de programação
+* `c++14` linguagem de programação
 * `make 4.2.1-1.2` para o make
 * `g++ 4:8.3.0-1` ([Lauro](https://github.com/brashi)) e `4:9.3.0-1ubuntu2` ([Lucas](https://github.com/lluckymou))
 * [Visual Studio Code](https://github.com/microsoft/vscode) para desenvolvimento
