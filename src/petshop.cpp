@@ -467,19 +467,32 @@ void Petshop::atualizarAnimal() {
 
 // Remoção
 void Petshop::excluirVeterinario() {
-    string s;
+    string idPessoa, s;
+    shared_ptr<Veterinario> veterinario;
+    long unsigned int num;
 
-    cout << endl << "Nome do veterinário: " << endl;
-    getline(cin, s);
-    if (s.size() == 0)
-        throw "Não é possível pesquisar um veterinário sem nome!";
+    if(this->veterinarios.size() == 0)
+        throw "Não há veterinario para remover no sistema!";
 
-    shared_ptr<Veterinario> veterinario = findVeterinario(s);
-
-    if(veterinario == nullptr)
-        throw "Veterinário não encontrado! Verifique os dados e tente novamente";
+    
+    cout << endl << "Veterinarios registrados: " << endl;
+    this->listarVeterinarios();
+    cout << endl << "Digite o ID do veterinario a ser removido: ";
+    getline(cin, idPessoa);
+    num = stoi(idPessoa);
+    if(num >= 0 && num < this->veterinarios.size())
+        veterinario = this->veterinarios[num];
     else
-        cout << "Veterinário encontrado!" << endl;
+        throw "Veterinario não existe!";
+
+    int animais = 0;
+    for(auto& animal : this->animais)
+        if(*veterinario == animal->getVeterinario())
+            animais++;
+
+    string error = "O veterinario cuida de " + std::to_string(animais) + " animais !\n Portando, ele não pode se removido, verifique nas listagens e tente novamente !";
+    if(animais > 0) 
+        throw error;
 
     cout << endl << "Tem certeza que deseja excluir? (S/N): " << endl;
     getline(cin, s);
@@ -488,27 +501,39 @@ void Petshop::excluirVeterinario() {
         if(this->excluirVeterinario(veterinario))
             cout << "Operação concluída" << endl;
         else
-            throw "Erro ao excluir veterinário, tente novamente";
+            throw "Erro ao excluir tratador, tente novamente";
     else
         cout << "Operação cancelada" << endl;
-    
 }
 
 void Petshop::excluirTratador() {
-    string s;
+    string idPessoa, s;
+    shared_ptr<Tratador> tratador;
+    long unsigned int num;
 
-    cout << endl << "Nome do tratador: " << endl;
-    getline(cin, s);
-    if (s.size() == 0)
-        throw "Não é possível pesquisar um tratador sem nome!";
+    if(this->tratadores.size() == 0)
+        throw "Não há tratadores para remover no sistema!";
 
-    shared_ptr<Tratador> tratador = findTratador(s);
-
-    if(tratador == nullptr)
-        throw "Tratador não encontrado! Verifique os dados e tente novamente";
+    
+    cout << endl << "Tratadores registrados: " << endl;
+    this->listarTratadores();
+    cout << endl << "Digite o ID do tratador a ser removido: ";
+    getline(cin, idPessoa);
+    num = stoi(idPessoa);
+    if(num >= 0 && num < this->tratadores.size())
+        tratador = this->tratadores[num];
     else
-        cout << "Tratador encontrado!" << endl;
+        throw "Tratador não existe!";
 
+
+    int animais = 0;
+    for(auto& animal : this->animais)
+        if(*tratador == animal->getTratador())
+            animais++;
+
+    string error = "O tratador cuida de " + std::to_string(animais) + " animais !\n Portando, ele não pode se removido, verifique nas listagens e tente novamente !";
+    if(animais > 0)
+        throw error;
     cout << endl << "Tem certeza que deseja excluir? (S/N): " << endl;
     getline(cin, s);
 
@@ -522,24 +547,24 @@ void Petshop::excluirTratador() {
 }
 
 void Petshop::excluirAnimal() {
-    string nome, especie, s;
+    string idAnimal, s;
+    shared_ptr<Animal> animal;
+    long unsigned int num;
 
-    cout << endl << "Nome do animal: " << endl;
-    getline(cin, nome);
-    if (nome.size() == 0)
-        throw "Não é possível pesquisar um animal sem nome!";
+    if(this->animais.size() == 0)
+        throw "Não há animais para remover no sistema!";
 
-    cout << endl << "Espécie do animal: " << endl;
-    getline(cin, especie);
-    if (especie.size() == 0)
-        throw "Não é possível pesquisar um animal sem espécie!";
-
-    shared_ptr<Animal> animal = findAnimal(nome, especie);
-
-    if(animal == nullptr)
-        throw "Animal não encontrado! Verifique os dados e tente novamente";
+    
+    cout << endl << "Animais registrados: " << endl;
+    this->listarAnimais(true);
+    cout << endl << "Digite o ID do animal a ser removido: ";
+    getline(cin, idAnimal);
+    num = stoi(idAnimal);
+    if(num >= 0 && num < this->animais.size())
+        animal = this->animais[num];
     else
-        cout << "Animal encontrado!" << endl;
+        throw "Animal não existe!";
+
 
     cout << endl << "Tem certeza que deseja excluir? (S/N): " << endl;
     getline(cin, s);
@@ -667,9 +692,14 @@ void Petshop::listarVeterinarios() {
     }
 }
 
-void Petshop::listarAnimais() {
+void Petshop::listarAnimais(bool autoList) {
     Veterinario vet;
     Tratador trt;
+    string filtro = {};
+    string idPessoa;
+
+    if(autoList == true)
+        goto listBypass;
 
     if(this->animais.size() == 0)
         throw "Não há animais para visualizar no sistema!";
@@ -686,9 +716,12 @@ void Petshop::listarAnimais() {
     cout << "T - Filtrar por tratador" << endl;
     cout << "V - Filtrar por veterinário" << endl;
 
-    string filtro, idPessoa;
     getline(cin, filtro);
     long unsigned int num;
+
+listBypass:
+    if(filtro.empty())
+        filtro = "X";
 
     if(filtro == "T" || filtro == "t") {
         if(this->tratadores.size() == 0)
@@ -718,8 +751,8 @@ void Petshop::listarAnimais() {
 
     // Imprime cabeçalho:
     cout << endl << "=-=-=-=-=- Lista de animais -=-=-=-=-=-" << endl;
-
-    cout << setfill(' ') << setw(23) << "Nome"
+    cout << right << setfill(' ') << setw(6) << "ID"
+    << setfill(' ') << setw(23) << "Nome"
     << setfill(' ') << setw(23) << "Espécie"
     //<< setfill(' ') << setw(23) << "Ameaçado por:"
     << setfill(' ') << setw(23) << "Perigoso"
@@ -727,36 +760,25 @@ void Petshop::listarAnimais() {
     << setfill(' ') << setw(23) << "Classe"
     << right<< endl;
 
+    int index = 0;
+    char selecao = toupper(filtro[0]);
     for(auto& animal : this->animais) {
-        if(filtro == "a" || filtro == "A") {
-            if( shared_ptr<Ave> checar_ave = dynamic_pointer_cast< Ave >(animal))
-                cout << animal;
-        } else if(filtro == "f" || filtro == "F") {
-            if( shared_ptr<Anfibio> checar_ave = dynamic_pointer_cast< Anfibio >(animal))
-                cout << animal;
-        } else if(filtro == "r" || filtro == "R") {
-            if( shared_ptr<Reptil> checar_ave = dynamic_pointer_cast< Reptil >(animal))
-                cout << animal;
-        } else if(filtro == "m" || filtro == "M") {
-            if( shared_ptr<Mamifero> checar_ave = dynamic_pointer_cast< Mamifero >(animal))
-                cout << animal;
-        } else if(filtro == "d" || filtro == "D") {
-            if( shared_ptr<Domestico> checar_domestico = dynamic_pointer_cast< Domestico >(animal))
-                cout << animal;
-        } else if(filtro == "e" || filtro == "E") {
-            if( shared_ptr<Exotico> checar_exotico = dynamic_pointer_cast< Exotico >(animal))
-                cout << animal;
-        } else if(filtro == "n" || filtro == "N") {
-            if( shared_ptr<Nativo> checar_nativo = dynamic_pointer_cast< Nativo >(animal))
-                cout << animal;
-        } else if(filtro == "T" || filtro == "t") {
-            if(animal->getTratador() == trt)
-                cout << animal;
-        } else if(filtro == "V" || filtro == "v") {
-            if(animal->getVeterinario() == vet)
-                cout << animal;
-        } else
-            cout << animal;
+        if(selecao == 'V') {
+            if(animal->getVeterinario() == vet) {
+                cout << right << setfill(' ') << setw(6) << index << animal;
+                index++;
+            }
+        } else if(selecao == 'T') {
+            if(animal->getTratador() == trt) {
+                cout << right << setfill(' ') << setw(6) << index << animal;
+                index++;
+            }
+        } else {
+            if(casts.filtro[selecao](animal)) {
+                cout << right << setfill(' ') << setw(6) << index << animal;
+                index++;
+            }
+        }
     }
     cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl << endl;
 }

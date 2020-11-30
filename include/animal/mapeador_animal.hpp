@@ -28,6 +28,7 @@
 
 using std::shared_ptr;
 using std::make_shared;
+using std::dynamic_pointer_cast;
 
 /**
  * @brief Mapeador de animais.
@@ -92,6 +93,6 @@ class FiltroAnimal {
          * @return Referência a Animal, é nullptr caso seja
          * ínvalido com o parâmetro dado.
          */
-        std::map<char, std::function<Animal* (Animal* animal)>> filtro;
+        std::map<char, std::function<shared_ptr<Animal> (shared_ptr<Animal> animal)>> filtro;
 
 };

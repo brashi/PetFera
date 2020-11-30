@@ -75,7 +75,7 @@ class Petshop {
          * - Também é possível listar todos os animais cadastrados
          * no sistema.
          */
-        void listarAnimais();
+        void listarAnimais(bool autoList = false);
         
         /**
          * @brief Listagem dos Tratadores registrados.
@@ -376,4 +376,7 @@ class Petshop {
 
         /** @brief Mapeador de animais, veja MapeadorAnimal */
         MapeadorAnimal mapa;
+
+        /** @brief Filtros para verificar animais pelo dynamic_cast */
+        FiltroAnimal casts;
 };

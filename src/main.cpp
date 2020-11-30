@@ -84,6 +84,8 @@ void menu() {
             cout << "Um valor numérico era esperado e não condiz com o introduzido." << endl;
         } catch (char const* msg) {
             cout << "Erro: " << msg << endl << "Verifique os dados informados e tente novamente." << endl;
+        } catch (const string msg) {
+            cout << "Erro: " << msg << endl << "Verifique os dados informados e tente novamente." << endl;
         } catch (...) {
             cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
         }

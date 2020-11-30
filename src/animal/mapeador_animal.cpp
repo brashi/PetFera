@@ -1,31 +1,46 @@
 #include "mapeador_animal.hpp"
 
-// FiltroAnimal::FiltroAnimal() {
-//     filtro['A'] = [](Animal* animal) {
-//         Ave* checar = dynamic_cast<Ave*>(animal);
-//         return dynamic_cast<Animal*>(checar);
-//     };
+ FiltroAnimal::FiltroAnimal() {
+     filtro['A'] = [](shared_ptr<Animal> animal) {
+         shared_ptr<Ave> checar = dynamic_pointer_cast<Ave>(animal);
+         return dynamic_pointer_cast<Animal>(checar);
+     };
 
-//     filtro['F'] = [](Animal* animal) {
-//         Anfibio* checar = dynamic_cast<Anfibio*>(animal);
-//         return dynamic_cast<Animal*>(checar);
-//     };
+     filtro['F'] = [](shared_ptr<Animal> animal) {
+         shared_ptr<Anfibio> checar = dynamic_pointer_cast<Anfibio>(animal);
+         return dynamic_pointer_cast<Animal>(checar);
+     };
 
-//     filtro['R'] = [](Animal* animal) {
-//         Reptil* checar = dynamic_cast<Reptil*>(animal);
-//         return dynamic_cast<Animal*>(checar);
-//     };
+     filtro['R'] = [](shared_ptr<Animal> animal) {
+         shared_ptr<Reptil> checar = dynamic_pointer_cast<Reptil>(animal);
+         return dynamic_pointer_cast<Animal>(checar);
+     };
 
-//     filtro['M'] = [](Animal* animal) {
-//         Mamifero* checar = dynamic_cast<Mamifero*>(animal);
-//         return dynamic_cast<Animal*>(checar);
-//     };
+     filtro['M'] = [](shared_ptr<Animal> animal) {
+         shared_ptr<Mamifero> checar = dynamic_pointer_cast<Mamifero>(animal);
+         return dynamic_pointer_cast<Animal>(checar);
+     };
 
-//     filtro['T'] = [](Animal* animal) {
-//         //Mamifero* checar = dynamic_cast<Mamifero*>(animal);
-//         return animal;
-//     };
-// }
+     filtro['D'] = [](shared_ptr<Animal> animal) {
+         shared_ptr<Domestico> checar = dynamic_pointer_cast<Domestico>(animal);
+         return dynamic_pointer_cast<Animal>(checar);
+     };
+
+     filtro['E'] = [](shared_ptr<Animal> animal) {
+         shared_ptr<Exotico> checar = dynamic_pointer_cast<Exotico>(animal);
+         return dynamic_pointer_cast<Animal>(checar);
+     };
+
+     filtro['N'] = [](shared_ptr<Animal> animal) {
+         shared_ptr<Nativo> checar = dynamic_pointer_cast<Nativo>(animal);
+         return dynamic_pointer_cast<Animal>(checar);
+     };
+
+     filtro['X'] = [](shared_ptr<Animal> animal) {
+         //Mamifero* checar = dynamic_cast<Mamifero*>(animal);
+         return animal;
+     };
+}
 
 MapeadorAnimal::MapeadorAnimal() {
     aMap["aveD"] = []() { 
