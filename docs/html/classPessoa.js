@@ -7,6 +7,7 @@ var classPessoa =
     [ "getNome", "classPessoa.html#a8d551db3b19e1f07022adb3793cb8ed7", null ],
     [ "getTelefone", "classPessoa.html#afcc25e8f6dc6d9b0ce5862df3cfbb66f", null ],
     [ "operator==", "classPessoa.html#a3a1cab899b8b33a9d88aeeb369d377dd", null ],
+    [ "operator==", "classPessoa.html#aa92d77e7d500548e3b9ea2c3e9815723", null ],
     [ "printOutDados", "classPessoa.html#a39406e1f3d5ceaf4db47fc7dae7b3ac0", null ],
     [ "setEmail", "classPessoa.html#a4df0ef02351e4970976e87d9f2c73488", null ],
     [ "setEmail", "classPessoa.html#a089f4783b4b0da96f21398eb5de8d9ff", null ],
@@ -15,6 +16,7 @@ var classPessoa =
     [ "setTelefone", "classPessoa.html#a514d8a97d00eef1bc4daada63e5b349f", null ],
     [ "setTelefone", "classPessoa.html#ae5e45e6394699bf58afe08001e9aecc3", null ],
     [ "operator<<", "classPessoa.html#adb1c6a714ec60655e618798db9429f1c", null ],
+    [ "operator<<", "classPessoa.html#a03780a69c8908ad23a8f387d2c981348", null ],
     [ "email", "classPessoa.html#adff808bdaf530f44b337705ef7a5b2f5", null ],
     [ "nome", "classPessoa.html#ad4e88b8f3499405a7a03df648857c338", null ],
     [ "telefone", "classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5", null ]

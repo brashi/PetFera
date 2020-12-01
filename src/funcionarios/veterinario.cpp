@@ -38,11 +38,11 @@ void Veterinario::setCRMV(string s) {
 }
 
 ostream& Veterinario::printOutDados(ostream& o) const {
-    int tamanhoColuna = 20;
-    int espacamento = 3;
+    int tamanhoColuna = 20, espacamento = 3;
     long unsigned int tamanhoTruncado = tamanhoColuna - 3 - espacamento;
 
-    o << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getNome().length() > tamanhoTruncado) ? (this->getNome().substr(0, tamanhoTruncado) + "...") : this->getNome())
+    o << right
+    << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getNome().length() > tamanhoTruncado) ? (this->getNome().substr(0, tamanhoTruncado) + "...") : this->getNome())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getEmail().length() > tamanhoTruncado) ? (this->getEmail().substr(0, tamanhoTruncado) + "...") : this->getEmail())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getTelefone().length() > tamanhoTruncado) ? (this->getTelefone().substr(0, tamanhoTruncado) + "...") : this->getTelefone())
     << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getCRMV().length() > tamanhoTruncado) ? (this->getCRMV().substr(0, tamanhoTruncado) + "...") : this->getCRMV())

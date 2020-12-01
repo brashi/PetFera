@@ -1,5 +1,5 @@
 <map id="Pessoa" name="Pessoa">
-<area shape="rect" id="node1" title="Classe base dos funcionarios." alt="" coords="151,5,417,567"/>
-<area shape="rect" id="node2" href="$classTratador.html" title="Implementação dos tratadores." alt="" coords="5,615,272,912"/>
-<area shape="rect" id="node3" href="$classVeterinario.html" title="Implementação dos veterinarios." alt="" coords="296,615,563,912"/>
+<area shape="rect" id="node1" title="Classe base dos funcionarios." alt="" coords="151,5,417,596"/>
+<area shape="rect" id="node2" href="$classTratador.html" title="Implementação dos tratadores." alt="" coords="5,644,272,941"/>
+<area shape="rect" id="node3" href="$classVeterinario.html" title="Implementação dos veterinarios." alt="" coords="296,644,563,941"/>
 </map>

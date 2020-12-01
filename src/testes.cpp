@@ -1,12 +1,10 @@
 #include "testes.hpp"
 
-
 void acionarTestes(shared_ptr<Petshop> ps) {
     shared_ptr<Veterinario> vet = make_shared<Veterinario>("General Sampaio", "(84) 19898-9292", "sampaio@petfera.com", "12345");
     shared_ptr<Tratador> verdes = make_shared<Tratador>("Adriano Verdes", "(84) 9129-1012", "verdes@petfera", Verde);
     shared_ptr<Tratador> azulis = make_shared<Tratador>("Laila Azulis", "(21) 92222-2221", "azulis@petfera", Azul);
     shared_ptr<Tratador> rubro = make_shared<Tratador>("Moura Rubro", "(51) 2312-1444", "rubro@petfera", Vermelho);
-
 
     ps->adicionarVeterinario(vet);
     ps->adicionarTratador(verdes);

@@ -112,32 +112,36 @@ $(document).ready(function(){initNavTree('mapeador__animal_8hpp_source.html','')
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classMapeadorAnimal.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMapeadorAnimal.html">MapeadorAnimal</a> {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classMapeadorAnimal.html#a9f7683be05c7cbb261b060db01eecbbf">MapeadorAnimal</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classMapeadorAnimal.html#a00e483d9c9b774834b3c00ed86272014">   63</a></span>&#160;        std::map&lt;string, std::function&lt;<a class="code" href="classAnimal.html">Animal</a>* ()&gt;&gt; <a class="code" href="classMapeadorAnimal.html#a00e483d9c9b774834b3c00ed86272014">aMap</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classFiltroAnimal.html">   73</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFiltroAnimal.html">FiltroAnimal</a> {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classFiltroAnimal.html#a90d1abb44538d5d9793c262cfcc0a12a">FiltroAnimal</a>();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classFiltroAnimal.html#a41691dd3fe4c7904e795edfccf7669b9">   91</a></span>&#160;        std::map&lt;char, std::function&lt;<a class="code" href="classAnimal.html">Animal</a>* (<a class="code" href="classAnimal.html">Animal</a>* animal)&gt;&gt; <a class="code" href="classFiltroAnimal.html#a41691dd3fe4c7904e795edfccf7669b9">filtro</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using</span> std::make_shared;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using</span> std::dynamic_pointer_cast;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classMapeadorAnimal.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMapeadorAnimal.html">MapeadorAnimal</a> {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classMapeadorAnimal.html#a9f7683be05c7cbb261b060db01eecbbf">MapeadorAnimal</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classMapeadorAnimal.html#adc8aa918bdc2eeff95b206d561cce077">   68</a></span>&#160;        std::map&lt;string, std::function&lt;shared_ptr&lt;Animal&gt; ()&gt;&gt; <a class="code" href="classMapeadorAnimal.html#adc8aa918bdc2eeff95b206d561cce077">aMap</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classFiltroAnimal.html">   78</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFiltroAnimal.html">FiltroAnimal</a> {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="classFiltroAnimal.html#a90d1abb44538d5d9793c262cfcc0a12a">FiltroAnimal</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classFiltroAnimal.html#a5ca60441c5f538cde09da6f9838cebf9">   96</a></span>&#160;        std::map&lt;char, std::function&lt;shared_ptr&lt;Animal&gt; (shared_ptr&lt;Animal&gt; animal)&gt;&gt; <a class="code" href="classFiltroAnimal.html#a5ca60441c5f538cde09da6f9838cebf9">filtro</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassMapeadorAnimal_html_a9f7683be05c7cbb261b060db01eecbbf"><div class="ttname"><a href="classMapeadorAnimal.html#a9f7683be05c7cbb261b060db01eecbbf">MapeadorAnimal::MapeadorAnimal</a></div><div class="ttdeci">MapeadorAnimal()</div><div class="ttdoc">Construtor do mapa.</div></div>
-<div class="ttc" id="aclassMapeadorAnimal_html"><div class="ttname"><a href="classMapeadorAnimal.html">MapeadorAnimal</a></div><div class="ttdoc">Mapeador de animais.</div><div class="ttdef"><b>Definition:</b> mapeador_animal.hpp:40</div></div>
-<div class="ttc" id="aclassAnimal_html"><div class="ttname"><a href="classAnimal.html">Animal</a></div><div class="ttdoc">Implementação base para o cadastro de animais.</div><div class="ttdef"><b>Definition:</b> animal.hpp:19</div></div>
-<div class="ttc" id="aclassFiltroAnimal_html_a41691dd3fe4c7904e795edfccf7669b9"><div class="ttname"><a href="classFiltroAnimal.html#a41691dd3fe4c7904e795edfccf7669b9">FiltroAnimal::filtro</a></div><div class="ttdeci">std::map&lt; char, std::function&lt; Animal *(Animal *animal)&gt; &gt; filtro</div><div class="ttdoc">Mapa para filtragem.</div><div class="ttdef"><b>Definition:</b> mapeador_animal.hpp:91</div></div>
+<div class="ttc" id="aclassMapeadorAnimal_html"><div class="ttname"><a href="classMapeadorAnimal.html">MapeadorAnimal</a></div><div class="ttdoc">Mapeador de animais.</div><div class="ttdef"><b>Definition:</b> mapeador_animal.hpp:45</div></div>
+<div class="ttc" id="aclassFiltroAnimal_html_a5ca60441c5f538cde09da6f9838cebf9"><div class="ttname"><a href="classFiltroAnimal.html#a5ca60441c5f538cde09da6f9838cebf9">FiltroAnimal::filtro</a></div><div class="ttdeci">std::map&lt; char, std::function&lt; shared_ptr&lt; Animal &gt;shared_ptr&lt; Animal &gt; animal)&gt; &gt; filtro</div><div class="ttdoc">Mapa para filtragem.</div><div class="ttdef"><b>Definition:</b> mapeador_animal.hpp:96</div></div>
 <div class="ttc" id="aclassFiltroAnimal_html_a90d1abb44538d5d9793c262cfcc0a12a"><div class="ttname"><a href="classFiltroAnimal.html#a90d1abb44538d5d9793c262cfcc0a12a">FiltroAnimal::FiltroAnimal</a></div><div class="ttdeci">FiltroAnimal()</div><div class="ttdoc">Construtor do filtro.</div></div>
-<div class="ttc" id="aclassMapeadorAnimal_html_a00e483d9c9b774834b3c00ed86272014"><div class="ttname"><a href="classMapeadorAnimal.html#a00e483d9c9b774834b3c00ed86272014">MapeadorAnimal::aMap</a></div><div class="ttdeci">std::map&lt; string, std::function&lt; Animal *()&gt; &gt; aMap</div><div class="ttdoc">Mapa de animais.</div><div class="ttdef"><b>Definition:</b> mapeador_animal.hpp:63</div></div>
-<div class="ttc" id="aclassFiltroAnimal_html"><div class="ttname"><a href="classFiltroAnimal.html">FiltroAnimal</a></div><div class="ttdoc">Classe de filtragem.</div><div class="ttdef"><b>Definition:</b> mapeador_animal.hpp:73</div></div>
+<div class="ttc" id="aclassMapeadorAnimal_html_adc8aa918bdc2eeff95b206d561cce077"><div class="ttname"><a href="classMapeadorAnimal.html#adc8aa918bdc2eeff95b206d561cce077">MapeadorAnimal::aMap</a></div><div class="ttdeci">std::map&lt; string, std::function&lt; shared_ptr&lt; Animal &gt;)&gt; &gt; aMap</div><div class="ttdoc">Mapa de animais.</div><div class="ttdef"><b>Definition:</b> mapeador_animal.hpp:68</div></div>
+<div class="ttc" id="aclassFiltroAnimal_html"><div class="ttname"><a href="classFiltroAnimal.html">FiltroAnimal</a></div><div class="ttdoc">Classe de filtragem.</div><div class="ttdef"><b>Definition:</b> mapeador_animal.hpp:78</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

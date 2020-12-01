@@ -1,7 +1,7 @@
 <map id="Reptil" name="Reptil">
-<area shape="rect" id="node1" title="Classificação base para Repteis." alt="" coords="386,615,555,883"/>
-<area shape="rect" id="node3" href="$classReptilDomestico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="5,931,315,1111"/>
-<area shape="rect" id="node4" href="$classReptilExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="339,931,603,1111"/>
-<area shape="rect" id="node5" href="$classReptilNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="627,931,880,1111"/>
-<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="322,5,619,567"/>
+<area shape="rect" id="node1" title="Classificação base para Repteis." alt="" coords="386,703,555,971"/>
+<area shape="rect" id="node3" href="$classReptilDomestico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="5,1019,315,1199"/>
+<area shape="rect" id="node4" href="$classReptilExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="339,1019,603,1199"/>
+<area shape="rect" id="node5" href="$classReptilNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="627,1019,880,1199"/>
+<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="322,5,619,655"/>
 </map>

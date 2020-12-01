@@ -296,7 +296,7 @@ void Petshop::atualizarTratador() {
 
 void Petshop::atualizarAnimal() {
     string nome, pessoa;
-    bool trocarHerancas = false;
+    bool trocarHerancas = false, trocarClasse = false, trocarCategoria = false;
     long unsigned int idPessoa;
 
     shared_ptr<Animal> animal;
@@ -315,19 +315,26 @@ void Petshop::atualizarAnimal() {
     else
         throw "Animal não existe!";
 
+    // "Sub-classes" anteriores
+    string classeAnterior = Animal::getClasse(animal, true);
+    string categoriaAnterior = Animal::getClassificacao(animal, true);
+
     cout << endl << updateText;
     string classe = animal->setClasse();
-    if(!classe.empty())
-        trocarHerancas = true;
+    if(!classe.empty() && classe != classeAnterior)
+        trocarClasse = true;
     else
-        classe = animal->getClasse(animal);
+        classe = classeAnterior;
 
     cout << endl << updateText;
     string categoria = animal->setClassificacao();
-    if(!categoria.empty())
-        trocarHerancas = true;
+    if(!categoria.empty() && categoria != categoriaAnterior)
+        trocarCategoria = true;
     else
-        categoria = animal->getClassificacao(animal);
+        categoria = categoriaAnterior;
+
+    if(trocarClasse || trocarCategoria)
+        trocarHerancas = true;
 
     // Animal que será atualizado *de facto*
     shared_ptr<Animal> atualizar;
@@ -371,37 +378,42 @@ void Petshop::atualizarAnimal() {
         atualizar->setPerigoso(animal->getPerigoso());
 
     // Classe
-    if(classe == "ave" || classe == "Ave") { // Ave
+    if(classe == "ave") { // Ave
         shared_ptr<Ave> classe = dynamic_pointer_cast< Ave >(atualizar);
 
         cout << endl << updateText;
-        if(!classe->setVoa() && trocarHerancas)
-            throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
+        if(!classe->setVoa())
+            if(trocarClasse)
+                throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
 
-    } else if(classe == "mam" || classe == "Mamífero") { // Mamífero
+    } else if(classe == "mam") { // Mamífero
         shared_ptr<Mamifero> classe = dynamic_pointer_cast< Mamifero >(atualizar);
     
         cout << endl << updateText;
-        if(!classe->setGestacao() && trocarHerancas)
-            throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
+        if(!classe->setGestacao())
+            if(trocarClasse)
+                throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
 
-    } else if(classe == "rep" || classe == "Réptil") { // Réptil
+    } else if(classe == "rep") { // Réptil
         shared_ptr<Reptil> classe = dynamic_pointer_cast< Reptil >(atualizar);
 
         cout << endl << updateText;
-        if(!classe->setPele() && trocarHerancas)
-            throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
+        if(!classe->setPele())
+            if(trocarClasse)
+                throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
 
-    } else if(classe == "anf" || classe == "Anfíbio") { // Anfíbio
+    } else if(classe == "anf") { // Anfíbio
         shared_ptr<Anfibio> classe = dynamic_pointer_cast< Anfibio >(atualizar);
 
         cout << endl << updateText;
-        if(!classe->setCauda() && trocarHerancas)
-            throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
+        if(!classe->setCauda())
+            if(trocarClasse)
+                throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
 
         cout << endl << updateText;
-        if(!classe->setPata() && trocarHerancas)
-            throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
+        if(!classe->setPata())
+            if(trocarClasse)
+                throw "Para troca de classes é necessário informar tal informação. Operação cancelada";
     }
 
     // Tratador
@@ -422,30 +434,34 @@ void Petshop::atualizarAnimal() {
     }
 
     // Classificação
-    if(categoria == "N" || categoria == "Silvestre Nativo") { // Silvestre Nativo
+    if(categoria == "N") { // Silvestre Nativo
         shared_ptr<Nativo> categoria = dynamic_pointer_cast< Nativo >(atualizar);
 
         cout << endl << updateText;
-        if(!categoria->setLicenca() && trocarHerancas)
-            throw "Para troca de categorias é necessário informar tal informação. Operação cancelada";
+        if(!categoria->setLicenca())
+            if(trocarCategoria)
+                throw "Para troca de categorias é necessário informar tal informação. Operação cancelada";
         
         cout << endl << updateText;
-        if(!categoria->setRegiao() && trocarHerancas)
-            throw "Para troca de categorias é necessário informar tal informação. Operação cancelada";
+        if(!categoria->setRegiao())
+            if(trocarCategoria)
+                throw "Para troca de categorias é necessário informar tal informação. Operação cancelada";
 
-    } else if(categoria == "E" || categoria == "Silvestre Exótico") { // Silvestre Exótico
+    } else if(categoria == "E") { // Silvestre Exótico
         shared_ptr<Exotico> categoria = dynamic_pointer_cast< Exotico >(atualizar);
     
         cout << endl << updateText;
-        if(!categoria->setLocal() && trocarHerancas)
-            throw "Para troca de categorias é necessário informar tal informação. Operação cancelada";
+        if(!categoria->setLocal())
+            if(trocarCategoria)
+                throw "Para troca de categorias é necessário informar tal informação. Operação cancelada";
 
-    } else if(categoria == "D" || categoria == "Doméstico") { // Doméstico
+    } else if(categoria == "D") { // Doméstico
         shared_ptr<Domestico> categoria = dynamic_pointer_cast< Domestico >(atualizar);
 
         cout << endl << updateText;
-        if(!categoria->setAdestrado() && trocarHerancas)
-            throw "Para troca de categorias é necessário informar tal informação. Operação cancelada";
+        if(!categoria->setAdestrado())
+            if(trocarCategoria)
+                throw "Para troca de categorias é necessário informar tal informação. Operação cancelada";
 
     }
 
@@ -668,7 +684,7 @@ void Petshop::listarTratadores() {
         << setfill(' ') << setw(23) << "N. segurança"
         << endl;
         for(auto& trt : this->tratadores) {
-            cout << right << setfill(' ') << setw(6) << index << *trt;
+            cout << setfill(' ') << setw(6) << index << *trt;
             index++;
         }
         cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl;
@@ -688,7 +704,7 @@ void Petshop::listarVeterinarios() {
         << setfill(' ') << setw(23) << "CRMV"
         << endl;
         for(auto& vet : this->veterinarios) {
-            cout << right << setfill(' ') << setw(6) << index << *vet;
+            cout << setfill(' ') << setw(6) << index << *vet;
             index++;
         }
         cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl;
@@ -754,24 +770,23 @@ listBypass:
     // Imprime cabeçalho:
     cout << endl << "=-=-=-=-=- Lista de animais -=-=-=-=-=-" << endl;
     cout << right << setfill(' ') << setw(6) << "ID"
-    << setfill(' ') << setw(23) << "Nome"
-    << setfill(' ') << setw(23) << "Espécie"
-    << setfill(' ') << setw(23) << "Classificação"
-    << setfill(' ') << setw(23) << "Classe"
-    << right<< endl;
+         << setfill(' ') << setw(23) << "Nome"
+         << setfill(' ') << setw(23) << "Espécie"
+         << setfill(' ') << setw(23) << "Ameaçado por"
+         << setfill(' ') << setw(23) << "Perigoso" << endl;
 
     int index = 0;
     char selecao = toupper(filtro[0]);
     for(auto& animal : this->animais) {
         if(selecao == 'V') {
             if(animal->getVeterinario() == vet)
-                cout << right << setfill(' ') << setw(6) << index << animal;
+                cout << setfill(' ') << setw(6) << index << animal;
         } else if(selecao == 'T') {
             if(animal->getTratador() == trt)
-                cout << right << setfill(' ') << setw(6) << index << animal;
+                cout << setfill(' ') << setw(6) << index << animal;
         } else {
             if(casts.filtro[selecao](animal))
-                cout << right << setfill(' ') << setw(6) << index << animal;
+                cout << setfill(' ') << setw(6) << index << animal;
         }
         index++;
     }
@@ -783,7 +798,7 @@ listBypass:
         getline(cin, animalID);
         if(animalID.size() != 0) {
             num = stoi(animalID);
-            this->animais[num]->printOutDetails(this->animais[num]);
+            Animal::printOutDetails(this->animais[num]);
         } else
             cout << "Operação cancelada..." << endl;
     }

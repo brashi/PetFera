@@ -170,18 +170,20 @@ class Animal {
          * o uma classe especifica. Define
          * uma string com a categoria do animal.
          * @param Animal em questão.
+         * @param Simplificado define a escrita simplificada da classificação, isso é: "Nativo" torna-se "N" 
          * @return String com a categoria do animal.
          */
-        string getClassificacao(shared_ptr<Animal> animal) const;
+        static string getClassificacao(shared_ptr<Animal> animal, bool simplificado = false);
         /**
          * @brief getter de string
          * @details com base em casts para
          * o uma classe especifica. Define
          * uma string com a classificação do animal.
          * @param Animal em questão.
+         * @param Simplificado define a escrita simplificada da classe, isso é: "Réptil" torna-se "rep" 
          * @return String com a classificação do animal.
          */
-        string getClasse(shared_ptr<Animal> animal) const;
+        static string getClasse(shared_ptr<Animal> animal, bool simplificado = false);
         
         /**
          * @brief Função de interface.
@@ -207,7 +209,7 @@ class Animal {
          * classe ou classificação.
          * @param Animal em questão.
          */
-        void printOutDetails(shared_ptr<Animal> animal) const;
+        static void printOutDetails(shared_ptr<Animal> animal);
 
         /**
          * @brief Função para impressão de dados via sobrecarga.

@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['_7eanfibio_90',['~Anfibio',['../classAnfibio.html#abd574fdb240818a4d43297d72c797537',1,'Anfibio']]],
-  ['_7eanimal_91',['~Animal',['../classAnimal.html#a16d8b7f94611cc65f5cdb58cc105527b',1,'Animal']]],
-  ['_7eave_92',['~Ave',['../classAve.html#a602d1e0572e141f6cc9cd91d062cc6dd',1,'Ave']]],
-  ['_7edomestico_93',['~Domestico',['../classDomestico.html#a31d57b664c512372e3e387b67f674212',1,'Domestico']]],
-  ['_7eexotico_94',['~Exotico',['../classExotico.html#a53c2d3ebefe862463f39051e510f33d8',1,'Exotico']]],
-  ['_7enativo_95',['~Nativo',['../classNativo.html#a06a78ba83dd340439d3266d38a9718bd',1,'Nativo']]],
-  ['_7epessoa_96',['~Pessoa',['../classPessoa.html#a1ffb74538d4ca9015ed38ee1136e3117',1,'Pessoa']]],
-  ['_7epetshop_97',['~Petshop',['../classPetshop.html#a3ec4d2ba5d85e86d63121b4efd199de2',1,'Petshop']]]
+  ['veterinario_97',['Veterinario',['../classVeterinario.html',1,'Veterinario'],['../classAnimal.html#a3618cd50da896cee0b62eec659d2c2bb',1,'Animal::veterinario()'],['../classVeterinario.html#ac25db80512f8cd3d3b76898c41c7fa2b',1,'Veterinario::Veterinario()']]],
+  ['veterinarios_98',['veterinarios',['../classPetshop.html#acce09fa3d23a602d11ebec3fc2b86c1e',1,'Petshop']]],
+  ['voa_99',['voa',['../classAve.html#a4f8416af36cfbb02dc6e7391ea7c88e8',1,'Ave']]]
 ];

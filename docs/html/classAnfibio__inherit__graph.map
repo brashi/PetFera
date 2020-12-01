@@ -1,7 +1,7 @@
 <map id="Anfibio" name="Anfibio">
-<area shape="rect" id="node1" title="Classificação base para Anfibios." alt="" coords="398,615,598,1000"/>
-<area shape="rect" id="node3" href="$classAnfibioDomestico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="5,1048,332,1228"/>
-<area shape="rect" id="node4" href="$classAnfibioExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="357,1048,639,1228"/>
-<area shape="rect" id="node5" href="$classAnfibioNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="663,1048,933,1228"/>
-<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="349,5,647,567"/>
+<area shape="rect" id="node1" title="Classificação base para Anfibios." alt="" coords="398,703,598,1088"/>
+<area shape="rect" id="node3" href="$classAnfibioDomestico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="5,1136,332,1316"/>
+<area shape="rect" id="node4" href="$classAnfibioExotico.html" title="Implementação de animal com Classe e Categoria." alt="" coords="357,1136,639,1316"/>
+<area shape="rect" id="node5" href="$classAnfibioNativo.html" title="Implementação de animal com Classe e Categoria." alt="" coords="663,1136,933,1316"/>
+<area shape="rect" id="node2" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="349,5,647,655"/>
 </map>
