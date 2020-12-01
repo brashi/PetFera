@@ -228,6 +228,7 @@ void Petshop::atualizarVeterinario() {
     string nome;
     
     shared_ptr<Veterinario> veterinario;
+    Veterinario antigovet;
     long unsigned int num;
 
     // Configuração do texto acima dos campos de alteração
@@ -246,6 +247,8 @@ void Petshop::atualizarVeterinario() {
     else
         throw "Veterinário não existe!";
 
+    antigovet = *veterinario;
+
     cout << endl << updateText;
     veterinario->setNome();
 
@@ -257,12 +260,17 @@ void Petshop::atualizarVeterinario() {
 
     cout << endl << updateText;
     veterinario->setCRMV();
+
+    for(auto& animal : this->animais)
+        if(animal->getVeterinario() == antigovet)
+            animal->setVeterinario(*veterinario);
 }
 
 void Petshop::atualizarTratador() {
     string nome;
 
     shared_ptr<Tratador> tratador;
+    Tratador antigotrt;
     long unsigned int num;
 
     // Configuração do texto acima dos campos de alteração
@@ -281,6 +289,8 @@ void Petshop::atualizarTratador() {
     else
         throw "Tratador não existe!";
 
+    antigotrt = *tratador;
+
     cout << endl << updateText;
     tratador->setNome();
 
@@ -292,12 +302,19 @@ void Petshop::atualizarTratador() {
 
     Uniforme un = tratador->getUniforme();
 
+    for(auto& animal : this->animais)
+        if(animal->getTratador() == antigotrt)
+            animal->setTratador(*tratador);
+
+    antigotrt = *tratador;
+
+
     cout << endl << updateText;
     if(tratador->setUniforme()) {
         Uniforme novo = tratador->getUniforme();
         for(auto& animal : this->animais) {
-            if(animal->getTratador() == *tratador) {
-                string classe = animal->getClasse(animal);
+            if(animal->getTratador() == (*tratador)) {
+                string classe = Animal::getClasse(animal);
                 if(animal->getPerigoso() && novo != Vermelho) {
                     tratador->setUniforme(un);
                     cout << "O tratador possui animais que requerem segurança maior que a informada." << endl << "Valor anterior restaurado." << endl;
@@ -309,6 +326,10 @@ void Petshop::atualizarTratador() {
                 }
             }
         }
+        if(tratador->getUniforme() != un)
+            for(auto& animal : this->animais)
+                if(animal->getTratador() == antigotrt)
+                    animal->setTratador(*tratador);
     }
 }
 
