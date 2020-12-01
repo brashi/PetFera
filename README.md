@@ -47,6 +47,15 @@ $ git clone https://github.com/brashi/PetFera.git
 # Dentro da pasta do projeto, execute um make para realizar a compilação do mesmo
 $ make
 
+# Caso queira instâncias predefinidas de animais, veterinários e tratadores para testes digite:
+$ make debug
+
+# Use o comando abaixo para assegurar que saiu do modo debug
+$ make clean
+
+# Caso queira apenas recompilar os arquivos-objetos, use:
+$ make remake
+
 # Agora execute o programa normalmente
 $ ./petFera
 ```
