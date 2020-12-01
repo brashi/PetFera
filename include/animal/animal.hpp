@@ -88,28 +88,84 @@ class Animal {
 
         //Setters
         
+        /**
+         * @brief setter para Nome de Animal
+         * @details Faz a mudança do atributo
+         * Nome para a instância de Animal em
+         * questão, sendo de uso interno
+         */
         void setNome(string s);
 
+        /**
+         * @brief interface de usuário para setNome(string s)
+         * @details faz a interface com o usuário, tratando
+         * as exceções na escolha do nome para a instância
+         * de animal em questão.
+         */
         bool setNome();
 
+        /**
+         * @brief setter para Especie de Animal
+         * @details Faz a mudança do atributo
+         * Especie para a instância de Animal em
+         * questão, sendo de uso interno
+         */
         void setEspecie(string s);
 
+        /**
+         * @brief interface de usuário para setEspecie(string s)
+         * @details faz a interface com o usuário, tratando
+         * as exceções na escolha da especie para a instância
+         * de animal em questão.
+         */
         bool setEspecie();
 
+        /**
+         * @brief setter de ameaça a extinção
+         * @details Faz a mudança do atributo
+         * ameacadoPor da instância em questão.
+         */
         void setAmeacadoPor(string s);
 
+        /**
+         * @brief interface de usuário para setAmeacadoPor(string s)
+         * @details faz a interface com o usuário, tratando
+         * as exceções na escolha da ameaça de extinção para a instância
+         * de animal em questão.
+         */
         bool setAmeacadoPor();
 
+        /**
+         * @brief setter de bool Perigo
+         * @details Faz a mudança do atributo
+         * perigoso da instância em questão.
+         */
         void setPerigoso(bool b);
 
+        /**
+         * @brief interface de usuário para setPerigoso(bool b)
+         * @details faz a interface com o usuário, tratando
+         * as exceções na definição de perigoso para a instância
+         * de animal em questão.
+         */
         bool setPerigoso();
 
+        /**
+         * @brief setter de Veterinario para a instância do Animal
+         * @details Faz a mudança do atributo Veterinario
+         * da instância do Animal em questão.
+         */
         void setVeterinario(Veterinario veterinario);
 
+        /**
+         * @brief setter de Tratador para a instância do Animal
+         * @details Faz a mudança do atributo Tratador
+         * da instância do Animal em questão.
+         */
         void setTratador(Tratador tratador);
 
         /**
-         * @details getter de string
+         * @brief getter de string
          * @details com base em casts para
          * o uma classe especifica. Define
          * uma string com a categoria do animal.
@@ -118,7 +174,7 @@ class Animal {
          */
         string getClassificacao(shared_ptr<Animal> animal) const;
         /**
-         * @details getter de string
+         * @brief getter de string
          * @details com base em casts para
          * o uma classe especifica. Define
          * uma string com a classificação do animal.
@@ -126,9 +182,23 @@ class Animal {
          * @return String com a classificação do animal.
          */
         string getClasse(shared_ptr<Animal> animal) const;
-
+        
+        /**
+         * @brief Função de interface.
+         * @details Faz a interface com usuário
+         * para o usuário definir a qual classificação
+         * o animal registrado pertence, podendo escolher entre
+         * as seguinte opções: Domestico, Nativo e Exotico
+         */
         string setClassificacao();
         
+        /**
+         * @brief Função de interface.
+         * @details Faz a interface com usuário
+         * para o usuário definir a qual classe
+         * o animal registrado pertence, podendo escolher entre
+         * as seguinte opções: Ave, Anfibio, Reptil e Mamifero
+         */
         string setClasse();
 
         /**

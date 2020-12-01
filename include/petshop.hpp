@@ -240,7 +240,7 @@ class Petshop {
          * de remoção de cadastro no sistema. O método
          * após ser chamado pede por parâmetros do
          * alvo a ser removido. Neste caso é necessário
-         * o nome do Veterinario a ser removido.
+         * o indice do Veterinario a ser removido, sendo dado na listagem pela função.
          * Após o processo, o mesmo é removido do sistema
          * e dos registros, podendo ser oferecido um
          * ponteiro da instância do alvo removido para usos futuros.
@@ -254,7 +254,7 @@ class Petshop {
          * de remoção de cadastro no sistema. O método
          * após ser chamado pede por parâmetros do
          * alvo a ser removido. Neste caso é necessário
-         * o nome do Tratador a ser removido.
+         * escolher um Tratador pelo seu indice que será listado na função.
          * Após o processo, o mesmo é removido do sistema
          * e dos registros, podendo ser oferecido um
          * ponteiro da instância do alvo removido para usos futuros.
@@ -268,7 +268,7 @@ class Petshop {
          * de remoção de cadastro no sistema. O método
          * após ser chamado pede por parâmetros do
          * alvo a ser removido. Neste caso é necessário
-         * o nome e a especie do Animal a ser removido.
+         * escolher um animal pelo seu indice, que será listado na função.
          * Após o processo, o mesmo é removido do sistema
          * e dos registros, podendo ser oferecido um
          * ponteiro da instância do alvo removido para usos futuros.
