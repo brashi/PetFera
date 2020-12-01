@@ -290,8 +290,26 @@ void Petshop::atualizarTratador() {
     cout << endl << updateText;
     tratador->setTelefone();
 
+    Uniforme un = tratador->getUniforme();
+
     cout << endl << updateText;
-    tratador->setUniforme();
+    if(tratador->setUniforme()) {
+        Uniforme novo = tratador->getUniforme();
+        for(auto& animal : this->animais) {
+            if(animal->getTratador() == *tratador) {
+                string classe = animal->getClasse(animal);
+                if(animal->getPerigoso() && novo != Vermelho) {
+                    tratador->setUniforme(un);
+                    cout << "O tratador possui animais que requerem segurança maior que a informada." << endl << "Valor anterior restaurado." << endl;
+                    break;
+                } else if((classe == "Réptil" || classe == "Mamífero") && (novo == Verde)) {
+                    tratador->setUniforme(un);
+                    cout << "O tratador possui animais que requerem segurança maior que a informada." << endl << "Valor anterior restaurado." << endl;
+                    break;
+                }
+            }
+        }
+    }
 }
 
 void Petshop::atualizarAnimal() {
@@ -798,7 +816,10 @@ listBypass:
         getline(cin, animalID);
         if(animalID.size() != 0) {
             num = stoi(animalID);
-            Animal::printOutDetails(this->animais[num]);
+            if(num >= 0 && num < this->animais.size())
+                Animal::printOutDetails(this->animais[num]);
+            else
+                throw "Animal não existe!";
         } else
             cout << "Operação cancelada..." << endl;
     }

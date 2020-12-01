@@ -2,9 +2,9 @@
 
 void acionarTestes(shared_ptr<Petshop> ps) {
     shared_ptr<Veterinario> vet = make_shared<Veterinario>("General Sampaio", "(84) 19898-9292", "sampaio@petfera.com", "12345");
-    shared_ptr<Tratador> verdes = make_shared<Tratador>("Adriano Verdes", "(84) 9129-1012", "verdes@petfera", Verde);
-    shared_ptr<Tratador> azulis = make_shared<Tratador>("Laila Azulis", "(21) 92222-2221", "azulis@petfera", Azul);
-    shared_ptr<Tratador> rubro = make_shared<Tratador>("Moura Rubro", "(51) 2312-1444", "rubro@petfera", Vermelho);
+    shared_ptr<Tratador> verdes = make_shared<Tratador>("Adriano Verdes", "(84) 9129-1012", "verdes@petfera.com", Verde);
+    shared_ptr<Tratador> azulis = make_shared<Tratador>("Laila Azulis", "(21) 92222-2221", "azulis@petfera.com", Azul);
+    shared_ptr<Tratador> rubro = make_shared<Tratador>("Moura Rubro", "(51) 2312-1444", "rubro@petfera.com", Vermelho);
 
     ps->adicionarVeterinario(vet);
     ps->adicionarTratador(verdes);
@@ -24,7 +24,7 @@ void acionarTestes(shared_ptr<Petshop> ps) {
     ps->adicionarAnimal(make_shared<ReptilExotico>("Aligatore", "Aligátor americano", "Nada", *vet, *rubro, true, "America do Norte", Placa));
 
     ps->adicionarAnimal(make_shared<MamiferoDomestico>("Polar", "Husky siberiano", "Nada", *vet, *azulis, false, true, true));
-    ps->adicionarAnimal(make_shared<MamiferoNativo>("Tatada", "Tamanduá-bandeira", "Caça predatória", *vet, *azulis, true, "America do Norte", "8842-2220-IBAMA",true));
+    ps->adicionarAnimal(make_shared<MamiferoNativo>("Tatada", "Tamanduá-bandeira", "Caça predatória", *vet, *azulis, false, "America do Norte", "8842-2220-IBAMA",true));
     ps->adicionarAnimal(make_shared<MamiferoExotico>("Usarde", "Urso-pardo", "Nada", *vet, *rubro, true, "America do Norte", true));
-    ps->adicionarAnimal(make_shared<MamiferoExotico>("Parry", "Ornitorrinco", "Nada", *vet, *azulis, true, "Australia", false));
+    ps->adicionarAnimal(make_shared<MamiferoExotico>("Parry", "Ornitorrinco", "Nada", *vet, *rubro, true, "Australia", false));
 }
