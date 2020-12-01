@@ -4,10 +4,12 @@
 #include "ave.hpp"
 #include "anfibio.hpp"
 #include "reptil.hpp"
+#include "mamifero.hpp"
 
 // Classificacao
 #include "exotico.hpp"
 #include "nativo.hpp"
+#include "domestico.hpp"
 
 #include <iomanip>
 #include <iostream>
@@ -209,15 +211,53 @@ string Animal::setClasse() {
     // {} é mais rápido que "", já que não chama o construtor de std::string
 }
 
+void Animal::printOutDetails(shared_ptr<Animal> animal) const {
+    Veterinario vet = this->veterinario;
+    Tratador trt = this->tratador;
+    string classe = this->getClasse(animal);
+    string classificacao = this->getClassificacao(animal);
+
+    cout << endl << "=-=-=-=-=- Visualização de animal -=-=-=-=-=-" << endl;
+    cout << "Nome: " << this->nome << endl;
+    cout << "Espécie: " << this->especie << endl;
+    cout << "Perigoso: " << (this->perigoso ? "Sim" : "Não") << endl;
+    cout << "Ameaçado por: " << this->ameacadoPor << endl;
+    cout << "Veterinário: " << vet.getNome() << endl;
+    cout << "  └ CRMV: " << vet.getCRMV() << endl;
+    cout << "Tratador: " << trt.getNome() << endl;
+    int un = trt.getUniforme();
+    cout << "  └ N. Segurança: " << (un == 0? "Verde" : (un == 1 ? "Azul" : "Vermelho")) << endl;
+    cout << "Categoria: " << this->getClassificacao(animal) << endl;
+    if(classificacao == "Silvestre Exótico")
+        cout << "  └ Habitat: " << dynamic_pointer_cast<Exotico>(animal)->getLocal() << endl;
+    else if(classificacao == "Silvestre Nativo") {
+        shared_ptr<Nativo> classificacao = dynamic_pointer_cast<Nativo>(animal);
+        cout << "  ├ Lic. Transporte IBAMA: " << classificacao->getLicenca() << endl;
+        cout << "  └ Região: " << classificacao->getRegiao() << endl;
+    } else 
+        cout << "  └ Adestrado: " << (dynamic_pointer_cast<Domestico>(animal)->getAdestrado() ? "Sim" : "Não") << endl;
+    cout << "Classe: " << classe << endl;
+    if(classe == "Ave")
+        cout << "  └ Voa: " << (dynamic_pointer_cast<Ave>(animal)->getVoa() ? "Sim" : "Não") << endl;
+    else if(classe == "Anfíbio") {
+        shared_ptr<Anfibio> classe = dynamic_pointer_cast<Anfibio>(animal);
+        cout << "  ├ Cauda: " << (classe->getCauda() ? "Sim" : "Não") << endl;
+        cout << "  └ Pata: " << (classe->getPata() ? "Sim" : "Não") << endl;
+    } else if(classe == "Réptil") {
+        int pele = dynamic_pointer_cast<Reptil>(animal)->getPele() == 0;
+        cout << "  └ Pele: " << (pele == 0? "Escama" : (pele == 1 ? "Placa" : "Carapaça")) << endl;
+    } else
+        cout << "  └ Gestação: " << (dynamic_pointer_cast<Mamifero>(animal)->getGestacao() ? "Sim" : "Não") << endl;
+    cout << endl << "-=-=-=-=-=-=-=-=-=-= Fim =-=-=-=-=-=-=-=-=-=-" << endl << endl;
+}
+
 ostream& Animal::printOutDados(ostream& o, shared_ptr<Animal> animal) const {
     int tamanhoColuna = 20;
     int espacamento = 3;
     long unsigned int tamanhoTruncado = tamanhoColuna - 3 - espacamento;
 
-    o  << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getNome().length() > tamanhoTruncado) ? (this->getNome().substr(0, tamanhoTruncado) + "...") : this->getNome())
-    << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getEspecie().length() > tamanhoTruncado) ? (this->getEspecie().substr(0, tamanhoTruncado) + "...") : this->getEspecie())
-    //<< setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->getAmeacadoPor().length() > tamanhoTruncado) ? (this->getAmeacadoPor().substr(0, tamanhoTruncado) + "...") : this->getAmeacadoPor())
-    << setfill(' ') << setw(tamanhoColuna + espacamento) << (this->getPerigoso()? "Sim" : "Não")
+    o  << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->nome.length() > tamanhoTruncado) ? (this->nome.substr(0, tamanhoTruncado) + "...") : this->nome)
+    << setfill(' ') << setw(tamanhoColuna + espacamento) << ((this->especie.length() > tamanhoTruncado) ? (this->especie.substr(0, tamanhoTruncado) + "...") : this->especie)
     << setfill(' ') << setw(tamanhoColuna + espacamento) << this->getClassificacao(animal)
     << setfill(' ') << setw(tamanhoColuna + espacamento) << this->getClasse(animal)
     << right << endl;

@@ -31,6 +31,7 @@ void imprimirMenu() {
     cout << "| \u2588\u2588      | \u2588\u2588         | \u2588\u2588   | \u2588\u2588      | \u2588\u2588      | \u2588\u2588  \\ \u2588\u2588| \u2588\u2588  | \u2588\u2588" << endl;
     cout << "| \u2588\u2588      | \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | \u2588\u2588   | \u2588\u2588      | \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| \u2588\u2588  | \u2588\u2588| \u2588\u2588  | \u2588\u2588" << endl;
     cout << "|__/      |________/   |__/   |__/      |________/|__/  |__/|__/  |__/" << endl;
+    Aviso(  "                                                        * Modo DEBUG *" << endl;);
     cout << "======================================================================" << endl;
     cout << "    A - Listar animais                                  [ X - Fechar ]" << endl;
     cout << "    B - Adicionar animal" << endl;
@@ -45,7 +46,6 @@ void imprimirMenu() {
     cout << "    K - Atualizar tratador" << endl;
     cout << "    L - Remover tratador" << endl;
     cout << "======================================================================" << endl;
-    Aviso(endl << "Modo DEBUG está ativo" << endl;);
 }
 
 void limparTela() {

@@ -226,21 +226,25 @@ void Petshop::criarAnimal() {
 // Atualização
 void Petshop::atualizarVeterinario() {
     string nome;
+    
+    shared_ptr<Veterinario> veterinario;
+    long unsigned int num;
 
     // Configuração do texto acima dos campos de alteração
     string updateText = "Alterar: (para não alterar mantenha em branco)";
 
-    cout << endl << "Nome do veterinário: " << endl;
+    if(this->veterinarios.size() == 0)
+        throw "Não há veterinários para remover no sistema!";
+
+    cout << endl << "Veterinários registrados: " << endl;
+    this->listarVeterinarios();
+    cout << endl << "Digite o ID do veterinário a ser alterado: ";
     getline(cin, nome);
-    if (nome.size() == 0)
-        throw "Não é possível pesquisar um veterinário sem nome!";
-
-    shared_ptr<Veterinario> veterinario = findVeterinario(nome);
-
-    if(veterinario == nullptr)
-        throw "Veterinário não encontrado! Verifique os dados e tente novamente";
+    num = stoi(nome);
+    if(num >= 0 && num < this->veterinarios.size())
+        veterinario = this->veterinarios[num];
     else
-        cout << "Veterinário encontrado!" << endl;
+        throw "Veterinário não existe!";
 
     cout << endl << updateText;
     veterinario->setNome();
@@ -258,20 +262,24 @@ void Petshop::atualizarVeterinario() {
 void Petshop::atualizarTratador() {
     string nome;
 
+    shared_ptr<Tratador> tratador;
+    long unsigned int num;
+
     // Configuração do texto acima dos campos de alteração
     string updateText = "Alterar: (para não alterar mantenha em branco)";
 
-    cout << endl << "Nome do tratador: " << endl;
+    if(this->tratadores.size() == 0)
+        throw "Não há tratadores para remover no sistema!";
+
+    cout << endl << "Tratadores registrados: " << endl;
+    this->listarTratadores();
+    cout << endl << "Digite o ID do tratador a ser alterado: ";
     getline(cin, nome);
-    if (nome.size() == 0)
-        throw "Não é possível pesquisar um tratador sem nome!";
-
-    shared_ptr<Tratador> tratador = findTratador(nome);
-
-    if(tratador == nullptr)
-        throw "Tratador não encontrado! Verifique os dados e tente novamente";
+    num = stoi(nome);
+    if(num >= 0 && num < this->tratadores.size())
+        tratador = this->tratadores[num];
     else
-        cout << "Tratador encontrado!" << endl;
+        throw "Tratador não existe!";
 
     cout << endl << updateText;
     tratador->setNome();
@@ -287,29 +295,25 @@ void Petshop::atualizarTratador() {
 }
 
 void Petshop::atualizarAnimal() {
-    string nome, especie, pessoa;
+    string nome, pessoa;
     bool trocarHerancas = false;
     long unsigned int idPessoa;
+
+    shared_ptr<Animal> animal;
+    long unsigned int num;
 
     // Configuração do texto acima dos campos de alteração
     string updateText = "Alterar: (para não alterar mantenha em branco)";
 
-    cout << endl << "Nome do animal: " << endl;
+    cout << endl << "Animais registrados: " << endl;
+    this->listarAnimais(true);
+    cout << endl << "Digite o ID do animal a ser alterado: ";
     getline(cin, nome);
-    if (nome.size() == 0)
-        throw "Não é possível pesquisar animal sem nome!";
-    
-    cout << "E sua espécie?" << endl;
-    getline(cin, especie);
-    if (especie.size() == 0)
-        throw "Não é possível pesquisar animal sem espécie!";
-
-    shared_ptr<Animal> animal = findAnimal(nome, especie);
-
-    if(animal == nullptr)
-        throw "Animal não encontrado! Verifique os dados e tente novamente";
+    num = stoi(nome);
+    if(num >= 0 && num < this->animais.size())
+        animal = this->animais[num];
     else
-        cout << "Animal encontrado!" << endl;
+        throw "Animal não existe!";
 
     cout << endl << updateText;
     string classe = animal->setClasse();
@@ -472,25 +476,24 @@ void Petshop::excluirVeterinario() {
     long unsigned int num;
 
     if(this->veterinarios.size() == 0)
-        throw "Não há veterinario para remover no sistema!";
+        throw "Não há veterinários para remover no sistema!";
 
-    
-    cout << endl << "Veterinarios registrados: " << endl;
+    cout << endl << "Veterinários registrados: " << endl;
     this->listarVeterinarios();
-    cout << endl << "Digite o ID do veterinario a ser removido: ";
+    cout << endl << "Digite o ID do veterinário a ser removido: ";
     getline(cin, idPessoa);
     num = stoi(idPessoa);
     if(num >= 0 && num < this->veterinarios.size())
         veterinario = this->veterinarios[num];
     else
-        throw "Veterinario não existe!";
+        throw "Veterinário não existe!";
 
     int animais = 0;
     for(auto& animal : this->animais)
         if(*veterinario == animal->getVeterinario())
             animais++;
 
-    string error = "O veterinario cuida de " + std::to_string(animais) + " animais !\n Portando, ele não pode se removido, verifique nas listagens e tente novamente !";
+    string error = "O veterinário cuida de " + std::to_string(animais) + " animais !\n Portando, ele não pode se removido, verifique nas listagens e tente novamente !";
     if(animais > 0) 
         throw error;
 
@@ -501,7 +504,7 @@ void Petshop::excluirVeterinario() {
         if(this->excluirVeterinario(veterinario))
             cout << "Operação concluída" << endl;
         else
-            throw "Erro ao excluir tratador, tente novamente";
+            throw "Erro ao excluir veterinário, tente novamente";
     else
         cout << "Operação cancelada" << endl;
 }
@@ -695,10 +698,9 @@ void Petshop::listarVeterinarios() {
 void Petshop::listarAnimais(bool autoList) {
     Veterinario vet;
     Tratador trt;
-    string filtro = {};
-    string idPessoa;
+    string filtro = {}, idPessoa = {}, animalID = {};
 
-    if(autoList == true)
+    if(autoList)
         goto listBypass;
 
     if(this->animais.size() == 0)
@@ -754,8 +756,6 @@ listBypass:
     cout << right << setfill(' ') << setw(6) << "ID"
     << setfill(' ') << setw(23) << "Nome"
     << setfill(' ') << setw(23) << "Espécie"
-    //<< setfill(' ') << setw(23) << "Ameaçado por:"
-    << setfill(' ') << setw(23) << "Perigoso"
     << setfill(' ') << setw(23) << "Classificação"
     << setfill(' ') << setw(23) << "Classe"
     << right<< endl;
@@ -764,21 +764,27 @@ listBypass:
     char selecao = toupper(filtro[0]);
     for(auto& animal : this->animais) {
         if(selecao == 'V') {
-            if(animal->getVeterinario() == vet) {
+            if(animal->getVeterinario() == vet)
                 cout << right << setfill(' ') << setw(6) << index << animal;
-                index++;
-            }
         } else if(selecao == 'T') {
-            if(animal->getTratador() == trt) {
+            if(animal->getTratador() == trt)
                 cout << right << setfill(' ') << setw(6) << index << animal;
-                index++;
-            }
         } else {
-            if(casts.filtro[selecao](animal)) {
+            if(casts.filtro[selecao](animal))
                 cout << right << setfill(' ') << setw(6) << index << animal;
-                index++;
-            }
         }
+        index++;
     }
     cout << endl << "-=-=-=-=-=-=-=-=- Fim -=-=-=-=-=-=-=-=-" << endl << endl;
+
+    if(!autoList) {
+        cout << endl << "Digite o ID de um animal a ser visualizado: " << endl;
+        cout << "(Mantenha em branco para cancelar a operação)" << endl;
+        getline(cin, animalID);
+        if(animalID.size() != 0) {
+            num = stoi(animalID);
+            this->animais[num]->printOutDetails(this->animais[num]);
+        } else
+            cout << "Operação cancelada..." << endl;
+    }
 }

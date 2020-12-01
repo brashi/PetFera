@@ -202,6 +202,14 @@ class Animal {
         string setClasse();
 
         /**
+         * @brief Função para impressão de todos os dados de um determinado animal.
+         * @details Imprime todos os dados de um determinado animal independente de
+         * classe ou classificação.
+         * @param Animal em questão.
+         */
+        void printOutDetails(shared_ptr<Animal> animal) const;
+
+        /**
          * @brief Função para impressão de dados via sobrecarga.
          * @details É chamada após o uso com operador de extração "<<". Tem sua base
          * informando as características comuns a todos os animais, bem como sua Classe
