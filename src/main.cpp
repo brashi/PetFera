@@ -4,7 +4,7 @@
 
 #include "mapeador_menu.hpp"
 #include "petshop.hpp"
-#include "testes.hpp"
+#include "banco_dados.hpp"
 
 using std::cout;
 using std::cin;
@@ -15,7 +15,6 @@ using std::unique_ptr;
 using std::make_unique;
 
 #ifdef DEBUG
-#define Debug(x) acionarTestes(x)
 #define Aviso(x) std::cout << x
 #else
 #define Debug(x)
@@ -68,11 +67,12 @@ void menu() {
     bool executando = true;
     string opcao;
     
-    Debug(petshop);
+    BancoDados banco(petshop);
+    banco.lerDados();
     while(executando) {
         limparTela();
         imprimirMenu();
-        
+
         getline(cin, opcao);
         limparTela();
 
@@ -93,6 +93,7 @@ void menu() {
         pausar();
     }
     
+    banco.salvarDados();
 }
 
 int main() {

@@ -333,8 +333,22 @@ class Petshop {
          * excluirAnimal().
          */
         shared_ptr<Animal> excluirAnimal(shared_ptr<Animal> removido);
-    
-    private:
+
+        /**
+         * @brief Retorna o vetor de Veterinario do Petshop
+         **/
+        vector<shared_ptr<Veterinario>> getVeterinarios() const;
+
+        /**
+         * @brief Retorna o vetor de Tratador do Petshop
+         **/
+        vector<shared_ptr<Tratador>> getTratadores() const;
+
+        /**
+         * @brief Retorna o vetor de Animal do Petshop
+         **/
+        vector<shared_ptr<Animal>> getAnimais() const;
+
         /**
          * @brief Uso interno
          * @details Acha e retorna a referência
@@ -355,6 +369,7 @@ class Petshop {
          * nullptr caso não exista.
          */
         shared_ptr<Tratador> findTratador(string nome);
+    private:
         /**
          * @brief Uso interno
          * @details Acha e retorna a referência

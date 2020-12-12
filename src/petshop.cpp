@@ -845,3 +845,15 @@ listBypass:
             cout << "Operação cancelada..." << endl;
     }
 }
+
+vector<shared_ptr<Veterinario>> Petshop::getVeterinarios() const {
+    return this->veterinarios;
+}
+
+vector<shared_ptr<Tratador>> Petshop::getTratadores() const {
+    return this->tratadores;
+}
+
+vector<shared_ptr<Animal>> Petshop::getAnimais() const {
+    return this->animais;
+}
