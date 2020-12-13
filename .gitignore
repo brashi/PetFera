@@ -4,4 +4,5 @@
 *.o
 petFera
 latex/
+dados/
 dados/*

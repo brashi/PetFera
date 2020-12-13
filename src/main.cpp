@@ -17,7 +17,6 @@ using std::make_unique;
 #ifdef DEBUG
 #define Aviso(x) std::cout << x
 #else
-#define Debug(x)
 #define Aviso(x)
 #endif
 
@@ -69,6 +68,7 @@ void menu() {
     
     BancoDados banco(petshop);
     banco.lerDados();
+    pausar();
     while(executando) {
         limparTela();
         imprimirMenu();

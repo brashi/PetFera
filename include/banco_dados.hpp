@@ -33,7 +33,6 @@ class BancoDados {
         
         void salvarDados();
         void lerDados();
-        void atuatlizarDados();
         
     private:
         shared_ptr<Petshop> petshop;

@@ -1,17 +1,16 @@
 #include "banco_dados.hpp"
 
 BancoDados::BancoDados(shared_ptr<Petshop> petshop):
-                        petshop(petshop){
+                        petshop(petshop) {
                             diretorio = "dados/";
                             struct stat info;
                             if(stat(diretorio.c_str(), &info) != 0) {
                                 mkdir(diretorio.c_str(), 0777);
                             }
+                            funcArq = diretorio + "funcionarios.csv";
+                            animalArq = diretorio + "animais.csv";
                             #ifdef DEBUG
                                 diretorio = "include/dadosDebug/";
-                                funcArq = diretorio + "funcionarios.csv";
-                                animalArq = diretorio + "animais.csv";
-                            #else
                                 funcArq = diretorio + "funcionarios.csv";
                                 animalArq = diretorio + "animais.csv";
                             #endif
@@ -19,21 +18,26 @@ BancoDados::BancoDados(shared_ptr<Petshop> petshop):
 
 void BancoDados::salvarDados() {
     #ifdef DEBUG
-    return;
+        cout << "Modo debug, portando nenhum arquivo será salvo." << endl;
+        return;
     #endif
-    salvarFuncionarios();
-    salvarAnimais();
+    try {
+        salvarFuncionarios();
+        salvarAnimais();
+    } catch(char const* msg) {
+        cout << "Erro: " << msg << endl;
+    }
     
 }
 
 void BancoDados::salvarFuncionarios() {
     if(petshop->getTratadores().size() == 0 && petshop->getVeterinarios().size() == 0) {
-        return;
+        throw "Nenhum funcionário registrado. Geração de arquivo cancelada.";
     }
     ofstream arqDados(funcArq);
 
     if(arqDados.bad() || arqDados.fail()) {
-        return;
+        throw "Algo deu errado na criação do arquivo de funcionários.";
     }
 
     for(auto& vet : petshop->getVeterinarios())
@@ -45,15 +49,17 @@ void BancoDados::salvarFuncionarios() {
             << ';' << trt->getUniforme() << endl;
 
     
+    arqDados.close();
+    cout << "Arquivo de funcionários salvo com sucesso." << endl;
 }
 
 void BancoDados::salvarAnimais() {
     if(petshop->getAnimais().size() == 0) {
-        return;
+        throw "Nenhum animal registrado. Geração de arquivo cancelada.";;
     }
     ofstream arqDados(animalArq);
     if(arqDados.bad() || arqDados.fail()) {
-        return;
+        throw "Algo deu errado na criação do arquivo de animais.";
     }
 
     string classe, classificao;
@@ -101,19 +107,23 @@ void BancoDados::salvarAnimais() {
     }
 
     arqDados.close();
+    cout << "Arquivo de animais salvo com sucesso." << endl;
 }
 
 void BancoDados::lerDados() {
-    
-    lerFuncionarios();
-    lerAnimais();
-
+    try {
+        lerFuncionarios();
+        lerAnimais();
+    } catch(char const* msg) {
+        cout << "Erro: " << msg << endl << "Caso os arquivos existam,"
+         << endl << "Verifique a integridade deles na pasta " << diretorio << endl;
+    }
 }
 
 void BancoDados::lerFuncionarios() {
     ifstream arqDados(funcArq);
     if(arqDados.bad() || arqDados.fail()){
-        return;
+        throw "Arquivo de funcionarios inexistente ou corrompido.";
     }
 
     string temp;
@@ -151,12 +161,13 @@ void BancoDados::lerFuncionarios() {
     }
 
     arqDados.close();
+    cout << "Arquivo de funcionários carregado com sucesso." << endl;
 }
 
 void BancoDados::lerAnimais() {
     ifstream arqDados(animalArq);
     if(arqDados.bad() || arqDados.fail()){
-        return;
+        throw "Arquivo de animais inexistente ou corrompido.";
     }
 
     int prox;
@@ -225,4 +236,6 @@ void BancoDados::lerAnimais() {
 
 
     }
+    arqDados.close();
+    cout << "Arquivo de animais carregado com sucesso." << endl;
 }
