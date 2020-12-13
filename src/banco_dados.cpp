@@ -31,9 +31,9 @@ void BancoDados::salvarDados() {
 }
 
 void BancoDados::salvarFuncionarios() {
-    if(petshop->getTratadores().size() == 0 && petshop->getVeterinarios().size() == 0) {
+    /*if(petshop->getTratadores().size() == 0 && petshop->getVeterinarios().size() == 0) {
         throw "Nenhum funcionário registrado. Geração de arquivo cancelada.";
-    }
+    } */
     ofstream arqDados(funcArq);
 
     if(arqDados.bad() || arqDados.fail()) {
@@ -54,9 +54,9 @@ void BancoDados::salvarFuncionarios() {
 }
 
 void BancoDados::salvarAnimais() {
-    if(petshop->getAnimais().size() == 0) {
+    /*if(petshop->getAnimais().size() == 0) {
         throw "Nenhum animal registrado. Geração de arquivo cancelada.";;
-    }
+    }*/
     ofstream arqDados(animalArq);
     if(arqDados.bad() || arqDados.fail()) {
         throw "Algo deu errado na criação do arquivo de animais.";
