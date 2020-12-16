@@ -125,7 +125,7 @@ void BancoDados::lerFuncionarios() {
     if(arqDados.bad() || arqDados.fail()){
         throw "Arquivo de funcionarios inexistente ou corrompido.";
     }
-
+    int count = 0;
     string temp;
     string linha;
     string palavra;
@@ -157,11 +157,13 @@ void BancoDados::lerFuncionarios() {
                     static_cast<Uniforme>(stoi(tokens.at(4)))
                 ));
             }
+            count++;
         }
     }
 
     arqDados.close();
     cout << "Arquivo de funcionários carregado com sucesso." << endl;
+    cout << "Foram carregados " << count << " funcionários." << endl;
 }
 
 void BancoDados::lerAnimais() {
@@ -169,7 +171,7 @@ void BancoDados::lerAnimais() {
     if(arqDados.bad() || arqDados.fail()){
         throw "Arquivo de animais inexistente ou corrompido.";
     }
-
+    int count = 0;
     int prox;
 
     string temp;
@@ -232,10 +234,12 @@ void BancoDados::lerAnimais() {
             }
 
             petshop->adicionarAnimal(animal);
+            count++;
         }
 
 
     }
     arqDados.close();
     cout << "Arquivo de animais carregado com sucesso." << endl;
+    cout << "Foram carregados " << count << " animais." << endl;
 }

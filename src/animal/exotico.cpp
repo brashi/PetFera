@@ -18,6 +18,8 @@ bool Exotico::setLocal() {
     cout << endl << "Habitat do animal: " << endl;
     getline(cin, s);
 
+    if(s.find(';') != std::string::npos)
+        throw "O caractere (Ponto e vírgula) é proibido.";
     if(s.size() == 0)
         return false;
     else

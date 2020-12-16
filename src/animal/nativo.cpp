@@ -22,6 +22,8 @@ bool Nativo::setLicenca() {
     cout << endl << "Licença de transporte IBAMA: " << endl;
     getline(cin, s);
 
+    if(s.find(';') != std::string::npos)
+        throw "O caractere (Ponto e vírgula) é proibido.";
     if(s.size() == 0)
         return false;
     else
@@ -43,6 +45,8 @@ bool Nativo::setRegiao() {
     cout << endl << "Região do animal: " << endl;
     getline(cin, s);
 
+    if(s.find(';') != std::string::npos)
+        throw "O caractere (Ponto e vírgula) é proibido.";
     if(s.size() == 0)
         return false;
     else

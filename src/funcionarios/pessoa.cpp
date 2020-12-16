@@ -18,6 +18,8 @@ bool Pessoa::setNome() {
     cout << endl << "Nome: " << endl;
     getline(cin, s);
 
+    if(s.find(';') != std::string::npos)
+        throw "O caractere (Ponto e vírgula) é proibido.";
     if(s.size() == 0)
         return false;
     else
@@ -39,6 +41,8 @@ bool Pessoa::setTelefone() {
     cout << endl << "Telefone: " << endl;
     getline(cin, s);
 
+    if(s.find(';') != std::string::npos)
+        throw "O caractere (Ponto e vírgula) é proibido.";
     if(s.size() == 0)
         return false;
     else
@@ -60,6 +64,8 @@ bool Pessoa::setEmail() {
     cout << endl << "E-mail: " << endl;
     getline(cin, s);
 
+    if(s.find(';') != std::string::npos)
+        throw "O caractere (Ponto e vírgula) é proibido.";
     if(s.size() == 0)
         return false;
     else

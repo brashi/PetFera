@@ -42,6 +42,8 @@ bool Animal::setNome() {
     cout << endl << "Nome: " << endl;
     getline(cin, s);
 
+    if(s.find(';') != std::string::npos)
+        throw "O caractere (Ponto e vírgula) é proibido.";
     if(s.size() == 0)
         return false;
     else
@@ -59,6 +61,8 @@ bool Animal::setEspecie() {
     cout << endl << "Espécie: " << endl;
     getline(cin, s);
     
+    if(s.find(';') != std::string::npos)
+        throw "O caractere (Ponto e vírgula) é proibido.";
     if(s.size() == 0)
         return false;
     else
@@ -80,6 +84,8 @@ bool Animal::setAmeacadoPor() {
     cout << endl << "Animal ameaçado de extinção por?: " << endl;
     getline(cin, s);
     
+    if(s.find(';') != std::string::npos)
+        throw "O caractere (Ponto e vírgula) é proibido.";
     if(s.size() == 0)
         return false;
     else

@@ -25,6 +25,8 @@ bool Veterinario::setCRMV() {
     cout << endl << "CRMV: " << endl;
     getline(cin, s);
 
+    if(s.find(';') != std::string::npos)
+        throw "O caractere (Ponto e vírgula) é proibido.";
     if(s.size() == 0)
         return false;
     else
