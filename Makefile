@@ -8,7 +8,7 @@ INC = ./include
 # Definições gerais: Nome do Executável Main e Flags do compilador.
 PROG = petFera	# Nome do executável gerado.
 CXX = g++
-CXXFLAGS = -Wall -std=c++14
+CXXFLAGS = -Wall -std=c++17
 
 # ATENÇÃO: Sub-Diretórios (DEVE SER IGUAL EM SRC E INCLUDE);
 DIRS = . funcionarios animal animal/ave animal/mamifero animal/reptil animal/anfibio
@@ -33,12 +33,12 @@ debug: remake all
 
 $(PROG): $(SOURCES:.cpp=.o)
 	@echo Linkando os arquivos no executável: $@
-	@$(CXX) $(CXXFLAGS) -o $@ $^
+	@$(CXX) $(CXXFLAGS) -o $@ $^ -lstdc++fs
 
 # Compilação das classes em arquivos-objetos ".o"
 %.o: %.cpp
 	@echo Compilando a classe: $@
-	@$(CXX) $(CXXFLAGS) -c $< $(INCLUDES) -o $@
+	@$(CXX) $(CXXFLAGS) -c $< $(INCLUDES) -o $@ -lstdc++fs
 
 
 -include $(SOURCES:.cpp=.d)

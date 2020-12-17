@@ -1,11 +1,12 @@
 #include "banco_dados.hpp"
 
+namespace fs = std::filesystem;
 BancoDados::BancoDados(shared_ptr<Petshop> petshop):
                         petshop(petshop) {
                             diretorio = "dados/";
-                            struct stat info;
-                            if(stat(diretorio.c_str(), &info) != 0) {
-                                mkdir(diretorio.c_str(), 0777);
+                            if(!fs::exists(diretorio)) {
+                                cout << "Criando diretório dados/" << endl;
+                                fs::create_directory(diretorio);
                             }
                             funcArq = diretorio + "funcionarios.csv";
                             animalArq = diretorio + "animais.csv";
@@ -121,6 +122,21 @@ void BancoDados::lerDados() {
 }
 
 void BancoDados::lerFuncionarios() {
+    if(!fs::exists(funcArq)) {
+        cout << "Arquivo de funcionarios ainda não criado." << endl;
+        if(ofstream(funcArq))
+            cout << "Arquivo criado com sucesso." << endl;
+        else
+            throw "Erro na criação do arquivo de funcionarios.";
+
+        return;
+    }
+    if(fs::is_empty(funcArq)) {
+        cout << "Arquivo de funcionarios vazio." << endl;
+        cout << "Leitura cancelada..." << endl;
+        return;
+    }
+
     ifstream arqDados(funcArq);
     if(arqDados.bad() || arqDados.fail()){
         throw "Arquivo de funcionarios inexistente ou corrompido.";
@@ -167,6 +183,21 @@ void BancoDados::lerFuncionarios() {
 }
 
 void BancoDados::lerAnimais() {
+    if(!fs::exists(animalArq)) {
+        cout << "Arquivo de animais ainda não criado." << endl;
+        if(ofstream(animalArq))
+            cout << "Arquivo criado com sucesso." << endl;
+        else
+            throw "Erro na criação do arquivo de animais.";
+
+        return;
+    }
+    if(fs::is_empty(animalArq)) {
+        cout << "Arquivo de animais vazio." << endl;
+        cout << "Leitura cancelada..." << endl;
+        return;
+    }
+
     ifstream arqDados(animalArq);
     if(arqDados.bad() || arqDados.fail()){
         throw "Arquivo de animais inexistente ou corrompido.";
