@@ -29,7 +29,7 @@ class Domestico {
          * pois terá herdeiros, sendo necessário
          * a definição do metodo
          */
-        virtual ~Domestico();
+        virtual ~Domestico() = 0;
 
         /**
          * @brief Um Domestico pode ser adestrado ou não.

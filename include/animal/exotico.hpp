@@ -31,7 +31,7 @@ class Exotico {
          * pois terá herdeiros, sendo necessário
          * a definição do metodo
          */
-        virtual ~Exotico();
+        virtual ~Exotico() = 0;
 
         /**
          * @brief Um Exotico ter uma string de sua origem.

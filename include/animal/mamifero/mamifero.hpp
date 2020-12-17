@@ -20,7 +20,8 @@ class Mamifero : public Animal {
         
         Mamifero(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, bool gestacao);
-        virtual ~Mamifero();
+
+        virtual ~Mamifero() = 0;
 
         bool getGestacao() const;
 

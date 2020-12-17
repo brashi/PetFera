@@ -32,7 +32,7 @@ class Anfibio : public Animal {
          * a ser utilizada para heranças
          * de forma geral.
          */
-        virtual ~Anfibio();
+        virtual ~Anfibio() = 0;
 
         /**
          * @brief getter de bool

@@ -28,7 +28,8 @@ class Reptil : public Animal {
 
         Reptil(string nome, string especie, string ameacadoPor, Veterinario veterinario,
                 Tratador tratador, bool perigoso, Pele pele);
-        virtual ~Reptil();
+                
+        virtual ~Reptil() = 0;
 
         Pele getPele() const;
 

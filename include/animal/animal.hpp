@@ -44,7 +44,7 @@ class Animal {
          * @details deve ser virtual por questões
          * de polimorfismo entre as classes herdeiras.
          */
-        virtual ~Animal();
+        virtual ~Animal() = 0;
 
         /** 
          * @brief getter de string

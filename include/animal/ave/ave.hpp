@@ -35,7 +35,7 @@ class Ave : public Animal {
          * haver polimorfismo entre
          * suas classes herdeiras.
          */
-        virtual ~Ave();
+        virtual ~Ave() = 0;
 
         /**
          * @brief getter de bool

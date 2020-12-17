@@ -31,7 +31,7 @@ class Nativo {
          * pois terá herdeiros, sendo necessário
          * a definição do metodo
          */
-        virtual ~Nativo();
+        virtual ~Nativo() = 0;
 
         /**
          * @brief Um Nativo tem a string com sua região do país.
