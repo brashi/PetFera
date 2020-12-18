@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['criaranimal_150',['criarAnimal',['../classPetshop.html#a8caabf7bd1d59db98087d7db8e06db8d',1,'Petshop']]],
-  ['criartratador_151',['criarTratador',['../classPetshop.html#a3991d24973de9302686e14ee40b4fdc2',1,'Petshop']]],
-  ['criarveterinario_152',['criarVeterinario',['../classPetshop.html#a2482421211b8030a3fb46ae653607bc4',1,'Petshop']]]
+  ['bancodados_167',['BancoDados',['../classBancoDados.html#a0e6c7cffe527d2f1e53c6d2c7e71e236',1,'BancoDados']]]
 ];

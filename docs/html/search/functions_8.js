@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nativo_186',['Nativo',['../classNativo.html#a012953908b588a1e5009d948c53dd91b',1,'Nativo']]]
+  ['mapeadoranimal_210',['MapeadorAnimal',['../classMapeadorAnimal.html#a9f7683be05c7cbb261b060db01eecbbf',1,'MapeadorAnimal']]],
+  ['mapeadormenu_211',['MapeadorMenu',['../classMapeadorMenu.html#aace8d1ef49f22aa4d24afdc4ada1fd3a',1,'MapeadorMenu']]]
 ];

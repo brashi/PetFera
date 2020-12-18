@@ -1,14 +1,14 @@
 var classAnimal =
 [
     [ "Animal", "classAnimal.html#a1e726a49ec952443190ac62dad22353c", null ],
-    [ "Animal", "classAnimal.html#af7c8d112db1caf06f9a2dd2c26f624c9", null ],
-    [ "~Animal", "classAnimal.html#a16d8b7f94611cc65f5cdb58cc105527b", null ],
+    [ "Animal", "classAnimal.html#af02fe30576a772bc65b75cde28fda658", null ],
+    [ "~Animal", "classAnimal.html#a4373eeea297a6d27e93b1fe8ce05e3e6", null ],
     [ "getAmeacadoPor", "classAnimal.html#a9acdc604d45a1e32e414bd8ffc0d220a", null ],
     [ "getEspecie", "classAnimal.html#ae44b21c31ddc536df13bb7989daf5913", null ],
     [ "getNome", "classAnimal.html#a16dab693b54ccdb94ead24d703f6d5a6", null ],
     [ "getPerigoso", "classAnimal.html#aea331441b92c0c724088fa0bc384db8d", null ],
-    [ "getTratador", "classAnimal.html#a836f9e953b1f801af5f0cc326cf09dae", null ],
-    [ "getVeterinario", "classAnimal.html#a5aba52156e564a35ab05a20d1cab3d8d", null ],
+    [ "getTratador", "classAnimal.html#a4aa36cefd59a4b7ac9467e68fb9c10e2", null ],
+    [ "getVeterinario", "classAnimal.html#a4fa60a8edd774b82eeec78509f678fe9", null ],
     [ "operator==", "classAnimal.html#a26ea7b58ac12fc7d43f4ff84e6f497c6", null ],
     [ "printOutDados", "classAnimal.html#abb8b267babc8b599bab63a1b26af5cc5", null ],
     [ "setAmeacadoPor", "classAnimal.html#a1e809bd6e513ef299b59ee53917fa998", null ],
@@ -21,13 +21,13 @@ var classAnimal =
     [ "setNome", "classAnimal.html#a18b6b0d54a7ab3640111abb02fdf3bdd", null ],
     [ "setPerigoso", "classAnimal.html#a7baca748d780ffe9f753a92f22bb27ae", null ],
     [ "setPerigoso", "classAnimal.html#af5eed00f18dc73e17db73babb4ae09a2", null ],
-    [ "setTratador", "classAnimal.html#ae11036faa5de8ad78f71f476512878d6", null ],
-    [ "setVeterinario", "classAnimal.html#a6c2de6ba96b3f99fff5bee40f4a4769c", null ],
+    [ "setTratador", "classAnimal.html#a0bd9bbaea507bd064f06df6e4ed9edd1", null ],
+    [ "setVeterinario", "classAnimal.html#a4ac17fa243e56739d3908bada0a56736", null ],
     [ "operator<<", "classAnimal.html#a1009748dabf25b0d38a273f7b82ccd38", null ],
     [ "ameacadoPor", "classAnimal.html#a680705af8ef098dc922b2a7c97dc7ed5", null ],
     [ "especie", "classAnimal.html#a6d08af00ece2985d73126798973f84a8", null ],
     [ "nome", "classAnimal.html#a54f3f22208c7342039266c8c87de99e7", null ],
     [ "perigoso", "classAnimal.html#ad2d8f253344b43d2e36ae71b4becc5b4", null ],
-    [ "tratador", "classAnimal.html#a9a864369990c6743895032c6c8f2bdbc", null ],
-    [ "veterinario", "classAnimal.html#a3618cd50da896cee0b62eec659d2c2bb", null ]
+    [ "tratador", "classAnimal.html#a02704c86020e1b12ead2b87019951dc5", null ],
+    [ "veterinario", "classAnimal.html#aa5459ebb8bbabc8875e6694d280b7a8a", null ]
 ];

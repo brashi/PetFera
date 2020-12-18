@@ -91,24 +91,25 @@ $(document).ready(function(){initNavTree('mapeador__menu_8hpp_source.html',''); 
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;petshop.hpp&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> std::make_shared;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classMapeadorMenu.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMapeadorMenu.html">MapeadorMenu</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classMapeadorMenu.html#aace8d1ef49f22aa4d24afdc4ada1fd3a">MapeadorMenu</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classMapeadorMenu.html#a544cf473f5a92a50a45762b71b6a03f5">   47</a></span>&#160;        std::map&lt;char, std::function&lt;bool (shared_ptr&lt;Petshop&gt; petshop)&gt;&gt; <a class="code" href="classMapeadorMenu.html#a544cf473f5a92a50a45762b71b6a03f5">escolhas</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;filesystem&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> std::shared_ptr;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using</span> std::make_shared;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classMapeadorMenu.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMapeadorMenu.html">MapeadorMenu</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classMapeadorMenu.html#aace8d1ef49f22aa4d24afdc4ada1fd3a">MapeadorMenu</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classMapeadorMenu.html#a544cf473f5a92a50a45762b71b6a03f5">   48</a></span>&#160;        std::map&lt;char, std::function&lt;bool (shared_ptr&lt;Petshop&gt; petshop)&gt;&gt; <a class="code" href="classMapeadorMenu.html#a544cf473f5a92a50a45762b71b6a03f5">escolhas</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassMapeadorMenu_html_a544cf473f5a92a50a45762b71b6a03f5"><div class="ttname"><a href="classMapeadorMenu.html#a544cf473f5a92a50a45762b71b6a03f5">MapeadorMenu::escolhas</a></div><div class="ttdeci">std::map&lt; char, std::function&lt; bool(shared_ptr&lt; Petshop &gt; petshop)&gt; &gt; escolhas</div><div class="ttdoc">Mapa usado para retornar funções.</div><div class="ttdef"><b>Definition:</b> mapeador_menu.hpp:47</div></div>
+<div class="ttc" id="aclassMapeadorMenu_html_a544cf473f5a92a50a45762b71b6a03f5"><div class="ttname"><a href="classMapeadorMenu.html#a544cf473f5a92a50a45762b71b6a03f5">MapeadorMenu::escolhas</a></div><div class="ttdeci">std::map&lt; char, std::function&lt; bool(shared_ptr&lt; Petshop &gt; petshop)&gt; &gt; escolhas</div><div class="ttdoc">Mapa usado para retornar funções.</div><div class="ttdef"><b>Definition:</b> mapeador_menu.hpp:48</div></div>
 <div class="ttc" id="aclassMapeadorMenu_html_aace8d1ef49f22aa4d24afdc4ada1fd3a"><div class="ttname"><a href="classMapeadorMenu.html#aace8d1ef49f22aa4d24afdc4ada1fd3a">MapeadorMenu::MapeadorMenu</a></div><div class="ttdeci">MapeadorMenu()</div><div class="ttdoc">Construtor do mapeador.</div></div>
-<div class="ttc" id="aclassMapeadorMenu_html"><div class="ttname"><a href="classMapeadorMenu.html">MapeadorMenu</a></div><div class="ttdoc">Classe mapeadora de funções para o menu.</div><div class="ttdef"><b>Definition:</b> mapeador_menu.hpp:23</div></div>
+<div class="ttc" id="aclassMapeadorMenu_html"><div class="ttname"><a href="classMapeadorMenu.html">MapeadorMenu</a></div><div class="ttdoc">Classe mapeadora de funções para o menu.</div><div class="ttdef"><b>Definition:</b> mapeador_menu.hpp:24</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

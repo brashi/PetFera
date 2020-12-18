@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['filtroanimal_158',['FiltroAnimal',['../classFiltroAnimal.html#a90d1abb44538d5d9793c262cfcc0a12a',1,'FiltroAnimal']]],
-  ['findanimal_159',['findAnimal',['../classPetshop.html#a9f3eb97a4b0b0ac09cba676e23583681',1,'Petshop']]],
-  ['findtratador_160',['findTratador',['../classPetshop.html#a013f8f60b6cda9d673a75b9871bf8583',1,'Petshop']]],
-  ['findveterinario_161',['findVeterinario',['../classPetshop.html#af76aaee3d6ab9ad9a67db7d4ee78121e',1,'Petshop']]]
+  ['excluiranimal_172',['excluirAnimal',['../classPetshop.html#a417aaf81e347090271901332ef4ac8fc',1,'Petshop::excluirAnimal()'],['../classPetshop.html#a9a79e1659a07f117038178703cca1666',1,'Petshop::excluirAnimal(shared_ptr&lt; Animal &gt; removido)']]],
+  ['excluirarquivos_173',['excluirArquivos',['../classBancoDados.html#a0b1691acdf747fcfd411cf0a8fe00235',1,'BancoDados']]],
+  ['excluirtratador_174',['excluirTratador',['../classPetshop.html#ac01affc09f3b75e024747a33748cd8b8',1,'Petshop::excluirTratador()'],['../classPetshop.html#a63b3cd4317dfab35e57c96ac58dc50a7',1,'Petshop::excluirTratador(shared_ptr&lt; Tratador &gt; removido)']]],
+  ['excluirveterinario_175',['excluirVeterinario',['../classPetshop.html#a4d5c9d254b59d3626a81d25a6ab83383',1,'Petshop::excluirVeterinario()'],['../classPetshop.html#a225292110fd96851d037fdc235498079',1,'Petshop::excluirVeterinario(shared_ptr&lt; Veterinario &gt; removido)']]],
+  ['exotico_176',['Exotico',['../classExotico.html#a467403db3a5396368a762e0926ea4234',1,'Exotico']]]
 ];

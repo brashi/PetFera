@@ -1,9 +1,25 @@
 var searchData=
 [
-  ['licenca_57',['licenca',['../classNativo.html#a0cb2da79afd69fa0e821c274be488eae',1,'Nativo']]],
-  ['listaranimais_58',['listarAnimais',['../classPetshop.html#ac0718f081dffefe0960860d016cba135',1,'Petshop']]],
-  ['listartratadores_59',['listarTratadores',['../classPetshop.html#aae1d8448fa0974450c8dceac2fc5b8f9',1,'Petshop']]],
-  ['listarveterinarios_60',['listarVeterinarios',['../classPetshop.html#a22664b727e5d580637146e83a60c29d3',1,'Petshop']]],
-  ['local_61',['local',['../classExotico.html#a9474fd05411cb50a37cd9cf408b1e101',1,'Exotico']]],
-  ['lista_20de_20atividades_20futuras_62',['Lista de atividades futuras',['../todo.html',1,'']]]
+  ['getadestrado_43',['getAdestrado',['../classDomestico.html#a1be64ba6c161c35484a6484e709cbbc1',1,'Domestico']]],
+  ['getameacadopor_44',['getAmeacadoPor',['../classAnimal.html#a9acdc604d45a1e32e414bd8ffc0d220a',1,'Animal']]],
+  ['getanimais_45',['getAnimais',['../classPetshop.html#ae6d17a648ae57e23398cc4c5cf0bc445',1,'Petshop']]],
+  ['getcauda_46',['getCauda',['../classAnfibio.html#aafdb18890be1713a49631fee8449b3dc',1,'Anfibio']]],
+  ['getclasse_47',['getClasse',['../classAnimal.html#a27c064922cf337d4c75a8e026ae2765c',1,'Animal']]],
+  ['getclassificacao_48',['getClassificacao',['../classAnimal.html#a8ee309c3c6a8e894f0f21d4a780dab90',1,'Animal']]],
+  ['getcrmv_49',['getCRMV',['../classVeterinario.html#a8ac8fd3dbec97feac3a870aa916d61ea',1,'Veterinario']]],
+  ['getemail_50',['getEmail',['../classPessoa.html#a0fe937f9358dd92f73441c3288e46500',1,'Pessoa']]],
+  ['getespecie_51',['getEspecie',['../classAnimal.html#ae44b21c31ddc536df13bb7989daf5913',1,'Animal']]],
+  ['getlicenca_52',['getLicenca',['../classNativo.html#af8b543c14031088110e972b13afe85a5',1,'Nativo']]],
+  ['getlocal_53',['getLocal',['../classExotico.html#a5434a3369721b03f129adbe23709f571',1,'Exotico']]],
+  ['getnome_54',['getNome',['../classAnimal.html#a16dab693b54ccdb94ead24d703f6d5a6',1,'Animal::getNome()'],['../classPessoa.html#a8d551db3b19e1f07022adb3793cb8ed7',1,'Pessoa::getNome()']]],
+  ['getpata_55',['getPata',['../classAnfibio.html#abeb145d22dbe98d78934ad9ef0e45873',1,'Anfibio']]],
+  ['getperigoso_56',['getPerigoso',['../classAnimal.html#aea331441b92c0c724088fa0bc384db8d',1,'Animal']]],
+  ['getregiao_57',['getRegiao',['../classNativo.html#a7f3fa1f37f3b9f7ea61d8377d7992dc6',1,'Nativo']]],
+  ['gettelefone_58',['getTelefone',['../classPessoa.html#afcc25e8f6dc6d9b0ce5862df3cfbb66f',1,'Pessoa']]],
+  ['gettratador_59',['getTratador',['../classAnimal.html#a4aa36cefd59a4b7ac9467e68fb9c10e2',1,'Animal']]],
+  ['gettratadores_60',['getTratadores',['../classPetshop.html#a303719be1d0865ba947c77e3f8b6a6aa',1,'Petshop']]],
+  ['getuniforme_61',['getUniforme',['../classTratador.html#a9950c0442f4dc3858605426f1589cac4',1,'Tratador']]],
+  ['getveterinario_62',['getVeterinario',['../classAnimal.html#a4fa60a8edd774b82eeec78509f678fe9',1,'Animal']]],
+  ['getveterinarios_63',['getVeterinarios',['../classPetshop.html#a41f569c303e60433ca2f3d0060f9cbcf',1,'Petshop']]],
+  ['getvoa_64',['getVoa',['../classAve.html#abe245db949779b3a0ae976aa5fe66169',1,'Ave']]]
 ];

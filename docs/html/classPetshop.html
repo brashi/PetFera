@@ -100,7 +100,8 @@ $(document).ready(function(){initNavTree('classPetshop.html',''); initResizable(
 <div class="dynheader">
 Diagrama de colaboração para Petshop:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classPetshop__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classPetshop__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -165,15 +166,27 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a9a79e1659a07f117038178703cca1666"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classAnimal.html">Animal</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPetshop.html#a9a79e1659a07f117038178703cca1666">excluirAnimal</a> (shared_ptr&lt; <a class="el" href="classAnimal.html">Animal</a> &gt; removido)</td></tr>
 <tr class="memdesc:a9a79e1659a07f117038178703cca1666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remoção interna de <a class="el" href="classAnimal.html" title="Implementação base para o cadastro de animais.">Animal</a>.  <a href="classPetshop.html#a9a79e1659a07f117038178703cca1666">Mais...</a><br /></td></tr>
 <tr class="separator:a9a79e1659a07f117038178703cca1666"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Membros Privados</h2></td></tr>
+<tr class="memitem:a41f569c303e60433ca2f3d0060f9cbcf"><td class="memItemLeft" align="right" valign="top"><a id="a41f569c303e60433ca2f3d0060f9cbcf"></a>
+vector&lt; shared_ptr&lt; <a class="el" href="classVeterinario.html">Veterinario</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPetshop.html#a41f569c303e60433ca2f3d0060f9cbcf">getVeterinarios</a> () const</td></tr>
+<tr class="memdesc:a41f569c303e60433ca2f3d0060f9cbcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o vetor de <a class="el" href="classVeterinario.html" title="Implementação dos veterinarios.">Veterinario</a> do <a class="el" href="classPetshop.html" title="Classe de controle.">Petshop</a>. <br /></td></tr>
+<tr class="separator:a41f569c303e60433ca2f3d0060f9cbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303719be1d0865ba947c77e3f8b6a6aa"><td class="memItemLeft" align="right" valign="top"><a id="a303719be1d0865ba947c77e3f8b6a6aa"></a>
+vector&lt; shared_ptr&lt; <a class="el" href="classTratador.html">Tratador</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPetshop.html#a303719be1d0865ba947c77e3f8b6a6aa">getTratadores</a> () const</td></tr>
+<tr class="memdesc:a303719be1d0865ba947c77e3f8b6a6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o vetor de <a class="el" href="classTratador.html" title="Implementação dos tratadores.">Tratador</a> do <a class="el" href="classPetshop.html" title="Classe de controle.">Petshop</a>. <br /></td></tr>
+<tr class="separator:a303719be1d0865ba947c77e3f8b6a6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d17a648ae57e23398cc4c5cf0bc445"><td class="memItemLeft" align="right" valign="top"><a id="ae6d17a648ae57e23398cc4c5cf0bc445"></a>
+vector&lt; shared_ptr&lt; <a class="el" href="classAnimal.html">Animal</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPetshop.html#ae6d17a648ae57e23398cc4c5cf0bc445">getAnimais</a> () const</td></tr>
+<tr class="memdesc:ae6d17a648ae57e23398cc4c5cf0bc445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o vetor de <a class="el" href="classAnimal.html" title="Implementação base para o cadastro de animais.">Animal</a> do <a class="el" href="classPetshop.html" title="Classe de controle.">Petshop</a>. <br /></td></tr>
+<tr class="separator:ae6d17a648ae57e23398cc4c5cf0bc445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af76aaee3d6ab9ad9a67db7d4ee78121e"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classVeterinario.html">Veterinario</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPetshop.html#af76aaee3d6ab9ad9a67db7d4ee78121e">findVeterinario</a> (string nome)</td></tr>
 <tr class="memdesc:af76aaee3d6ab9ad9a67db7d4ee78121e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uso interno.  <a href="classPetshop.html#af76aaee3d6ab9ad9a67db7d4ee78121e">Mais...</a><br /></td></tr>
 <tr class="separator:af76aaee3d6ab9ad9a67db7d4ee78121e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a013f8f60b6cda9d673a75b9871bf8583"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classTratador.html">Tratador</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPetshop.html#a013f8f60b6cda9d673a75b9871bf8583">findTratador</a> (string nome)</td></tr>
 <tr class="memdesc:a013f8f60b6cda9d673a75b9871bf8583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uso interno.  <a href="classPetshop.html#a013f8f60b6cda9d673a75b9871bf8583">Mais...</a><br /></td></tr>
 <tr class="separator:a013f8f60b6cda9d673a75b9871bf8583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Membros Privados</h2></td></tr>
 <tr class="memitem:a9f3eb97a4b0b0ac09cba676e23583681"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classAnimal.html">Animal</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPetshop.html#a9f3eb97a4b0b0ac09cba676e23583681">findAnimal</a> (string nome, string especie)</td></tr>
 <tr class="memdesc:a9f3eb97a4b0b0ac09cba676e23583681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uso interno.  <a href="classPetshop.html#a9f3eb97a4b0b0ac09cba676e23583681">Mais...</a><br /></td></tr>
 <tr class="separator:a9f3eb97a4b0b0ac09cba676e23583681"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -640,9 +653,6 @@ vector&lt; shared_ptr&lt; <a class="el" href="classAnimal.html">Animal</a> &gt; 
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">shared_ptr&lt;<a class="el" href="classTratador.html">Tratador</a>&gt; Petshop::findTratador </td>
@@ -652,11 +662,6 @@ vector&lt; shared_ptr&lt; <a class="el" href="classAnimal.html">Animal</a> &gt; 
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Uso interno. </p>
@@ -675,9 +680,6 @@ vector&lt; shared_ptr&lt; <a class="el" href="classAnimal.html">Animal</a> &gt; 
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">shared_ptr&lt;<a class="el" href="classVeterinario.html">Veterinario</a>&gt; Petshop::findVeterinario </td>
@@ -687,11 +689,6 @@ vector&lt; shared_ptr&lt; <a class="el" href="classAnimal.html">Animal</a> &gt; 
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Uso interno. </p>

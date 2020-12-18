@@ -1,12 +1,10 @@
 <map id="AveNativa" name="AveNativa">
-<area shape="rect" id="node1" title="Implementação de animal com Classe e Categoria." alt="" coords="724,2443,952,2623"/>
-<area shape="rect" id="node2" href="$classAve.html" title="Classificação base para Aves." alt="" coords="698,2125,860,2393"/>
-<area shape="rect" id="node3" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="298,1573,596,2076"/>
-<area shape="rect" id="node4" href="$classTratador.html" title="Implementação dos tratadores." alt="" coords="400,1199,667,1496"/>
-<area shape="rect" id="node5" href="$classPessoa.html" title="Classe base dos funcionarios." alt="" coords="364,263,631,795"/>
-<area shape="rect" id="node9" href="$classVeterinario.html" title="Implementação dos veterinarios." alt="" coords="110,1199,376,1496"/>
-<area shape="rect" id="node6" title=" " alt="" coords="320,5,419,127"/>
-<area shape="rect" id="node10" href="$classNativo.html" title="Umas das definições de categoria para Animal." alt="" coords="790,819,1006,1175"/>
-<area shape="rect" id="node7" title=" " alt="" coords="656,468,798,589"/>
-<area shape="rect" id="node8" title=" " alt="" coords="717,1287,796,1408"/>
+<area shape="rect" id="node1" title="Implementação de animal com Classe e Categoria." alt="" coords="397,1487,625,1667"/>
+<area shape="rect" id="node2" href="$classAve.html" title="Classificação base para Aves." alt="" coords="322,1169,485,1437"/>
+<area shape="rect" id="node3" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="255,263,552,765"/>
+<area shape="rect" id="node4" title=" " alt="" coords="108,5,475,127"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,84,127"/>
+<area shape="rect" id="node6" title=" " alt="" coords="855,5,954,127"/>
+<area shape="rect" id="node8" href="$classNativo.html" title="Umas das definições de categoria para Animal." alt="" coords="610,789,826,1145"/>
+<area shape="rect" id="node7" title=" " alt="" coords="499,5,831,127"/>
 </map>

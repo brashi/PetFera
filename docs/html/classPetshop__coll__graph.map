@@ -1,5 +1,5 @@
 <map id="Petshop" name="Petshop">
-<area shape="rect" id="node1" title="Classe de controle." alt="" coords="553,491,890,993"/>
+<area shape="rect" id="node1" title="Classe de controle." alt="" coords="553,491,890,935"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,263,283,413"/>
 <area shape="rect" id="node3" title=" " alt="" coords="307,263,584,413"/>
 <area shape="rect" id="node4" href="$classFiltroAnimal.html" title="Classe de filtragem." alt="" coords="608,277,835,399"/>

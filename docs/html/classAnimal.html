@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('classAnimal.html',''); initResizable()
 <a href="#friends">Amigas</a> &#124;
 <a href="classAnimal-members.html">Lista de todos os Membros</a>  </div>
   <div class="headertitle">
-<div class="title">Referência da Classe Animal</div>  </div>
+<div class="title">Referência da Classe Animal<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -106,17 +106,18 @@ Diagrama de hierarquia para Animal:</div>
 <div class="dynheader">
 Diagrama de colaboração para Animal:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classAnimal__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classAnimal__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:af7c8d112db1caf06f9a2dd2c26f624c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#af7c8d112db1caf06f9a2dd2c26f624c9">Animal</a> (string <a class="el" href="classAnimal.html#a54f3f22208c7342039266c8c87de99e7">nome</a>, string <a class="el" href="classAnimal.html#a6d08af00ece2985d73126798973f84a8">especie</a>, string <a class="el" href="classAnimal.html#a680705af8ef098dc922b2a7c97dc7ed5">ameacadoPor</a>, <a class="el" href="classVeterinario.html">Veterinario</a> <a class="el" href="classAnimal.html#a3618cd50da896cee0b62eec659d2c2bb">veterinario</a>, <a class="el" href="classTratador.html">Tratador</a> <a class="el" href="classAnimal.html#a9a864369990c6743895032c6c8f2bdbc">tratador</a>, bool <a class="el" href="classAnimal.html#ad2d8f253344b43d2e36ae71b4becc5b4">perigoso</a>)</td></tr>
-<tr class="memdesc:af7c8d112db1caf06f9a2dd2c26f624c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe base <a class="el" href="classAnimal.html" title="Implementação base para o cadastro de animais.">Animal</a>.  <a href="classAnimal.html#af7c8d112db1caf06f9a2dd2c26f624c9">Mais...</a><br /></td></tr>
-<tr class="separator:af7c8d112db1caf06f9a2dd2c26f624c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16d8b7f94611cc65f5cdb58cc105527b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a16d8b7f94611cc65f5cdb58cc105527b">~Animal</a> ()</td></tr>
-<tr class="memdesc:a16d8b7f94611cc65f5cdb58cc105527b"><td class="mdescLeft">&#160;</td><td class="mdescRight">destrutor padrão para base  <a href="classAnimal.html#a16d8b7f94611cc65f5cdb58cc105527b">Mais...</a><br /></td></tr>
-<tr class="separator:a16d8b7f94611cc65f5cdb58cc105527b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af02fe30576a772bc65b75cde28fda658"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#af02fe30576a772bc65b75cde28fda658">Animal</a> (string <a class="el" href="classAnimal.html#a54f3f22208c7342039266c8c87de99e7">nome</a>, string <a class="el" href="classAnimal.html#a6d08af00ece2985d73126798973f84a8">especie</a>, string <a class="el" href="classAnimal.html#a680705af8ef098dc922b2a7c97dc7ed5">ameacadoPor</a>, shared_ptr&lt; <a class="el" href="classVeterinario.html">Veterinario</a> &gt; <a class="el" href="classAnimal.html#aa5459ebb8bbabc8875e6694d280b7a8a">veterinario</a>, shared_ptr&lt; <a class="el" href="classTratador.html">Tratador</a> &gt; <a class="el" href="classAnimal.html#a02704c86020e1b12ead2b87019951dc5">tratador</a>, bool <a class="el" href="classAnimal.html#ad2d8f253344b43d2e36ae71b4becc5b4">perigoso</a>)</td></tr>
+<tr class="memdesc:af02fe30576a772bc65b75cde28fda658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe base <a class="el" href="classAnimal.html" title="Implementação base para o cadastro de animais.">Animal</a>.  <a href="classAnimal.html#af02fe30576a772bc65b75cde28fda658">Mais...</a><br /></td></tr>
+<tr class="separator:af02fe30576a772bc65b75cde28fda658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4373eeea297a6d27e93b1fe8ce05e3e6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a4373eeea297a6d27e93b1fe8ce05e3e6">~Animal</a> ()=0</td></tr>
+<tr class="memdesc:a4373eeea297a6d27e93b1fe8ce05e3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">destrutor padrão para base  <a href="classAnimal.html#a4373eeea297a6d27e93b1fe8ce05e3e6">Mais...</a><br /></td></tr>
+<tr class="separator:a4373eeea297a6d27e93b1fe8ce05e3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16dab693b54ccdb94ead24d703f6d5a6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a16dab693b54ccdb94ead24d703f6d5a6">getNome</a> () const</td></tr>
 <tr class="memdesc:a16dab693b54ccdb94ead24d703f6d5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter de string  <a href="classAnimal.html#a16dab693b54ccdb94ead24d703f6d5a6">Mais...</a><br /></td></tr>
 <tr class="separator:a16dab693b54ccdb94ead24d703f6d5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,12 +127,12 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a9acdc604d45a1e32e414bd8ffc0d220a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a9acdc604d45a1e32e414bd8ffc0d220a">getAmeacadoPor</a> () const</td></tr>
 <tr class="memdesc:a9acdc604d45a1e32e414bd8ffc0d220a"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter de string  <a href="classAnimal.html#a9acdc604d45a1e32e414bd8ffc0d220a">Mais...</a><br /></td></tr>
 <tr class="separator:a9acdc604d45a1e32e414bd8ffc0d220a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aba52156e564a35ab05a20d1cab3d8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVeterinario.html">Veterinario</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a5aba52156e564a35ab05a20d1cab3d8d">getVeterinario</a> () const</td></tr>
-<tr class="memdesc:a5aba52156e564a35ab05a20d1cab3d8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter de tipo <a class="el" href="classVeterinario.html" title="Implementação dos veterinarios.">Veterinario</a>  <a href="classAnimal.html#a5aba52156e564a35ab05a20d1cab3d8d">Mais...</a><br /></td></tr>
-<tr class="separator:a5aba52156e564a35ab05a20d1cab3d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a836f9e953b1f801af5f0cc326cf09dae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTratador.html">Tratador</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a836f9e953b1f801af5f0cc326cf09dae">getTratador</a> () const</td></tr>
-<tr class="memdesc:a836f9e953b1f801af5f0cc326cf09dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter de tipo <a class="el" href="classTratador.html" title="Implementação dos tratadores.">Tratador</a>  <a href="classAnimal.html#a836f9e953b1f801af5f0cc326cf09dae">Mais...</a><br /></td></tr>
-<tr class="separator:a836f9e953b1f801af5f0cc326cf09dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fa60a8edd774b82eeec78509f678fe9"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classVeterinario.html">Veterinario</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a4fa60a8edd774b82eeec78509f678fe9">getVeterinario</a> () const</td></tr>
+<tr class="memdesc:a4fa60a8edd774b82eeec78509f678fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter de tipo <a class="el" href="classVeterinario.html" title="Implementação dos veterinarios.">Veterinario</a>  <a href="classAnimal.html#a4fa60a8edd774b82eeec78509f678fe9">Mais...</a><br /></td></tr>
+<tr class="separator:a4fa60a8edd774b82eeec78509f678fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa36cefd59a4b7ac9467e68fb9c10e2"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classTratador.html">Tratador</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a4aa36cefd59a4b7ac9467e68fb9c10e2">getTratador</a> () const</td></tr>
+<tr class="memdesc:a4aa36cefd59a4b7ac9467e68fb9c10e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter de tipo <a class="el" href="classTratador.html" title="Implementação dos tratadores.">Tratador</a>  <a href="classAnimal.html#a4aa36cefd59a4b7ac9467e68fb9c10e2">Mais...</a><br /></td></tr>
+<tr class="separator:a4aa36cefd59a4b7ac9467e68fb9c10e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea331441b92c0c724088fa0bc384db8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#aea331441b92c0c724088fa0bc384db8d">getPerigoso</a> () const</td></tr>
 <tr class="memdesc:aea331441b92c0c724088fa0bc384db8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter de bool  <a href="classAnimal.html#aea331441b92c0c724088fa0bc384db8d">Mais...</a><br /></td></tr>
 <tr class="separator:aea331441b92c0c724088fa0bc384db8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,12 +160,12 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a7baca748d780ffe9f753a92f22bb27ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a7baca748d780ffe9f753a92f22bb27ae">setPerigoso</a> ()</td></tr>
 <tr class="memdesc:a7baca748d780ffe9f753a92f22bb27ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">interface de usuário para <a class="el" href="classAnimal.html#af5eed00f18dc73e17db73babb4ae09a2" title="setter de bool Perigo">setPerigoso(bool b)</a>  <a href="classAnimal.html#a7baca748d780ffe9f753a92f22bb27ae">Mais...</a><br /></td></tr>
 <tr class="separator:a7baca748d780ffe9f753a92f22bb27ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c2de6ba96b3f99fff5bee40f4a4769c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a6c2de6ba96b3f99fff5bee40f4a4769c">setVeterinario</a> (<a class="el" href="classVeterinario.html">Veterinario</a> <a class="el" href="classAnimal.html#a3618cd50da896cee0b62eec659d2c2bb">veterinario</a>)</td></tr>
-<tr class="memdesc:a6c2de6ba96b3f99fff5bee40f4a4769c"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter de <a class="el" href="classVeterinario.html" title="Implementação dos veterinarios.">Veterinario</a> para a instância do <a class="el" href="classAnimal.html" title="Implementação base para o cadastro de animais.">Animal</a>  <a href="classAnimal.html#a6c2de6ba96b3f99fff5bee40f4a4769c">Mais...</a><br /></td></tr>
-<tr class="separator:a6c2de6ba96b3f99fff5bee40f4a4769c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae11036faa5de8ad78f71f476512878d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#ae11036faa5de8ad78f71f476512878d6">setTratador</a> (<a class="el" href="classTratador.html">Tratador</a> <a class="el" href="classAnimal.html#a9a864369990c6743895032c6c8f2bdbc">tratador</a>)</td></tr>
-<tr class="memdesc:ae11036faa5de8ad78f71f476512878d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter de <a class="el" href="classTratador.html" title="Implementação dos tratadores.">Tratador</a> para a instância do <a class="el" href="classAnimal.html" title="Implementação base para o cadastro de animais.">Animal</a>  <a href="classAnimal.html#ae11036faa5de8ad78f71f476512878d6">Mais...</a><br /></td></tr>
-<tr class="separator:ae11036faa5de8ad78f71f476512878d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac17fa243e56739d3908bada0a56736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a4ac17fa243e56739d3908bada0a56736">setVeterinario</a> (shared_ptr&lt; <a class="el" href="classVeterinario.html">Veterinario</a> &gt; <a class="el" href="classAnimal.html#aa5459ebb8bbabc8875e6694d280b7a8a">veterinario</a>)</td></tr>
+<tr class="memdesc:a4ac17fa243e56739d3908bada0a56736"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter de <a class="el" href="classVeterinario.html" title="Implementação dos veterinarios.">Veterinario</a> para a instância do <a class="el" href="classAnimal.html" title="Implementação base para o cadastro de animais.">Animal</a>  <a href="classAnimal.html#a4ac17fa243e56739d3908bada0a56736">Mais...</a><br /></td></tr>
+<tr class="separator:a4ac17fa243e56739d3908bada0a56736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bd9bbaea507bd064f06df6e4ed9edd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a0bd9bbaea507bd064f06df6e4ed9edd1">setTratador</a> (shared_ptr&lt; <a class="el" href="classTratador.html">Tratador</a> &gt; <a class="el" href="classAnimal.html#a02704c86020e1b12ead2b87019951dc5">tratador</a>)</td></tr>
+<tr class="memdesc:a0bd9bbaea507bd064f06df6e4ed9edd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter de <a class="el" href="classTratador.html" title="Implementação dos tratadores.">Tratador</a> para a instância do <a class="el" href="classAnimal.html" title="Implementação base para o cadastro de animais.">Animal</a>  <a href="classAnimal.html#a0bd9bbaea507bd064f06df6e4ed9edd1">Mais...</a><br /></td></tr>
+<tr class="separator:a0bd9bbaea507bd064f06df6e4ed9edd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad12fe5d357a89fef67e896426e6da0e9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#ad12fe5d357a89fef67e896426e6da0e9">setClassificacao</a> ()</td></tr>
 <tr class="memdesc:ad12fe5d357a89fef67e896426e6da0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função de interface.  <a href="classAnimal.html#ad12fe5d357a89fef67e896426e6da0e9">Mais...</a><br /></td></tr>
 <tr class="separator:ad12fe5d357a89fef67e896426e6da0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,14 +201,14 @@ Atributos Protegidos</h2></td></tr>
 string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a680705af8ef098dc922b2a7c97dc7ed5">ameacadoPor</a></td></tr>
 <tr class="memdesc:a680705af8ef098dc922b2a7c97dc7ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declara se o animal é ameaçado por alguma causa. Possui valor "nada" caso contrário. <br /></td></tr>
 <tr class="separator:a680705af8ef098dc922b2a7c97dc7ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3618cd50da896cee0b62eec659d2c2bb"><td class="memItemLeft" align="right" valign="top"><a id="a3618cd50da896cee0b62eec659d2c2bb"></a>
-<a class="el" href="classVeterinario.html">Veterinario</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a3618cd50da896cee0b62eec659d2c2bb">veterinario</a></td></tr>
-<tr class="memdesc:a3618cd50da896cee0b62eec659d2c2bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">O <a class="el" href="classVeterinario.html" title="Implementação dos veterinarios.">Veterinario</a> responsável pelo animal em questão. <br /></td></tr>
-<tr class="separator:a3618cd50da896cee0b62eec659d2c2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a864369990c6743895032c6c8f2bdbc"><td class="memItemLeft" align="right" valign="top"><a id="a9a864369990c6743895032c6c8f2bdbc"></a>
-<a class="el" href="classTratador.html">Tratador</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a9a864369990c6743895032c6c8f2bdbc">tratador</a></td></tr>
-<tr class="memdesc:a9a864369990c6743895032c6c8f2bdbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A classe do animal pode indicar a necessidade de um <a class="el" href="classTratador.html" title="Implementação dos tratadores.">Tratador</a> com Uniforme específico. <br /></td></tr>
-<tr class="separator:a9a864369990c6743895032c6c8f2bdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5459ebb8bbabc8875e6694d280b7a8a"><td class="memItemLeft" align="right" valign="top"><a id="aa5459ebb8bbabc8875e6694d280b7a8a"></a>
+shared_ptr&lt; <a class="el" href="classVeterinario.html">Veterinario</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#aa5459ebb8bbabc8875e6694d280b7a8a">veterinario</a></td></tr>
+<tr class="memdesc:aa5459ebb8bbabc8875e6694d280b7a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">O <a class="el" href="classVeterinario.html" title="Implementação dos veterinarios.">Veterinario</a> responsável pelo animal em questão. <br /></td></tr>
+<tr class="separator:aa5459ebb8bbabc8875e6694d280b7a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02704c86020e1b12ead2b87019951dc5"><td class="memItemLeft" align="right" valign="top"><a id="a02704c86020e1b12ead2b87019951dc5"></a>
+shared_ptr&lt; <a class="el" href="classTratador.html">Tratador</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#a02704c86020e1b12ead2b87019951dc5">tratador</a></td></tr>
+<tr class="memdesc:a02704c86020e1b12ead2b87019951dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A classe do animal pode indicar a necessidade de um <a class="el" href="classTratador.html" title="Implementação dos tratadores.">Tratador</a> com Uniforme específico. <br /></td></tr>
+<tr class="separator:a02704c86020e1b12ead2b87019951dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2d8f253344b43d2e36ae71b4becc5b4"><td class="memItemLeft" align="right" valign="top"><a id="ad2d8f253344b43d2e36ae71b4becc5b4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html#ad2d8f253344b43d2e36ae71b4becc5b4">perigoso</a></td></tr>
 <tr class="memdesc:ad2d8f253344b43d2e36ae71b4becc5b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declara se o animal apresenta perigo ao manejo. <br /></td></tr>
@@ -223,8 +224,8 @@ Amigas</h2></td></tr>
 <div class="textblock"><p>Implementação base para o cadastro de animais. </p>
 <p>O cadastro de um animal passa pela base <a class="el" href="classAnimal.html" title="Implementação base para o cadastro de animais.">Animal</a>. Exigindo uma série de informações comuns a todos os animais, tais como nome, especie, seu <a class="el" href="classVeterinario.html" title="Implementação dos veterinarios.">Veterinario</a> e <a class="el" href="classTratador.html" title="Implementação dos tratadores.">Tratador</a>. </p>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
-<a id="af7c8d112db1caf06f9a2dd2c26f624c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7c8d112db1caf06f9a2dd2c26f624c9">&#9670;&nbsp;</a></span>Animal()</h2>
+<a id="af02fe30576a772bc65b75cde28fda658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af02fe30576a772bc65b75cde28fda658">&#9670;&nbsp;</a></span>Animal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,13 +251,13 @@ Amigas</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classVeterinario.html">Veterinario</a>&#160;</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classVeterinario.html">Veterinario</a> &gt;&#160;</td>
           <td class="paramname"><em>veterinario</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classTratador.html">Tratador</a>&#160;</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classTratador.html">Tratador</a> &gt;&#160;</td>
           <td class="paramname"><em>tratador</em>, </td>
         </tr>
         <tr>
@@ -288,8 +289,8 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
-<a id="a16d8b7f94611cc65f5cdb58cc105527b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16d8b7f94611cc65f5cdb58cc105527b">&#9670;&nbsp;</a></span>~Animal()</h2>
+<a id="a4373eeea297a6d27e93b1fe8ce05e3e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4373eeea297a6d27e93b1fe8ce05e3e6">&#9670;&nbsp;</a></span>~Animal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,7 +307,7 @@ Amigas</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -489,14 +490,14 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
-<a id="a836f9e953b1f801af5f0cc326cf09dae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a836f9e953b1f801af5f0cc326cf09dae">&#9670;&nbsp;</a></span>getTratador()</h2>
+<a id="a4aa36cefd59a4b7ac9467e68fb9c10e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa36cefd59a4b7ac9467e68fb9c10e2">&#9670;&nbsp;</a></span>getTratador()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classTratador.html">Tratador</a> Animal::getTratador </td>
+          <td class="memname">shared_ptr&lt;<a class="el" href="classTratador.html">Tratador</a>&gt; Animal::getTratador </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -509,14 +510,14 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
-<a id="a5aba52156e564a35ab05a20d1cab3d8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aba52156e564a35ab05a20d1cab3d8d">&#9670;&nbsp;</a></span>getVeterinario()</h2>
+<a id="a4fa60a8edd774b82eeec78509f678fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa60a8edd774b82eeec78509f678fe9">&#9670;&nbsp;</a></span>getVeterinario()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classVeterinario.html">Veterinario</a> Animal::getVeterinario </td>
+          <td class="memname">shared_ptr&lt;<a class="el" href="classVeterinario.html">Veterinario</a>&gt; Animal::getVeterinario </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -832,8 +833,8 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
-<a id="ae11036faa5de8ad78f71f476512878d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae11036faa5de8ad78f71f476512878d6">&#9670;&nbsp;</a></span>setTratador()</h2>
+<a id="a0bd9bbaea507bd064f06df6e4ed9edd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bd9bbaea507bd064f06df6e4ed9edd1">&#9670;&nbsp;</a></span>setTratador()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -841,7 +842,7 @@ Amigas</h2></td></tr>
         <tr>
           <td class="memname">void Animal::setTratador </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classTratador.html">Tratador</a>&#160;</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classTratador.html">Tratador</a> &gt;&#160;</td>
           <td class="paramname"><em>tratador</em></td><td>)</td>
           <td></td>
         </tr>
@@ -853,8 +854,8 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
-<a id="a6c2de6ba96b3f99fff5bee40f4a4769c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c2de6ba96b3f99fff5bee40f4a4769c">&#9670;&nbsp;</a></span>setVeterinario()</h2>
+<a id="a4ac17fa243e56739d3908bada0a56736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac17fa243e56739d3908bada0a56736">&#9670;&nbsp;</a></span>setVeterinario()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -862,7 +863,7 @@ Amigas</h2></td></tr>
         <tr>
           <td class="memname">void Animal::setVeterinario </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classVeterinario.html">Veterinario</a>&#160;</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classVeterinario.html">Veterinario</a> &gt;&#160;</td>
           <td class="paramname"><em>veterinario</em></td><td>)</td>
           <td></td>
         </tr>

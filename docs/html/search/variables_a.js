@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uniforme_231',['uniforme',['../classTratador.html#a978d8cd91b975a119353d98ce4b9fdcc',1,'Tratador']]]
+  ['strfiltro_261',['strFiltro',['../classBancoDados.html#a841121cd8e8bc59471a4cde0dfe98629',1,'BancoDados']]]
 ];

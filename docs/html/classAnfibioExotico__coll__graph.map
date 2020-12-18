@@ -1,12 +1,10 @@
 <map id="AnfibioExotico" name="AnfibioExotico">
-<area shape="rect" id="node1" title="Implementação de animal com Classe e Categoria." alt="" coords="716,2443,999,2623"/>
-<area shape="rect" id="node2" href="$classAnfibio.html" title="Classificação base para Anfibios." alt="" coords="687,2037,887,2393"/>
-<area shape="rect" id="node3" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="305,1485,602,1988"/>
-<area shape="rect" id="node4" href="$classTratador.html" title="Implementação dos tratadores." alt="" coords="407,1111,673,1408"/>
-<area shape="rect" id="node5" href="$classPessoa.html" title="Classe base dos funcionarios." alt="" coords="371,263,637,795"/>
-<area shape="rect" id="node9" href="$classVeterinario.html" title="Implementação dos veterinarios." alt="" coords="116,1111,383,1408"/>
-<area shape="rect" id="node6" title=" " alt="" coords="327,5,425,127"/>
-<area shape="rect" id="node10" href="$classExotico.html" title="Umas das definições de categoria para Animal." alt="" coords="833,819,1023,1087"/>
-<area shape="rect" id="node7" title=" " alt="" coords="662,468,805,589"/>
-<area shape="rect" id="node8" title=" " alt="" coords="723,1199,802,1320"/>
+<area shape="rect" id="node1" title="Implementação de animal com Classe e Categoria." alt="" coords="378,1487,661,1667"/>
+<area shape="rect" id="node2" href="$classAnfibio.html" title="Classificação base para Anfibios." alt="" coords="315,1081,515,1437"/>
+<area shape="rect" id="node3" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="267,263,564,765"/>
+<area shape="rect" id="node4" title=" " alt="" coords="108,5,475,127"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,84,127"/>
+<area shape="rect" id="node6" title=" " alt="" coords="855,5,954,127"/>
+<area shape="rect" id="node8" href="$classExotico.html" title="Umas das definições de categoria para Animal." alt="" coords="737,789,928,1057"/>
+<area shape="rect" id="node7" title=" " alt="" coords="499,5,831,127"/>
 </map>

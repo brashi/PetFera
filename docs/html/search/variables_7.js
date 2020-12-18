@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pata_225',['pata',['../classAnfibio.html#a35a3ac8bb1ed9b2f5d23404583fd4bc5',1,'Anfibio']]],
-  ['perigoso_226',['perigoso',['../classAnimal.html#ad2d8f253344b43d2e36ae71b4becc5b4',1,'Animal']]]
+  ['nome_256',['nome',['../classAnimal.html#a54f3f22208c7342039266c8c87de99e7',1,'Animal::nome()'],['../classPessoa.html#ad4e88b8f3499405a7a03df648857c338',1,'Pessoa::nome()']]]
 ];

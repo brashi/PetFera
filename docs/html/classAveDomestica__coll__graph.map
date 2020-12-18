@@ -1,12 +1,10 @@
 <map id="AveDomestica" name="AveDomestica">
-<area shape="rect" id="node1" title="Implementação de animal com Classe e Categoria." alt="" coords="54,2441,338,2621"/>
-<area shape="rect" id="node2" href="$classAve.html" title="Classificação base para Aves." alt="" coords="213,2124,376,2392"/>
-<area shape="rect" id="node3" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="398,1305,695,1808"/>
-<area shape="rect" id="node4" href="$classTratador.html" title="Implementação dos tratadores." alt="" coords="339,931,605,1228"/>
-<area shape="rect" id="node5" href="$classPessoa.html" title="Classe base dos funcionarios." alt="" coords="484,263,751,795"/>
-<area shape="rect" id="node9" href="$classVeterinario.html" title="Implementação dos veterinarios." alt="" coords="629,931,896,1228"/>
-<area shape="rect" id="node6" title=" " alt="" coords="749,5,848,127"/>
-<area shape="rect" id="node7" title=" " alt="" coords="317,468,459,589"/>
-<area shape="rect" id="node8" title=" " alt="" coords="235,1019,314,1140"/>
-<area shape="rect" id="node10" href="$classDomestico.html" title="Umas das definições de categoria para Animal." alt="" coords="5,1832,256,2100"/>
+<area shape="rect" id="node1" title="Implementação de animal com Classe e Categoria." alt="" coords="945,1399,1229,1579"/>
+<area shape="rect" id="node2" href="$classAve.html" title="Classificação base para Aves." alt="" coords="934,1081,1097,1349"/>
+<area shape="rect" id="node3" href="$classAnimal.html" title="Implementação base para o cadastro de animais." alt="" coords="533,263,831,765"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,372,127"/>
+<area shape="rect" id="node5" title=" " alt="" coords="976,5,1055,127"/>
+<area shape="rect" id="node8" href="$classDomestico.html" title="Umas das definições de categoria para Animal." alt="" coords="1035,789,1286,1057"/>
+<area shape="rect" id="node6" title=" " alt="" coords="397,5,495,127"/>
+<area shape="rect" id="node7" title=" " alt="" coords="520,5,852,127"/>
 </map>

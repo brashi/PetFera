@@ -1,8 +1,8 @@
 var classAnfibio =
 [
     [ "Anfibio", "classAnfibio.html#a91fd9b91b9124ab41ea9e9c9bb013476", null ],
-    [ "Anfibio", "classAnfibio.html#a88146957022fd7d8eaccee3832c65845", null ],
-    [ "~Anfibio", "classAnfibio.html#abd574fdb240818a4d43297d72c797537", null ],
+    [ "Anfibio", "classAnfibio.html#a52a313e1a61637a0c029e399d62f7e14", null ],
+    [ "~Anfibio", "classAnfibio.html#a2ff1cf2cbeca6b1b7f93c2a11beaf082", null ],
     [ "getCauda", "classAnfibio.html#aafdb18890be1713a49631fee8449b3dc", null ],
     [ "getPata", "classAnfibio.html#abeb145d22dbe98d78934ad9ef0e45873", null ],
     [ "setCauda", "classAnfibio.html#a02fe2ca5e7b4be3ed7961eb747ab9f60", null ],

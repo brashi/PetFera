@@ -46,7 +46,7 @@ void imprimirMenu() {
     cout << "    L - Remover tratador" << endl;
     cout << "======================================================================" << endl;
     if(!std::filesystem::is_empty("dados/"))
-        cout << "    N - Apagar registros (DELETA TODO OS REGISTROS !!)" << endl;
+        cout << "    N - Apagar registros (DELETA TODOS OS REGISTROS !)" << endl;
     Aviso(  "    T - Acionar arquivos de teste (Exclusivo Debug)" << endl;)
 }
 

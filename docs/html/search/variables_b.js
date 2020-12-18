@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['veterinario_232',['veterinario',['../classAnimal.html#a3618cd50da896cee0b62eec659d2c2bb',1,'Animal']]],
-  ['veterinarios_233',['veterinarios',['../classPetshop.html#acce09fa3d23a602d11ebec3fc2b86c1e',1,'Petshop']]],
-  ['voa_234',['voa',['../classAve.html#a4f8416af36cfbb02dc6e7391ea7c88e8',1,'Ave']]]
+  ['telefone_262',['telefone',['../classPessoa.html#a9bf168eeb62bd37b8815d8ab920ceed5',1,'Pessoa']]],
+  ['tratador_263',['tratador',['../classAnimal.html#a02704c86020e1b12ead2b87019951dc5',1,'Animal']]],
+  ['tratadores_264',['tratadores',['../classPetshop.html#ad3c2961ed6b74ee2d6c8f5738e2bbca3',1,'Petshop']]]
 ];

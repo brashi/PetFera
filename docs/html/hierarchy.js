@@ -22,6 +22,7 @@ var hierarchy =
         [ "ReptilNativo", "classReptilNativo.html", null ]
       ] ]
     ] ],
+    [ "BancoDados", "classBancoDados.html", null ],
     [ "Domestico", "classDomestico.html", [
       [ "AnfibioDomestico", "classAnfibioDomestico.html", null ],
       [ "AveDomestica", "classAveDomestica.html", null ],
