@@ -61,11 +61,20 @@ MapeadorMenu::MapeadorMenu() {
     };
 
     escolhas['T'] = [](shared_ptr<Petshop> ps) {
-        cout << "Arquivos de testes carregado !" << endl;
-        return true;
+        #ifdef DEBUG
+            cout << "Arquivos de testes carregado !" << endl;
+            return true;
+        #else
+            cout << "Informe uma opção válida para realizar uma ação" << endl;
+            return true;
+        #endif
     };
 
     escolhas['N'] = [](shared_ptr<Petshop> ps) {
+        if(std::filesystem::is_empty("dados/")) {
+            cout << "Informe uma opção válida para realizar uma ação" << endl;
+            return true;
+        }
         cout << "O banco de dados foi completamente apagado." << endl;
         return true;
     };

@@ -2,6 +2,7 @@
 
 #include "petshop.hpp"
 
+#include <filesystem>
 #include <functional>
 #include <string>
 #include <memory>

@@ -84,8 +84,16 @@ void menu() {
             if(toupper(opcao[0]) == 'T')
                 banco.lerDadosTestes();
         #endif
-        if(toupper(opcao[0]) == 'N')
-            banco.excluirArquivos();
+        if(toupper(opcao[0]) == 'N' && !std::filesystem::is_empty("dados/")) {
+            cout << "Tem certeza? TUDO será apagado" << endl;
+            cout << "S - para SIM: ";
+            getline(cin, opcao);
+
+            if(toupper(opcao[0]) == 'S')
+                banco.excluirArquivos();
+            else
+                cout << "Operação cancelada..." << endl;
+        }
         try {
             executando = mapeador->escolhas[toupper(opcao[0])](petshop);
         } catch (const std::bad_function_call&) {
