@@ -49,6 +49,12 @@ class BancoDados {
 
         /** @brief Lê os dados dos arquivos para o Petshop */
         void lerDados();
+
+        /** @brief Lê os dados nos arquivos de testes */
+        void lerDadosTestes();
+
+        /** @brief Exclui os arquivos de dados */
+        void excluirArquivos();
         
     private:
         /** @brief Petshop administrado pelo banco de dados */

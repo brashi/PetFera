@@ -3,7 +3,7 @@
 using std::cout;
 using std::cin;
 
-Ave::Ave(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador, bool perigoso,
+Ave::Ave(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario, shared_ptr<Tratador> tratador, bool perigoso,
                 bool voa):
                 Animal(nome, especie, ameacadoPor, veterinario, tratador, perigoso),
                 voa(voa){}

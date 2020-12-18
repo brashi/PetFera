@@ -18,8 +18,8 @@ class Mamifero : public Animal {
     public:
         Mamifero() {};
         
-        Mamifero(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, bool gestacao);
+        Mamifero(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, bool gestacao);
 
         virtual ~Mamifero() = 0;
 

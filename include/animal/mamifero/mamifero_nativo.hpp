@@ -20,8 +20,8 @@ class MamiferoNativo : public Mamifero, public Nativo {
     public:
         MamiferoNativo() {};
 
-        MamiferoNativo(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string regiao, string licenca, bool gestacao);
+        MamiferoNativo(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, string regiao, string licenca, bool gestacao);
 
         ~MamiferoNativo();
 };

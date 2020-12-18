@@ -28,8 +28,8 @@ class AnfibioExotico : public Anfibio, public Exotico {
          * @param Exotico()
          * @param Anfibio()
          */
-        AnfibioExotico(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string local, bool cauda, bool pata);
+        AnfibioExotico(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, string local, bool cauda, bool pata);
 
         ~AnfibioExotico();
 };

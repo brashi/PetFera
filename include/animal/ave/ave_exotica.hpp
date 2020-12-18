@@ -26,8 +26,8 @@ class AveExotica : public Ave, public Exotico {
          * @param Ave()
          * @param Exotico()
          */
-        AveExotica(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string local, bool voa);
+        AveExotica(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, string local, bool voa);
 
         ~AveExotica();
 };

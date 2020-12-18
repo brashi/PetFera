@@ -20,8 +20,8 @@ class MamiferoExotico : public Mamifero, public Exotico {
     public:
         MamiferoExotico() {};
 
-        MamiferoExotico(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string local, bool gestacao);
+        MamiferoExotico(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, string local, bool gestacao);
 
         ~MamiferoExotico();
 };

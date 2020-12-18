@@ -1,6 +1,7 @@
 #include <iostream> 
 #include <iterator>
 #include <memory>
+#include <filesystem>
 
 #include "mapeador_menu.hpp"
 #include "petshop.hpp"
@@ -44,6 +45,9 @@ void imprimirMenu() {
     cout << "    K - Atualizar tratador" << endl;
     cout << "    L - Remover tratador" << endl;
     cout << "======================================================================" << endl;
+    if(!std::filesystem::is_empty("dados/"))
+        cout << "    N - Apagar registros (DELETA TODO OS REGISTROS !!)" << endl;
+    Aviso(  "    T - Acionar arquivos de teste (Exclusivo Debug)" << endl;)
 }
 
 void limparTela() {
@@ -75,7 +79,13 @@ void menu() {
 
         getline(cin, opcao);
         limparTela();
-
+        
+        #ifdef DEBUG
+            if(toupper(opcao[0]) == 'T')
+                banco.lerDadosTestes();
+        #endif
+        if(toupper(opcao[0]) == 'N')
+            banco.excluirArquivos();
         try {
             executando = mapeador->escolhas[toupper(opcao[0])](petshop);
         } catch (const std::bad_function_call&) {

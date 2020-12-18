@@ -26,8 +26,8 @@ class Ave : public Animal {
          * dela.
          * @param voa tipo bool
          */
-        Ave(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-            Tratador tratador, bool perigoso, bool voa);
+        Ave(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+            shared_ptr<Tratador> tratador, bool perigoso, bool voa);
 
         /**
          * @brief destrutor de Ave

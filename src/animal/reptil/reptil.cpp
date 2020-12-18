@@ -3,7 +3,7 @@
 using std::cout;
 using std::cin;
 
-Reptil::Reptil(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador, bool perigoso,
+Reptil::Reptil(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario, shared_ptr<Tratador> tratador, bool perigoso,
                 Pele pele):
                 Animal(nome, especie, ameacadoPor, veterinario, tratador, perigoso),
                 pele(pele){}

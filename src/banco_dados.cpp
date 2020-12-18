@@ -10,18 +10,9 @@ BancoDados::BancoDados(shared_ptr<Petshop> petshop):
                             }
                             funcArq = diretorio + "funcionarios.csv";
                             animalArq = diretorio + "animais.csv";
-                            #ifdef DEBUG
-                                diretorio = "include/dadosDebug/";
-                                funcArq = diretorio + "funcionarios.csv";
-                                animalArq = diretorio + "animais.csv";
-                            #endif
                         }
 
 void BancoDados::salvarDados() {
-    #ifdef DEBUG
-        cout << "Modo debug, portando nenhum arquivo será salvo." << endl;
-        return;
-    #endif
     try {
         salvarFuncionarios();
         salvarAnimais();
@@ -51,6 +42,11 @@ void BancoDados::salvarFuncionarios() {
 
     
     arqDados.close();
+    if(fs::is_empty(funcArq)) {
+        fs::remove(funcArq);
+        return;
+    }
+
     cout << "Arquivo de funcionários salvo com sucesso." << endl;
 }
 
@@ -70,8 +66,8 @@ void BancoDados::salvarAnimais() {
         classificao = Animal::getClassificacao(animal, true);
         arqDados << classe << ';' << classificao << ';'
                  << animal->getNome() << ';' << animal->getEspecie() << ';'
-                 << animal->getAmeacadoPor() << ';' << animal->getVeterinario().getNome() << ';'
-                 << animal->getTratador().getNome() << ';'
+                 << animal->getAmeacadoPor() << ';' << animal->getVeterinario()->getNome() << ';'
+                 << animal->getTratador()->getNome() << ';'
                  << animal->getPerigoso() << ';';
 
 
@@ -108,6 +104,10 @@ void BancoDados::salvarAnimais() {
     }
 
     arqDados.close();
+    if(fs::is_empty(animalArq)) {
+        fs::remove(animalArq);
+        return;
+    }
     cout << "Arquivo de animais salvo com sucesso." << endl;
 }
 
@@ -121,14 +121,28 @@ void BancoDados::lerDados() {
     }
 }
 
+void BancoDados::lerDadosTestes() {
+    diretorio = "include/dadosDebug/";
+    funcArq = diretorio + "funcionarios.csv";
+    animalArq = diretorio + "animais.csv";
+
+    try {
+        lerFuncionarios();
+        lerAnimais();
+    } catch(char const* msg) {
+        cout << "Erro: " << msg << endl << "Caso os arquivos existam,"
+         << endl << "Verifique a integridade deles na pasta " << diretorio << endl;
+    }
+
+    diretorio = "dados/";
+    funcArq = diretorio + "funcionarios.csv";
+    animalArq = diretorio + "animais.csv";
+}
+
 void BancoDados::lerFuncionarios() {
     if(!fs::exists(funcArq)) {
         cout << "Arquivo de funcionarios ainda não criado." << endl;
-        if(ofstream(funcArq))
-            cout << "Arquivo criado com sucesso." << endl;
-        else
-            throw "Erro na criação do arquivo de funcionarios.";
-
+        cout << "Leitura cancelada..." << endl;
         return;
     }
     if(fs::is_empty(funcArq)) {
@@ -185,11 +199,8 @@ void BancoDados::lerFuncionarios() {
 void BancoDados::lerAnimais() {
     if(!fs::exists(animalArq)) {
         cout << "Arquivo de animais ainda não criado." << endl;
-        if(ofstream(animalArq))
-            cout << "Arquivo criado com sucesso." << endl;
-        else
-            throw "Erro na criação do arquivo de animais.";
-
+        cout << "Leitura cancelada..." << endl;
+        
         return;
     }
     if(fs::is_empty(animalArq)) {
@@ -229,8 +240,8 @@ void BancoDados::lerAnimais() {
             animal->setNome(tokens.at(2));
             animal->setEspecie(tokens.at(3));
             animal->setAmeacadoPor(tokens.at(4));
-            animal->setVeterinario(*petshop->findVeterinario(tokens.at(5)));
-            animal->setTratador(*petshop->findTratador(tokens.at(6)));
+            animal->setVeterinario(petshop->findVeterinario(tokens.at(5)));
+            animal->setTratador(petshop->findTratador(tokens.at(6)));
             animal->setPerigoso(stoi(tokens.at(7)));
 
             switch(strFiltro[classificacao]) {
@@ -273,4 +284,25 @@ void BancoDados::lerAnimais() {
     arqDados.close();
     cout << "Arquivo de animais carregado com sucesso." << endl;
     cout << "Foram carregados " << count << " animais." << endl;
+}
+
+void BancoDados::excluirArquivos() {
+    if(fs::remove(funcArq))
+        cout << "Arquivo de funcionarios foi removido." << endl;
+    else
+        cout << "Houve um erro ao tentar remover o arquivo de funcionarios." << endl;
+
+    if(fs::remove(animalArq))
+        cout << "Arquivo de animais foi removido." << endl;
+    else
+        cout << "Houve um erro ao tentar remover o arquivo de animais." << endl;
+
+    for(auto& an : petshop->getAnimais())
+        petshop->excluirAnimal(an);
+
+    for(auto& vet : petshop->getVeterinarios())
+        petshop->excluirVeterinario(vet);
+
+    for(auto& trt : petshop->getTratadores())
+        petshop->excluirTratador(trt);
 }

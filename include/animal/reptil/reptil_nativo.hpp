@@ -20,8 +20,8 @@ class ReptilNativo : public Reptil, public Nativo {
     public:
         ReptilNativo() {};
 
-        ReptilNativo(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string regiao, string licenca, Pele pele);
+        ReptilNativo(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, string regiao, string licenca, Pele pele);
 
         ~ReptilNativo();
 };

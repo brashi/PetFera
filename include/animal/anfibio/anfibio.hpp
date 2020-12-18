@@ -24,8 +24,8 @@ class Anfibio : public Animal {
          * provendo os atributos
          * do tipo do Animal
          */
-        Anfibio(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, bool cauda, bool pata);
+        Anfibio(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, bool cauda, bool pata);
         /**
          * @brief Destrutor virtual
          * @details Determinado virtual devido

@@ -26,8 +26,8 @@ class AveDomestica : public Ave, public Domestico {
          * @param Ave()
          * @param Domestico()
          */
-        AveDomestica(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, bool adestrado, bool voa);
+        AveDomestica(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, bool adestrado, bool voa);
 
         ~AveDomestica();
 };

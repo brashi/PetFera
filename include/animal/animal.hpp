@@ -37,8 +37,8 @@ class Animal {
          * @param Tratador como tipo Tratador
          * @param perigoso como bool
          */
-        Animal(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-            Tratador tratador, bool perigoso);
+        Animal(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+            shared_ptr<Tratador> tratador, bool perigoso);
         /** 
          * @brief destrutor padrão para base
          * @details deve ser virtual por questões
@@ -71,13 +71,13 @@ class Animal {
          * @return Veterinario responsável
          * pelo animal em questão.
          */
-        Veterinario getVeterinario() const;
+        shared_ptr<Veterinario> getVeterinario() const;
         /**
          * @brief getter de tipo Tratador
          * @return Tratador responsável
          * pelo animal em questão.
          */
-        Tratador getTratador() const;
+        shared_ptr<Tratador> getTratador() const;
         /**
          * @brief getter de bool
          * @return bool de verdadeiro
@@ -155,14 +155,14 @@ class Animal {
          * @details Faz a mudança do atributo Veterinario
          * da instância do Animal em questão.
          */
-        void setVeterinario(Veterinario veterinario);
+        void setVeterinario(shared_ptr<Veterinario> veterinario);
 
         /**
          * @brief setter de Tratador para a instância do Animal
          * @details Faz a mudança do atributo Tratador
          * da instância do Animal em questão.
          */
-        void setTratador(Tratador tratador);
+        void setTratador(shared_ptr<Tratador> tratador);
 
         /**
          * @brief getter de string
@@ -249,9 +249,9 @@ class Animal {
         /** @brief Declara se o animal é ameaçado por alguma causa. Possui valor "nada" caso contrário */
         string ameacadoPor;
         /** @brief O Veterinario responsável pelo animal em questão */
-        Veterinario veterinario;
+        shared_ptr<Veterinario> veterinario;
         /** @brief A classe do animal pode indicar a necessidade de um Tratador com Uniforme específico */
-        Tratador tratador;
+        shared_ptr<Tratador> tratador;
         /** @brief Declara se o animal apresenta perigo ao manejo */
         bool perigoso;
 };

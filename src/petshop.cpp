@@ -16,22 +16,32 @@ using std::stoi;
 using std::cout;
 using std::cin;
 
+#ifdef DEBUG
+    std::ofstream arq("debug.txt");
+#define Debug(x) std::ofstream("debug.txt", std::ofstream::app) << x << endl;
+#else
+#define Debug(x)
+#endif
+
 Petshop::Petshop() {}
 
 Petshop::~Petshop() {}
 
 bool Petshop::adicionarVeterinario(shared_ptr<Veterinario> vetAdd) {
     this->veterinarios.push_back(vetAdd);
+    Debug("Veterinario: " << vetAdd->getNome() << " adicionado ao registro.");
     return true;
 }
 
 bool Petshop::adicionarTratador(shared_ptr<Tratador> tratAdd) {
     this->tratadores.push_back(tratAdd);
+    Debug("Tratador: " << tratAdd->getNome() << " adicionado ao registro.");
     return true;
 }
 
 bool Petshop::adicionarAnimal(shared_ptr<Animal> animalAdd) {
     this->animais.push_back(animalAdd);
+    Debug("Animal: " << animalAdd->getNome() << " adicionado ao registro.");
     return true;
 }
 
@@ -137,7 +147,7 @@ void Petshop::criarAnimal() {
 
     // Pela lista de vet. ser em petshop o tratamento se dá aqui, não no setter
     if(idPessoa >= 0 && idPessoa < this->veterinarios.size())
-        animal->setVeterinario(*this->veterinarios[idPessoa]);
+        animal->setVeterinario(this->veterinarios[idPessoa]);
     else
         throw "Veterinário não existe!";
 
@@ -182,12 +192,12 @@ void Petshop::criarAnimal() {
 
     // Pela lista de trt. ser em petshop o tratador se dá aqui, não no setter
     if(idPessoa >= 0 && idPessoa < this->tratadores.size())
-        animal->setTratador(*this->tratadores[idPessoa]);
+        animal->setTratador(this->tratadores[idPessoa]);
     else
         throw "Tratador não existe!";
 
     // Tratamento de permissão
-    Uniforme un = animal->getTratador().getUniforme();
+    Uniforme un = animal->getTratador()->getUniforme();
     if(animal->getPerigoso() && un != Vermelho)
         throw "Erro de permissão! O tratador necessita de ao menos um nível de segurança Vermelho.";
     else if((classe == "rep" || classe == "mam") && (un == Verde))
@@ -228,7 +238,7 @@ void Petshop::atualizarVeterinario() {
     string nome;
     
     shared_ptr<Veterinario> veterinario;
-    Veterinario antigovet;
+    //Veterinario antigovet;
     long unsigned int num;
 
     // Configuração do texto acima dos campos de alteração
@@ -247,7 +257,7 @@ void Petshop::atualizarVeterinario() {
     else
         throw "Veterinário não existe!";
 
-    antigovet = *veterinario;
+    //antigovet = *veterinario;
 
     cout << endl << updateText;
     veterinario->setNome();
@@ -261,9 +271,6 @@ void Petshop::atualizarVeterinario() {
     cout << endl << updateText;
     veterinario->setCRMV();
 
-    for(auto& animal : this->animais)
-        if(animal->getVeterinario() == antigovet)
-            animal->setVeterinario(*veterinario);
 }
 
 void Petshop::atualizarTratador() {
@@ -302,18 +309,11 @@ void Petshop::atualizarTratador() {
 
     Uniforme un = tratador->getUniforme();
 
-    for(auto& animal : this->animais)
-        if(animal->getTratador() == antigotrt)
-            animal->setTratador(*tratador);
-
-    antigotrt = *tratador;
-
-
     cout << endl << updateText;
     if(tratador->setUniforme()) {
         Uniforme novo = tratador->getUniforme();
         for(auto& animal : this->animais) {
-            if(animal->getTratador() == (*tratador)) {
+            if(animal->getTratador() == tratador) {
                 string classe = Animal::getClasse(animal);
                 if(animal->getPerigoso() && novo != Vermelho) {
                     tratador->setUniforme(un);
@@ -326,10 +326,10 @@ void Petshop::atualizarTratador() {
                 }
             }
         }
-        if(tratador->getUniforme() != un)
+        /*if(tratador->getUniforme() != un)
             for(auto& animal : this->animais)
                 if(animal->getTratador() == antigotrt)
-                    animal->setTratador(*tratador);
+                    animal->setTratador(*tratador); */
     }
 }
 
@@ -407,7 +407,7 @@ void Petshop::atualizarAnimal() {
 
         // Pela lista de vet. ser em petshop o tratamento se dá aqui, não no setter
         if(idPessoa >= 0 && idPessoa < this->veterinarios.size())
-            atualizar->setVeterinario(*this->veterinarios[idPessoa]);
+            atualizar->setVeterinario(this->veterinarios[idPessoa]);
         else if(trocarHerancas)
             atualizar->setVeterinario(animal->getVeterinario());
     }
@@ -467,7 +467,7 @@ void Petshop::atualizarAnimal() {
 
         // Pela lista de trt. ser em petshop o tratamento se dá aqui, não no setter
         if(idPessoa >= 0 && idPessoa < this->tratadores.size())
-            atualizar->setTratador(*this->tratadores[idPessoa]);
+            atualizar->setTratador(this->tratadores[idPessoa]);
         else if(trocarHerancas)
             atualizar->setTratador(animal->getTratador());
     }
@@ -505,7 +505,7 @@ void Petshop::atualizarAnimal() {
     }
 
     // Tratamento de permissão
-    Uniforme un = atualizar->getTratador().getUniforme();
+    Uniforme un = atualizar->getTratador()->getUniforme();
     if(atualizar->getPerigoso() && un != Vermelho) {
         throw "Erro de permissão, o tratador informado não possui permissão para manejar esse animal, cadastre ou altere um tratador e tente novamente.";
     } else if((classe == "rep" || classe == "mam") && (un == Verde)) {
@@ -545,7 +545,7 @@ void Petshop::excluirVeterinario() {
 
     int animais = 0;
     for(auto& animal : this->animais)
-        if(*veterinario == animal->getVeterinario())
+        if(veterinario == animal->getVeterinario())
             animais++;
 
     string error = "O veterinário cuida de " + std::to_string(animais) + " animais !\n Portando, ele não pode se removido, verifique nas listagens e tente novamente !";
@@ -586,7 +586,7 @@ void Petshop::excluirTratador() {
 
     int animais = 0;
     for(auto& animal : this->animais)
-        if(*tratador == animal->getTratador())
+        if(tratador == animal->getTratador())
             animais++;
 
     string error = "O tratador cuida de " + std::to_string(animais) + " animais !\n Portando, ele não pode se removido, verifique nas listagens e tente novamente !";
@@ -643,6 +643,7 @@ shared_ptr<Veterinario> Petshop::excluirVeterinario(shared_ptr<Veterinario> remo
         if(vet == removido) {
             shared_ptr<Veterinario> ptr_removido = vet;
             this->veterinarios.erase(this->veterinarios.begin() + index);
+            Debug("Veterinario: " << ptr_removido->getNome() << " removido do registro.");
             return ptr_removido;
         }
         index++;
@@ -658,6 +659,7 @@ shared_ptr<Tratador> Petshop::excluirTratador(shared_ptr<Tratador> removido) {
         if(tratador == removido) {
             shared_ptr<Tratador> ptr_removido = tratador;
             this->tratadores.erase(this->tratadores.begin() + index);
+            Debug("Tratador: " << ptr_removido->getNome() << " removido do registro.");
             return ptr_removido;
         }
         index++;
@@ -673,6 +675,7 @@ shared_ptr<Animal> Petshop::excluirAnimal(shared_ptr<Animal> removido) {
         if(animal == removido) {
             shared_ptr<Animal> ptr_removido = animal;
             this->animais.erase(this->animais.begin() + index);
+            Debug("Animal: " << ptr_removido->getNome() << " removido do registro.");
             return ptr_removido;
         }
         index++;
@@ -751,8 +754,8 @@ void Petshop::listarVeterinarios() {
 }
 
 void Petshop::listarAnimais(bool autoList) {
-    Veterinario vet;
-    Tratador trt;
+    shared_ptr<Veterinario> vet;
+    shared_ptr<Tratador> trt;
     string filtro = {}, idPessoa = {}, animalID = {};
 
     if(autoList)
@@ -789,7 +792,7 @@ listBypass:
         getline(cin, idPessoa);
         num = stoi(idPessoa);
         if(num >= 0 && num < this->tratadores.size())
-            trt = *this->tratadores[num];
+            trt = this->tratadores[num];
         else
             throw "Tratador não existe!";
     } else if(filtro == "V" || filtro == "v") {
@@ -801,7 +804,7 @@ listBypass:
         getline(cin, idPessoa);
         num = stoi(idPessoa);
         if(num >= 0 && num < this->veterinarios.size())
-            vet = *this->veterinarios[num];
+            vet = this->veterinarios[num];
         else
             throw "Veterinário não existe!";
     }

@@ -27,8 +27,8 @@ class AnfibioDomestico : public Anfibio, public Domestico {
          * @param Domestico()
          * @param Anfibio()
          */
-        AnfibioDomestico(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, bool adestrado, bool cauda, bool pata);
+        AnfibioDomestico(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, bool adestrado, bool cauda, bool pata);
 
         ~AnfibioDomestico();
 };

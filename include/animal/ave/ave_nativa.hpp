@@ -27,8 +27,8 @@ class AveNativa : public Ave, public Nativo {
          * @param Ave()
          * @param Nativo()
          */
-        AveNativa(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string regiao, string licenca, bool voa);
+        AveNativa(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, string regiao, string licenca, bool voa);
 
         ~AveNativa();
 };

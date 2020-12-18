@@ -22,7 +22,7 @@ using std::vector;
 using std::cout;
 using std::cin;
 
-Animal::Animal(string nome, string especie, string ameacadoPor, Veterinario veterinario, Tratador tratador,
+Animal::Animal(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario, shared_ptr<Tratador> tratador,
                 bool perigoso):
                 nome(nome), especie(especie), ameacadoPor(ameacadoPor), veterinario(veterinario), tratador(tratador),
                 perigoso(perigoso){}
@@ -98,19 +98,19 @@ void Animal::setAmeacadoPor(string s) {
     this->ameacadoPor = s;
 }
 
-Veterinario Animal::getVeterinario() const {
+shared_ptr<Veterinario> Animal::getVeterinario() const {
     return this->veterinario;
 }
 
-void Animal::setVeterinario(Veterinario vet) {
+void Animal::setVeterinario(shared_ptr<Veterinario> vet) {
     this->veterinario = vet;
 }
 
-Tratador Animal::getTratador() const {
+shared_ptr<Tratador> Animal::getTratador() const {
     return this->tratador;
 }
 
-void Animal::setTratador(Tratador trt) {
+void Animal::setTratador(shared_ptr<Tratador> trt) {
     this->tratador = trt;
 }
 
@@ -239,8 +239,8 @@ string Animal::setClasse() {
 }
 
 void Animal::printOutDetails(shared_ptr<Animal> animal) {
-    Veterinario vet = animal->getVeterinario();
-    Tratador trt = animal->getTratador();
+    shared_ptr<Veterinario> vet = animal->getVeterinario();
+    shared_ptr<Tratador> trt = animal->getTratador();
     string classe = Animal::getClasse(animal);
     string classificacao = Animal::getClassificacao(animal);
 
@@ -249,10 +249,10 @@ void Animal::printOutDetails(shared_ptr<Animal> animal) {
     cout << "Espécie: " << animal->getEspecie() << endl;
     cout << "Perigoso: " << (animal->getPerigoso() ? "Sim" : "Não") << endl;
     cout << "Ameaçado por: " << animal->getAmeacadoPor() << endl;
-    cout << "Veterinário: " << vet.getNome() << endl;
-    cout << "  └ CRMV: " << vet.getCRMV() << endl;
-    cout << "Tratador: " << trt.getNome() << endl;
-    int un = trt.getUniforme();
+    cout << "Veterinário: " << vet->getNome() << endl;
+    cout << "  └ CRMV: " << vet->getCRMV() << endl;
+    cout << "Tratador: " << trt->getNome() << endl;
+    int un = trt->getUniforme();
     cout << "  └ N. Segurança: " << (un == 0? "Verde" : (un == 1 ? "Azul" : "Vermelho")) << endl;
     cout << "Categoria: " << classificacao << endl;
     if(classificacao == "Silvestre Exótico")

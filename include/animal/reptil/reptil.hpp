@@ -26,8 +26,8 @@ class Reptil : public Animal {
     public:
         Reptil() {};
 
-        Reptil(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, Pele pele);
+        Reptil(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, Pele pele);
                 
         virtual ~Reptil() = 0;
 

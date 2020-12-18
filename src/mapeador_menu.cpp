@@ -59,4 +59,14 @@ MapeadorMenu::MapeadorMenu() {
         cout << "Saindo do programa..." << endl;
         return false;
     };
+
+    escolhas['T'] = [](shared_ptr<Petshop> ps) {
+        cout << "Arquivos de testes carregado !" << endl;
+        return true;
+    };
+
+    escolhas['N'] = [](shared_ptr<Petshop> ps) {
+        cout << "O banco de dados foi completamente apagado." << endl;
+        return true;
+    };
 }

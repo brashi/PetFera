@@ -20,8 +20,8 @@ class ReptilExotico : public Reptil, public Exotico {
     public:
         ReptilExotico() {};
 
-        ReptilExotico(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string local, Pele pele);
+        ReptilExotico(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, string local, Pele pele);
 
         ~ReptilExotico();
 };

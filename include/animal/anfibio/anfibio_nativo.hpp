@@ -28,8 +28,8 @@ class AnfibioNativo : public Anfibio, public Nativo {
          * @param Nativo()
          * @param Anfibio()
          */
-        AnfibioNativo(string nome, string especie, string ameacadoPor, Veterinario veterinario,
-                Tratador tratador, bool perigoso, string regiao, string licenca, bool cauda, bool pata);
+        AnfibioNativo(string nome, string especie, string ameacadoPor, shared_ptr<Veterinario> veterinario,
+                shared_ptr<Tratador> tratador, bool perigoso, string regiao, string licenca, bool cauda, bool pata);
 
         ~AnfibioNativo();
 };
