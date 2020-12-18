@@ -93,19 +93,20 @@ void menu() {
                 banco.excluirArquivos();
             else
                 cout << "Operação cancelada..." << endl;
-        }
-        try {
-            executando = mapeador->escolhas[toupper(opcao[0])](petshop);
-        } catch (const std::bad_function_call&) {
-            cout << "Informe uma opção válida para realizar uma ação" << endl;
-        } catch (const std::invalid_argument&) {
-            cout << "Um valor numérico era esperado e não condiz com o introduzido." << endl;
-        } catch (char const* msg) {
-            cout << "Erro: " << msg << endl << "Verifique os dados informados e tente novamente." << endl;
-        } catch (const string msg) {
-            cout << "Erro: " << msg << endl << "Verifique os dados informados e tente novamente." << endl;
-        } catch (...) {
-            cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+        } else {
+            try {
+                executando = mapeador->escolhas[toupper(opcao[0])](petshop);
+            } catch (const std::bad_function_call&) {
+                cout << "Informe uma opção válida para realizar uma ação" << endl;
+            } catch (const std::invalid_argument&) {
+                cout << "Um valor numérico era esperado e não condiz com o introduzido." << endl;
+            } catch (char const* msg) {
+                cout << "Erro: " << msg << endl << "Verifique os dados informados e tente novamente." << endl;
+            } catch (const string msg) {
+                cout << "Erro: " << msg << endl << "Verifique os dados informados e tente novamente." << endl;
+            } catch (...) {
+                cout << "Algo de errado ocorreu, verifique os dados informados e tente novamente." << endl;
+            }
         }
 
         pausar();
